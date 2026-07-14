@@ -257,8 +257,8 @@
         "scope": "Australian listed securities; separate residential-exposure basket recommended"
       }
     ],
-    "last_refreshed_at": "2026-07-14T13:38:52+00:00",
-    "latest_refresh_id": "2026-07-14T133852+0000",
+    "last_refreshed_at": "2026-07-14T23:25:22+00:00",
+    "latest_refresh_id": "2026-07-14T232522+0000",
     "vintage_file": "data_vintages.json"
   },
   "series": {
@@ -25982,7 +25982,7 @@
           },
           {
             "date": "2026-07",
-            "value": 7536.65
+            "value": 7543.59
           }
         ]
       },
@@ -27858,7 +27858,7 @@
           },
           {
             "date": "2026-07",
-            "value": 1121.08
+            "value": 1121.57
           }
         ]
       },
@@ -32538,7 +32538,7 @@
           },
           {
             "date": "2026-07",
-            "value": 4.22
+            "value": 4.3
           }
         ]
       },
@@ -32551,7 +32551,7 @@
       "update_method": "automated",
       "source_url": "https://fred.stlouisfed.org/series/DGS3",
       "source": "Federal Reserve Bank of St. Louis (FRED DGS3)",
-      "status_note": "Last available daily FRED observation in each month; latest month-end value is 4.22%."
+      "status_note": "Last available daily FRED observation in each month; latest month-end value is 4.3%."
     },
     "us_treasury_10y": {
       "label": "US Treasury 10-year yield",
@@ -35660,7 +35660,7 @@
           },
           {
             "date": "2026-07",
-            "value": 4.56
+            "value": 4.62
           }
         ]
       },
@@ -35673,7 +35673,7 @@
       "update_method": "automated",
       "source_url": "https://fred.stlouisfed.org/series/DGS10",
       "source": "Federal Reserve Bank of St. Louis (FRED DGS10)",
-      "status_note": "Last available daily FRED observation in each month; latest month-end value is 4.56%."
+      "status_note": "Last available daily FRED observation in each month; latest month-end value is 4.62%."
     },
     "wage_growth_private_yoy": {
       "label": "Private-sector wage growth, year-on-year",
