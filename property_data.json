@@ -257,8 +257,8 @@
         "scope": "Australian listed securities; separate residential-exposure basket recommended"
       }
     ],
-    "last_refreshed_at": "2026-07-14T08:41:20+00:00",
-    "latest_refresh_id": "2026-07-14T084120+0000",
+    "last_refreshed_at": "2026-07-14T13:38:52+00:00",
+    "latest_refresh_id": "2026-07-14T133852+0000",
     "vintage_file": "data_vintages.json"
   },
   "series": {
@@ -25982,7 +25982,7 @@
           },
           {
             "date": "2026-07",
-            "value": 7515.34
+            "value": 7536.65
           }
         ]
       },
@@ -27858,7 +27858,7 @@
           },
           {
             "date": "2026-07",
-            "value": 1116.44
+            "value": 1121.08
           }
         ]
       },
