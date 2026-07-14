@@ -1,0 +1,21 @@
+name: Validate tracker data
+
+on:
+  push:
+  pull_request:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Run validation regression tests
+        run: python3 -m unittest discover -s tests -v
+      - name: Validate published data and vintage archive
+        run: python3 validate_data.py
+      - name: Compile ingestion and validation scripts
+        run: python3 -m py_compile ingest_macro.py validate_data.py

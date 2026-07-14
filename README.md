@@ -1,7 +1,7 @@
 # Australian Property & Macro Tracker
 
 A self-hosted dashboard for haoyileslieluo.com — no build step, no
-framework. Seven components:
+framework. Core components:
 
 - `index.html` — the main charts and source/policy map
 - `data.html` — full underlying observation tables
@@ -10,6 +10,10 @@ framework. Seven components:
 - `data_vintages.json` — append-only, timestamped copies of every refresh for revision and historical tracking.
 - `ingest_macro.py` — optional local updater for the monitored macro
   and supply series.
+- `validate_data.py` — dependency-free data-quality, freshness and
+  vintage-consistency checks.
+- `tests/` — regression tests proving that malformed dates, implausible
+  values, stale labels and vintage mismatches are rejected.
 - `vendor/chart.umd.min.js` — the locally hosted Chart.js runtime used
   to draw the time-series charts.
 
@@ -66,6 +70,27 @@ lending-indicator releases. It archives the complete refresh in
 history-count and status metadata. Use
 `python3 ingest_macro.py --dry-run` first when you want to check what
 would be ingested without writing the file.
+
+The ingestor validates the complete refresh before replacing either JSON
+file. A failed check exits with an error and leaves the published dataset
+and vintage archive unchanged.
+
+## Validating the data
+
+Run the same checks used by GitHub Actions:
+
+```bash
+python3 -m unittest discover -s tests -v
+python3 validate_data.py
+```
+
+The validator checks required source and explanatory metadata, valid and
+strictly chronological dates, duplicate observations, finite values,
+indicator-specific plausible ranges, source-check freshness, reported
+observation counts, and exact agreement between `property_data.json` and
+the latest timestamped vintage. The workflow in
+`.github/workflows/validate.yml` runs these checks on every push and pull
+request, as well as on demand from the Actions tab.
 
 ### Access and download links (public)
 
