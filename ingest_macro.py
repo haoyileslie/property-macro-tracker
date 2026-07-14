@@ -20,6 +20,8 @@ import urllib.request
 import urllib.error
 from pathlib import Path
 
+from validate_data import validate_dataset, validate_vintage_archive
+
 
 DATA_PATH = Path(__file__).with_name("property_data.json")
 VINTAGES_PATH = Path(__file__).with_name("data_vintages.json")
@@ -755,7 +757,7 @@ def refresh(data):
     return data
 
 
-def write_vintage(data):
+def prepare_vintage(data):
     captured_at = dt.datetime.now(dt.timezone.utc).replace(microsecond=0).isoformat()
     refresh_id = captured_at.replace(":", "").replace("+00:00", "Z")
     archive = {"schema_version": 1, "refreshes": []}
@@ -778,10 +780,10 @@ def write_vintage(data):
     }
     archive.setdefault("refreshes", []).append(snapshot)
     archive["latest_refresh_id"] = refresh_id
-    VINTAGES_PATH.write_text(json.dumps(archive, indent=2) + "\n")
     data["meta"]["last_refreshed_at"] = captured_at
     data["meta"]["latest_refresh_id"] = refresh_id
     data["meta"]["vintage_file"] = VINTAGES_PATH.name
+    return archive
 
 
 def main():
@@ -791,6 +793,13 @@ def main():
 
     data = json.loads(DATA_PATH.read_text())
     refreshed = refresh(data)
+
+    if args.dry_run:
+        validate_dataset(refreshed, require_refresh_metadata=False)
+    else:
+        archive = prepare_vintage(refreshed)
+        validate_dataset(refreshed)
+        validate_vintage_archive(archive, refreshed)
 
     summary = {
         key: refreshed["series"][key]["data"]["National"][-1]
@@ -810,7 +819,7 @@ def main():
     print(json.dumps(summary, indent=2))
 
     if not args.dry_run:
-        write_vintage(refreshed)
+        VINTAGES_PATH.write_text(json.dumps(archive, indent=2) + "\n")
         DATA_PATH.write_text(json.dumps(refreshed, indent=2) + "\n")
 
 
