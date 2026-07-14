@@ -57,17 +57,41 @@ MONTHS = {
 }
 
 
-def fetch(url):
-    req = urllib.request.Request(url, headers={"User-Agent": "property-macro-tracker/0.1"})
-    try:
-        with urllib.request.urlopen(req, timeout=30) as response:
-            return response.read().decode("utf-8", errors="replace")
-    except urllib.error.URLError as exc:
-        if "CERTIFICATE_VERIFY_FAILED" not in str(exc):
-            raise
-        context = ssl._create_unverified_context()
-        with urllib.request.urlopen(req, timeout=30, context=context) as response:
-            return response.read().decode("utf-8", errors="replace")
+def fetch(url, attempts=3, timeout=60):
+    req = urllib.request.Request(
+        url,
+        headers={
+            "User-Agent": (
+                "Mozilla/5.0 (compatible; PropertyMacroTracker/1.0; "
+                "+https://github.com/haoyileslie/property-macro-tracker)"
+            ),
+            "Accept": "text/csv,text/html,application/json,*/*;q=0.8",
+        },
+    )
+
+    def fetch_once():
+        try:
+            with urllib.request.urlopen(req, timeout=timeout) as response:
+                return response.read().decode("utf-8", errors="replace")
+        except urllib.error.URLError as exc:
+            if "CERTIFICATE_VERIFY_FAILED" not in str(exc):
+                raise
+            context = ssl._create_unverified_context()
+            with urllib.request.urlopen(req, timeout=timeout, context=context) as response:
+                return response.read().decode("utf-8", errors="replace")
+
+    last_error = None
+    for attempt in range(1, attempts + 1):
+        try:
+            print(f"fetching {url} (attempt {attempt}/{attempts})", file=sys.stderr)
+            return fetch_once()
+        except (OSError, TimeoutError, urllib.error.URLError) as exc:
+            last_error = exc
+            if attempt < attempts:
+                delay = 2 ** (attempt - 1)
+                print(f"fetch retry in {delay}s: {url}: {exc}", file=sys.stderr)
+                time.sleep(delay)
+    raise RuntimeError(f"fetch failed after {attempts} attempts: {url}: {last_error}") from last_error
 
 
 def yahoo_monthly_close(symbol):

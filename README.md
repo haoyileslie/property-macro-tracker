@@ -49,12 +49,23 @@ Serve it over HTTP(S), not by double-clicking the file locally —
 
 ## Updating it monthly (or ad hoc)
 
-1. Come back to this chat (or open a new one and mention the tracker) and say something like "update the property tracker."
-2. Run the ingestion script. It refreshes official and market feeds,
-   appends a complete timestamped snapshot to `data_vintages.json`, and
-   writes the latest results to `property_data.json`.
-3. Review the freshness page and spot-check any revised observations.
-4. Re-upload the updated JSON files. `index.html` does not change.
+The GitHub Actions workflow in `.github/workflows/refresh-data.yml` runs
+automatically each month at 22:30 UTC on the 14th. That is 08:30 or 09:30
+Melbourne time on the 15th, depending on daylight saving. It refreshes the
+public feeds, validates the result, appends a timestamped snapshot to
+`data_vintages.json`, and commits both JSON files back to `main`. GitHub
+Pages then republishes the latest dashboard data.
+
+For an ad hoc refresh, open the repository's **Actions** tab, select
+**Refresh tracker data**, choose **Run workflow**, and run it from `main`.
+The workflow uses only public endpoints and the built-in GitHub token, so
+it does not require API keys or repository secrets.
+
+After each run, review the workflow's validation summary and spot-check
+the dashboard freshness page. A source, parser, or validation failure stops
+the job before any data is committed.
+
+The same refresh can still be run locally when investigating a source:
 
 For the monitored macro series, run:
 
@@ -70,6 +81,11 @@ lending-indicator releases. It archives the complete refresh in
 history-count and status metadata. Use
 `python3 ingest_macro.py --dry-run` first when you want to check what
 would be ingested without writing the file.
+
+Network requests are retried up to three times with bounded backoff. The
+workflow logs the exact failing URL when a provider times out or rejects a
+request, which keeps source outages distinguishable from parser or data
+quality failures.
 
 The ingestor validates the complete refresh before replacing either JSON
 file. A failed check exits with an error and leaves the published dataset

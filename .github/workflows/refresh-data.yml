@@ -1,0 +1,56 @@
+name: Refresh tracker data
+
+on:
+  schedule:
+    # 08:30 or 09:30 Melbourne time on the 15th, depending on daylight saving.
+    - cron: "30 22 14 * *"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: tracker-data-refresh
+  cancel-in-progress: false
+
+jobs:
+  refresh:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: ${{ github.ref_name }}
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Fetch and validate source data
+        run: python3 ingest_macro.py
+
+      - name: Revalidate published files
+        run: python3 validate_data.py | tee validation-summary.txt
+
+      - name: Record validation summary
+        run: cat validation-summary.txt >> "$GITHUB_STEP_SUMMARY"
+
+      - name: Stage refreshed datasets
+        id: changes
+        shell: bash
+        run: |
+          git add property_data.json data_vintages.json
+          if git diff --cached --quiet; then
+            echo "changed=false" >> "$GITHUB_OUTPUT"
+          else
+            echo "changed=true" >> "$GITHUB_OUTPUT"
+          fi
+
+      - name: Commit and publish refresh
+        if: steps.changes.outputs.changed == 'true'
+        shell: bash
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git commit -m "Refresh tracker data $(date -u +%Y-%m-%d)"
+          git push origin "HEAD:${GITHUB_REF_NAME}"
