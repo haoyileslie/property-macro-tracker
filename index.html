@@ -1,0 +1,1093 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Australian Property &amp; Macro Tracker</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Source+Serif+4:opsz,wght@8..60,400;8..60,600;8..60,700&family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<script src="vendor/chart.umd.min.js"></script>
+<style>
+  :root{
+    --cream:#F7F5EF;
+    --navy:#1F3A6E;
+    --navy-deep:#142748;
+    --ink:#1B1F26;
+    --slate:#5C6773;
+    --gold:#C08A3E;
+    --line:#DEDACD;
+    --card:#FFFFFF;
+  }
+  *{box-sizing:border-box;}
+  body{
+    margin:0;
+    background:var(--cream);
+    color:var(--ink);
+    font-family:'IBM Plex Sans', sans-serif;
+    -webkit-font-smoothing:antialiased;
+  }
+  .wrap{max-width:1100px;margin:0 auto;padding:32px 24px 80px;}
+  .page-nav{
+    display:flex;
+    gap:18px;
+    margin:0 0 24px;
+    padding:0 0 12px;
+    border-bottom:1px solid var(--line);
+  }
+  .page-nav a{
+    color:var(--slate);
+    font-size:0.78rem;
+    font-weight:600;
+    text-decoration:none;
+  }
+  .page-nav a:hover,
+  .page-nav a[aria-current="page"]{color:var(--navy);text-decoration:underline;text-underline-offset:5px;}
+
+  header.masthead{
+    border-bottom:2px solid var(--navy);
+    padding-bottom:18px;
+    margin-bottom:6px;
+    display:flex;
+    justify-content:space-between;
+    align-items:flex-end;
+    flex-wrap:wrap;
+    gap:12px;
+  }
+  header.masthead h1{
+    font-family:'Source Serif 4', serif;
+    font-weight:700;
+    font-size:clamp(1.6rem, 3vw, 2.3rem);
+    margin:0;
+    color:var(--navy-deep);
+    letter-spacing:-0.01em;
+  }
+  header.masthead .meta{
+    font-family:'IBM Plex Mono', monospace;
+    font-size:0.78rem;
+    color:var(--slate);
+    text-align:right;
+  }
+  .deck{
+    font-family:'Source Serif 4', serif;
+    font-style:italic;
+    font-size:1.05rem;
+    color:var(--slate);
+    border-bottom:1px solid var(--line);
+    padding:14px 0 22px;
+    margin-bottom:28px;
+  }
+
+  .stat-strip{
+    display:grid;
+    grid-template-columns:repeat(auto-fit, minmax(150px,1fr));
+    gap:1px;
+    background:var(--line);
+    border:1px solid var(--line);
+    margin-bottom:36px;
+  }
+  .stat{
+    background:var(--card);
+    padding:16px 18px;
+  }
+  .stat .label{
+    font-size:0.7rem;
+    text-transform:uppercase;
+    letter-spacing:0.06em;
+    color:var(--slate);
+    margin-bottom:6px;
+  }
+  .stat .value{
+    font-family:'IBM Plex Mono', monospace;
+    font-size:1.5rem;
+    font-weight:500;
+    color:var(--navy-deep);
+  }
+  .stat .asof{
+    font-size:0.7rem;
+    color:var(--slate);
+    margin-top:4px;
+  }
+
+  .region-tabs{
+    display:flex;
+    gap:6px;
+    margin-bottom:22px;
+    flex-wrap:wrap;
+  }
+  .region-tabs button{
+    font-family:'IBM Plex Sans', sans-serif;
+    font-size:0.82rem;
+    font-weight:500;
+    padding:7px 16px;
+    border:1px solid var(--navy);
+    background:transparent;
+    color:var(--navy);
+    cursor:pointer;
+    border-radius:2px;
+    transition:background 0.15s, color 0.15s;
+  }
+  .region-tabs button.active,
+  .region-tabs button:hover{
+    background:var(--navy);
+    color:#fff;
+  }
+
+  .chart-grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fit, minmax(420px,1fr));
+    gap:22px;
+  }
+  .chart-card{
+    background:var(--card);
+    border:1px solid var(--line);
+    padding:18px 20px 8px;
+  }
+  .chart-card h3{
+    font-family:'Source Serif 4', serif;
+    font-size:1.05rem;
+    margin:0 0 2px;
+    color:var(--navy-deep);
+  }
+  .chart-card .src{
+    font-size:0.72rem;
+    color:var(--slate);
+    margin-bottom:10px;
+  }
+  .chart-card canvas{max-height:220px;}
+  .time-slicer{display:grid;grid-template-columns:auto minmax(120px,1fr) auto;gap:8px;align-items:center;margin:8px 0 10px;}
+  .time-slicer label{color:var(--slate);font:0.66rem 'IBM Plex Mono',monospace;white-space:nowrap;}
+  .time-slicer input[type="range"]{width:100%;accent-color:var(--navy);}
+  .time-slicer .range-start{grid-column:2;}
+  .time-slicer .range-end{grid-column:2;}
+  .time-slicer .start-label{grid-column:1;grid-row:1;}
+  .time-slicer .end-label{grid-column:3;grid-row:2;}
+  .time-slicer .range-start{grid-row:1;}
+  .time-slicer .range-end{grid-row:2;}
+  .empty-note{
+    font-size:0.82rem;
+    color:var(--slate);
+    font-style:italic;
+    padding:24px 0;
+  }
+
+  .panel-section{
+    margin-top:42px;
+  }
+  .series-workbench{
+    display:grid;
+    grid-template-columns:minmax(230px, 0.32fr) minmax(0, 1fr);
+    gap:1px;
+    background:var(--line);
+    border:1px solid var(--line);
+    height:760px;
+    align-items:stretch;
+  }
+  .series-list,
+  .series-detail{
+    background:var(--card);
+  }
+  .series-list{
+    display:grid;
+    align-content:start;
+    min-height:0;
+    overflow-y:auto;
+    scrollbar-gutter:stable;
+  }
+  .series-list button{
+    width:100%;
+    border:0;
+    border-bottom:1px solid var(--line);
+    background:transparent;
+    color:var(--ink);
+    text-align:left;
+    padding:13px 14px;
+    cursor:pointer;
+    font-family:'IBM Plex Sans', sans-serif;
+  }
+  .series-list button:hover,
+  .series-list button.active{
+    background:#F0EEE6;
+  }
+  .series-list .series-name{
+    display:block;
+    color:var(--navy-deep);
+    font-size:0.82rem;
+    font-weight:600;
+    line-height:1.25;
+  }
+  .series-list .series-count{
+    display:block;
+    margin-top:4px;
+    color:var(--slate);
+    font-family:'IBM Plex Mono', monospace;
+    font-size:0.67rem;
+  }
+  .series-detail{
+    min-width:0;
+    padding:18px 20px 20px;
+    min-height:0;
+    overflow-y:auto;
+  }
+  .series-toolbar{
+    display:flex;
+    justify-content:space-between;
+    align-items:flex-start;
+    gap:16px;
+    margin-bottom:14px;
+  }
+  .series-toolbar h3{
+    margin:0 0 4px;
+    font-family:'Source Serif 4', serif;
+    color:var(--navy-deep);
+    font-size:1.15rem;
+  }
+  .series-toolbar p{
+    margin:0;
+    color:var(--slate);
+    font-size:0.76rem;
+    line-height:1.45;
+  }
+  .series-toolbar p a{color:var(--navy);font-weight:600;text-underline-offset:3px;}
+  .series-toolbar button{
+    flex:0 0 auto;
+    border:1px solid var(--navy);
+    background:var(--navy);
+    color:#fff;
+    padding:8px 11px;
+    border-radius:2px;
+    cursor:pointer;
+    font-family:'IBM Plex Sans', sans-serif;
+    font-size:0.76rem;
+    font-weight:500;
+  }
+  .series-actions{display:flex;gap:8px;align-items:center;flex-wrap:wrap;}
+  .series-actions a{
+    display:inline-block;
+    border:1px solid var(--navy);
+    color:var(--navy);
+    padding:8px 11px;
+    border-radius:2px;
+    text-decoration:none;
+    font-size:0.76rem;
+    font-weight:600;
+  }
+  .series-meta{
+    display:grid;
+    grid-template-columns:repeat(auto-fit, minmax(130px,1fr));
+    gap:1px;
+    background:var(--line);
+    border:1px solid var(--line);
+    margin:12px 0 16px;
+  }
+  .series-meta div{
+    background:#FBFAF6;
+    padding:9px 10px;
+  }
+  .series-meta span{
+    display:block;
+    color:var(--slate);
+    font-size:0.65rem;
+    text-transform:uppercase;
+    letter-spacing:0.06em;
+    margin-bottom:3px;
+  }
+  .series-meta strong{
+    color:var(--navy-deep);
+    font-family:'IBM Plex Mono', monospace;
+    font-size:0.78rem;
+    font-weight:500;
+  }
+  .large-chart{min-height:340px;}
+  .large-chart canvas{
+    max-height:300px;
+  }
+  .indicator-guide{
+    display:grid;
+    grid-template-columns:repeat(3, minmax(0,1fr));
+    gap:1px;
+    margin:0 0 18px;
+    border:1px solid var(--line);
+    background:var(--line);
+  }
+  .indicator-guide div{background:#FBFAF6;padding:12px 13px;}
+  .indicator-guide h4{margin:0 0 5px;color:var(--navy-deep);font-size:0.72rem;text-transform:uppercase;letter-spacing:0.05em;}
+  .indicator-guide p{margin:0;color:var(--slate);font-size:0.76rem;line-height:1.5;}
+  .data-table-wrap{
+    max-height:360px;
+    overflow:auto;
+    border:1px solid var(--line);
+    background:#fff;
+  }
+  table.data-table{
+    width:100%;
+    border-collapse:collapse;
+    font-size:0.78rem;
+  }
+  .data-table th,
+  .data-table td{
+    padding:8px 10px;
+    border-bottom:1px solid #ECE8DD;
+    text-align:right;
+    white-space:nowrap;
+  }
+  .data-table th:first-child,
+  .data-table td:first-child{
+    text-align:left;
+  }
+  .data-table th{
+    position:sticky;
+    top:0;
+    z-index:1;
+    background:#F4F1E8;
+    color:var(--navy-deep);
+    font-size:0.67rem;
+    text-transform:uppercase;
+    letter-spacing:0.06em;
+  }
+  .health-grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fit, minmax(220px,1fr));
+    gap:1px;
+    background:var(--line);
+    border:1px solid var(--line);
+  }
+  .health-card{
+    background:var(--card);
+    padding:14px 16px;
+  }
+  .health-card h3{
+    margin:0 0 6px;
+    font-size:0.86rem;
+    color:var(--navy-deep);
+  }
+  .status-pill{
+    display:inline-block;
+    margin-bottom:8px;
+    padding:3px 7px;
+    border-radius:999px;
+    font-family:'IBM Plex Mono', monospace;
+    font-size:0.66rem;
+    text-transform:uppercase;
+    background:#E9EDF5;
+    color:var(--navy-deep);
+  }
+  .status-pill.fresh{background:#E7F1EA;color:#245A37;}
+  .status-pill.watch{background:#FFF3D7;color:#7A5316;}
+  .status-pill.stale,
+  .status-pill.discontinued{background:#F5E4DF;color:#893F2D;}
+  .health-card p{
+    margin:0;
+    color:var(--slate);
+    font-size:0.74rem;
+    line-height:1.4;
+  }
+
+  .section-head{
+    display:flex;
+    justify-content:space-between;
+    align-items:flex-end;
+    gap:18px;
+    border-top:2px solid var(--navy);
+    padding-top:16px;
+    margin-bottom:16px;
+  }
+  .section-head h2{
+    font-family:'Source Serif 4', serif;
+    font-size:1.25rem;
+    line-height:1.2;
+    margin:0;
+    color:var(--navy-deep);
+  }
+  .section-head p{
+    max-width:560px;
+    margin:0;
+    color:var(--slate);
+    font-size:0.82rem;
+    line-height:1.45;
+  }
+  .source-grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fit, minmax(260px,1fr));
+    gap:1px;
+    background:var(--line);
+    border:1px solid var(--line);
+  }
+  .source-card{
+    background:var(--card);
+    padding:15px 16px 14px;
+  }
+  .source-card h3{
+    margin:0 0 6px;
+    font-family:'Source Serif 4', serif;
+    font-size:1rem;
+    color:var(--navy-deep);
+  }
+  .source-card .watch,
+  .source-card .cadence{
+    margin:0 0 8px;
+    color:var(--slate);
+    font-size:0.76rem;
+    line-height:1.4;
+  }
+  .source-card ul{
+    list-style:none;
+    padding:0;
+    margin:10px 0 0;
+    display:grid;
+    gap:6px;
+  }
+  .source-card a{
+    color:var(--navy);
+    font-size:0.78rem;
+    text-decoration-thickness:1px;
+    text-underline-offset:3px;
+  }
+  .source-card .scope{
+    display:inline-block;
+    margin-top:10px;
+    font-family:'IBM Plex Mono', monospace;
+    font-size:0.68rem;
+    color:var(--navy-deep);
+  }
+
+  footer{
+    margin-top:48px;
+    padding-top:16px;
+    border-top:1px solid var(--line);
+    font-size:0.75rem;
+    color:var(--slate);
+    display:flex;
+    justify-content:space-between;
+    flex-wrap:wrap;
+    gap:8px;
+  }
+
+  @media (max-width:600px){
+    header.masthead{flex-direction:column;align-items:flex-start;}
+    header.masthead .meta{text-align:left;}
+    .chart-grid{grid-template-columns:1fr;}
+    .series-workbench{grid-template-columns:1fr;height:auto;}
+    .series-list{max-height:320px;}
+    .series-detail{overflow:visible;}
+    .series-toolbar{display:block;}
+    .series-toolbar button{margin-top:12px;}
+    .indicator-guide{grid-template-columns:1fr;}
+    .section-head{display:block;}
+    .section-head p{margin-top:8px;}
+  }
+</style>
+</head>
+<body>
+<div class="wrap">
+
+  <nav class="page-nav" aria-label="Tracker pages">
+    <a href="index.html" aria-current="page">Dashboard</a>
+    <a href="data.html">Data tables</a>
+    <a href="freshness.html">Data freshness</a>
+  </nav>
+
+  <header class="masthead">
+    <h1>Australian Property &amp; Macro Tracker</h1>
+    <div class="meta" id="lastUpdated">Loading…</div>
+  </header>
+  <div class="deck">A working desk note on housing, lending, and macro conditions across Sydney, Melbourne, Brisbane, and Perth — updated monthly, checked ad hoc.</div>
+
+  <div class="stat-strip" id="statStrip"></div>
+
+  <div class="region-tabs" id="regionTabs"></div>
+
+  <div class="chart-grid" id="chartGrid"></div>
+
+  <section class="panel-section" aria-labelledby="seriesTitle">
+    <div class="section-head">
+      <h2 id="seriesTitle">Macro Indicator Time Series</h2>
+      <p>Choose an indicator to inspect its national history, definition and housing-market relevance. Hover or tap any point for its date and value; the full observation table remains on its own page.</p>
+    </div>
+    <div class="series-workbench">
+      <div class="series-list" id="seriesList"></div>
+      <div class="series-detail" id="seriesDetail"></div>
+    </div>
+  </section>
+
+  <section class="panel-section" aria-labelledby="sourceMapTitle">
+    <div class="section-head">
+      <h2 id="sourceMapTitle">Source &amp; Policy Map</h2>
+      <p>Maintain indicators, track policy shifts, and turn ABS, RBA, government, and market releases into repeatable monthly commentary.</p>
+    </div>
+    <div class="source-grid" id="sourceGrid"></div>
+  </section>
+
+  <footer>
+    <span>Sources: PropTrack, Domain, ABS, RBA, APRA and SQM Research.</span>
+    <span id="footNote">Personal research tool — not investment advice.</span>
+  </footer>
+</div>
+
+<script>
+// ---- Embedded fallback data (used only if property_data.json can't be fetched, e.g. in preview) ----
+const SAMPLE_DATA = {
+  "meta": {
+    "last_updated": "2026-07-14",
+    "regions": ["National","Sydney","Melbourne","Brisbane","Perth"],
+    "notes": "Seed dataset.",
+    "source_registry": [
+      {
+        "category": "Price",
+        "watch": "Home value / home price indexes, median values, city momentum",
+        "primary_sources": [
+          {"name":"PropTrack Home Price Index","url":"https://www.proptrack.com.au/insights-hub/proptrack-home-price-index/"},
+          {"name":"Domain Research","url":"https://www.domain.com.au/research/"}
+        ],
+        "update_cadence": "Monthly or quarterly",
+        "scope": "National, Sydney, Melbourne, Brisbane, Perth"
+      },
+      {
+        "category": "Supply Pipeline",
+        "watch": "Approvals, completions, commencements, dwelling stock",
+        "primary_sources": [
+          {"name":"ABS Building Approvals","url":"https://www.abs.gov.au/statistics/industry/building-and-construction/building-approvals-australia/latest-release"},
+          {"name":"ABS Building Activity","url":"https://www.abs.gov.au/statistics/industry/building-and-construction/building-activity-australia/latest-release"},
+          {"name":"National Housing Supply and Affordability Council","url":"https://nhsac.gov.au/"}
+        ],
+        "update_cadence": "Monthly, quarterly, annual",
+        "scope": "National and state/capital-city proxies"
+      },
+      {
+        "category": "Macro & Policy",
+        "watch": "Cash rate, CPI, labour market, prudential settings, housing schemes",
+        "primary_sources": [
+          {"name":"RBA Cash Rate Target","url":"https://www.rba.gov.au/statistics/cash-rate/"},
+          {"name":"ABS Labour Force","url":"https://www.abs.gov.au/statistics/labour/employment-and-unemployment/labour-force-australia/latest-release"},
+          {"name":"APRA releases","url":"https://www.apra.gov.au/news-and-publications"},
+          {"name":"Housing Australia buyer support","url":"https://www.housingaustralia.gov.au/support-buy-home"}
+        ],
+        "update_cadence": "Monthly and ad hoc",
+        "scope": "National plus NSW, VIC, QLD, WA"
+      }
+    ]
+  },
+  "series": {
+    "home_value_index_mom": {
+      "label": "Home value growth, month-on-month", "unit": "%",
+      "source": "PropTrack Home Price Index", "frequency": "monthly",
+      "data": {
+        "National": [{"date":"2026-04","value":0.5}],
+        "Sydney": [{"date":"2026-04","value":-0.5}],
+        "Melbourne": [{"date":"2026-04","value":-0.3}],
+        "Brisbane": [{"date":"2026-04","value":0.2}],
+        "Perth": [{"date":"2026-04","value":0.2}]
+      }
+    },
+    "building_approvals_total_dwellings": {
+      "label": "Total dwellings approved (seasonally adjusted)", "unit": "count",
+      "source": "ABS Building Approvals, Australia", "frequency": "monthly",
+      "data": { "National": [{"date":"2026-05","value":17019}], "Sydney": [], "Melbourne": [], "Brisbane": [], "Perth": [] }
+    },
+    "cash_rate": {
+      "label": "RBA cash rate target", "unit": "%",
+      "source": "Reserve Bank of Australia", "frequency": "as-changed",
+      "data": { "National": [{"date":"2026-07","value":4.35}] }
+    },
+    "unemployment_rate": {
+      "label": "Unemployment rate, seasonally adjusted", "unit": "%",
+      "source": "ABS Labour Force, Australia", "frequency": "monthly",
+      "data": { "National": [{"date":"2026-05","value":4.4}] }
+    },
+    "cpi_trimmed_mean_yoy": {
+      "label": "Trimmed mean inflation, year-on-year", "unit": "%",
+      "source": "ABS / RBA", "frequency": "monthly",
+      "data": { "National": [{"date":"2026-05","value":3.6}] }
+    },
+    "lending_new_loan_commitments_dwellings_qoq": {
+      "label": "New loan commitments for dwellings, quarter-on-quarter", "unit": "%",
+      "source": "ABS Lending Indicators", "frequency": "quarterly",
+      "data": { "National": [{"date":"2026-Q1","value":-6.2}] }
+    },
+    "vacancy_rate": {
+      "label": "Rental vacancy rate", "unit": "%",
+      "source": "SQM Research", "frequency": "monthly",
+      "data": { "National": [{"date":"2026-04","value":1.0}], "Sydney": [], "Melbourne": [], "Brisbane": [], "Perth": [] }
+    }
+  }
+};
+
+const NAVY = '#1F3A6E';
+const GOLD = '#C08A3E';
+const SLATE = '#5C6773';
+
+let currentRegion = 'National';
+let selectedSeriesKey = 'cash_rate';
+let DATA = null;
+
+async function loadData(){
+  try{
+    const res = await fetch('./property_data.json', {cache:'no-store'});
+    if(!res.ok) throw new Error('no file');
+    DATA = await res.json();
+  }catch(e){
+    DATA = SAMPLE_DATA;
+  }
+  const requestedSeries = new URLSearchParams(window.location.search).get('series');
+  if(requestedSeries && DATA.series[requestedSeries]) selectedSeriesKey = requestedSeries;
+  render();
+}
+
+function latest(arr){
+  if(!arr || arr.length===0) return null;
+  return arr[arr.length-1];
+}
+
+function formatValue(point, series){
+  if(!point) return '—';
+  const value = Number(point.value).toLocaleString();
+  if(series.unit === 'count') return value;
+  if(series.unit === '%') return `${value}%`;
+  if(series.unit === 'index points') return `${value} points`;
+  return series.unit ? `${value}${series.unit.startsWith(' ') ? '' : ' '}${series.unit}` : value;
+}
+
+function axisUnit(series){
+  if(series.unit === 'count') return 'Count';
+  if(series.unit === '%') return 'Percent';
+  if(series.unit === 'index points') return 'Index points';
+  return (series.unit || 'Value').trim();
+}
+
+function monthOrdinal(date){
+  const year = Number(String(date).slice(0,4));
+  const quarter = String(date).match(/Q([1-4])/);
+  const month = quarter ? Number(quarter[1]) * 3 : Number(String(date).slice(5,7) || 1);
+  return year * 12 + month;
+}
+
+function defaultRangeStart(points){
+  if(points.length < 2) return 0;
+  const cutoff = monthOrdinal(points[points.length - 1].date) - 120;
+  const found = points.findIndex(point=>monthOrdinal(point.date) >= cutoff);
+  return found < 0 ? 0 : found;
+}
+
+function addTimeSlicer(container, points, onChange){
+  const controls = document.createElement('div');
+  controls.className = 'time-slicer';
+  const start = defaultRangeStart(points);
+  controls.innerHTML = `
+    <label class="start-label">From <span>${points[start].date}</span></label>
+    <input class="range-start" type="range" min="0" max="${points.length - 1}" value="${start}" aria-label="Chart start date">
+    <input class="range-end" type="range" min="0" max="${points.length - 1}" value="${points.length - 1}" aria-label="Chart end date">
+    <label class="end-label">To <span>${points[points.length - 1].date}</span></label>
+  `;
+  container.appendChild(controls);
+  const startInput = controls.querySelector('.range-start');
+  const endInput = controls.querySelector('.range-end');
+  const renderRange = event=>{
+    if(Number(startInput.value) > Number(endInput.value)){
+      if(event?.target === startInput) endInput.value = startInput.value;
+      else startInput.value = endInput.value;
+    }
+    controls.querySelector('.start-label span').textContent = points[Number(startInput.value)].date;
+    controls.querySelector('.end-label span').textContent = points[Number(endInput.value)].date;
+    onChange(Number(startInput.value), Number(endInput.value));
+  };
+  startInput.addEventListener('input', renderRange);
+  endInput.addEventListener('input', renderRange);
+  return [start, points.length - 1];
+}
+
+function renderStatStrip(){
+  const strip = document.getElementById('statStrip');
+  strip.innerHTML = '';
+  const nationalStats = [
+    ['cash_rate','Cash rate'],
+    ['unemployment_rate','Unemployment'],
+    ['cpi_trimmed_mean_yoy','Trimmed mean CPI'],
+    ['building_approvals_total_dwellings','Building approvals']
+  ];
+  nationalStats.forEach(([key,label])=>{
+    const s = DATA.series[key];
+    if(!s) return;
+    const point = latest(s.data.National);
+    const div = document.createElement('div');
+    div.className = 'stat';
+    div.innerHTML = `
+      <div class="label">${label}</div>
+      <div class="value">${formatValue(point, s)}</div>
+      <div class="asof">${point ? point.date : 'no data'}</div>
+    `;
+    strip.appendChild(div);
+  });
+}
+
+function renderRegionTabs(){
+  const tabs = document.getElementById('regionTabs');
+  tabs.innerHTML = '';
+  DATA.meta.regions.forEach(region=>{
+    const btn = document.createElement('button');
+    btn.textContent = region;
+    if(region===currentRegion) btn.classList.add('active');
+    btn.onclick = ()=>{ currentRegion = region; render(); };
+    tabs.appendChild(btn);
+  });
+}
+
+function renderCharts(){
+  const grid = document.getElementById('chartGrid');
+  grid.innerHTML = '';
+  const regionalSeries = [
+    'building_approvals_total_dwellings_state_proxy'
+  ];
+  const nationalOnlySeries = [];
+
+  const seriesToShow = [...regionalSeries, ...nationalOnlySeries];
+
+  seriesToShow.forEach(key=>{
+    const s = DATA.series[key];
+    if(!s) return;
+    const isNationalOnly = nationalOnlySeries.includes(key);
+    const region = isNationalOnly ? 'National' : currentRegion;
+    const points = (s.data[region] || []);
+
+    const card = document.createElement('div');
+    card.className = 'chart-card';
+    card.innerHTML = `
+      <h3>${s.label}${isNationalOnly ? ' (National)' : ' — ' + region}</h3>
+      <div class="src">${s.source} · ${s.frequency}</div>
+    `;
+
+    if(points.length < 2){
+      const note = document.createElement('div');
+      note.className = 'empty-note';
+      note.textContent = points.length
+        ? 'Only one observation is available. This panel will become a time-series bar chart after historical data is backfilled.'
+        : 'No historical data is logged yet for this region.';
+      card.appendChild(note);
+    } else {
+      grid.appendChild(card);
+      drawChart(card, points, s, 'bar');
+      return;
+    }
+    grid.appendChild(card);
+  });
+}
+
+function drawChart(card, points, series, chartType = 'line'){
+  const label = series.label;
+  if(typeof Chart === 'undefined'){
+    const note = document.createElement('div');
+    note.className = 'empty-note';
+    note.textContent = 'Chart library unavailable. Underlying observations are listed in the data-series table below.';
+    card.appendChild(note);
+    return;
+  }
+  let chart;
+  const [startIndex, endIndex] = addTimeSlicer(card, points, (start, end)=>{
+    if(!chart) return;
+    const visible = points.slice(start, end + 1);
+    chart.data.labels = visible.map(point=>point.date);
+    chart.data.datasets[0].data = visible.map(point=>point.value);
+    chart.update('none');
+  });
+  const visiblePoints = points.slice(startIndex, endIndex + 1);
+  const canvas = document.createElement('canvas');
+  card.appendChild(canvas);
+  try {
+    chart = new Chart(canvas, {
+    type: chartType,
+    data: {
+      labels: visiblePoints.map(p=>p.date),
+      datasets: [{
+        label,
+        data: visiblePoints.map(p=>p.value),
+        borderColor: NAVY,
+        backgroundColor: chartType === 'bar' ? 'rgba(31,58,110,0.72)' : 'rgba(31,58,110,0.08)',
+        borderWidth: chartType === 'bar' ? 0 : 2,
+        borderRadius: chartType === 'bar' ? 2 : 0,
+        barPercentage: 0.86,
+        categoryPercentage: 0.9,
+        pointBackgroundColor: NAVY,
+        pointRadius: visiblePoints.length === 1 ? 5 : 3,
+        pointHoverRadius: 6,
+        pointHitRadius: 12,
+        fill: visiblePoints.length > 1,
+        tension: 0.25
+      }]
+    },
+    options: {
+      responsive:true,
+      interaction:{ mode:'nearest', intersect:false },
+      plugins:{
+        legend:{ display:false },
+        tooltip:{
+          displayColors:false,
+          callbacks:{
+            title:(items)=> items[0]?.label || '',
+            label:(ctx)=> `${label}: ${formatValue({value:ctx.parsed.y}, series)}`
+          }
+        }
+      },
+      scales:{
+        x:{ ticks:{ color: SLATE, font:{family:'IBM Plex Mono', size:10}, maxRotation:0, autoSkip:true, maxTicksLimit:8 }, grid:{ display:false } },
+        y:{ title:{display:true,text:axisUnit(series),color:SLATE,font:{family:'IBM Plex Sans',size:11}}, ticks:{ color: SLATE, font:{family:'IBM Plex Mono', size:10} }, grid:{ color:'#EFEBDF' } }
+      }
+    }
+    });
+  } catch(error) {
+    canvas.remove();
+    const note = document.createElement('div');
+    note.className = 'empty-note';
+    note.textContent = 'Chart rendering failed. The observations remain available in the data table.';
+    card.appendChild(note);
+    console.error('Chart rendering failed', error);
+  }
+}
+
+function drawSeriesCanvas(container, points, series){
+  if(typeof Chart === 'undefined'){
+    const note = document.createElement('div');
+    note.className = 'empty-note';
+    note.textContent = 'Chart library unavailable. The full time series is still available in the table below.';
+    container.appendChild(note);
+    return;
+  }
+  let chart;
+  const [startIndex, endIndex] = addTimeSlicer(container, points, (start, end)=>{
+    if(!chart) return;
+    const visible = points.slice(start, end + 1);
+    chart.data.labels = visible.map(point=>point.date);
+    chart.data.datasets[0].data = visible.map(point=>point.value);
+    chart.data.datasets[0].pointRadius = visible.length > 72 ? 0 : 3;
+    chart.update('none');
+  });
+  const visiblePoints = points.slice(startIndex, endIndex + 1);
+  const canvas = document.createElement('canvas');
+  container.appendChild(canvas);
+  try {
+    chart = new Chart(canvas, {
+    type: 'line',
+    data: {
+      labels: visiblePoints.map(p=>p.date),
+      datasets: [{
+        label: series.label,
+        data: visiblePoints.map(p=>p.value),
+        borderColor: NAVY,
+        backgroundColor: 'rgba(92,103,115,0.16)',
+        borderWidth: 2,
+        pointRadius: visiblePoints.length > 72 ? 0 : 3,
+        pointHoverRadius: 6,
+        pointHitRadius: 12,
+        pointBackgroundColor: NAVY,
+        fill: true,
+        stepped: false,
+        tension: 0.28
+      }]
+    },
+    options: {
+      responsive:true,
+      maintainAspectRatio:false,
+      interaction:{ mode:'nearest', intersect:false },
+      plugins:{
+        legend:{ display:false },
+        tooltip:{
+          callbacks:{
+            title:(items)=> items[0]?.label || '',
+            label:(ctx)=> `${series.label}: ${formatValue({value:ctx.parsed.y}, series)}`,
+            afterLabel:()=> 'Hover or tap another point to compare.'
+          }
+        }
+      },
+      scales:{
+        x:{ ticks:{ color: SLATE, font:{family:'IBM Plex Mono', size:10}, maxRotation:0, autoSkip:true, maxTicksLimit:10 }, grid:{ display:false } },
+        y:{ title:{display:true,text:axisUnit(series),color:SLATE,font:{family:'IBM Plex Sans',size:11}}, ticks:{ color: SLATE, font:{family:'IBM Plex Mono', size:10} }, grid:{ color:'#E7E1D3' } }
+      }
+    }
+    });
+  } catch(error) {
+    canvas.remove();
+    const note = document.createElement('div');
+    note.className = 'empty-note';
+    note.textContent = 'Chart rendering failed. The observations remain available below.';
+    container.appendChild(note);
+    console.error('Series chart rendering failed', error);
+  }
+}
+
+function csvEscape(value){
+  const text = String(value ?? '');
+  return /[",\n]/.test(text) ? `"${text.replace(/"/g, '""')}"` : text;
+}
+
+function downloadSeriesCsv(key, points, series){
+  const rows = [
+    ['series_key','series_label','date','value','unit','source','status'],
+    ...points.map(point=>[
+      key,
+      series.label,
+      point.date,
+      point.value,
+      series.unit || '',
+      series.source || '',
+      series.status || ''
+    ])
+  ];
+  const csv = rows.map(row=>row.map(csvEscape).join(',')).join('\n');
+  const blob = new Blob([csv], {type:'text/csv'});
+  const url = URL.createObjectURL(blob);
+  const link = document.createElement('a');
+  link.href = url;
+  link.download = `${key}.csv`;
+  link.click();
+  URL.revokeObjectURL(url);
+}
+
+function renderSeriesExplorer(){
+  const list = document.getElementById('seriesList');
+  const detail = document.getElementById('seriesDetail');
+  if(!list || !detail) return;
+  const preferred = [
+    'cash_rate',
+    'unemployment_rate',
+    'employed_people',
+    'cpi_headline_yoy',
+    'cpi_trimmed_mean_yoy',
+    'building_approvals_total_dwellings',
+    'building_approvals_total_dwellings_state_proxy',
+    'housing_lending_rate_owner_occupier_variable',
+    'lending_new_loan_commitments_dwellings_number',
+    'lending_new_loan_commitments_dwellings_value',
+    'wage_growth_private_yoy',
+    'wage_growth_public_yoy',
+    'average_weekly_earnings_private',
+    'average_weekly_earnings_public',
+    'us_treasury_3y',
+    'us_treasury_10y',
+    'asx_200',
+    'sp_500',
+    'msci_acwi',
+    'asx_200_real_estate',
+    'asx_200_areit'
+  ];
+  const homepageExcluded = new Set([
+    'home_value_index_mom',
+    'vacancy_rate',
+    'lending_new_loan_commitments_dwellings_qoq'
+  ]);
+  const remaining = Object.keys(DATA.series).filter(key=>!preferred.includes(key) && !homepageExcluded.has(key));
+  const entries = [...preferred, ...remaining]
+    .filter(key=>DATA.series[key] && !homepageExcluded.has(key))
+    .map(key=>[key, DATA.series[key]]);
+  if(!entries.some(([key])=>key===selectedSeriesKey)) selectedSeriesKey = entries[0]?.[0];
+
+  list.innerHTML = '';
+  entries.forEach(([key, series])=>{
+    const points = series.data.National || [];
+    const btn = document.createElement('button');
+    btn.type = 'button';
+    if(key === selectedSeriesKey) btn.classList.add('active');
+    btn.innerHTML = `
+      <span class="series-name">${series.label}</span>
+      <span class="series-count">${points.length} obs · ${series.frequency || 'unknown'}</span>
+    `;
+    btn.onclick = ()=>{ selectedSeriesKey = key; renderSeriesExplorer(); };
+    list.appendChild(btn);
+  });
+
+  const series = DATA.series[selectedSeriesKey];
+  const points = series.data.National || [];
+  const latestPoint = latest(points);
+  detail.innerHTML = `
+    <div class="series-toolbar">
+      <div>
+        <h3>${series.label}</h3>
+        <p>${series.source || 'Source not logged'} · ${series.frequency || 'frequency not logged'} · ${points.length} observations${series.source_url ? ` (<a href="${series.source_url}" target="_blank" rel="noopener">Source</a>)` : ''}</p>
+      </div>
+      <div class="series-actions">
+        <a id="openDataTable" href="data.html?series=${encodeURIComponent(selectedSeriesKey)}">Open data table</a>
+        <button type="button" id="downloadSeries">Download CSV</button>
+      </div>
+    </div>
+    <div class="series-meta">
+      <div><span>History</span><strong>${points.length ? points[0].date : 'no data'} to ${latestPoint ? latestPoint.date : 'no data'}</strong></div>
+      <div><span>Observations</span><strong>${points.length}</strong></div>
+      <div><span>Latest</span><strong>${latestPoint ? latestPoint.date : 'no data'}</strong></div>
+      <div><span>Value</span><strong>${formatValue(latestPoint, series)}</strong></div>
+      <div><span>Status</span><strong>${series.status || 'unrated'}</strong></div>
+      <div><span>Checked</span><strong>${series.last_source_check || 'not logged'}</strong></div>
+    </div>
+    <div class="indicator-guide">
+      <div><h4>Definition</h4><p>${series.definition || 'Definition not yet documented.'}</p></div>
+      <div><h4>How to use it</h4><p>${series.usage || 'Usage guidance not yet documented.'}</p></div>
+      <div><h4>Housing-market link</h4><p>${series.housing_market_link || 'Housing-market relationship not yet documented.'}</p></div>
+    </div>
+  `;
+  const chartBox = document.createElement('div');
+  chartBox.className = 'large-chart';
+  detail.appendChild(chartBox);
+  if(points.length) drawSeriesCanvas(chartBox, points, series);
+
+  const download = document.getElementById('downloadSeries');
+  if(download) download.onclick = ()=>downloadSeriesCsv(selectedSeriesKey, points, series);
+}
+
+function renderDataHealth(){
+  const grid = document.getElementById('healthGrid');
+  if(!grid) return;
+  grid.innerHTML = '';
+  Object.entries(DATA.series).forEach(([key, s])=>{
+    if(!s.status && !s.last_source_check) return;
+    const point = latest(s.data.National || []);
+    const status = s.status || 'watch';
+    const card = document.createElement('article');
+    card.className = 'health-card';
+    card.innerHTML = `
+      <h3>${s.label}</h3>
+      <span class="status-pill ${status}">${status}</span>
+      <p><strong>Latest:</strong> ${point ? point.date + ' · ' + formatValue(point, s) : 'no data'}</p>
+      <p><strong>Checked:</strong> ${s.last_source_check || 'not logged'}</p>
+      <p><strong>Access:</strong> ${s.access_tier || 'unspecified'} · <strong>Update:</strong> ${s.update_method || 'unspecified'}</p>
+      <p>${s.status_note || 'No status note logged.'}</p>
+    `;
+    grid.appendChild(card);
+  });
+}
+
+function renderSourceRegistry(){
+  const grid = document.getElementById('sourceGrid');
+  if(!grid) return;
+  const order = ['Policy And Regulation','Macro Conditions','Income And Affordability','Rental Market','Market Activity','Price','Supply Pipeline','Credit And Lending','Listed Housing Exposure'];
+  const registry = [...(DATA.meta.source_registry || [])].sort((a,b)=>{
+    const aRank = order.indexOf(a.category);
+    const bRank = order.indexOf(b.category);
+    return (aRank < 0 ? order.length : aRank) - (bRank < 0 ? order.length : bRank);
+  });
+  grid.innerHTML = '';
+  registry.forEach(item=>{
+    const card = document.createElement('article');
+    card.className = 'source-card';
+    const links = (item.primary_sources || []).map(source=>`
+      <li><a href="${source.url}" target="_blank" rel="noopener">${source.name}</a></li>
+    `).join('');
+    card.innerHTML = `
+      <h3>${item.category}</h3>
+      <p class="watch">${item.watch}</p>
+      <p class="cadence"><strong>Refresh:</strong> ${item.update_cadence}</p>
+      <ul>${links}</ul>
+      <span class="scope">${item.scope}</span>
+    `;
+    grid.appendChild(card);
+  });
+}
+
+function render(){
+  const refreshed = DATA.meta.last_refreshed_at ? new Date(DATA.meta.last_refreshed_at).toLocaleString() : DATA.meta.last_updated;
+  document.getElementById('lastUpdated').textContent = 'Latest refresh: ' + refreshed;
+  renderStatStrip();
+  renderRegionTabs();
+  renderSeriesExplorer();
+  renderCharts();
+  renderSourceRegistry();
+}
+
+loadData();
+</script>
+</body>
+</html>
