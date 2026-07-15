@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Market Listings | Australian Property &amp; Macro Tracker</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Source+Serif+4:wght@600;700&family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+  :root{--cream:#F7F5EF;--navy:#1F3A6E;--navy-deep:#142748;--ink:#1B1F26;--slate:#5C6773;--gold:#C08A3E;--line:#DEDACD;--card:#fff;}
+  *{box-sizing:border-box}body{margin:0;background:var(--cream);color:var(--ink);font-family:'IBM Plex Sans',sans-serif}.wrap{max-width:1120px;margin:0 auto;padding:32px 24px 80px}
+  .page-nav{display:flex;gap:18px;margin:0 0 24px;padding:0 0 12px;border-bottom:1px solid var(--line);overflow-x:auto}.page-nav a{color:var(--slate);font-size:.78rem;font-weight:600;text-decoration:none;white-space:nowrap}.page-nav a:hover,.page-nav a[aria-current="page"]{color:var(--navy);text-decoration:underline;text-underline-offset:5px}
+  header{display:flex;justify-content:space-between;align-items:flex-end;gap:18px;border-bottom:2px solid var(--navy);padding-bottom:18px}h1{margin:0;font-family:'Source Serif 4',serif;font-size:clamp(1.6rem,3vw,2.2rem);color:var(--navy-deep);letter-spacing:0}.meta{font:0.75rem 'IBM Plex Mono',monospace;color:var(--slate);text-align:right}.deck{margin:14px 0 24px;color:var(--slate);font-family:'Source Serif 4',serif;font-size:1rem;line-height:1.5}
+  .summary{display:grid;grid-template-columns:repeat(auto-fit,minmax(140px,1fr));gap:1px;margin-bottom:20px;border:1px solid var(--line);background:var(--line)}.summary div{padding:13px 15px;background:#fff}.summary span{display:block;color:var(--slate);font-size:.66rem;text-transform:uppercase;letter-spacing:.05em}.summary strong{display:block;margin-top:4px;color:var(--navy-deep);font:500 1.05rem 'IBM Plex Mono',monospace}
+  .toolbar{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:12px;margin:0 0 18px}.toolbar label{display:block;margin-bottom:5px;color:var(--slate);font-size:.66rem;font-weight:600;text-transform:uppercase;letter-spacing:.05em}.toolbar select{width:100%;padding:9px 10px;border:1px solid var(--navy);border-radius:2px;background:#fff;color:var(--navy-deep);font:500 .8rem 'IBM Plex Sans',sans-serif}
+  .coverage{margin:0 0 18px;padding:10px 12px;border-left:3px solid var(--gold);background:#F7F4EB;color:var(--slate);font-size:.78rem;line-height:1.5}.table-wrap{overflow:auto;border:1px solid var(--line);background:#fff}table{width:100%;border-collapse:collapse;font-size:.78rem}th,td{padding:10px 12px;border-bottom:1px solid #ECE8DD;text-align:left;white-space:nowrap}th{position:sticky;top:0;background:#F4F1E8;color:var(--navy-deep);font-size:.65rem;text-transform:uppercase;letter-spacing:.05em}td.price,td.number{text-align:right}.empty{padding:32px 20px;text-align:center;color:var(--slate);white-space:normal}.source-note{color:var(--slate);font-size:.75rem;line-height:1.5}.source-note a{color:var(--navy);text-underline-offset:3px}.error{padding:20px;border:1px solid var(--line);background:#fff;color:#893F2D}
+  @media(max-width:700px){header{display:block}.meta{margin-top:8px;text-align:left}.toolbar{grid-template-columns:1fr}}
+</style>
+</head>
+<body>
+<main class="wrap">
+  <nav class="page-nav" aria-label="Tracker pages">
+    <a href="index.html">Dashboard</a>
+    <a href="data.html">Data tables</a>
+    <a href="freshness.html">Data freshness</a>
+    <a href="listings.html" aria-current="page">Market listings</a>
+  </nav>
+  <header><h1>Active Market Listings</h1><div class="meta" id="capturedAt">Loading...</div></header>
+  <p class="deck">Current listing conditions across representative suburbs in Sydney, Melbourne, Brisbane and Perth, with a deliberately limited attributed sample.</p>
+  <div class="summary" id="summary"></div>
+  <p class="coverage" id="coverage"></p>
+  <div class="toolbar">
+    <div><label for="cityFilter">City</label><select id="cityFilter"></select></div>
+    <div><label for="saleFilter">Sale method</label><select id="saleFilter"></select></div>
+    <div><label for="typeFilter">Property type</label><select id="typeFilter"></select></div>
+  </div>
+  <div class="table-wrap">
+    <table aria-label="Limited active listing sample">
+      <thead><tr><th>Address</th><th>City</th><th>Type</th><th>Sale method</th><th>Guide</th><th>Beds</th><th>Baths</th><th>Parking</th><th>Listed</th><th>First seen</th></tr></thead>
+      <tbody id="rows"></tbody>
+    </table>
+  </div>
+  <p class="source-note">Source: <a href="https://propradar.com.au/developers/docs" target="_blank" rel="noopener">PropRadar API</a>. Aggregate measures use one newest-first page per configured suburb. Only three examples per suburb are displayed publicly. Asking-price fields may be unavailable where an advertiser withholds a guide.</p>
+</main>
+<script>
+let DATA;
+function escapeHtml(value){return String(value??'').replace(/[&<>"]/g,character=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[character]))}
+function money(value){return value==null?'Not disclosed':new Intl.NumberFormat('en-AU',{style:'currency',currency:'AUD',maximumFractionDigits:0}).format(value)}
+function priceGuide(item){if(item.asking_price_low==null&&item.asking_price_high==null)return 'Not disclosed';if(item.asking_price_low===item.asking_price_high||item.asking_price_high==null)return money(item.asking_price_low);if(item.asking_price_low==null)return `Up to ${money(item.asking_price_high)}`;return `${money(item.asking_price_low)}–${money(item.asking_price_high)}`}
+function dateOnly(value){return value?String(value).slice(0,10):'Unknown'}
+function options(id,label,values){document.getElementById(id).innerHTML=`<option value="">All ${label}</option>`+values.map(value=>`<option>${value}</option>`).join('')}
+function render(){
+  const city=document.getElementById('cityFilter').value,sale=document.getElementById('saleFilter').value,type=document.getElementById('typeFilter').value;
+  const filtered=DATA.listings.filter(item=>(!city||item.city===city)&&(!sale||item.sale_type===sale)&&(!type||item.property_type===type));
+  document.getElementById('rows').innerHTML=filtered.map(item=>`<tr><td>${escapeHtml(item.address||'Unknown')}</td><td>${escapeHtml(item.city)}</td><td>${escapeHtml(item.property_type||'Unknown')}</td><td>${escapeHtml(item.sale_type||'Unknown')}</td><td class="price">${priceGuide(item)}</td><td class="number">${item.bedrooms??'–'}</td><td class="number">${item.bathrooms??'–'}</td><td class="number">${item.parking??'–'}</td><td>${dateOnly(item.added_at)}</td><td>${dateOnly(item.first_seen_at)}</td></tr>`).join('')||`<tr><td colspan="10" class="empty">${DATA.meta.status==='awaiting_first_refresh'?'No authenticated snapshot yet. Add the GitHub secret and run the listing refresh workflow.':'No listings match these filters.'}</td></tr>`;
+}
+async function init(){
+  try{const response=await fetch('./market_listings_latest.json',{cache:'no-store'});if(!response.ok)throw new Error('Data file unavailable');DATA=await response.json()}
+  catch(error){document.querySelector('.table-wrap').outerHTML='<div class="error">Could not load market_listings_latest.json.</div>';return}
+  const meta=DATA.meta;document.getElementById('capturedAt').textContent=meta.captured_at?`Captured: ${new Date(meta.captured_at).toLocaleString()}`:'Awaiting first refresh';
+  const auctionCount=DATA.listings.filter(item=>item.sale_type==='Auction').length;const disclosed=DATA.listings.filter(item=>item.asking_price_low!=null||item.asking_price_high!=null).length;
+  document.getElementById('summary').innerHTML=`<div><span>Observations analysed</span><strong>${meta.observations_fetched??0}</strong></div><div><span>Public examples</span><strong>${meta.listing_count}</strong></div><div><span>Suburbs</span><strong>${meta.market_count}</strong></div><div><span>Sample auctions</span><strong>${auctionCount}</strong></div><div><span>Sample price disclosed</span><strong>${meta.listing_count?Math.round(disclosed/meta.listing_count*100):0}%</strong></div><div><span>API calls</span><strong>${meta.calls_used}</strong></div>`;
+  document.getElementById('coverage').textContent=meta.coverage_note||'The first authenticated snapshot has not been captured.';
+  const unique=key=>[...new Set(DATA.listings.map(item=>item[key]).filter(Boolean))].sort();options('cityFilter','cities',unique('city'));options('saleFilter','sale methods',unique('sale_type'));options('typeFilter','property types',unique('property_type'));
+  ['cityFilter','saleFilter','typeFilter'].forEach(id=>document.getElementById(id).addEventListener('change',render));render();
+}
+init();
+</script>
+</body>
+</html>

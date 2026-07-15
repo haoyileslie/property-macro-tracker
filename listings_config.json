@@ -1,0 +1,15 @@
+{
+  "provider": "PropRadar",
+  "page_limit": 20,
+  "public_sample_per_market": 3,
+  "markets": [
+    {"city": "Sydney", "state": "NSW", "suburb": "Parramatta", "postcode": "2150"},
+    {"city": "Sydney", "state": "NSW", "suburb": "Chatswood", "postcode": "2067"},
+    {"city": "Melbourne", "state": "VIC", "suburb": "Richmond", "postcode": "3121"},
+    {"city": "Melbourne", "state": "VIC", "suburb": "Brunswick", "postcode": "3056"},
+    {"city": "Brisbane", "state": "QLD", "suburb": "New Farm", "postcode": "4005"},
+    {"city": "Brisbane", "state": "QLD", "suburb": "Indooroopilly", "postcode": "4068"},
+    {"city": "Perth", "state": "WA", "suburb": "Subiaco", "postcode": "6008"},
+    {"city": "Perth", "state": "WA", "suburb": "Victoria Park", "postcode": "6100"}
+  ]
+}

@@ -6,6 +6,7 @@ framework. Core components:
 - `index.html` — the main charts and source/policy map
 - `data.html` — full underlying observation tables
 - `freshness.html` — source checks, release lags and freshness status
+- `listings.html` — filterable active-listing sample for the four-city market watch
 - `property_data.json` — the latest refreshed dataset consumed by the dashboard.
 - `data_vintages.json` — append-only, timestamped copies of every refresh for revision and historical tracking.
 - `ingest_macro.py` — optional local updater for the monitored macro
@@ -14,6 +15,10 @@ framework. Core components:
   vintage-consistency checks.
 - `derived_indicators.py` — deterministic formulas that turn observed
   series into financing, affordability, supply and relative-market signals.
+- `ingest_listings.py` — quota-conscious PropRadar active-listing snapshotter.
+- `listings_config.json` — the representative suburbs included in each snapshot.
+- `market_listings_latest.json` — the newest listing snapshot consumed by `listings.html`.
+- `market_listings_vintages.json` — append-only listing snapshots for change tracking.
 - `tests/` — regression tests proving that malformed dates, implausible
   values, stale labels and vintage mismatches are rejected.
 - `vendor/chart.umd.min.js` — the locally hosted Chart.js runtime used
@@ -109,6 +114,36 @@ observation counts, and exact agreement between `property_data.json` and
 the latest timestamped vintage. The workflow in
 `.github/workflows/validate.yml` runs these checks on every push and pull
 request, as well as on demand from the Actions tab.
+
+## Active-listings prototype
+
+The listing prototype uses PropRadar's documented active-listings endpoint.
+It requests one newest-first page, capped at 20 records, for each of eight
+representative suburbs. A complete refresh therefore uses eight API calls.
+The ingestor publishes derived market summaries and no more than three current
+examples per suburb. Historical vintages contain aggregate measures only, not
+listing-level records. This supports listing mix, auction share, disclosed-price
+coverage and trend analysis without publishing raw API dumps; it is not a
+complete city inventory.
+
+Create a free key through the PropRadar developer portal, then store it as
+`PROPRADAR_API_KEY`. Never place the key in an HTML or JSON file.
+
+For a local one-off check:
+
+```bash
+export PROPRADAR_API_KEY='your key'
+python3 ingest_listings.py --dry-run
+python3 ingest_listings.py
+```
+
+For GitHub, open **Settings → Secrets and variables → Actions**, create the
+repository secret `PROPRADAR_API_KEY`, then run **Refresh market listings**
+from the Actions tab. The workflow validates the response, appends a
+timestamped aggregate vintage, updates the limited public sample and commits only those two
+data files. It is manual during the prototype phase to prevent accidental
+quota consumption. Add a monthly schedule only after reviewing the first few
+snapshots and confirming the provider's licensing terms for the intended use.
 
 ### Access and download links (public)
 

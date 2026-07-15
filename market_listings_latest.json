@@ -1,0 +1,13 @@
+{
+  "meta": {
+    "provider": "PropRadar",
+    "source_url": "https://propradar.com.au/developers/docs",
+    "captured_at": null,
+    "status": "awaiting_first_refresh",
+    "calls_used": 0,
+    "market_count": 8,
+    "listing_count": 0
+  },
+  "markets": [],
+  "listings": []
+}
