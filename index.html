@@ -778,7 +778,7 @@ function renderCharts(){
     card.className = 'chart-card';
     card.innerHTML = `
       <h3>${s.label}${isNationalOnly ? ' (National)' : ' — ' + region}</h3>
-      <div class="src">${s.source} · ${s.frequency}</div>
+      <div class="src">${s.source} · ${s.frequency} · bars: approvals count · line: month-on-month growth</div>
     `;
 
     if(points.length < 2){
@@ -790,14 +790,31 @@ function renderCharts(){
       card.appendChild(note);
     } else {
       grid.appendChild(card);
-      drawChart(card, points, s, 'bar');
+      drawChart(card, points, s, 'bar', {
+        label: 'Month-on-month growth',
+        points: monthOnMonthGrowth(points),
+        unit: '%'
+      });
       return;
     }
     grid.appendChild(card);
   });
 }
 
-function drawChart(card, points, series, chartType = 'line'){
+function monthOnMonthGrowth(points){
+  return points.map((point, index)=>{
+    if(index === 0) return {date:point.date, value:null};
+    const previous = points[index - 1];
+    const consecutive = monthOrdinal(point.date) - monthOrdinal(previous.date) === 1;
+    if(!consecutive || Number(previous.value) === 0) return {date:point.date, value:null};
+    return {
+      date: point.date,
+      value: Number((((Number(point.value) / Number(previous.value)) - 1) * 100).toFixed(2))
+    };
+  });
+}
+
+function drawChart(card, points, series, chartType = 'line', secondary = null){
   const label = series.label;
   if(typeof Chart === 'undefined'){
     const note = document.createElement('div');
@@ -812,9 +829,14 @@ function drawChart(card, points, series, chartType = 'line'){
     const visible = points.slice(start, end + 1);
     chart.data.labels = visible.map(point=>point.date);
     chart.data.datasets[0].data = visible.map(point=>point.value);
+    if(secondary && chart.data.datasets[1]){
+      chart.data.datasets[1].data = secondary.points.slice(start, end + 1).map(point=>point.value);
+      chart.data.datasets[1].pointRadius = visible.length > 72 ? 0 : 2;
+    }
     chart.update('none');
   });
   const visiblePoints = points.slice(startIndex, endIndex + 1);
+  const visibleSecondary = secondary ? secondary.points.slice(startIndex, endIndex + 1) : [];
   const canvas = document.createElement('canvas');
   card.appendChild(canvas);
   try {
@@ -825,6 +847,8 @@ function drawChart(card, points, series, chartType = 'line'){
       datasets: [{
         label,
         data: visiblePoints.map(p=>p.value),
+        yAxisID: 'y',
+        order: 1,
         borderColor: NAVY,
         backgroundColor: chartType === 'bar' ? 'rgba(31,58,110,0.72)' : 'rgba(31,58,110,0.08)',
         borderWidth: chartType === 'bar' ? 0 : 2,
@@ -837,24 +861,46 @@ function drawChart(card, points, series, chartType = 'line'){
         pointHitRadius: 12,
         fill: visiblePoints.length > 1,
         tension: 0.25
-      }]
+      }, ...(secondary ? [{
+        type: 'line',
+        label: secondary.label,
+        data: visibleSecondary.map(point=>point.value),
+        yAxisID: 'yGrowth',
+        order: 0,
+        borderColor: GOLD,
+        backgroundColor: GOLD,
+        borderWidth: 2,
+        pointRadius: visiblePoints.length > 72 ? 0 : 2,
+        pointHoverRadius: 5,
+        pointHitRadius: 10,
+        pointBackgroundColor: GOLD,
+        fill: false,
+        spanGaps: false,
+        tension: 0.25
+      }] : [])]
     },
     options: {
       responsive:true,
       interaction:{ mode:'nearest', intersect:false },
       plugins:{
-        legend:{ display:false },
+        legend:{
+          display:Boolean(secondary),
+          labels:{color:SLATE,usePointStyle:true,boxWidth:8,font:{family:'IBM Plex Sans',size:11}}
+        },
         tooltip:{
           displayColors:false,
           callbacks:{
             title:(items)=> items[0]?.label || '',
-            label:(ctx)=> `${label}: ${formatValue({value:ctx.parsed.y}, series)}`
+            label:(ctx)=> ctx.datasetIndex === 1
+              ? `${secondary.label}: ${Number(ctx.parsed.y).toLocaleString()}%`
+              : `${label}: ${formatValue({value:ctx.parsed.y}, series)}`
           }
         }
       },
       scales:{
         x:{ ticks:{ color: SLATE, font:{family:'IBM Plex Mono', size:10}, maxRotation:0, autoSkip:true, maxTicksLimit:8 }, grid:{ display:false } },
-        y:{ title:{display:true,text:axisUnit(series),color:SLATE,font:{family:'IBM Plex Sans',size:11}}, ticks:{ color: SLATE, font:{family:'IBM Plex Mono', size:10} }, grid:{ color:'#EFEBDF' } }
+        y:{ position:'left',title:{display:true,text:axisUnit(series),color:SLATE,font:{family:'IBM Plex Sans',size:11}}, ticks:{ color: SLATE, font:{family:'IBM Plex Mono', size:10} }, grid:{ color:'#EFEBDF' } },
+        ...(secondary ? {yGrowth:{position:'right',title:{display:true,text:'Month-on-month growth (%)',color:GOLD,font:{family:'IBM Plex Sans',size:11}},ticks:{color:GOLD,font:{family:'IBM Plex Mono',size:10},callback:value=>`${value}%`},grid:{drawOnChartArea:false}}} : {})
       }
     }
     });
