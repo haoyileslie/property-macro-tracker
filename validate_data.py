@@ -9,6 +9,8 @@ import re
 import sys
 from pathlib import Path
 
+from derived_indicators import DERIVATION_VERSION, build_derived_series
+
 
 ROOT = Path(__file__).parent
 DATA_PATH = ROOT / "property_data.json"
@@ -192,9 +194,33 @@ def validate_dataset(data, *, require_refresh_metadata=True, as_of=None):
         if national and series.get("latest_source_period") != national[-1].get("date"):
             errors.append(f"{prefix}.latest_source_period does not match latest National observation")
 
+    derived_series = data.get("derived_series")
+    if not isinstance(derived_series, dict) or not derived_series:
+        errors.append("derived_series must be a non-empty object")
+        derived_series = {}
+    if meta.get("derived_series_version") != DERIVATION_VERSION:
+        errors.append(f"meta.derived_series_version must be {DERIVATION_VERSION}")
+    if series_map:
+        expected_derived = build_derived_series(data)
+        if set(derived_series) != set(expected_derived):
+            errors.append("derived_series keys do not match the configured derivations")
+        else:
+            for key, expected in expected_derived.items():
+                if derived_series[key] != expected:
+                    errors.append(f"derived_series.{key} does not match its source formula")
+
     if errors:
         raise ValidationError(errors)
-    return {"series": len(series_map), "observations": observation_count}
+    derived_observations = sum(
+        len(series.get("data", {}).get("National", []))
+        for series in derived_series.values()
+    )
+    return {
+        "series": len(series_map),
+        "observations": observation_count,
+        "derived series": len(derived_series),
+        "derived observations": derived_observations,
+    }
 
 
 def validate_vintage_archive(archive, current_data):

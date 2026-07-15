@@ -24,6 +24,7 @@
   .summary{display:grid;grid-template-columns:repeat(auto-fit,minmax(140px,1fr));gap:1px;margin-bottom:18px;border:1px solid var(--line);background:var(--line);}
   .summary div{padding:11px 12px;background:#fff;}.summary span{display:block;color:var(--slate);font-size:.65rem;text-transform:uppercase;letter-spacing:.05em;}.summary strong{display:block;margin-top:4px;color:var(--navy-deep);font:500 .8rem 'IBM Plex Mono',monospace;overflow-wrap:anywhere;}
   .indicator-source{margin:-7px 0 18px;color:var(--slate);font-size:.78rem;}.indicator-source a{color:var(--navy);font-weight:600;text-underline-offset:3px;}
+  .calculation{margin:-8px 0 18px;padding:9px 11px;border-left:3px solid #C08A3E;background:#F7F4EB;color:var(--slate);font-size:.77rem;line-height:1.5;}
   .indicator-guide{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:1px;margin-bottom:18px;border:1px solid var(--line);background:var(--line);}
   .indicator-guide div{padding:12px 13px;background:#FBFAF6;}.indicator-guide h2{margin:0 0 5px;color:var(--navy-deep);font-size:.7rem;text-transform:uppercase;letter-spacing:.05em;}.indicator-guide p{margin:0;color:var(--slate);font-size:.76rem;line-height:1.5;}
   .table-wrap{max-height:620px;overflow:auto;border:1px solid var(--line);background:#fff;}
@@ -51,6 +52,7 @@
     </div>
     <div class="summary" id="summary"></div>
     <p class="indicator-source" id="indicatorSource"></p>
+    <p class="calculation" id="calculation" hidden></p>
     <div class="indicator-guide" id="indicatorGuide"></div>
     <div class="table-wrap"><table><thead><tr><th>Date</th><th>Value</th><th>Unit</th></tr></thead><tbody id="dataRows"></tbody></table></div>
     <p class="source-note" id="sourceNote"></p>
@@ -60,37 +62,45 @@
 <script>
 let DATA;
 let selectedKey;
+let selectedKind='observed';
 const preferred=['cash_rate','unemployment_rate','employed_people','cpi_headline_yoy','cpi_trimmed_mean_yoy','building_approvals_total_dwellings','building_approvals_total_dwellings_state_proxy','housing_lending_rate_owner_occupier_variable','lending_new_loan_commitments_dwellings_number','lending_new_loan_commitments_dwellings_value','wage_growth_private_yoy','wage_growth_public_yoy','average_weekly_earnings_private','average_weekly_earnings_public','us_treasury_3y','us_treasury_10y','asx_200','sp_500','msci_acwi','asx_200_real_estate','asx_200_areit','lending_new_loan_commitments_dwellings_qoq','home_value_index_mom','vacancy_rate'];
 
 function latest(points){return points?.length ? points[points.length-1] : null;}
-function formatValue(point,series){if(!point)return 'No data';const value=Number(point.value).toLocaleString();if(series.unit==='count')return value;if(series.unit==='%')return `${value}%`;if(series.unit==='index points')return `${value} points`;return series.unit?`${value}${series.unit.startsWith(' ')?'':' '}${series.unit}`:value;}
+function formatValue(point,series){if(!point)return 'No data';const value=Number(point.value).toLocaleString();if(series.unit==='count')return value;if(series.unit==='%')return `${value}%`;if(series.unit==='percentage points')return `${value} pp`;if(series.unit==='AUD')return `$${value}`;if(series.unit==='index points')return `${value} points`;return series.unit?`${value}${series.unit.startsWith(' ')?'':' '}${series.unit}`:value;}
+function selectedSeries(){return selectedKind==='derived'?DATA.derived_series[selectedKey]:DATA.series[selectedKey];}
+function sourceHtml(series){const components=series.component_sources||[];if(components.length)return components.map(source=>`<a href="${source.url}" target="_blank" rel="noopener">${source.name}</a>`).join(' + ');return `${series.source||'Source not logged'}${series.source_url?` · <a href="${series.source_url}" target="_blank" rel="noopener">Source</a>`:''}`;}
 function csvEscape(value){const text=String(value??'');return /[",\n]/.test(text)?`"${text.replace(/"/g,'""')}"`:text;}
 function downloadCsv(){
-  const series=DATA.series[selectedKey]; const points=series.data.National||[];
+  const series=selectedSeries(); const points=series.data.National||[];
   const rows=[['series_key','series_label','date','value','unit','source'],...points.map(point=>[selectedKey,series.label,point.date,point.value,series.unit||'',series.source||''])];
   const blob=new Blob([rows.map(row=>row.map(csvEscape).join(',')).join('\n')],{type:'text/csv'});
   const url=URL.createObjectURL(blob); const link=document.createElement('a'); link.href=url; link.download=`${selectedKey}.csv`; link.click(); URL.revokeObjectURL(url);
 }
 function renderTable(){
-  const series=DATA.series[selectedKey]; const points=series.data.National||[]; const point=latest(points);
-  const url=new URL(window.location.href); url.searchParams.set('series',selectedKey); history.replaceState({},'',url);
+  const series=selectedSeries(); const points=series.data.National||[]; const point=latest(points);
+  const url=new URL(window.location.href); url.searchParams.set('series',selectedKey); url.searchParams.set('kind',selectedKind); history.replaceState({},'',url);
   const captured=series.snapshot_captured_at?`<div><span>Snapshot captured</span><strong>${series.snapshot_captured_at}</strong></div>`:'';
   document.getElementById('summary').innerHTML=`<div><span>Observations</span><strong>${points.length}</strong></div><div><span>History starts</span><strong>${points[0]?.date||'No data'}</strong></div><div><span>Frequency</span><strong>${series.frequency||'Unknown'}</strong></div><div><span>Latest period</span><strong>${point?.date||'No data'}</strong></div><div><span>Latest value</span><strong>${formatValue(point,series)}</strong></div>${captured}`;
-  document.getElementById('indicatorSource').innerHTML=`${series.source||'Source not logged'}${series.source_url?` · <a href="${series.source_url}" target="_blank" rel="noopener">Source</a>`:''}`;
+  document.getElementById('indicatorSource').innerHTML=sourceHtml(series);
+  const calculation=document.getElementById('calculation'); calculation.hidden=!series.calculation; calculation.innerHTML=series.calculation?`<strong>Formula:</strong> ${series.calculation}`:'';
   document.getElementById('indicatorGuide').innerHTML=`<div><h2>Definition</h2><p>${series.definition||'Definition not yet documented.'}</p></div><div><h2>How to use it</h2><p>${series.usage||'Usage guidance not yet documented.'}</p></div><div><h2>Housing-market link</h2><p>${series.housing_market_link||'Housing-market relationship not yet documented.'}</p></div>`;
   document.getElementById('dataRows').innerHTML=[...points].reverse().map(item=>`<tr><td>${item.date}</td><td>${Number(item.value).toLocaleString()}</td><td>${series.unit||''}</td></tr>`).join('')||'<tr><td colspan="3">No observations logged.</td></tr>';
-  const source=series.source||'Source not logged'; const sourceUrl=series.source_url;
-  document.getElementById('sourceNote').innerHTML=`<strong>Source:</strong> ${sourceUrl?`<a href="${sourceUrl}" target="_blank" rel="noopener">${source}</a>`:source}.`;
-  document.getElementById('backToChart').href=`index.html?series=${encodeURIComponent(selectedKey)}#seriesTitle`;
+  const sourceLabel=series.component_sources?.length?'Component sources':'Source';
+  document.getElementById('sourceNote').innerHTML=`<strong>${sourceLabel}:</strong> ${sourceHtml(series)}.${series.methodology_note?` <strong>Method:</strong> ${series.methodology_note}`:''}`;
+  document.getElementById('backToChart').href=`index.html?series=${encodeURIComponent(selectedKey)}#${selectedKind==='derived'?'derivedSeriesTitle':'seriesTitle'}`;
 }
 async function init(){
   try{const response=await fetch('./property_data.json',{cache:'no-store'});if(!response.ok)throw new Error('Data file unavailable');DATA=await response.json();}
   catch(error){document.getElementById('content').innerHTML=`<div class="error">Could not load property_data.json. Open this page through the local web server.</div>`;return;}
   document.getElementById('lastUpdated').textContent=`Last updated: ${DATA.meta.last_updated}`;
   const keys=[...preferred,...Object.keys(DATA.series).filter(key=>!preferred.includes(key))].filter(key=>DATA.series[key]);
-  const requested=new URLSearchParams(location.search).get('series'); selectedKey=DATA.series[requested]?requested:keys[0];
-  const select=document.getElementById('seriesSelect'); select.innerHTML=keys.map(key=>{const series=DATA.series[key];const suffix=(series.data.National||[]).length===1?' (snapshot)':'';return `<option value="${key}" ${key===selectedKey?'selected':''}>${series.label}${suffix}</option>`;}).join('');
-  select.addEventListener('change',()=>{selectedKey=select.value;renderTable();}); document.getElementById('downloadCsv').addEventListener('click',downloadCsv); renderTable();
+  const derivedKeys=Object.keys(DATA.derived_series||{}); const params=new URLSearchParams(location.search); const requested=params.get('series');
+  if(DATA.derived_series?.[requested]){selectedKind='derived';selectedKey=requested;}else{selectedKind='observed';selectedKey=DATA.series[requested]?requested:keys[0];}
+  const select=document.getElementById('seriesSelect');
+  const observedOptions=keys.map(key=>{const series=DATA.series[key];const suffix=(series.data.National||[]).length===1?' (snapshot)':'';return `<option value="observed:${key}" ${selectedKind==='observed'&&key===selectedKey?'selected':''}>${series.label}${suffix}</option>`;}).join('');
+  const derivedOptions=derivedKeys.map(key=>{const series=DATA.derived_series[key];return `<option value="derived:${key}" ${selectedKind==='derived'&&key===selectedKey?'selected':''}>${series.label}</option>`;}).join('');
+  select.innerHTML=`<optgroup label="Observed series">${observedOptions}</optgroup><optgroup label="Derived indicators">${derivedOptions}</optgroup>`;
+  select.addEventListener('change',()=>{[selectedKind,selectedKey]=select.value.split(':');renderTable();}); document.getElementById('downloadCsv').addEventListener('click',downloadCsv); renderTable();
 }
 init();
 </script>

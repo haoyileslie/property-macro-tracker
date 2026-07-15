@@ -248,6 +248,16 @@
     line-height:1.45;
   }
   .series-toolbar p a{color:var(--navy);font-weight:600;text-underline-offset:3px;}
+  .series-formula{
+    margin:0 0 14px;
+    padding:10px 12px;
+    border-left:3px solid var(--gold);
+    background:#F7F4EB;
+    color:var(--slate);
+    font-size:0.76rem;
+    line-height:1.5;
+  }
+  .series-formula strong{color:var(--navy-deep);}
   .series-toolbar button{
     flex:0 0 auto;
     border:1px solid var(--navy);
@@ -509,6 +519,17 @@
     </div>
   </section>
 
+  <section class="panel-section" aria-labelledby="derivedSeriesTitle">
+    <div class="section-head">
+      <h2 id="derivedSeriesTitle">Derived Housing &amp; Market Indicators</h2>
+      <p>Explore calculated measures that combine the observed series into financing, affordability, supply-cycle and listed-property signals. Each chart discloses its formula and component sources.</p>
+    </div>
+    <div class="series-workbench">
+      <div class="series-list" id="derivedSeriesList"></div>
+      <div class="series-detail" id="derivedSeriesDetail"></div>
+    </div>
+  </section>
+
   <section class="panel-section" aria-labelledby="sourceMapTitle">
     <div class="section-head">
       <h2 id="sourceMapTitle">Source &amp; Policy Map</h2>
@@ -617,6 +638,7 @@ const SLATE = '#5C6773';
 
 let currentRegion = 'National';
 let selectedSeriesKey = 'cash_rate';
+let selectedDerivedSeriesKey = 'real_cash_rate_trimmed_mean';
 let DATA = null;
 
 async function loadData(){
@@ -629,6 +651,7 @@ async function loadData(){
   }
   const requestedSeries = new URLSearchParams(window.location.search).get('series');
   if(requestedSeries && DATA.series[requestedSeries]) selectedSeriesKey = requestedSeries;
+  if(requestedSeries && DATA.derived_series?.[requestedSeries]) selectedDerivedSeriesKey = requestedSeries;
   render();
 }
 
@@ -642,6 +665,8 @@ function formatValue(point, series){
   const value = Number(point.value).toLocaleString();
   if(series.unit === 'count') return value;
   if(series.unit === '%') return `${value}%`;
+  if(series.unit === 'percentage points') return `${value} pp`;
+  if(series.unit === 'AUD') return `$${value}`;
   if(series.unit === 'index points') return `${value} points`;
   return series.unit ? `${value}${series.unit.startsWith(' ') ? '' : ' '}${series.unit}` : value;
 }
@@ -649,6 +674,8 @@ function formatValue(point, series){
 function axisUnit(series){
   if(series.unit === 'count') return 'Count';
   if(series.unit === '%') return 'Percent';
+  if(series.unit === 'percentage points') return 'Percentage points';
+  if(series.unit === 'AUD') return 'Australian dollars';
   if(series.unit === 'index points') return 'Index points';
   return (series.unit || 'Value').trim();
 }
@@ -939,72 +966,63 @@ function downloadSeriesCsv(key, points, series){
   URL.revokeObjectURL(url);
 }
 
-function renderSeriesExplorer(){
-  const list = document.getElementById('seriesList');
-  const detail = document.getElementById('seriesDetail');
+function seriesSourceHtml(series){
+  const components = series.component_sources || [];
+  if(components.length){
+    return components.map(source=>`<a href="${source.url}" target="_blank" rel="noopener">${source.name}</a>`).join(' + ');
+  }
+  return series.source_url
+    ? `<a href="${series.source_url}" target="_blank" rel="noopener">${series.source || 'Source'}</a>`
+    : (series.source || 'Source not logged');
+}
+
+function renderSeriesWorkbench({seriesMap, listId, detailId, preferred, excluded, selectedKey, selectKey, rerender, dataKind}){
+  const list = document.getElementById(listId);
+  const detail = document.getElementById(detailId);
   if(!list || !detail) return;
-  const preferred = [
-    'cash_rate',
-    'unemployment_rate',
-    'employed_people',
-    'cpi_headline_yoy',
-    'cpi_trimmed_mean_yoy',
-    'building_approvals_total_dwellings',
-    'building_approvals_total_dwellings_state_proxy',
-    'housing_lending_rate_owner_occupier_variable',
-    'lending_new_loan_commitments_dwellings_number',
-    'lending_new_loan_commitments_dwellings_value',
-    'wage_growth_private_yoy',
-    'wage_growth_public_yoy',
-    'average_weekly_earnings_private',
-    'average_weekly_earnings_public',
-    'us_treasury_3y',
-    'us_treasury_10y',
-    'asx_200',
-    'sp_500',
-    'msci_acwi',
-    'asx_200_real_estate',
-    'asx_200_areit'
-  ];
-  const homepageExcluded = new Set([
-    'home_value_index_mom',
-    'vacancy_rate',
-    'lending_new_loan_commitments_dwellings_qoq'
-  ]);
-  const remaining = Object.keys(DATA.series).filter(key=>!preferred.includes(key) && !homepageExcluded.has(key));
+  const excludedKeys = new Set(excluded || []);
+  const remaining = Object.keys(seriesMap).filter(key=>!preferred.includes(key) && !excludedKeys.has(key));
   const entries = [...preferred, ...remaining]
-    .filter(key=>DATA.series[key] && !homepageExcluded.has(key))
-    .map(key=>[key, DATA.series[key]]);
-  if(!entries.some(([key])=>key===selectedSeriesKey)) selectedSeriesKey = entries[0]?.[0];
+    .filter(key=>seriesMap[key] && !excludedKeys.has(key))
+    .map(key=>[key, seriesMap[key]]);
+  if(!entries.length){
+    detail.innerHTML = '<div class="empty-note">Derived indicators are not available in the fallback preview dataset.</div>';
+    return;
+  }
+  if(!entries.some(([key])=>key===selectedKey)){
+    selectedKey = entries[0][0];
+    selectKey(selectedKey);
+  }
 
   list.innerHTML = '';
   entries.forEach(([key, series])=>{
     const points = series.data.National || [];
     const btn = document.createElement('button');
     btn.type = 'button';
-    if(key === selectedSeriesKey) btn.classList.add('active');
+    if(key === selectedKey) btn.classList.add('active');
     btn.innerHTML = `
       <span class="series-name">${series.label}</span>
       <span class="series-count">${points.length} obs · ${series.frequency || 'unknown'}</span>
     `;
-    btn.onclick = ()=>{ selectedSeriesKey = key; renderSeriesExplorer(); };
+    btn.onclick = ()=>{ selectKey(key); rerender(); };
     list.appendChild(btn);
   });
 
-  const series = DATA.series[selectedSeriesKey];
+  const series = seriesMap[selectedKey];
   const points = series.data.National || [];
   const latestPoint = latest(points);
   detail.innerHTML = `
     <div class="series-toolbar">
       <div>
         <h3>${series.label}</h3>
-        <p>${series.source || 'Source not logged'} · ${series.frequency || 'frequency not logged'} · ${points.length} observations${series.source_url ? ` (<a href="${series.source_url}" target="_blank" rel="noopener">Source</a>)` : ''}</p>
+        <p>${series.frequency || 'frequency not logged'} · ${points.length} observations · ${seriesSourceHtml(series)}</p>
       </div>
       <div class="series-actions">
-        <a id="openDataTable" href="data.html?series=${encodeURIComponent(selectedSeriesKey)}">Open data table</a>
-        <button type="button" id="downloadSeries">Download CSV</button>
+        <a href="data.html?series=${encodeURIComponent(selectedKey)}&amp;kind=${dataKind}">Open data table</a>
+        <button type="button" class="download-series">Download CSV</button>
       </div>
     </div>
+    ${series.calculation ? `<p class="series-formula"><strong>Formula:</strong> ${series.calculation}</p>` : ''}
     <div class="series-meta">
       <div><span>History</span><strong>${points.length ? points[0].date : 'no data'} to ${latestPoint ? latestPoint.date : 'no data'}</strong></div>
       <div><span>Observations</span><strong>${points.length}</strong></div>
@@ -1024,8 +1042,36 @@ function renderSeriesExplorer(){
   detail.appendChild(chartBox);
   if(points.length) drawSeriesCanvas(chartBox, points, series);
 
-  const download = document.getElementById('downloadSeries');
-  if(download) download.onclick = ()=>downloadSeriesCsv(selectedSeriesKey, points, series);
+  const download = detail.querySelector('.download-series');
+  if(download) download.onclick = ()=>downloadSeriesCsv(selectedKey, points, series);
+}
+
+function renderSeriesExplorer(){
+  renderSeriesWorkbench({
+    seriesMap: DATA.series,
+    listId: 'seriesList',
+    detailId: 'seriesDetail',
+    preferred: ['cash_rate','unemployment_rate','employed_people','cpi_headline_yoy','cpi_trimmed_mean_yoy','building_approvals_total_dwellings','building_approvals_total_dwellings_state_proxy','housing_lending_rate_owner_occupier_variable','lending_new_loan_commitments_dwellings_number','lending_new_loan_commitments_dwellings_value','wage_growth_private_yoy','wage_growth_public_yoy','average_weekly_earnings_private','average_weekly_earnings_public','us_treasury_3y','us_treasury_10y','asx_200','sp_500','msci_acwi','asx_200_real_estate','asx_200_areit'],
+    excluded: ['home_value_index_mom','vacancy_rate','lending_new_loan_commitments_dwellings_qoq'],
+    selectedKey: selectedSeriesKey,
+    selectKey: key=>{selectedSeriesKey=key;},
+    rerender: renderSeriesExplorer,
+    dataKind: 'observed'
+  });
+}
+
+function renderDerivedSeriesExplorer(){
+  renderSeriesWorkbench({
+    seriesMap: DATA.derived_series || {},
+    listId: 'derivedSeriesList',
+    detailId: 'derivedSeriesDetail',
+    preferred: ['real_cash_rate_trimmed_mean','real_mortgage_rate_headline','mortgage_cash_spread','real_wage_growth_private','real_wage_growth_public','average_new_dwelling_loan_value','dwelling_approvals_yoy','us_yield_curve_10y_3y','asx_real_estate_relative','asx_areit_relative'],
+    excluded: [],
+    selectedKey: selectedDerivedSeriesKey,
+    selectKey: key=>{selectedDerivedSeriesKey=key;},
+    rerender: renderDerivedSeriesExplorer,
+    dataKind: 'derived'
+  });
 }
 
 function renderDataHealth(){
@@ -1083,6 +1129,7 @@ function render(){
   renderStatStrip();
   renderRegionTabs();
   renderSeriesExplorer();
+  renderDerivedSeriesExplorer();
   renderCharts();
   renderSourceRegistry();
 }
