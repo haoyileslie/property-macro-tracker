@@ -14,6 +14,7 @@
   .summary{display:grid;grid-template-columns:repeat(auto-fit,minmax(140px,1fr));gap:1px;margin-bottom:20px;border:1px solid var(--line);background:var(--line)}.summary div{padding:13px 15px;background:#fff}.summary span{display:block;color:var(--slate);font-size:.66rem;text-transform:uppercase;letter-spacing:.05em}.summary strong{display:block;margin-top:4px;color:var(--navy-deep);font:500 1.05rem 'IBM Plex Mono',monospace}
   .toolbar{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:12px;margin:0 0 18px}.toolbar label{display:block;margin-bottom:5px;color:var(--slate);font-size:.66rem;font-weight:600;text-transform:uppercase;letter-spacing:.05em}.toolbar select{width:100%;padding:9px 10px;border:1px solid var(--navy);border-radius:2px;background:#fff;color:var(--navy-deep);font:500 .8rem 'IBM Plex Sans',sans-serif}
   .coverage{margin:0 0 18px;padding:10px 12px;border-left:3px solid var(--gold);background:#F7F4EB;color:var(--slate);font-size:.78rem;line-height:1.5}.table-wrap{overflow:auto;border:1px solid var(--line);background:#fff}table{width:100%;border-collapse:collapse;font-size:.78rem}th,td{padding:10px 12px;border-bottom:1px solid #ECE8DD;text-align:left;white-space:nowrap}th{position:sticky;top:0;background:#F4F1E8;color:var(--navy-deep);font-size:.65rem;text-transform:uppercase;letter-spacing:.05em}td.price,td.number{text-align:right}.empty{padding:32px 20px;text-align:center;color:var(--slate);white-space:normal}.source-note{color:var(--slate);font-size:.75rem;line-height:1.5}.source-note a{color:var(--navy);text-underline-offset:3px}.error{padding:20px;border:1px solid var(--line);background:#fff;color:#893F2D}
+  td a{color:var(--navy);font-weight:600;text-underline-offset:3px}
   @media(max-width:700px){header{display:block}.meta{margin-top:8px;text-align:left}.toolbar{grid-template-columns:1fr}}
 </style>
 </head>
@@ -36,11 +37,11 @@
   </div>
   <div class="table-wrap">
     <table aria-label="Limited active listing sample">
-      <thead><tr><th>Address</th><th>City</th><th>Type</th><th>Sale method</th><th>Guide</th><th>Beds</th><th>Baths</th><th>Parking</th><th>Listed</th><th>First seen</th></tr></thead>
+      <thead><tr><th>Address</th><th>City</th><th>Type</th><th>Sale method</th><th>Guide</th><th>Beds</th><th>Baths</th><th>Parking</th><th>Listed</th><th>First seen</th><th>Details</th></tr></thead>
       <tbody id="rows"></tbody>
     </table>
   </div>
-  <p class="source-note">Source: <a href="https://propradar.com.au/developers/docs" target="_blank" rel="noopener">PropRadar API</a>. Aggregate measures use one newest-first page per configured suburb. Only three examples per suburb are displayed publicly. Asking-price fields may be unavailable where an advertiser withholds a guide.</p>
+  <p class="source-note">Source: <a href="https://propradar.com.au/developers/docs" target="_blank" rel="noopener">PropRadar API</a>. Aggregate measures use one newest-first page per configured suburb. Only three examples per suburb are displayed publicly. Asking-price fields may be unavailable where an advertiser withholds a guide. Details opens an exact-address web search because the API response does not provide the originating portal URL.</p>
 </main>
 <script>
 let DATA;
@@ -48,11 +49,12 @@ function escapeHtml(value){return String(value??'').replace(/[&<>"]/g,character=
 function money(value){return value==null?'Not disclosed':new Intl.NumberFormat('en-AU',{style:'currency',currency:'AUD',maximumFractionDigits:0}).format(value)}
 function priceGuide(item){if(item.asking_price_low==null&&item.asking_price_high==null)return 'Not disclosed';if(item.asking_price_low===item.asking_price_high||item.asking_price_high==null)return money(item.asking_price_low);if(item.asking_price_low==null)return `Up to ${money(item.asking_price_high)}`;return `${money(item.asking_price_low)}–${money(item.asking_price_high)}`}
 function dateOnly(value){return value?String(value).slice(0,10):'Unknown'}
+function detailsUrl(item){return `https://www.google.com/search?q=${encodeURIComponent(`"${item.address||''}" property for sale`)}`}
 function options(id,label,values){document.getElementById(id).innerHTML=`<option value="">All ${label}</option>`+values.map(value=>`<option>${value}</option>`).join('')}
 function render(){
   const city=document.getElementById('cityFilter').value,sale=document.getElementById('saleFilter').value,type=document.getElementById('typeFilter').value;
   const filtered=DATA.listings.filter(item=>(!city||item.city===city)&&(!sale||item.sale_type===sale)&&(!type||item.property_type===type));
-  document.getElementById('rows').innerHTML=filtered.map(item=>`<tr><td>${escapeHtml(item.address||'Unknown')}</td><td>${escapeHtml(item.city)}</td><td>${escapeHtml(item.property_type||'Unknown')}</td><td>${escapeHtml(item.sale_type||'Unknown')}</td><td class="price">${priceGuide(item)}</td><td class="number">${item.bedrooms??'–'}</td><td class="number">${item.bathrooms??'–'}</td><td class="number">${item.parking??'–'}</td><td>${dateOnly(item.added_at)}</td><td>${dateOnly(item.first_seen_at)}</td></tr>`).join('')||`<tr><td colspan="10" class="empty">${DATA.meta.status==='awaiting_first_refresh'?'No authenticated snapshot yet. Add the GitHub secret and run the listing refresh workflow.':'No listings match these filters.'}</td></tr>`;
+  document.getElementById('rows').innerHTML=filtered.map(item=>`<tr><td>${escapeHtml(item.address||'Unknown')}</td><td>${escapeHtml(item.city)}</td><td>${escapeHtml(item.property_type||'Unknown')}</td><td>${escapeHtml(item.sale_type||'Unknown')}</td><td class="price">${priceGuide(item)}</td><td class="number">${item.bedrooms??'–'}</td><td class="number">${item.bathrooms??'–'}</td><td class="number">${item.parking??'–'}</td><td>${dateOnly(item.added_at)}</td><td>${dateOnly(item.first_seen_at)}</td><td><a href="${detailsUrl(item)}" target="_blank" rel="noopener" title="Search this exact address">Details</a></td></tr>`).join('')||`<tr><td colspan="11" class="empty">${DATA.meta.status==='awaiting_first_refresh'?'No authenticated snapshot yet. Add the GitHub secret and run the listing refresh workflow.':'No listings match these filters.'}</td></tr>`;
 }
 async function init(){
   try{const response=await fetch('./market_listings_latest.json',{cache:'no-store'});if(!response.ok)throw new Error('Data file unavailable');DATA=await response.json()}
