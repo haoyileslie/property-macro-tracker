@@ -12,6 +12,8 @@ framework. Core components:
   and supply series.
 - `validate_data.py` — dependency-free data-quality, freshness and
   vintage-consistency checks.
+- `derived_indicators.py` — deterministic formulas that turn observed
+  series into financing, affordability, supply and relative-market signals.
 - `tests/` — regression tests proving that malformed dates, implausible
   values, stale labels and vintage mismatches are rejected.
 - `vendor/chart.umd.min.js` — the locally hosted Chart.js runtime used
@@ -208,6 +210,28 @@ The table is generated directly from `property_data.json`, so if a
 series has 36 observations in the JSON, the page lists all 36. This is
 intended to make the dashboard auditable rather than only showing
 summary cards.
+
+## Derived housing and market indicators
+
+The second time-series workspace is calculated from the observed series on
+every refresh. It currently includes:
+
+- real cash and variable mortgage rates
+- the variable mortgage-rate spread to the cash rate
+- private- and public-sector real wage growth
+- the US 10-year minus 3-year Treasury spread
+- the implied average value of a new dwelling loan commitment
+- annual dwelling-approvals growth
+- ASX 200 Real Estate and A-REIT performance relative to the ASX 200
+
+Each derived series carries its formula, component-series keys, component
+source links and a methodology note. `validate_data.py` independently
+recalculates all derived observations and rejects the dataset if any stored
+value or metadata differs from the configured formula. The data-table page
+and CSV downloads cover observed and derived series through the same UI.
+Timestamped vintages retain the underlying observed inputs and derivation
+version, so a historical derived reading can be reproduced without copying
+the calculated layer into every archive snapshot.
 
 ## Source and policy map
 

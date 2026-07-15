@@ -20,6 +20,7 @@ import urllib.request
 import urllib.error
 from pathlib import Path
 
+from derived_indicators import DERIVATION_VERSION, build_derived_series
 from validate_data import validate_dataset, validate_vintage_archive
 
 
@@ -777,6 +778,8 @@ def refresh(data):
             "Original six-monthly average. It is affected by workforce composition and is not directly comparable with the fixed-job Wage Price Index."
         )
 
+    data["derived_series"] = build_derived_series(data)
+    data["meta"]["derived_series_version"] = DERIVATION_VERSION
     data["meta"]["last_updated"] = TODAY
     return data
 
@@ -791,6 +794,7 @@ def prepare_vintage(data):
         "refresh_id": refresh_id,
         "captured_at": captured_at,
         "data_as_of": data["meta"].get("last_updated"),
+        "derived_series_version": data["meta"].get("derived_series_version"),
         "series": {
             key: {
                 "label": series.get("label"),
