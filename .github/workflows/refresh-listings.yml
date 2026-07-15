@@ -1,0 +1,50 @@
+name: Refresh market listings
+
+on:
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: tracker-listings-refresh
+  cancel-in-progress: false
+
+jobs:
+  refresh:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v6
+
+      - uses: actions/setup-python@v6
+        with:
+          python-version: "3.12"
+
+      - name: Fetch and validate active listings
+        env:
+          PROPRADAR_API_KEY: ${{ secrets.PROPRADAR_API_KEY }}
+        run: python3 ingest_listings.py
+
+      - name: Run listing regression tests
+        run: python3 -m unittest tests.test_ingest_listings -v
+
+      - name: Stage refreshed listing datasets
+        id: changes
+        shell: bash
+        run: |
+          git add market_listings_latest.json market_listings_vintages.json
+          if git diff --cached --quiet; then
+            echo "changed=false" >> "$GITHUB_OUTPUT"
+          else
+            echo "changed=true" >> "$GITHUB_OUTPUT"
+          fi
+
+      - name: Commit and publish listing refresh
+        if: steps.changes.outputs.changed == 'true'
+        shell: bash
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git commit -m "Refresh market listings $(date -u +%Y-%m-%d)"
+          git push origin "HEAD:${GITHUB_REF_NAME}"
