@@ -1,6 +1,6 @@
 {
   "meta": {
-    "last_updated": "2026-07-17",
+    "last_updated": "2026-07-20",
     "regions": [
       "National",
       "Sydney",
@@ -257,8 +257,8 @@
         "scope": "Australian listed securities; separate residential-exposure basket recommended"
       }
     ],
-    "last_refreshed_at": "2026-07-17T05:26:53+00:00",
-    "latest_refresh_id": "2026-07-17T052653+0000",
+    "last_refreshed_at": "2026-07-20T07:40:28+00:00",
+    "latest_refresh_id": "2026-07-20T074028+0000",
     "vintage_file": "data_vintages.json",
     "derived_series_version": 1
   },
@@ -323,7 +323,7 @@
       "source_url": "https://www.abs.gov.au/statistics/industry/building-and-construction/building-approvals-australia/latest-release",
       "frequency": "monthly",
       "release_lag_days": 35,
-      "last_source_check": "2026-07-17",
+      "last_source_check": "2026-07-20",
       "latest_source_period": "2026-05",
       "status": "fresh",
       "status_note": "Latest parsed ABS seasonally adjusted dwelling approvals value is 17019.",
@@ -2410,7 +2410,7 @@
       "source_url": "https://www.abs.gov.au/statistics/industry/building-and-construction/building-approvals-australia/latest-release",
       "frequency": "monthly",
       "release_lag_days": 35,
-      "last_source_check": "2026-07-17",
+      "last_source_check": "2026-07-20",
       "latest_source_period": "2026-05",
       "status": "fresh",
       "status_note": "National is the Australia total. City labels are state proxies: Sydney\u2192NSW, Melbourne\u2192VIC, Brisbane\u2192QLD, Perth\u2192WA.",
@@ -12747,7 +12747,7 @@
       "source_url": "https://www.rba.gov.au/statistics/cash-rate/",
       "frequency": "as-changed",
       "release_lag_days": 1,
-      "last_source_check": "2026-07-17",
+      "last_source_check": "2026-07-20",
       "latest_source_period": "2026-06-17",
       "status": "fresh",
       "status_note": "Latest parsed RBA cash rate target is 4.35%.",
@@ -14362,7 +14362,7 @@
       "source_url": "https://www.rba.gov.au/statistics/tables/csv/f6-data.csv",
       "frequency": "monthly",
       "release_lag_days": 14,
-      "last_source_check": "2026-07-17",
+      "last_source_check": "2026-07-20",
       "latest_source_period": "2026-05",
       "status": "fresh",
       "status_note": "Latest parsed RBA F6 owner-occupier outstanding variable housing lending rate (all institutions) is 6.2%.",
@@ -14717,7 +14717,7 @@
       "source_url": "https://www.rba.gov.au/statistics/tables/csv/h5-data.csv",
       "frequency": "monthly",
       "release_lag_days": 25,
-      "last_source_check": "2026-07-17",
+      "last_source_check": "2026-07-20",
       "latest_source_period": "2026-05",
       "status": "fresh",
       "status_note": "Latest parsed ABS seasonally adjusted unemployment rate is 4.4%.",
@@ -17060,7 +17060,7 @@
       "source_url": "https://www.rba.gov.au/statistics/tables/csv/h5-data.csv",
       "frequency": "monthly",
       "release_lag_days": 25,
-      "last_source_check": "2026-07-17",
+      "last_source_check": "2026-07-20",
       "latest_source_period": "2026-05",
       "status": "fresh",
       "status_note": "Latest parsed ABS seasonally adjusted employed people is 14738.8 ('000 persons).",
@@ -19403,7 +19403,7 @@
       "source_url": "https://www.abs.gov.au/statistics/economy/price-indexes-and-inflation/consumer-price-index-australia/latest-release",
       "frequency": "quarterly through 2025-03; monthly thereafter",
       "release_lag_days": 35,
-      "last_source_check": "2026-07-17",
+      "last_source_check": "2026-07-20",
       "latest_source_period": "2026-05",
       "status": "fresh",
       "status_note": "Full available RBA G1 quarterly trimmed mean inflation history joined to the ABS complete monthly CPI publication at its first available recent observation.",
@@ -20160,7 +20160,7 @@
       "source_url": "https://www.abs.gov.au/statistics/economy/price-indexes-and-inflation/consumer-price-index-australia/latest-release",
       "frequency": "quarterly through 2025-03; monthly thereafter",
       "release_lag_days": 35,
-      "last_source_check": "2026-07-17",
+      "last_source_check": "2026-07-20",
       "latest_source_period": "2026-05",
       "status": "fresh",
       "status_note": "Full available RBA G1 quarterly annual inflation history joined to the ABS complete monthly CPI publication at its first available recent observation.",
@@ -21873,7 +21873,7 @@
       "source_url": "https://www.abs.gov.au/statistics/economy/finance/lending-indicators/latest-release",
       "frequency": "quarterly",
       "release_lag_days": 45,
-      "last_source_check": "2026-07-17",
+      "last_source_check": "2026-07-20",
       "latest_source_period": "2026-Q1",
       "status": "fresh",
       "status_note": "Quarter-on-quarter change calculated from the ABS seasonally adjusted total number of new dwelling loan commitments; comparable total series begins in September quarter 2019.",
@@ -22142,7 +22142,7 @@
         ]
       },
       "access_tier": "public",
-      "last_source_check": "2026-07-17",
+      "last_source_check": "2026-07-20",
       "latest_source_period": "2026-Q1",
       "status": "fresh",
       "history_start": "2019-Q3",
@@ -22328,7 +22328,7 @@
         ]
       },
       "access_tier": "public",
-      "last_source_check": "2026-07-17",
+      "last_source_check": "2026-07-20",
       "latest_source_period": "2026-Q1",
       "status": "fresh",
       "history_start": "2016-Q1",
@@ -23959,16 +23959,16 @@
           },
           {
             "date": "2026-06",
-            "value": 8840.7
+            "value": 8796.7
           },
           {
             "date": "2026-07",
-            "value": 8764.4
+            "value": 8791.3
           }
         ]
       },
       "access_tier": "public",
-      "last_source_check": "2026-07-17",
+      "last_source_check": "2026-07-20",
       "latest_source_period": "2026-07",
       "status": "fresh",
       "history_start": "1992-11",
@@ -25983,12 +25983,12 @@
           },
           {
             "date": "2026-07",
-            "value": 7533.77
+            "value": 7457.69
           }
         ]
       },
       "access_tier": "public",
-      "last_source_check": "2026-07-17",
+      "last_source_check": "2026-07-20",
       "latest_source_period": "2026-07",
       "status": "fresh",
       "history_start": "1985-01",
@@ -27859,12 +27859,12 @@
           },
           {
             "date": "2026-07",
-            "value": 1115.75
+            "value": 1108.4
           }
         ]
       },
       "access_tier": "public",
-      "last_source_check": "2026-07-17",
+      "last_source_check": "2026-07-20",
       "latest_source_period": "2026-07",
       "status": "fresh",
       "history_start": "1988-01",
@@ -28315,16 +28315,16 @@
           },
           {
             "date": "2026-06",
-            "value": 3548.5
+            "value": 3583.8
           },
           {
             "date": "2026-07",
-            "value": 3553.8
+            "value": 3576.9
           }
         ]
       },
       "access_tier": "public",
-      "last_source_check": "2026-07-17",
+      "last_source_check": "2026-07-20",
       "latest_source_period": "2026-07",
       "status": "fresh",
       "history_start": "2017-07",
@@ -29411,16 +29411,16 @@
           },
           {
             "date": "2026-06",
-            "value": 1651.6
+            "value": 1668.5
           },
           {
             "date": "2026-07",
-            "value": 1654.2
+            "value": 1665.7
           }
         ]
       },
       "access_tier": "public",
-      "last_source_check": "2026-07-17",
+      "last_source_check": "2026-07-20",
       "latest_source_period": "2026-07",
       "status": "fresh",
       "history_start": "2004-04",
@@ -32539,12 +32539,12 @@
           },
           {
             "date": "2026-07",
-            "value": 4.18
+            "value": 4.2
           }
         ]
       },
       "access_tier": "public",
-      "last_source_check": "2026-07-17",
+      "last_source_check": "2026-07-20",
       "latest_source_period": "2026-07",
       "status": "fresh",
       "history_start": "1962-01",
@@ -32552,7 +32552,7 @@
       "update_method": "automated",
       "source_url": "https://fred.stlouisfed.org/series/DGS3",
       "source": "Federal Reserve Bank of St. Louis (FRED DGS3)",
-      "status_note": "Last available daily FRED observation in each month; latest month-end value is 4.18%."
+      "status_note": "Last available daily FRED observation in each month; latest month-end value is 4.2%."
     },
     "us_treasury_10y": {
       "label": "US Treasury 10-year yield",
@@ -35661,12 +35661,12 @@
           },
           {
             "date": "2026-07",
-            "value": 4.55
+            "value": 4.57
           }
         ]
       },
       "access_tier": "public",
-      "last_source_check": "2026-07-17",
+      "last_source_check": "2026-07-20",
       "latest_source_period": "2026-07",
       "status": "fresh",
       "history_start": "1962-01",
@@ -35674,7 +35674,7 @@
       "update_method": "automated",
       "source_url": "https://fred.stlouisfed.org/series/DGS10",
       "source": "Federal Reserve Bank of St. Louis (FRED DGS10)",
-      "status_note": "Last available daily FRED observation in each month; latest month-end value is 4.55%."
+      "status_note": "Last available daily FRED observation in each month; latest month-end value is 4.57%."
     },
     "wage_growth_private_yoy": {
       "label": "Private-sector wage growth, year-on-year",
@@ -35932,7 +35932,7 @@
         ]
       },
       "access_tier": "public",
-      "last_source_check": "2026-07-17",
+      "last_source_check": "2026-07-20",
       "latest_source_period": "2026-Q1",
       "status": "fresh",
       "history_start": "2011-Q1",
@@ -36198,7 +36198,7 @@
         ]
       },
       "access_tier": "public",
-      "last_source_check": "2026-07-17",
+      "last_source_check": "2026-07-20",
       "latest_source_period": "2026-Q1",
       "status": "fresh",
       "history_start": "2011-Q1",
@@ -36304,7 +36304,7 @@
         ]
       },
       "access_tier": "public",
-      "last_source_check": "2026-07-17",
+      "last_source_check": "2026-07-20",
       "latest_source_period": "2025-11",
       "status": "fresh",
       "history_start": "2015-11",
@@ -36411,7 +36411,7 @@
         ]
       },
       "access_tier": "public",
-      "last_source_check": "2026-07-17",
+      "last_source_check": "2026-07-20",
       "latest_source_period": "2025-11",
       "status": "fresh",
       "history_start": "2015-11",
@@ -36451,7 +36451,7 @@
       "methodology_note": "The cash rate is carried to each CPI observation period. This is an analytical proxy, not an expected real rate.",
       "derivation_version": 1,
       "status": "fresh",
-      "last_source_check": "2026-07-17",
+      "last_source_check": "2026-07-20",
       "latest_source_period": "2026-05",
       "history_start": "1990-03",
       "observation_count": 155,
@@ -37109,7 +37109,7 @@
       "methodology_note": "The latest CPI observation at or before each mortgage-rate month is used. Borrower-specific rates differ from this system average.",
       "derivation_version": 1,
       "status": "fresh",
-      "last_source_check": "2026-07-17",
+      "last_source_check": "2026-07-20",
       "latest_source_period": "2026-05",
       "history_start": "2019-07",
       "observation_count": 83,
@@ -37479,7 +37479,7 @@
       "methodology_note": "The latest cash-rate setting in each mortgage-rate month is used.",
       "derivation_version": 1,
       "status": "fresh",
-      "last_source_check": "2026-07-17",
+      "last_source_check": "2026-07-20",
       "latest_source_period": "2026-05",
       "history_start": "2019-07",
       "observation_count": 83,
@@ -37849,7 +37849,7 @@
       "methodology_note": "The latest CPI observation at or before each wage quarter is used. This is a growth differential, not a household-income level.",
       "derivation_version": 1,
       "status": "fresh",
-      "last_source_check": "2026-07-17",
+      "last_source_check": "2026-07-20",
       "latest_source_period": "2026-Q1",
       "history_start": "2011-Q1",
       "observation_count": 61,
@@ -38131,7 +38131,7 @@
       "methodology_note": "The latest CPI observation at or before each wage quarter is used. This is a growth differential, not a household-income level.",
       "derivation_version": 1,
       "status": "fresh",
-      "last_source_check": "2026-07-17",
+      "last_source_check": "2026-07-20",
       "latest_source_period": "2026-Q1",
       "history_start": "2011-Q1",
       "observation_count": 61,
@@ -38413,7 +38413,7 @@
       "methodology_note": "Calculated from matched monthly FRED observations.",
       "derivation_version": 1,
       "status": "fresh",
-      "last_source_check": "2026-07-17",
+      "last_source_check": "2026-07-20",
       "latest_source_period": "2026-07",
       "history_start": "1962-01",
       "observation_count": 775,
@@ -41547,7 +41547,7 @@
       "methodology_note": "Aggregate value divided by aggregate count. It is not the ABS median loan size and excludes refinancing consistently with the inputs.",
       "derivation_version": 1,
       "status": "fresh",
-      "last_source_check": "2026-07-17",
+      "last_source_check": "2026-07-20",
       "latest_source_period": "2026-Q1",
       "history_start": "2019-Q3",
       "observation_count": 27,
@@ -41688,7 +41688,7 @@
       "methodology_note": "Calculated only where an observation exists exactly 12 months earlier.",
       "derivation_version": 1,
       "status": "fresh",
-      "last_source_check": "2026-07-17",
+      "last_source_check": "2026-07-20",
       "latest_source_period": "2026-05",
       "history_start": "1984-07",
       "observation_count": 503,
@@ -43738,7 +43738,7 @@
       "methodology_note": "Monthly price-index levels are divided and rebased. Dividends are excluded where the component series is a price-return index.",
       "derivation_version": 1,
       "status": "fresh",
-      "last_source_check": "2026-07-17",
+      "last_source_check": "2026-07-20",
       "latest_source_period": "2026-07",
       "history_start": "2017-07",
       "observation_count": 109,
@@ -44176,11 +44176,11 @@
           },
           {
             "date": "2026-06",
-            "value": 73.6
+            "value": 74.7
           },
           {
             "date": "2026-07",
-            "value": 74.35
+            "value": 74.61
           }
         ]
       }
@@ -44212,7 +44212,7 @@
       "methodology_note": "Monthly price-index levels are divided and rebased. Dividends are excluded where the component series is a price-return index.",
       "derivation_version": 1,
       "status": "fresh",
-      "last_source_check": "2026-07-17",
+      "last_source_check": "2026-07-20",
       "latest_source_period": "2026-07",
       "history_start": "2004-04",
       "observation_count": 268,
@@ -45286,11 +45286,11 @@
           },
           {
             "date": "2026-06",
-            "value": 39.5
+            "value": 40.1
           },
           {
             "date": "2026-07",
-            "value": 39.9
+            "value": 40.06
           }
         ]
       }
