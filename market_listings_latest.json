@@ -2,7 +2,7 @@
   "meta": {
     "provider": "PropRadar",
     "source_url": "https://propradar.com.au/developers/docs",
-    "captured_at": "2026-07-20T07:46:09Z",
+    "captured_at": "2026-07-21T08:26:50Z",
     "status": "ok",
     "calls_used": 8,
     "market_count": 8,
@@ -21,9 +21,9 @@
       "page_limit": 20,
       "auction_count": 4,
       "auction_share_pct": 20.0,
-      "price_disclosed_count": 3,
-      "price_disclosed_share_pct": 15.0,
-      "median_asking_midpoint_aud": 640000,
+      "price_disclosed_count": 4,
+      "price_disclosed_share_pct": 20.0,
+      "median_asking_midpoint_aud": 632500,
       "property_type_counts": {
         "Apartment": 19,
         "House": 1
@@ -64,19 +64,19 @@
       "postcode": "3121",
       "listing_count": 20,
       "page_limit": 20,
-      "auction_count": 12,
-      "auction_share_pct": 60.0,
+      "auction_count": 11,
+      "auction_share_pct": 55.0,
       "price_disclosed_count": 17,
       "price_disclosed_share_pct": 85.0,
       "median_asking_midpoint_aud": 1150000,
       "property_type_counts": {
-        "Apartment": 6,
-        "House": 10,
+        "Apartment": 7,
+        "House": 9,
         "Townhouse": 4
       },
       "sale_type_counts": {
-        "Auction": 12,
-        "Private Sale": 8
+        "Auction": 11,
+        "Private Sale": 9
       }
     },
     {
@@ -180,9 +180,9 @@
       "page_limit": 20,
       "auction_count": 1,
       "auction_share_pct": 5.0,
-      "price_disclosed_count": 14,
-      "price_disclosed_share_pct": 70.0,
-      "median_asking_midpoint_aud": 800000,
+      "price_disclosed_count": 15,
+      "price_disclosed_share_pct": 75.0,
+      "median_asking_midpoint_aud": 700000,
       "property_type_counts": {
         "Apartment": 12,
         "House": 5,
@@ -213,7 +213,7 @@
       "parking": 1,
       "added_at": "2026-07-19T17:45:23.000Z",
       "first_seen_at": "2026-07-20T07:46:09Z",
-      "last_seen_at": "2026-07-20T07:46:09Z"
+      "last_seen_at": "2026-07-21T08:26:50Z"
     },
     {
       "property_id": "dda94d9d",
@@ -231,7 +231,7 @@
       "parking": 1,
       "added_at": "2026-07-15T16:41:20.000Z",
       "first_seen_at": "2026-07-15T08:40:20Z",
-      "last_seen_at": "2026-07-20T07:46:09Z"
+      "last_seen_at": "2026-07-21T08:26:50Z"
     },
     {
       "property_id": "1941ca18",
@@ -249,7 +249,7 @@
       "parking": 1,
       "added_at": "2026-07-16T16:46:37.000Z",
       "first_seen_at": "2026-07-20T07:46:09Z",
-      "last_seen_at": "2026-07-20T07:46:09Z"
+      "last_seen_at": "2026-07-21T08:26:50Z"
     },
     {
       "property_id": "b8e5d382",
@@ -267,25 +267,7 @@
       "parking": 1,
       "added_at": "2026-07-16T16:33:19.000Z",
       "first_seen_at": "2026-07-20T07:46:09Z",
-      "last_seen_at": "2026-07-20T07:46:09Z"
-    },
-    {
-      "property_id": "369f284b",
-      "city": "Brisbane",
-      "suburb": "New Farm",
-      "state": "QLD",
-      "postcode": "4005",
-      "address": "33/75 Welsby Street, New Farm, QLD, 4005",
-      "property_type": "Apartment",
-      "sale_type": "Private Sale",
-      "asking_price_low": null,
-      "asking_price_high": null,
-      "bedrooms": 1,
-      "bathrooms": 1,
-      "parking": 1,
-      "added_at": "2026-07-15T17:16:53.000Z",
-      "first_seen_at": "2026-07-20T07:46:09Z",
-      "last_seen_at": "2026-07-20T07:46:09Z"
+      "last_seen_at": "2026-07-21T08:26:50Z"
     },
     {
       "property_id": "692ef1f2",
@@ -303,7 +285,25 @@
       "parking": 3,
       "added_at": "2026-07-19T08:19:29.000Z",
       "first_seen_at": "2026-07-20T07:46:09Z",
-      "last_seen_at": "2026-07-20T07:46:09Z"
+      "last_seen_at": "2026-07-21T08:26:50Z"
+    },
+    {
+      "property_id": "7e831c8e",
+      "city": "Brisbane",
+      "suburb": "New Farm",
+      "state": "QLD",
+      "postcode": "4005",
+      "address": "9/425 Bowen Terrace, New Farm, QLD, 4005",
+      "property_type": "Apartment",
+      "sale_type": "Private Sale",
+      "asking_price_low": null,
+      "asking_price_high": null,
+      "bedrooms": 1,
+      "bathrooms": 1,
+      "parking": 1,
+      "added_at": "2026-07-20T16:28:25.000Z",
+      "first_seen_at": "2026-07-21T08:26:50Z",
+      "last_seen_at": "2026-07-21T08:26:50Z"
     },
     {
       "property_id": "d0d54308",
@@ -321,7 +321,7 @@
       "parking": 1,
       "added_at": "2026-07-20T14:04:59.000Z",
       "first_seen_at": "2026-07-20T07:46:09Z",
-      "last_seen_at": "2026-07-20T07:46:09Z"
+      "last_seen_at": "2026-07-21T08:26:50Z"
     },
     {
       "property_id": "94f694c0",
@@ -339,7 +339,7 @@
       "parking": 2,
       "added_at": "2026-07-16T18:03:24.000Z",
       "first_seen_at": "2026-07-20T07:46:09Z",
-      "last_seen_at": "2026-07-20T07:46:09Z"
+      "last_seen_at": "2026-07-21T08:26:50Z"
     },
     {
       "property_id": "4874eb80",
@@ -357,7 +357,7 @@
       "parking": 2,
       "added_at": "2026-07-20T13:04:59.000Z",
       "first_seen_at": "2026-07-20T07:46:09Z",
-      "last_seen_at": "2026-07-20T07:46:09Z"
+      "last_seen_at": "2026-07-21T08:26:50Z"
     },
     {
       "property_id": "168fe566",
@@ -375,25 +375,25 @@
       "parking": null,
       "added_at": "2026-07-20T12:58:25.000Z",
       "first_seen_at": "2026-07-20T07:46:09Z",
-      "last_seen_at": "2026-07-20T07:46:09Z"
+      "last_seen_at": "2026-07-21T08:26:50Z"
     },
     {
-      "property_id": "a28666b0",
+      "property_id": "9cb6cee5",
       "city": "Melbourne",
       "suburb": "Richmond",
       "state": "VIC",
       "postcode": "3121",
-      "address": "36a Cameron Street, Richmond, VIC, 3121",
-      "property_type": "Townhouse",
-      "sale_type": "Auction",
-      "asking_price_low": 900000,
-      "asking_price_high": 990000,
+      "address": "3/61 Stawell Street, Richmond, VIC, 3121",
+      "property_type": "Apartment",
+      "sale_type": "Private Sale",
+      "asking_price_low": 700000,
+      "asking_price_high": 750000,
       "bedrooms": 2,
-      "bathrooms": 1,
+      "bathrooms": 2,
       "parking": 1,
-      "added_at": "2026-07-16T20:55:02.000Z",
-      "first_seen_at": "2026-07-20T07:46:09Z",
-      "last_seen_at": "2026-07-20T07:46:09Z"
+      "added_at": "2026-07-21T10:23:01.000Z",
+      "first_seen_at": "2026-07-21T08:26:50Z",
+      "last_seen_at": "2026-07-21T08:26:50Z"
     },
     {
       "property_id": "97caf395",
@@ -411,7 +411,25 @@
       "parking": 1,
       "added_at": "2026-07-20T15:55:23.000Z",
       "first_seen_at": "2026-07-20T07:46:09Z",
-      "last_seen_at": "2026-07-20T07:46:09Z"
+      "last_seen_at": "2026-07-21T08:26:50Z"
+    },
+    {
+      "property_id": "a68a9537",
+      "city": "Perth",
+      "suburb": "Subiaco",
+      "state": "WA",
+      "postcode": "6008",
+      "address": "12/148 Subiaco Road, Subiaco, WA, 6008",
+      "property_type": "Apartment",
+      "sale_type": "Private Sale",
+      "asking_price_low": null,
+      "asking_price_high": null,
+      "bedrooms": 2,
+      "bathrooms": 1,
+      "parking": 1,
+      "added_at": "2026-07-20T18:47:32.000Z",
+      "first_seen_at": "2026-07-21T08:26:50Z",
+      "last_seen_at": "2026-07-21T08:26:50Z"
     },
     {
       "property_id": "fd0164be",
@@ -429,7 +447,7 @@
       "parking": 2,
       "added_at": "2026-07-16T18:35:29.000Z",
       "first_seen_at": "2026-07-20T07:46:09Z",
-      "last_seen_at": "2026-07-20T07:46:09Z"
+      "last_seen_at": "2026-07-21T08:26:50Z"
     },
     {
       "property_id": "89321fdd",
@@ -447,26 +465,26 @@
       "parking": 4,
       "added_at": "2026-07-17T04:25:36.000Z",
       "first_seen_at": "2026-07-20T07:46:09Z",
-      "last_seen_at": "2026-07-20T07:46:09Z",
+      "last_seen_at": "2026-07-21T08:26:50Z",
       "data_quality_note": "Unrecognised sale type retained from source"
     },
     {
-      "property_id": "9498936c",
+      "property_id": "81b79e4a",
       "city": "Perth",
-      "suburb": "Subiaco",
+      "suburb": "Victoria Park",
       "state": "WA",
-      "postcode": "6008",
-      "address": "511/19 Olive Street, Subiaco, WA, 6008",
+      "postcode": "6100",
+      "address": "2/54 Canning Highway, Victoria Park, WA, 6100",
       "property_type": "Apartment",
       "sale_type": "Private Sale",
-      "asking_price_low": null,
-      "asking_price_high": null,
+      "asking_price_low": 700000,
+      "asking_price_high": 700000,
       "bedrooms": 2,
-      "bathrooms": 2,
-      "parking": 2,
-      "added_at": "2026-07-16T18:35:29.000Z",
-      "first_seen_at": "2026-07-20T07:46:09Z",
-      "last_seen_at": "2026-07-20T07:46:09Z"
+      "bathrooms": 1,
+      "parking": 1,
+      "added_at": "2026-07-20T17:14:48.000Z",
+      "first_seen_at": "2026-07-21T08:26:50Z",
+      "last_seen_at": "2026-07-21T08:26:50Z"
     },
     {
       "property_id": "0eaf6ed5",
@@ -484,26 +502,8 @@
       "parking": 1,
       "added_at": "2026-07-19T11:43:38.000Z",
       "first_seen_at": "2026-07-20T07:46:09Z",
-      "last_seen_at": "2026-07-20T07:46:09Z",
+      "last_seen_at": "2026-07-21T08:26:50Z",
       "data_quality_note": "Unrecognised sale type retained from source"
-    },
-    {
-      "property_id": "f2815e98",
-      "city": "Perth",
-      "suburb": "Victoria Park",
-      "state": "WA",
-      "postcode": "6100",
-      "address": "46B Sunbury Road, Victoria Park, WA, 6100",
-      "property_type": "Apartment",
-      "sale_type": "Private Sale",
-      "asking_price_low": 700000,
-      "asking_price_high": 700000,
-      "bedrooms": 2,
-      "bathrooms": 1,
-      "parking": 2,
-      "added_at": "2026-07-16T18:07:01.000Z",
-      "first_seen_at": "2026-07-20T07:46:09Z",
-      "last_seen_at": "2026-07-20T07:46:09Z"
     },
     {
       "property_id": "f3d34142",
@@ -521,7 +521,7 @@
       "parking": 1,
       "added_at": "2026-07-19T11:43:38.000Z",
       "first_seen_at": "2026-07-20T07:46:09Z",
-      "last_seen_at": "2026-07-20T07:46:09Z",
+      "last_seen_at": "2026-07-21T08:26:50Z",
       "data_quality_note": "Unrecognised sale type retained from source"
     },
     {
@@ -540,7 +540,7 @@
       "parking": 2,
       "added_at": "2026-07-16T12:47:02.000Z",
       "first_seen_at": "2026-07-20T07:46:09Z",
-      "last_seen_at": "2026-07-20T07:46:09Z"
+      "last_seen_at": "2026-07-21T08:26:50Z"
     },
     {
       "property_id": "55c7b127",
@@ -558,7 +558,7 @@
       "parking": 1,
       "added_at": "2026-07-16T10:45:58.000Z",
       "first_seen_at": "2026-07-20T07:46:09Z",
-      "last_seen_at": "2026-07-20T07:46:09Z"
+      "last_seen_at": "2026-07-21T08:26:50Z"
     },
     {
       "property_id": "9ab2ea1e",
@@ -576,25 +576,25 @@
       "parking": 2,
       "added_at": "2026-07-17T16:06:18.000Z",
       "first_seen_at": "2026-07-20T07:46:09Z",
-      "last_seen_at": "2026-07-20T07:46:09Z"
+      "last_seen_at": "2026-07-21T08:26:50Z"
     },
     {
-      "property_id": "c0a97218",
+      "property_id": "23c45d56",
       "city": "Sydney",
       "suburb": "Parramatta",
       "state": "NSW",
       "postcode": "2150",
-      "address": "2/15-19 Early Street, Parramatta, NSW, 2150",
+      "address": "3637/180 George Street, Parramatta, NSW, 2150",
       "property_type": "Apartment",
       "sale_type": "Private Sale",
-      "asking_price_low": null,
-      "asking_price_high": null,
-      "bedrooms": 2,
+      "asking_price_low": 600000,
+      "asking_price_high": 650000,
+      "bedrooms": 1,
       "bathrooms": 1,
-      "parking": 1,
-      "added_at": "2026-07-16T11:18:13.000Z",
-      "first_seen_at": "2026-07-20T07:46:09Z",
-      "last_seen_at": "2026-07-20T07:46:09Z"
+      "parking": null,
+      "added_at": "2026-07-20T17:04:41.000Z",
+      "first_seen_at": "2026-07-21T08:26:50Z",
+      "last_seen_at": "2026-07-21T08:26:50Z"
     },
     {
       "property_id": "a278d5ac",
@@ -612,7 +612,7 @@
       "parking": 1,
       "added_at": "2026-07-20T11:26:40.000Z",
       "first_seen_at": "2026-07-20T07:46:09Z",
-      "last_seen_at": "2026-07-20T07:46:09Z"
+      "last_seen_at": "2026-07-21T08:26:50Z"
     },
     {
       "property_id": "c6056ce4",
@@ -630,7 +630,7 @@
       "parking": 1,
       "added_at": "2026-07-16T15:14:31.000Z",
       "first_seen_at": "2026-07-20T07:46:09Z",
-      "last_seen_at": "2026-07-20T07:46:09Z"
+      "last_seen_at": "2026-07-21T08:26:50Z"
     }
   ]
 }
