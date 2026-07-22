@@ -6,7 +6,7 @@ framework. Core components:
 - `index.html` — the main charts and source/policy map
 - `data.html` — full underlying observation tables
 - `freshness.html` — source checks, release lags and freshness status
-- `listings.html` — filterable active-listing sample for the four-city market watch
+- `listings.html` — filterable recent-listing sample for the four-city market watch
 - `property_data.json` — the latest refreshed dataset consumed by the dashboard.
 - `data_vintages.json` — append-only, timestamped copies of every refresh for revision and historical tracking.
 - `ingest_macro.py` — optional local updater for the monitored macro
@@ -15,8 +15,7 @@ framework. Core components:
   vintage-consistency checks.
 - `derived_indicators.py` — deterministic formulas that turn observed
   series into financing, affordability, supply and relative-market signals.
-- `ingest_listings.py` — quota-conscious PropRadar active-listing snapshotter.
-- `listings_config.json` — the representative suburbs included in each snapshot.
+- `ingest_listings.py` — privacy and schema validator for the public listing export.
 - `market_listings_latest.json` — the newest listing snapshot consumed by `listings.html`.
 - `market_listings_vintages.json` — append-only listing snapshots for change tracking.
 - `tests/` — regression tests proving that malformed dates, implausible
@@ -115,35 +114,31 @@ the latest timestamped vintage. The workflow in
 `.github/workflows/validate.yml` runs these checks on every push and pull
 request, as well as on demand from the Actions tab.
 
-## Active-listings prototype
+## Recent-listings prototype
 
-The listing prototype uses PropRadar's documented active-listings endpoint.
-It requests one newest-first page, capped at 20 records, for each of eight
-representative suburbs. A complete refresh therefore uses eight API calls.
-The ingestor publishes derived market summaries and no more than three current
-examples per suburb. Historical vintages contain aggregate measures only, not
-listing-level records. This supports listing mix, auction share, disclosed-price
-coverage and trend analysis without publishing raw API dumps; it is not a
-complete city inventory.
+The listing page uses saved-search alerts received from Domain and
+realestate.com.au. The private research desk parses and deduplicates those
+alerts, then exports no more than three recent examples per observed suburb.
+Both portals are represented where the alert evidence allows it. Historical
+vintages retain aggregate measures only, not listing-level records.
 
-Create a free key through the PropRadar developer portal, then store it as
-`PROPRADAR_API_KEY`. Never place the key in an HTML or JSON file.
+The public export excludes Gmail message IDs, email content, notes and
+personalized campaign links. The Details link performs an exact-address public
+search instead. The dataset supports portal coverage, listing mix, auction
+share, disclosed-price coverage and longitudinal analysis; it is alert evidence,
+not a complete market census.
 
-For a local one-off check:
+For a local validation:
 
 ```bash
-export PROPRADAR_API_KEY='your key'
-python3 ingest_listings.py --dry-run
 python3 ingest_listings.py
+python3 -m unittest tests.test_ingest_listings -v
 ```
 
-For GitHub, open **Settings → Secrets and variables → Actions**, create the
-repository secret `PROPRADAR_API_KEY`, then run **Refresh market listings**
-from the Actions tab. The workflow validates the response, appends a
-timestamped aggregate vintage, updates the limited public sample and commits only those two
-data files. It is manual during the prototype phase to prevent accidental
-quota consumption. Add a monthly schedule only after reviewing the first few
-snapshots and confirming the provider's licensing terms for the intended use.
+GitHub Actions runs the same privacy and regression checks whenever the listing
+page or export changes. Gmail access remains local and is not stored in this
+repository, so publishing a new vintage is an explicit reviewed export from the
+private desk rather than an unattended GitHub mailbox connection.
 
 ### Access and download links (public)
 

@@ -25,44 +25,47 @@
     <a href="freshness.html">Data freshness</a>
     <a href="listings.html" aria-current="page">Market listings</a>
   </nav>
-  <header><h1>Active Market Listings</h1><div class="meta" id="capturedAt">Loading...</div></header>
-  <p class="deck">Current listing conditions across representative suburbs in Sydney, Melbourne, Brisbane and Perth, with a deliberately limited attributed sample.</p>
+  <header><h1>Recent Market Listings</h1><div class="meta" id="capturedAt">Loading...</div></header>
+  <p class="deck">Recent listings observed in saved-search alerts across Sydney, Melbourne, Brisbane and Perth, with a deliberately limited attributed sample.</p>
   <div class="summary" id="summary"></div>
   <p class="coverage" id="coverage"></p>
   <div class="toolbar">
     <div><label for="cityFilter">City</label><select id="cityFilter"></select></div>
     <div><label for="saleFilter">Sale method</label><select id="saleFilter"></select></div>
-    <div><label for="typeFilter">Property type</label><select id="typeFilter"></select></div>
+    <div><label for="sourceFilter">Portal</label><select id="sourceFilter"></select></div>
   </div>
   <div class="table-wrap">
     <table aria-label="Limited active listing sample">
-      <thead><tr><th>Address</th><th>City</th><th>Type</th><th>Sale method</th><th>Guide</th><th>Beds</th><th>Baths</th><th>Parking</th><th>Listed</th><th>First seen</th></tr></thead>
+      <thead><tr><th>Address</th><th>City</th><th>Portal</th><th>Sale method</th><th>Guide</th><th>Beds</th><th>Baths</th><th>Parking</th><th>First seen</th><th>Latest alert</th><th>Details</th></tr></thead>
       <tbody id="rows"></tbody>
     </table>
   </div>
-  <p class="source-note">Source: <a href="https://propradar.com.au/developers/docs" target="_blank" rel="noopener">PropRadar API</a>. Aggregate measures use one newest-first page per configured suburb. Only three examples per suburb are displayed publicly. Asking-price fields may be unavailable where an advertiser withholds a guide.</p>
+  <p class="source-note">Sources: <a href="https://www.domain.com.au/" target="_blank" rel="noopener">Domain</a> and <a href="https://www.realestate.com.au/" target="_blank" rel="noopener">realestate.com.au</a> saved-search alerts. Only three examples per suburb are displayed publicly. Asking-price fields may be unavailable where an advertiser withholds a guide. Personalized email links and Gmail metadata are never published.</p>
 </main>
 <script>
-let DATA;
+let DATA,DISPLAY_LISTINGS=[];
 function escapeHtml(value){return String(value??'').replace(/[&<>"]/g,character=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[character]))}
 function money(value){return value==null?'Not disclosed':new Intl.NumberFormat('en-AU',{style:'currency',currency:'AUD',maximumFractionDigits:0}).format(value)}
-function priceGuide(item){if(item.asking_price_low==null&&item.asking_price_high==null)return 'Not disclosed';if(item.asking_price_low===item.asking_price_high||item.asking_price_high==null)return money(item.asking_price_low);if(item.asking_price_low==null)return `Up to ${money(item.asking_price_high)}`;return `${money(item.asking_price_low)}–${money(item.asking_price_high)}`}
+function priceGuide(item){if(item.price_text)return escapeHtml(item.price_text);if(item.asking_price_low==null&&item.asking_price_high==null)return 'Not disclosed';if(item.asking_price_low===item.asking_price_high||item.asking_price_high==null)return money(item.asking_price_low);if(item.asking_price_low==null)return `Up to ${money(item.asking_price_high)}`;return `${money(item.asking_price_low)}–${money(item.asking_price_high)}`}
 function dateOnly(value){return value?String(value).slice(0,10):'Unknown'}
+function detailsUrl(item){return `https://www.google.com/search?q=${encodeURIComponent(`"${item.address||''}" ${item.source||''} property`)}`}
+function cappedBySuburb(items,limit){const counts=new Map();return items.filter(item=>{const key=[item.city,item.suburb,item.state].join('|');const count=counts.get(key)||0;if(count>=limit)return false;counts.set(key,count+1);return true})}
 function options(id,label,values){document.getElementById(id).innerHTML=`<option value="">All ${label}</option>`+values.map(value=>`<option>${value}</option>`).join('')}
 function render(){
-  const city=document.getElementById('cityFilter').value,sale=document.getElementById('saleFilter').value,type=document.getElementById('typeFilter').value;
-  const filtered=DATA.listings.filter(item=>(!city||item.city===city)&&(!sale||item.sale_type===sale)&&(!type||item.property_type===type));
-  document.getElementById('rows').innerHTML=filtered.map(item=>`<tr><td>${escapeHtml(item.address||'Unknown')}</td><td>${escapeHtml(item.city)}</td><td>${escapeHtml(item.property_type||'Unknown')}</td><td>${escapeHtml(item.sale_type||'Unknown')}</td><td class="price">${priceGuide(item)}</td><td class="number">${item.bedrooms??'–'}</td><td class="number">${item.bathrooms??'–'}</td><td class="number">${item.parking??'–'}</td><td>${dateOnly(item.added_at)}</td><td>${dateOnly(item.first_seen_at)}</td></tr>`).join('')||`<tr><td colspan="10" class="empty">${DATA.meta.status==='awaiting_first_refresh'?'No authenticated snapshot yet. Add the GitHub secret and run the listing refresh workflow.':'No listings match these filters.'}</td></tr>`;
+  const city=document.getElementById('cityFilter').value,sale=document.getElementById('saleFilter').value,source=document.getElementById('sourceFilter').value;
+  const filtered=DISPLAY_LISTINGS.filter(item=>(!city||item.city===city)&&(!sale||item.sale_type===sale)&&(!source||item.source===source));
+  document.getElementById('rows').innerHTML=filtered.map(item=>`<tr><td>${escapeHtml(item.address||'Unknown')}</td><td>${escapeHtml(item.city)}</td><td>${escapeHtml(item.source)}</td><td>${escapeHtml(item.sale_type||'Unknown')}</td><td class="price">${priceGuide(item)}</td><td class="number">${item.bedrooms??'–'}</td><td class="number">${item.bathrooms??'–'}</td><td class="number">${item.parking??'–'}</td><td>${dateOnly(item.first_seen_at)}</td><td>${dateOnly(item.last_seen_at)}</td><td><a href="${detailsUrl(item)}" target="_blank" rel="noopener" title="Search this exact address">Details</a></td></tr>`).join('')||'<tr><td colspan="11" class="empty">No listings match these filters.</td></tr>';
 }
 async function init(){
   try{const response=await fetch('./market_listings_latest.json',{cache:'no-store'});if(!response.ok)throw new Error('Data file unavailable');DATA=await response.json()}
   catch(error){document.querySelector('.table-wrap').outerHTML='<div class="error">Could not load market_listings_latest.json.</div>';return}
+  DISPLAY_LISTINGS=cappedBySuburb(DATA.listings,3);
   const meta=DATA.meta;document.getElementById('capturedAt').textContent=meta.captured_at?`Captured: ${new Date(meta.captured_at).toLocaleString()}`:'Awaiting first refresh';
-  const auctionCount=DATA.listings.filter(item=>item.sale_type==='Auction').length;const disclosed=DATA.listings.filter(item=>item.asking_price_low!=null||item.asking_price_high!=null).length;
-  document.getElementById('summary').innerHTML=`<div><span>Observations analysed</span><strong>${meta.observations_fetched??0}</strong></div><div><span>Public examples</span><strong>${meta.listing_count}</strong></div><div><span>Suburbs</span><strong>${meta.market_count}</strong></div><div><span>Sample auctions</span><strong>${auctionCount}</strong></div><div><span>Sample price disclosed</span><strong>${meta.listing_count?Math.round(disclosed/meta.listing_count*100):0}%</strong></div><div><span>API calls</span><strong>${meta.calls_used}</strong></div>`;
+  const auctionCount=DISPLAY_LISTINGS.filter(item=>item.sale_type==='Auction').length;const disclosed=DISPLAY_LISTINGS.filter(item=>item.price_text||item.asking_price_low!=null||item.asking_price_high!=null).length;
+  document.getElementById('summary').innerHTML=`<div><span>Observations analysed</span><strong>${meta.observations_fetched??0}</strong></div><div><span>Public examples</span><strong>${meta.listing_count}</strong></div><div><span>Suburbs observed</span><strong>${meta.market_count}</strong></div><div><span>Sample auctions</span><strong>${auctionCount}</strong></div><div><span>Sample price disclosed</span><strong>${meta.listing_count?Math.round(disclosed/meta.listing_count*100):0}%</strong></div><div><span>Alert emails</span><strong>${meta.alert_messages??0}</strong></div>`;
   document.getElementById('coverage').textContent=meta.coverage_note||'The first authenticated snapshot has not been captured.';
-  const unique=key=>[...new Set(DATA.listings.map(item=>item[key]).filter(Boolean))].sort();options('cityFilter','cities',unique('city'));options('saleFilter','sale methods',unique('sale_type'));options('typeFilter','property types',unique('property_type'));
-  ['cityFilter','saleFilter','typeFilter'].forEach(id=>document.getElementById(id).addEventListener('change',render));render();
+  const unique=key=>[...new Set(DISPLAY_LISTINGS.map(item=>item[key]).filter(Boolean))].sort();options('cityFilter','cities',unique('city'));options('saleFilter','sale methods',unique('sale_type'));options('sourceFilter','portals',unique('source'));
+  ['cityFilter','saleFilter','sourceFilter'].forEach(id=>document.getElementById(id).addEventListener('change',render));render();
 }
 init();
 </script>
