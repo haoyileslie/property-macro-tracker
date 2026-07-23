@@ -28,6 +28,22 @@ class RefreshListingsTests(unittest.TestCase):
         self.assertEqual((rows[0]["bedrooms"], rows[0]["bathrooms"], rows[0]["parking"]), (2, 1, 1))
         self.assertNotIn("url", rows[0])
 
+    def test_rea_alert_parses_live_inline_icon_facts(self):
+        message = alert(
+            'New to market: Alert for your "Strathfield, NSW 2135" saved search',
+            '<a href="https://example.test/image">4/1 Example Crescent</a>'
+            '<div>$1,100,000</div>'
+            '<a href="https://example.test/listing">4/1 Example Crescent, Strathfield 2135</a>'
+            '<div><img alt="Bedrooms"><span>&nbsp;&nbsp;2&nbsp;&nbsp;</span>'
+            '<img alt="Bathrooms"><span>&nbsp;&nbsp;1&nbsp;&nbsp;</span>'
+            '<img alt="Parking spaces"><span>&nbsp;&nbsp;1</span></div>',
+        )
+        rows = refresh.parse_message(message)
+        self.assertEqual(len(rows), 1)
+        self.assertEqual(rows[0]["address"], "4/1 Example Crescent, Strathfield NSW 2135")
+        self.assertEqual(rows[0]["price_text"], "$1,100,000")
+        self.assertEqual((rows[0]["bedrooms"], rows[0]["bathrooms"], rows[0]["parking"]), (2, 1, 1))
+
     def test_domain_saved_search_parses_card(self):
         message = alert(
             "Domain Home Alert for Richmond VIC 3121",

@@ -284,8 +284,22 @@ def parse_rea(body, subject, captured_at, coming_soon=False):
         street, suburb, address_postcode = address_match.groups()
         if not re.match(r"^\d", street) or address_postcode != postcode:
             continue
-        facts = lines[index + 1:index + 4]
-        if len(facts) != 3 or not all(value.isdigit() for value in facts):
+        fact_lines = lines[index + 1:index + 8]
+        facts = {}
+        fact_text = " ".join(fact_lines)
+        for key, pattern in {
+            "bedrooms": r"\bBedrooms?\s*(\d+)\b",
+            "bathrooms": r"\bBathrooms?\s*(\d+)\b",
+            "parking": r"\b(?:Parking(?:\s+spaces?)?|Cars?)\s*(\d+)\b",
+        }.items():
+            fact_match = re.search(pattern, fact_text, re.I)
+            if fact_match:
+                facts[key] = int(fact_match.group(1))
+        if len(facts) != 3:
+            numeric = [int(value) for value in fact_lines[:3] if value.isdigit()]
+            if len(numeric) == 3:
+                facts = dict(zip(("bedrooms", "bathrooms", "parking"), numeric))
+        if len(facts) != 3:
             continue
         price = None
         for prior in reversed(lines[max(0, index - 4):index]):
@@ -298,7 +312,7 @@ def parse_rea(body, subject, captured_at, coming_soon=False):
         records.append(public_item(
             "REA", f"{street}, {suburb} {state} {postcode}", suburb, state, postcode,
             captured_at, sale_type="Coming Soon" if coming_soon else None,
-            price_text=price, bedrooms=int(facts[0]), bathrooms=int(facts[1]), parking=int(facts[2]),
+            price_text=price, **facts,
         ))
     return records
 
