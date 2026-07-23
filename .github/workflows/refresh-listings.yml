@@ -2,12 +2,24 @@ name: Refresh market listings
 
 on:
   workflow_dispatch:
+  schedule:
+    - cron: "25 21 * * *"
+  pull_request:
+    paths:
+      - "listings.html"
+      - "market_listings_latest.json"
+      - "market_listings_vintages.json"
+      - "ingest_listings.py"
+      - "refresh_listings_from_gmail.py"
+      - "tests/test_ingest_listings.py"
+      - "tests/test_refresh_listings_from_gmail.py"
+      - ".github/workflows/refresh-listings.yml"
 
 permissions:
   contents: write
 
 concurrency:
-  group: tracker-listings-refresh
+  group: market-listings-refresh
   cancel-in-progress: false
 
 jobs:
@@ -21,30 +33,29 @@ jobs:
         with:
           python-version: "3.12"
 
-      - name: Fetch and validate active listings
+      - name: Read new Property Desk alerts
+        if: github.event_name != 'pull_request'
         env:
-          PROPRADAR_API_KEY: ${{ secrets.PROPRADAR_API_KEY }}
+          GMAIL_CLIENT_ID: ${{ secrets.GMAIL_CLIENT_ID }}
+          GMAIL_CLIENT_SECRET: ${{ secrets.GMAIL_CLIENT_SECRET }}
+          GMAIL_REFRESH_TOKEN: ${{ secrets.GMAIL_REFRESH_TOKEN }}
+        run: python3 refresh_listings_from_gmail.py
+
+      - name: Validate privacy-safe listing export
         run: python3 ingest_listings.py
 
       - name: Run listing regression tests
-        run: python3 -m unittest tests.test_ingest_listings -v
+        run: python3 -m unittest tests.test_ingest_listings tests.test_refresh_listings_from_gmail -v
 
-      - name: Stage refreshed listing datasets
-        id: changes
-        shell: bash
+      - name: Publish refreshed listing data
+        if: github.event_name != 'pull_request'
         run: |
-          git add market_listings_latest.json market_listings_vintages.json
-          if git diff --cached --quiet; then
-            echo "changed=false" >> "$GITHUB_OUTPUT"
-          else
-            echo "changed=true" >> "$GITHUB_OUTPUT"
+          if git diff --quiet -- market_listings_latest.json market_listings_vintages.json; then
+            echo "No new listing alerts to publish."
+            exit 0
           fi
-
-      - name: Commit and publish listing refresh
-        if: steps.changes.outputs.changed == 'true'
-        shell: bash
-        run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git commit -m "Refresh market listings $(date -u +%Y-%m-%d)"
-          git push origin "HEAD:${GITHUB_REF_NAME}"
+          git add market_listings_latest.json market_listings_vintages.json
+          git commit -m "Refresh market listings from Gmail alerts"
+          git push
