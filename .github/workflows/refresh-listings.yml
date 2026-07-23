@@ -1,28 +1,29 @@
-name: Validate market listings
+name: Refresh market listings
 
 on:
   workflow_dispatch:
-  push:
-    paths:
-      - "listings.html"
-      - "market_listings_latest.json"
-      - "market_listings_vintages.json"
-      - "ingest_listings.py"
-      - "tests/test_ingest_listings.py"
-      - ".github/workflows/refresh-listings.yml"
+  schedule:
+    - cron: "25 21 * * *"
   pull_request:
     paths:
       - "listings.html"
       - "market_listings_latest.json"
       - "market_listings_vintages.json"
       - "ingest_listings.py"
+      - "refresh_listings_from_gmail.py"
       - "tests/test_ingest_listings.py"
+      - "tests/test_refresh_listings_from_gmail.py"
+      - ".github/workflows/refresh-listings.yml"
 
 permissions:
-  contents: read
+  contents: write
+
+concurrency:
+  group: market-listings-refresh
+  cancel-in-progress: false
 
 jobs:
-  validate:
+  refresh:
     runs-on: ubuntu-latest
     timeout-minutes: 10
     steps:
@@ -32,8 +33,29 @@ jobs:
         with:
           python-version: "3.12"
 
+      - name: Read new Property Desk alerts
+        if: github.event_name != 'pull_request'
+        env:
+          GMAIL_CLIENT_ID: ${{ secrets.GMAIL_CLIENT_ID }}
+          GMAIL_CLIENT_SECRET: ${{ secrets.GMAIL_CLIENT_SECRET }}
+          GMAIL_REFRESH_TOKEN: ${{ secrets.GMAIL_REFRESH_TOKEN }}
+        run: python3 refresh_listings_from_gmail.py
+
       - name: Validate privacy-safe listing export
         run: python3 ingest_listings.py
 
       - name: Run listing regression tests
-        run: python3 -m unittest tests.test_ingest_listings -v
+        run: python3 -m unittest tests.test_ingest_listings tests.test_refresh_listings_from_gmail -v
+
+      - name: Publish refreshed listing data
+        if: github.event_name != 'pull_request'
+        run: |
+          if git diff --quiet -- market_listings_latest.json market_listings_vintages.json; then
+            echo "No new listing alerts to publish."
+            exit 0
+          fi
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add market_listings_latest.json market_listings_vintages.json
+          git commit -m "Refresh market listings from Gmail alerts"
+          git push

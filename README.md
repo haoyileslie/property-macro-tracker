@@ -16,6 +16,8 @@ framework. Core components:
 - `derived_indicators.py` — deterministic formulas that turn observed
   series into financing, affordability, supply and relative-market signals.
 - `ingest_listings.py` — privacy and schema validator for the public listing export.
+- `refresh_listings_from_gmail.py` — unattended read-only Gmail alert ingestor.
+- `gmail_oauth_setup.py` — one-time helper for placing Google credentials in encrypted GitHub Secrets.
 - `market_listings_latest.json` — the newest listing snapshot consumed by `listings.html`.
 - `market_listings_vintages.json` — append-only listing snapshots for change tracking.
 - `tests/` — regression tests proving that malformed dates, implausible
@@ -135,10 +137,35 @@ python3 ingest_listings.py
 python3 -m unittest tests.test_ingest_listings -v
 ```
 
-GitHub Actions runs the same privacy and regression checks whenever the listing
-page or export changes. Gmail access remains local and is not stored in this
-repository, so publishing a new vintage is an explicit reviewed export from the
-private desk rather than an unattended GitHub mailbox connection.
+The **Refresh market listings** GitHub Action checks the Gmail label
+`Property Desk` every day at 21:25 UTC, parses only newer Domain and REA alert
+messages, keeps no more than three recent examples per suburb, validates the
+privacy-safe export, and commits changed JSON files back to the repository.
+This is 07:25 or 08:25 Melbourne time depending on daylight saving. It can also
+be run on demand from the Actions tab.
+
+The Action needs one-time read-only Gmail authorization. In Google Cloud:
+
+1. Create a project, enable the Gmail API, and configure the OAuth consent screen.
+2. Add your Google account as a test user, then create an OAuth **Desktop app** client.
+3. Download its JSON file and run:
+
+```bash
+python3 gmail_oauth_setup.py ~/Downloads/client_secret_*.json
+```
+
+The helper opens Google consent and stores `GMAIL_CLIENT_ID`,
+`GMAIL_CLIENT_SECRET`, and `GMAIL_REFRESH_TOKEN` directly as encrypted repository
+secrets using GitHub CLI. It never writes their values into this repository.
+Google expires refresh tokens for external apps left in Testing after seven days.
+Moving an app to Production avoids that short token lifetime, but Gmail read-only
+is a restricted scope and Google may require OAuth verification. Keep this setup
+in Testing for the pilot, then choose between verification and a local scheduled
+refresh before treating it as durable production infrastructure.
+
+The workflow has read-only Gmail scope. Public output excludes message IDs, raw
+email content, notes, recipient details and portal tracking links. Details links
+on the page remain exact-address public searches.
 
 ### Access and download links (public)
 
