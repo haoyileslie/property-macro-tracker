@@ -44,6 +44,19 @@ class RefreshListingsTests(unittest.TestCase):
         self.assertEqual(rows[0]["price_text"], "$1,100,000")
         self.assertEqual((rows[0]["bedrooms"], rows[0]["bathrooms"], rows[0]["parking"]), (2, 1, 1))
 
+    def test_rea_alert_accepts_lot_number_but_skips_hidden_address(self):
+        message = alert(
+            'New to market: Alert for your "Cockburn Central, WA 6164" saved search',
+            '<a href="https://example.test/hidden">Address available on request, Cockburn Central 6164</a>'
+            '<div>3</div><div>2</div><div>0</div>'
+            '<a href="https://example.test/lot">Lot 191 Example Court, Cockburn Central 6164</a>'
+            '<div>4</div><div>3</div><div>2</div>',
+        )
+        rows = refresh.parse_message(message)
+        self.assertEqual(len(rows), 1)
+        self.assertEqual(rows[0]["address"], "Lot 191 Example Court, Cockburn Central WA 6164")
+        self.assertEqual((rows[0]["bedrooms"], rows[0]["bathrooms"], rows[0]["parking"]), (4, 3, 2))
+
     def test_domain_saved_search_parses_card(self):
         message = alert(
             "Domain Home Alert for Richmond VIC 3121",
