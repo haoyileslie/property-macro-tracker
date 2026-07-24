@@ -3249,6 +3249,1438 @@
           }
         }
       ]
+    },
+    {
+      "meta": {
+        "provider": "Domain and realestate.com.au saved-search alerts",
+        "source_urls": [
+          "https://www.domain.com.au/",
+          "https://www.realestate.com.au/"
+        ],
+        "captured_at": "2026-07-24T00:57:32Z",
+        "published_at": "2026-07-24T04:09:52Z",
+        "status": "ok",
+        "alert_messages": 238,
+        "market_count": 94,
+        "listing_count": 231,
+        "observations_fetched": 666,
+        "unique_listings_analysed": 598,
+        "public_sample_per_market": 3,
+        "coverage_note": "Recent saved-search alert evidence, not a complete market census. Up to three examples are shown per suburb, with both portals represented where available.",
+        "last_alert_email_at": "2026-07-24T00:57:32Z"
+      },
+      "markets": [
+        {
+          "city": "Brisbane",
+          "suburb": "Acacia Ridge",
+          "state": "QLD",
+          "postcode": "4110",
+          "listing_count": 3,
+          "auction_count": 1,
+          "auction_share_pct": 33.3,
+          "price_disclosed_count": 3,
+          "median_asking_midpoint_aud": null,
+          "source_counts": {
+            "Domain": 3,
+            "REA": 0
+          }
+        },
+        {
+          "city": "Brisbane",
+          "suburb": "Auchenflower",
+          "state": "QLD",
+          "postcode": "4005",
+          "listing_count": 2,
+          "auction_count": 0,
+          "auction_share_pct": 0.0,
+          "price_disclosed_count": 2,
+          "median_asking_midpoint_aud": null,
+          "source_counts": {
+            "Domain": 2,
+            "REA": 0
+          }
+        },
+        {
+          "city": "Brisbane",
+          "suburb": "Balmoral",
+          "state": "QLD",
+          "postcode": "4005",
+          "listing_count": 1,
+          "auction_count": 0,
+          "auction_share_pct": 0.0,
+          "price_disclosed_count": 1,
+          "median_asking_midpoint_aud": null,
+          "source_counts": {
+            "Domain": 1,
+            "REA": 0
+          }
+        },
+        {
+          "city": "Brisbane",
+          "suburb": "Bowen Hills",
+          "state": "QLD",
+          "postcode": "4005",
+          "listing_count": 3,
+          "auction_count": 0,
+          "auction_share_pct": 0.0,
+          "price_disclosed_count": 1,
+          "median_asking_midpoint_aud": null,
+          "source_counts": {
+            "Domain": 3,
+            "REA": 0
+          }
+        },
+        {
+          "city": "Brisbane",
+          "suburb": "Bulimba",
+          "state": "QLD",
+          "postcode": "4005",
+          "listing_count": 3,
+          "auction_count": 1,
+          "auction_share_pct": 33.3,
+          "price_disclosed_count": 3,
+          "median_asking_midpoint_aud": null,
+          "source_counts": {
+            "Domain": 3,
+            "REA": 0
+          }
+        },
+        {
+          "city": "Brisbane",
+          "suburb": "Cannon Hill",
+          "state": "QLD",
+          "postcode": "4005",
+          "listing_count": 1,
+          "auction_count": 0,
+          "auction_share_pct": 0.0,
+          "price_disclosed_count": 1,
+          "median_asking_midpoint_aud": null,
+          "source_counts": {
+            "Domain": 1,
+            "REA": 0
+          }
+        },
+        {
+          "city": "Brisbane",
+          "suburb": "Chapel Hill",
+          "state": "QLD",
+          "postcode": "4005",
+          "listing_count": 3,
+          "auction_count": 0,
+          "auction_share_pct": 0.0,
+          "price_disclosed_count": 2,
+          "median_asking_midpoint_aud": null,
+          "source_counts": {
+            "Domain": 3,
+            "REA": 0
+          }
+        },
+        {
+          "city": "Brisbane",
+          "suburb": "Corinda",
+          "state": "QLD",
+          "postcode": "4005",
+          "listing_count": 3,
+          "auction_count": 0,
+          "auction_share_pct": 0.0,
+          "price_disclosed_count": 2,
+          "median_asking_midpoint_aud": null,
+          "source_counts": {
+            "Domain": 3,
+            "REA": 0
+          }
+        },
+        {
+          "city": "Brisbane",
+          "suburb": "East Brisbane",
+          "state": "QLD",
+          "postcode": "4005",
+          "listing_count": 3,
+          "auction_count": 0,
+          "auction_share_pct": 0.0,
+          "price_disclosed_count": 3,
+          "median_asking_midpoint_aud": null,
+          "source_counts": {
+            "Domain": 3,
+            "REA": 0
+          }
+        },
+        {
+          "city": "Brisbane",
+          "suburb": "Fig Tree Pocket",
+          "state": "QLD",
+          "postcode": "4069",
+          "listing_count": 1,
+          "auction_count": 0,
+          "auction_share_pct": 0.0,
+          "price_disclosed_count": 1,
+          "median_asking_midpoint_aud": null,
+          "source_counts": {
+            "Domain": 1,
+            "REA": 0
+          }
+        },
+        {
+          "city": "Brisbane",
+          "suburb": "Fortitude Valley",
+          "state": "QLD",
+          "postcode": "4005",
+          "listing_count": 3,
+          "auction_count": 0,
+          "auction_share_pct": 0.0,
+          "price_disclosed_count": 3,
+          "median_asking_midpoint_aud": null,
+          "source_counts": {
+            "Domain": 3,
+            "REA": 0
+          }
+        },
+        {
+          "city": "Brisbane",
+          "suburb": "Graceville",
+          "state": "QLD",
+          "postcode": "4005",
+          "listing_count": 1,
+          "auction_count": 0,
+          "auction_share_pct": 0.0,
+          "price_disclosed_count": 1,
+          "median_asking_midpoint_aud": null,
+          "source_counts": {
+            "Domain": 1,
+            "REA": 0
+          }
+        },
+        {
+          "city": "Brisbane",
+          "suburb": "Hawthorne",
+          "state": "QLD",
+          "postcode": "4005",
+          "listing_count": 1,
+          "auction_count": 0,
+          "auction_share_pct": 0.0,
+          "price_disclosed_count": 1,
+          "median_asking_midpoint_aud": null,
+          "source_counts": {
+            "Domain": 1,
+            "REA": 0
+          }
+        },
+        {
+          "city": "Brisbane",
+          "suburb": "Indooroopilly",
+          "state": "QLD",
+          "postcode": "4068",
+          "listing_count": 3,
+          "auction_count": 0,
+          "auction_share_pct": 0.0,
+          "price_disclosed_count": 1,
+          "median_asking_midpoint_aud": null,
+          "source_counts": {
+            "Domain": 1,
+            "REA": 2
+          }
+        },
+        {
+          "city": "Brisbane",
+          "suburb": "Kangaroo Point",
+          "state": "QLD",
+          "postcode": "4005",
+          "listing_count": 3,
+          "auction_count": 0,
+          "auction_share_pct": 0.0,
+          "price_disclosed_count": 2,
+          "median_asking_midpoint_aud": null,
+          "source_counts": {
+            "Domain": 3,
+            "REA": 0
+          }
+        },
+        {
+          "city": "Brisbane",
+          "suburb": "Kenmore",
+          "state": "QLD",
+          "postcode": "4005",
+          "listing_count": 1,
+          "auction_count": 0,
+          "auction_share_pct": 0.0,
+          "price_disclosed_count": 0,
+          "median_asking_midpoint_aud": null,
+          "source_counts": {
+            "Domain": 1,
+            "REA": 0
+          }
+        },
+        {
+          "city": "Brisbane",
+          "suburb": "Manly",
+          "state": "QLD",
+          "postcode": "4179",
+          "listing_count": 3,
+          "auction_count": 0,
+          "auction_share_pct": 0.0,
+          "price_disclosed_count": 2,
+          "median_asking_midpoint_aud": null,
+          "source_counts": {
+            "Domain": 2,
+            "REA": 1
+          }
+        },
+        {
+          "city": "Brisbane",
+          "suburb": "Moorooka",
+          "state": "QLD",
+          "postcode": "4005",
+          "listing_count": 2,
+          "auction_count": 0,
+          "auction_share_pct": 0.0,
+          "price_disclosed_count": 2,
+          "median_asking_midpoint_aud": null,
+          "source_counts": {
+            "Domain": 2,
+            "REA": 0
+          }
+        },
+        {
+          "city": "Brisbane",
+          "suburb": "Morningside",
+          "state": "QLD",
+          "postcode": "4170",
+          "listing_count": 3,
+          "auction_count": 0,
+          "auction_share_pct": 0.0,
+          "price_disclosed_count": 3,
+          "median_asking_midpoint_aud": null,
+          "source_counts": {
+            "Domain": 1,
+            "REA": 2
+          }
+        },
+        {
+          "city": "Brisbane",
+          "suburb": "New Farm",
+          "state": "QLD",
+          "postcode": "4005",
+          "listing_count": 3,
+          "auction_count": 0,
+          "auction_share_pct": 0.0,
+          "price_disclosed_count": 3,
+          "median_asking_midpoint_aud": null,
+          "source_counts": {
+            "Domain": 2,
+            "REA": 1
+          }
+        },
+        {
+          "city": "Brisbane",
+          "suburb": "Newstead",
+          "state": "QLD",
+          "postcode": "4005",
+          "listing_count": 3,
+          "auction_count": 0,
+          "auction_share_pct": 0.0,
+          "price_disclosed_count": 3,
+          "median_asking_midpoint_aud": null,
+          "source_counts": {
+            "Domain": 3,
+            "REA": 0
+          }
+        },
+        {
+          "city": "Brisbane",
+          "suburb": "Norman Park",
+          "state": "QLD",
+          "postcode": "4005",
+          "listing_count": 2,
+          "auction_count": 0,
+          "auction_share_pct": 0.0,
+          "price_disclosed_count": 2,
+          "median_asking_midpoint_aud": null,
+          "source_counts": {
+            "Domain": 2,
+            "REA": 0
+          }
+        },
+        {
+          "city": "Brisbane",
+          "suburb": "Northgate",
+          "state": "QLD",
+          "postcode": "4013",
+          "listing_count": 3,
+          "auction_count": 0,
+          "auction_share_pct": 0.0,
+          "price_disclosed_count": 2,
+          "median_asking_midpoint_aud": null,
+          "source_counts": {
+            "Domain": 2,
+            "REA": 1
+          }
+        },
+        {
+          "city": "Brisbane",
+          "suburb": "Nundah",
+          "state": "QLD",
+          "postcode": "4012",
+          "listing_count": 3,
+          "auction_count": 1,
+          "auction_share_pct": 33.3,
+          "price_disclosed_count": 1,
+          "median_asking_midpoint_aud": null,
+          "source_counts": {
+            "Domain": 1,
+            "REA": 2
+          }
+        },
+        {
+          "city": "Brisbane",
+          "suburb": "Oxley",
+          "state": "QLD",
+          "postcode": "4075",
+          "listing_count": 3,
+          "auction_count": 0,
+          "auction_share_pct": 0.0,
+          "price_disclosed_count": 2,
+          "median_asking_midpoint_aud": null,
+          "source_counts": {
+            "Domain": 2,
+            "REA": 1
+          }
+        },
+        {
+          "city": "Brisbane",
+          "suburb": "Pullenvale",
+          "state": "QLD",
+          "postcode": "4005",
+          "listing_count": 3,
+          "auction_count": 1,
+          "auction_share_pct": 33.3,
+          "price_disclosed_count": 1,
+          "median_asking_midpoint_aud": null,
+          "source_counts": {
+            "Domain": 3,
+            "REA": 0
+          }
+        },
+        {
+          "city": "Brisbane",
+          "suburb": "Sunnybank",
+          "state": "QLD",
+          "postcode": "4109",
+          "listing_count": 3,
+          "auction_count": 0,
+          "auction_share_pct": 0.0,
+          "price_disclosed_count": 1,
+          "median_asking_midpoint_aud": null,
+          "source_counts": {
+            "Domain": 2,
+            "REA": 1
+          }
+        },
+        {
+          "city": "Brisbane",
+          "suburb": "Taringa",
+          "state": "QLD",
+          "postcode": "4005",
+          "listing_count": 3,
+          "auction_count": 0,
+          "auction_share_pct": 0.0,
+          "price_disclosed_count": 3,
+          "median_asking_midpoint_aud": null,
+          "source_counts": {
+            "Domain": 3,
+            "REA": 0
+          }
+        },
+        {
+          "city": "Brisbane",
+          "suburb": "Teneriffe",
+          "state": "QLD",
+          "postcode": "4005",
+          "listing_count": 1,
+          "auction_count": 0,
+          "auction_share_pct": 0.0,
+          "price_disclosed_count": 1,
+          "median_asking_midpoint_aud": null,
+          "source_counts": {
+            "Domain": 1,
+            "REA": 0
+          }
+        },
+        {
+          "city": "Brisbane",
+          "suburb": "Tennyson",
+          "state": "QLD",
+          "postcode": "4005",
+          "listing_count": 1,
+          "auction_count": 0,
+          "auction_share_pct": 0.0,
+          "price_disclosed_count": 1,
+          "median_asking_midpoint_aud": null,
+          "source_counts": {
+            "Domain": 1,
+            "REA": 0
+          }
+        },
+        {
+          "city": "Brisbane",
+          "suburb": "Toowong",
+          "state": "QLD",
+          "postcode": "4066",
+          "listing_count": 3,
+          "auction_count": 0,
+          "auction_share_pct": 0.0,
+          "price_disclosed_count": 3,
+          "median_asking_midpoint_aud": null,
+          "source_counts": {
+            "Domain": 2,
+            "REA": 1
+          }
+        },
+        {
+          "city": "Brisbane",
+          "suburb": "Woolloongabba",
+          "state": "QLD",
+          "postcode": "4102",
+          "listing_count": 2,
+          "auction_count": 0,
+          "auction_share_pct": 0.0,
+          "price_disclosed_count": 1,
+          "median_asking_midpoint_aud": null,
+          "source_counts": {
+            "Domain": 1,
+            "REA": 1
+          }
+        },
+        {
+          "city": "Brisbane",
+          "suburb": "Yeronga",
+          "state": "QLD",
+          "postcode": "4005",
+          "listing_count": 2,
+          "auction_count": 0,
+          "auction_share_pct": 0.0,
+          "price_disclosed_count": 1,
+          "median_asking_midpoint_aud": null,
+          "source_counts": {
+            "Domain": 2,
+            "REA": 0
+          }
+        },
+        {
+          "city": "Melbourne",
+          "suburb": "Abbotsford",
+          "state": "VIC",
+          "postcode": "3121",
+          "listing_count": 3,
+          "auction_count": 0,
+          "auction_share_pct": 0.0,
+          "price_disclosed_count": 3,
+          "median_asking_midpoint_aud": null,
+          "source_counts": {
+            "Domain": 3,
+            "REA": 0
+          }
+        },
+        {
+          "city": "Melbourne",
+          "suburb": "Bentleigh",
+          "state": "VIC",
+          "postcode": "3204",
+          "listing_count": 3,
+          "auction_count": 0,
+          "auction_share_pct": 0.0,
+          "price_disclosed_count": 3,
+          "median_asking_midpoint_aud": null,
+          "source_counts": {
+            "Domain": 1,
+            "REA": 2
+          }
+        },
+        {
+          "city": "Melbourne",
+          "suburb": "Blackburn",
+          "state": "VIC",
+          "postcode": "3130",
+          "listing_count": 3,
+          "auction_count": 0,
+          "auction_share_pct": 0.0,
+          "price_disclosed_count": 3,
+          "median_asking_midpoint_aud": null,
+          "source_counts": {
+            "Domain": 1,
+            "REA": 2
+          }
+        },
+        {
+          "city": "Melbourne",
+          "suburb": "Box Hill",
+          "state": "VIC",
+          "postcode": "3128",
+          "listing_count": 3,
+          "auction_count": 0,
+          "auction_share_pct": 0.0,
+          "price_disclosed_count": 3,
+          "median_asking_midpoint_aud": null,
+          "source_counts": {
+            "Domain": 2,
+            "REA": 1
+          }
+        },
+        {
+          "city": "Melbourne",
+          "suburb": "Brunswick",
+          "state": "VIC",
+          "postcode": "3056",
+          "listing_count": 3,
+          "auction_count": 0,
+          "auction_share_pct": 0.0,
+          "price_disclosed_count": 3,
+          "median_asking_midpoint_aud": null,
+          "source_counts": {
+            "Domain": 1,
+            "REA": 2
+          }
+        },
+        {
+          "city": "Melbourne",
+          "suburb": "Brunswick East",
+          "state": "VIC",
+          "postcode": "3121",
+          "listing_count": 3,
+          "auction_count": 0,
+          "auction_share_pct": 0.0,
+          "price_disclosed_count": 3,
+          "median_asking_midpoint_aud": null,
+          "source_counts": {
+            "Domain": 3,
+            "REA": 0
+          }
+        },
+        {
+          "city": "Melbourne",
+          "suburb": "Brunswick West",
+          "state": "VIC",
+          "postcode": "3121",
+          "listing_count": 1,
+          "auction_count": 0,
+          "auction_share_pct": 0.0,
+          "price_disclosed_count": 1,
+          "median_asking_midpoint_aud": null,
+          "source_counts": {
+            "Domain": 1,
+            "REA": 0
+          }
+        },
+        {
+          "city": "Melbourne",
+          "suburb": "Carlton North",
+          "state": "VIC",
+          "postcode": "3121",
+          "listing_count": 3,
+          "auction_count": 0,
+          "auction_share_pct": 0.0,
+          "price_disclosed_count": 3,
+          "median_asking_midpoint_aud": null,
+          "source_counts": {
+            "Domain": 3,
+            "REA": 0
+          }
+        },
+        {
+          "city": "Melbourne",
+          "suburb": "Caulfield",
+          "state": "VIC",
+          "postcode": "3162",
+          "listing_count": 2,
+          "auction_count": 0,
+          "auction_share_pct": 0.0,
+          "price_disclosed_count": 2,
+          "median_asking_midpoint_aud": null,
+          "source_counts": {
+            "Domain": 2,
+            "REA": 0
+          }
+        },
+        {
+          "city": "Melbourne",
+          "suburb": "Coburg",
+          "state": "VIC",
+          "postcode": "3058",
+          "listing_count": 3,
+          "auction_count": 0,
+          "auction_share_pct": 0.0,
+          "price_disclosed_count": 3,
+          "median_asking_midpoint_aud": null,
+          "source_counts": {
+            "Domain": 1,
+            "REA": 2
+          }
+        },
+        {
+          "city": "Melbourne",
+          "suburb": "Collingwood",
+          "state": "VIC",
+          "postcode": "3121",
+          "listing_count": 3,
+          "auction_count": 0,
+          "auction_share_pct": 0.0,
+          "price_disclosed_count": 3,
+          "median_asking_midpoint_aud": null,
+          "source_counts": {
+            "Domain": 3,
+            "REA": 0
+          }
+        },
+        {
+          "city": "Melbourne",
+          "suburb": "Cremorne",
+          "state": "VIC",
+          "postcode": "3121",
+          "listing_count": 1,
+          "auction_count": 0,
+          "auction_share_pct": 0.0,
+          "price_disclosed_count": 1,
+          "median_asking_midpoint_aud": null,
+          "source_counts": {
+            "Domain": 1,
+            "REA": 0
+          }
+        },
+        {
+          "city": "Melbourne",
+          "suburb": "East Melbourne",
+          "state": "VIC",
+          "postcode": "3121",
+          "listing_count": 3,
+          "auction_count": 0,
+          "auction_share_pct": 0.0,
+          "price_disclosed_count": 3,
+          "median_asking_midpoint_aud": null,
+          "source_counts": {
+            "Domain": 3,
+            "REA": 0
+          }
+        },
+        {
+          "city": "Melbourne",
+          "suburb": "Footscray",
+          "state": "VIC",
+          "postcode": "3011",
+          "listing_count": 3,
+          "auction_count": 0,
+          "auction_share_pct": 0.0,
+          "price_disclosed_count": 3,
+          "median_asking_midpoint_aud": null,
+          "source_counts": {
+            "Domain": 1,
+            "REA": 2
+          }
+        },
+        {
+          "city": "Melbourne",
+          "suburb": "Hawthorn",
+          "state": "VIC",
+          "postcode": "3121",
+          "listing_count": 3,
+          "auction_count": 0,
+          "auction_share_pct": 0.0,
+          "price_disclosed_count": 3,
+          "median_asking_midpoint_aud": null,
+          "source_counts": {
+            "Domain": 3,
+            "REA": 0
+          }
+        },
+        {
+          "city": "Melbourne",
+          "suburb": "Kew",
+          "state": "VIC",
+          "postcode": "3121",
+          "listing_count": 3,
+          "auction_count": 1,
+          "auction_share_pct": 33.3,
+          "price_disclosed_count": 3,
+          "median_asking_midpoint_aud": null,
+          "source_counts": {
+            "Domain": 3,
+            "REA": 0
+          }
+        },
+        {
+          "city": "Melbourne",
+          "suburb": "Melbourne",
+          "state": "VIC",
+          "postcode": "3121",
+          "listing_count": 3,
+          "auction_count": 0,
+          "auction_share_pct": 0.0,
+          "price_disclosed_count": 3,
+          "median_asking_midpoint_aud": null,
+          "source_counts": {
+            "Domain": 3,
+            "REA": 0
+          }
+        },
+        {
+          "city": "Melbourne",
+          "suburb": "Preston",
+          "state": "VIC",
+          "postcode": "3072",
+          "listing_count": 3,
+          "auction_count": 0,
+          "auction_share_pct": 0.0,
+          "price_disclosed_count": 3,
+          "median_asking_midpoint_aud": null,
+          "source_counts": {
+            "Domain": 1,
+            "REA": 2
+          }
+        },
+        {
+          "city": "Melbourne",
+          "suburb": "Richmond",
+          "state": "VIC",
+          "postcode": "3121",
+          "listing_count": 3,
+          "auction_count": 0,
+          "auction_share_pct": 0.0,
+          "price_disclosed_count": 3,
+          "median_asking_midpoint_aud": null,
+          "source_counts": {
+            "Domain": 1,
+            "REA": 2
+          }
+        },
+        {
+          "city": "Melbourne",
+          "suburb": "South Yarra",
+          "state": "VIC",
+          "postcode": "3121",
+          "listing_count": 3,
+          "auction_count": 0,
+          "auction_share_pct": 0.0,
+          "price_disclosed_count": 3,
+          "median_asking_midpoint_aud": null,
+          "source_counts": {
+            "Domain": 3,
+            "REA": 0
+          }
+        },
+        {
+          "city": "Melbourne",
+          "suburb": "Sunshine",
+          "state": "VIC",
+          "postcode": "3020",
+          "listing_count": 2,
+          "auction_count": 0,
+          "auction_share_pct": 0.0,
+          "price_disclosed_count": 2,
+          "median_asking_midpoint_aud": null,
+          "source_counts": {
+            "Domain": 1,
+            "REA": 1
+          }
+        },
+        {
+          "city": "Melbourne",
+          "suburb": "Toorak",
+          "state": "VIC",
+          "postcode": "3121",
+          "listing_count": 2,
+          "auction_count": 0,
+          "auction_share_pct": 0.0,
+          "price_disclosed_count": 2,
+          "median_asking_midpoint_aud": null,
+          "source_counts": {
+            "Domain": 2,
+            "REA": 0
+          }
+        },
+        {
+          "city": "Perth",
+          "suburb": "2 Bathroom Apartment with Sweeping Southern Views!",
+          "state": "WA",
+          "postcode": "6027",
+          "listing_count": 1,
+          "auction_count": 0,
+          "auction_share_pct": 0.0,
+          "price_disclosed_count": 0,
+          "median_asking_midpoint_aud": null,
+          "source_counts": {
+            "Domain": 1,
+            "REA": 0
+          }
+        },
+        {
+          "city": "Perth",
+          "suburb": "Bassendean",
+          "state": "WA",
+          "postcode": "6054",
+          "listing_count": 1,
+          "auction_count": 0,
+          "auction_share_pct": 0.0,
+          "price_disclosed_count": 0,
+          "median_asking_midpoint_aud": null,
+          "source_counts": {
+            "Domain": 0,
+            "REA": 1
+          }
+        },
+        {
+          "city": "Perth",
+          "suburb": "Burswood",
+          "state": "WA",
+          "postcode": "6008",
+          "listing_count": 3,
+          "auction_count": 0,
+          "auction_share_pct": 0.0,
+          "price_disclosed_count": 2,
+          "median_asking_midpoint_aud": null,
+          "source_counts": {
+            "Domain": 3,
+            "REA": 0
+          }
+        },
+        {
+          "city": "Perth",
+          "suburb": "Carlisle",
+          "state": "WA",
+          "postcode": "6008",
+          "listing_count": 3,
+          "auction_count": 0,
+          "auction_share_pct": 0.0,
+          "price_disclosed_count": 3,
+          "median_asking_midpoint_aud": null,
+          "source_counts": {
+            "Domain": 3,
+            "REA": 0
+          }
+        },
+        {
+          "city": "Perth",
+          "suburb": "Claremont",
+          "state": "WA",
+          "postcode": "6010",
+          "listing_count": 3,
+          "auction_count": 0,
+          "auction_share_pct": 0.0,
+          "price_disclosed_count": 2,
+          "median_asking_midpoint_aud": null,
+          "source_counts": {
+            "Domain": 2,
+            "REA": 1
+          }
+        },
+        {
+          "city": "Perth",
+          "suburb": "Cockburn Central",
+          "state": "WA",
+          "postcode": "6164",
+          "listing_count": 3,
+          "auction_count": 0,
+          "auction_share_pct": 0.0,
+          "price_disclosed_count": 2,
+          "median_asking_midpoint_aud": null,
+          "source_counts": {
+            "Domain": 1,
+            "REA": 2
+          }
+        },
+        {
+          "city": "Perth",
+          "suburb": "Como",
+          "state": "WA",
+          "postcode": "6152",
+          "listing_count": 3,
+          "auction_count": 0,
+          "auction_share_pct": 0.0,
+          "price_disclosed_count": 2,
+          "median_asking_midpoint_aud": null,
+          "source_counts": {
+            "Domain": 1,
+            "REA": 2
+          }
+        },
+        {
+          "city": "Perth",
+          "suburb": "Cottesloe",
+          "state": "WA",
+          "postcode": "6011",
+          "listing_count": 3,
+          "auction_count": 0,
+          "auction_share_pct": 0.0,
+          "price_disclosed_count": 2,
+          "median_asking_midpoint_aud": null,
+          "source_counts": {
+            "Domain": 1,
+            "REA": 2
+          }
+        },
+        {
+          "city": "Perth",
+          "suburb": "East Perth",
+          "state": "WA",
+          "postcode": "6008",
+          "listing_count": 3,
+          "auction_count": 0,
+          "auction_share_pct": 0.0,
+          "price_disclosed_count": 2,
+          "median_asking_midpoint_aud": null,
+          "source_counts": {
+            "Domain": 3,
+            "REA": 0
+          }
+        },
+        {
+          "city": "Perth",
+          "suburb": "East Victoria Park",
+          "state": "WA",
+          "postcode": "6008",
+          "listing_count": 3,
+          "auction_count": 0,
+          "auction_share_pct": 0.0,
+          "price_disclosed_count": 2,
+          "median_asking_midpoint_aud": null,
+          "source_counts": {
+            "Domain": 3,
+            "REA": 0
+          }
+        },
+        {
+          "city": "Perth",
+          "suburb": "Jolimont",
+          "state": "WA",
+          "postcode": "6008",
+          "listing_count": 1,
+          "auction_count": 0,
+          "auction_share_pct": 0.0,
+          "price_disclosed_count": 0,
+          "median_asking_midpoint_aud": null,
+          "source_counts": {
+            "Domain": 1,
+            "REA": 0
+          }
+        },
+        {
+          "city": "Perth",
+          "suburb": "Joondalup",
+          "state": "WA",
+          "postcode": "6027",
+          "listing_count": 3,
+          "auction_count": 0,
+          "auction_share_pct": 0.0,
+          "price_disclosed_count": 2,
+          "median_asking_midpoint_aud": null,
+          "source_counts": {
+            "Domain": 1,
+            "REA": 2
+          }
+        },
+        {
+          "city": "Perth",
+          "suburb": "Kensington",
+          "state": "WA",
+          "postcode": "6008",
+          "listing_count": 2,
+          "auction_count": 0,
+          "auction_share_pct": 0.0,
+          "price_disclosed_count": 2,
+          "median_asking_midpoint_aud": null,
+          "source_counts": {
+            "Domain": 2,
+            "REA": 0
+          }
+        },
+        {
+          "city": "Perth",
+          "suburb": "Lathlain",
+          "state": "WA",
+          "postcode": "6008",
+          "listing_count": 3,
+          "auction_count": 0,
+          "auction_share_pct": 0.0,
+          "price_disclosed_count": 2,
+          "median_asking_midpoint_aud": null,
+          "source_counts": {
+            "Domain": 3,
+            "REA": 0
+          }
+        },
+        {
+          "city": "Perth",
+          "suburb": "Leederville",
+          "state": "WA",
+          "postcode": "6008",
+          "listing_count": 1,
+          "auction_count": 0,
+          "auction_share_pct": 0.0,
+          "price_disclosed_count": 1,
+          "median_asking_midpoint_aud": null,
+          "source_counts": {
+            "Domain": 1,
+            "REA": 0
+          }
+        },
+        {
+          "city": "Perth",
+          "suburb": "Maylands",
+          "state": "WA",
+          "postcode": "6051",
+          "listing_count": 3,
+          "auction_count": 0,
+          "auction_share_pct": 0.0,
+          "price_disclosed_count": 3,
+          "median_asking_midpoint_aud": null,
+          "source_counts": {
+            "Domain": 1,
+            "REA": 2
+          }
+        },
+        {
+          "city": "Perth",
+          "suburb": "Shenton Park",
+          "state": "WA",
+          "postcode": "6008",
+          "listing_count": 1,
+          "auction_count": 0,
+          "auction_share_pct": 0.0,
+          "price_disclosed_count": 0,
+          "median_asking_midpoint_aud": null,
+          "source_counts": {
+            "Domain": 1,
+            "REA": 0
+          }
+        },
+        {
+          "city": "Perth",
+          "suburb": "South Perth",
+          "state": "WA",
+          "postcode": "6008",
+          "listing_count": 3,
+          "auction_count": 0,
+          "auction_share_pct": 0.0,
+          "price_disclosed_count": 3,
+          "median_asking_midpoint_aud": null,
+          "source_counts": {
+            "Domain": 3,
+            "REA": 0
+          }
+        },
+        {
+          "city": "Perth",
+          "suburb": "Subiaco",
+          "state": "WA",
+          "postcode": "6008",
+          "listing_count": 3,
+          "auction_count": 0,
+          "auction_share_pct": 0.0,
+          "price_disclosed_count": 2,
+          "median_asking_midpoint_aud": null,
+          "source_counts": {
+            "Domain": 1,
+            "REA": 2
+          }
+        },
+        {
+          "city": "Perth",
+          "suburb": "Victoria Park",
+          "state": "WA",
+          "postcode": "6100",
+          "listing_count": 3,
+          "auction_count": 0,
+          "auction_share_pct": 0.0,
+          "price_disclosed_count": 3,
+          "median_asking_midpoint_aud": null,
+          "source_counts": {
+            "Domain": 2,
+            "REA": 1
+          }
+        },
+        {
+          "city": "Perth",
+          "suburb": "Warwick",
+          "state": "WA",
+          "postcode": "6024",
+          "listing_count": 3,
+          "auction_count": 0,
+          "auction_share_pct": 0.0,
+          "price_disclosed_count": 3,
+          "median_asking_midpoint_aud": null,
+          "source_counts": {
+            "Domain": 1,
+            "REA": 2
+          }
+        },
+        {
+          "city": "Perth",
+          "suburb": "Wembley",
+          "state": "WA",
+          "postcode": "6008",
+          "listing_count": 3,
+          "auction_count": 0,
+          "auction_share_pct": 0.0,
+          "price_disclosed_count": 3,
+          "median_asking_midpoint_aud": null,
+          "source_counts": {
+            "Domain": 3,
+            "REA": 0
+          }
+        },
+        {
+          "city": "Perth",
+          "suburb": "West Leederville",
+          "state": "WA",
+          "postcode": "6008",
+          "listing_count": 1,
+          "auction_count": 0,
+          "auction_share_pct": 0.0,
+          "price_disclosed_count": 1,
+          "median_asking_midpoint_aud": null,
+          "source_counts": {
+            "Domain": 1,
+            "REA": 0
+          }
+        },
+        {
+          "city": "Perth",
+          "suburb": "West Perth",
+          "state": "WA",
+          "postcode": "6008",
+          "listing_count": 3,
+          "auction_count": 0,
+          "auction_share_pct": 0.0,
+          "price_disclosed_count": 3,
+          "median_asking_midpoint_aud": null,
+          "source_counts": {
+            "Domain": 3,
+            "REA": 0
+          }
+        },
+        {
+          "city": "Sydney",
+          "suburb": "Blacktown",
+          "state": "NSW",
+          "postcode": "2148",
+          "listing_count": 3,
+          "auction_count": 0,
+          "auction_share_pct": 0.0,
+          "price_disclosed_count": 1,
+          "median_asking_midpoint_aud": null,
+          "source_counts": {
+            "Domain": 0,
+            "REA": 3
+          }
+        },
+        {
+          "city": "Sydney",
+          "suburb": "Bondi Junction",
+          "state": "NSW",
+          "postcode": "2022",
+          "listing_count": 3,
+          "auction_count": 1,
+          "auction_share_pct": 33.3,
+          "price_disclosed_count": 1,
+          "median_asking_midpoint_aud": null,
+          "source_counts": {
+            "Domain": 1,
+            "REA": 2
+          }
+        },
+        {
+          "city": "Sydney",
+          "suburb": "Chatswood",
+          "state": "NSW",
+          "postcode": "2067",
+          "listing_count": 3,
+          "auction_count": 0,
+          "auction_share_pct": 0.0,
+          "price_disclosed_count": 1,
+          "median_asking_midpoint_aud": null,
+          "source_counts": {
+            "Domain": 1,
+            "REA": 2
+          }
+        },
+        {
+          "city": "Sydney",
+          "suburb": "Girraween",
+          "state": "NSW",
+          "postcode": "2150",
+          "listing_count": 1,
+          "auction_count": 1,
+          "auction_share_pct": 100.0,
+          "price_disclosed_count": 1,
+          "median_asking_midpoint_aud": null,
+          "source_counts": {
+            "Domain": 1,
+            "REA": 0
+          }
+        },
+        {
+          "city": "Sydney",
+          "suburb": "Hornsby",
+          "state": "NSW",
+          "postcode": "2077",
+          "listing_count": 3,
+          "auction_count": 0,
+          "auction_share_pct": 0.0,
+          "price_disclosed_count": 3,
+          "median_asking_midpoint_aud": null,
+          "source_counts": {
+            "Domain": 1,
+            "REA": 2
+          }
+        },
+        {
+          "city": "Sydney",
+          "suburb": "Hurstville",
+          "state": "NSW",
+          "postcode": "2220",
+          "listing_count": 3,
+          "auction_count": 0,
+          "auction_share_pct": 0.0,
+          "price_disclosed_count": 0,
+          "median_asking_midpoint_aud": null,
+          "source_counts": {
+            "Domain": 0,
+            "REA": 3
+          }
+        },
+        {
+          "city": "Sydney",
+          "suburb": "Kingsford",
+          "state": "NSW",
+          "postcode": "2032",
+          "listing_count": 3,
+          "auction_count": 0,
+          "auction_share_pct": 0.0,
+          "price_disclosed_count": 0,
+          "median_asking_midpoint_aud": null,
+          "source_counts": {
+            "Domain": 1,
+            "REA": 2
+          }
+        },
+        {
+          "city": "Sydney",
+          "suburb": "Merrylands West",
+          "state": "NSW",
+          "postcode": "2150",
+          "listing_count": 1,
+          "auction_count": 0,
+          "auction_share_pct": 0.0,
+          "price_disclosed_count": 0,
+          "median_asking_midpoint_aud": null,
+          "source_counts": {
+            "Domain": 1,
+            "REA": 0
+          }
+        },
+        {
+          "city": "Sydney",
+          "suburb": "North Parramatta",
+          "state": "NSW",
+          "postcode": "2150",
+          "listing_count": 1,
+          "auction_count": 0,
+          "auction_share_pct": 0.0,
+          "price_disclosed_count": 0,
+          "median_asking_midpoint_aud": null,
+          "source_counts": {
+            "Domain": 1,
+            "REA": 0
+          }
+        },
+        {
+          "city": "Sydney",
+          "suburb": "Parramatta",
+          "state": "NSW",
+          "postcode": "2150",
+          "listing_count": 3,
+          "auction_count": 0,
+          "auction_share_pct": 0.0,
+          "price_disclosed_count": 2,
+          "median_asking_midpoint_aud": null,
+          "source_counts": {
+            "Domain": 1,
+            "REA": 2
+          }
+        },
+        {
+          "city": "Sydney",
+          "suburb": "St Leonards",
+          "state": "NSW",
+          "postcode": "2065",
+          "listing_count": 3,
+          "auction_count": 1,
+          "auction_share_pct": 33.3,
+          "price_disclosed_count": 1,
+          "median_asking_midpoint_aud": null,
+          "source_counts": {
+            "Domain": 1,
+            "REA": 2
+          }
+        },
+        {
+          "city": "Sydney",
+          "suburb": "Strathfield",
+          "state": "NSW",
+          "postcode": "2135",
+          "listing_count": 3,
+          "auction_count": 0,
+          "auction_share_pct": 0.0,
+          "price_disclosed_count": 1,
+          "median_asking_midpoint_aud": null,
+          "source_counts": {
+            "Domain": 0,
+            "REA": 3
+          }
+        },
+        {
+          "city": "Sydney",
+          "suburb": "Sutherland",
+          "state": "NSW",
+          "postcode": "2232",
+          "listing_count": 3,
+          "auction_count": 0,
+          "auction_share_pct": 0.0,
+          "price_disclosed_count": 1,
+          "median_asking_midpoint_aud": null,
+          "source_counts": {
+            "Domain": 0,
+            "REA": 3
+          }
+        },
+        {
+          "city": "Sydney",
+          "suburb": "Willoughby",
+          "state": "NSW",
+          "postcode": "2150",
+          "listing_count": 1,
+          "auction_count": 1,
+          "auction_share_pct": 100.0,
+          "price_disclosed_count": 1,
+          "median_asking_midpoint_aud": null,
+          "source_counts": {
+            "Domain": 1,
+            "REA": 0
+          }
+        },
+        {
+          "city": "Sydney",
+          "suburb": "with district views",
+          "state": "NSW",
+          "postcode": "2150",
+          "listing_count": 1,
+          "auction_count": 0,
+          "auction_share_pct": 0.0,
+          "price_disclosed_count": 0,
+          "median_asking_midpoint_aud": null,
+          "source_counts": {
+            "Domain": 1,
+            "REA": 0
+          }
+        }
+      ]
     }
   ]
 }
