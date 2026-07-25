@@ -57,6 +57,23 @@ class RefreshListingsTests(unittest.TestCase):
         self.assertEqual(rows[0]["address"], "Lot 191 Example Court, Cockburn Central WA 6164")
         self.assertEqual((rows[0]["bedrooms"], rows[0]["bathrooms"], rows[0]["parking"]), (4, 3, 2))
 
+    def test_rea_alert_parses_land_card_without_dwelling_facts(self):
+        message = alert(
+            'New to market: Alert for your "Sunnybank, QLD 4109" saved search',
+            '<a href="https://example.test/image">Lot 3, 1 Example Street</a>'
+            '<div>New Land Release From $977,000</div>'
+            '<a href="https://example.test/listing">Lot 3, 1 Example Street, Sunnybank 4109</a>'
+            '<a href="https://example.test/listing">View Property</a>',
+        )
+        rows = refresh.parse_message(message)
+        self.assertEqual(len(rows), 1)
+        self.assertEqual(rows[0]["address"], "Lot 3, 1 Example Street, Sunnybank QLD 4109")
+        self.assertEqual(rows[0]["property_type"], "Land")
+        self.assertEqual(rows[0]["price_text"], "New Land Release From $977,000")
+        self.assertIsNone(rows[0]["bedrooms"])
+        self.assertIsNone(rows[0]["bathrooms"])
+        self.assertIsNone(rows[0]["parking"])
+
     def test_domain_saved_search_parses_card(self):
         message = alert(
             "Domain Home Alert for Richmond VIC 3121",

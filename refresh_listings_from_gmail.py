@@ -299,7 +299,8 @@ def parse_rea(body, subject, captured_at, coming_soon=False):
             numeric = [int(value) for value in fact_lines[:3] if value.isdigit()]
             if len(numeric) == 3:
                 facts = dict(zip(("bedrooms", "bathrooms", "parking"), numeric))
-        if len(facts) != 3:
+        land_only = bool(re.match(r"^Lot\s+\d", street, re.I)) and not facts
+        if len(facts) != 3 and not land_only:
             continue
         price = None
         for prior in reversed(lines[max(0, index - 4):index]):
@@ -312,7 +313,7 @@ def parse_rea(body, subject, captured_at, coming_soon=False):
         records.append(public_item(
             "REA", f"{street}, {suburb} {state} {postcode}", suburb, state, postcode,
             captured_at, sale_type="Coming Soon" if coming_soon else None,
-            price_text=price, **facts,
+            price_text=price, property_type="Land" if land_only else None, **facts,
         ))
     return records
 
