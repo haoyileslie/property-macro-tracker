@@ -150,6 +150,35 @@ class RefreshListingsTests(unittest.TestCase):
         self.assertEqual(refreshed["meta"]["unattributed_alert_cards_skipped"], 1)
         self.assertEqual(refreshed["meta"]["last_alert_email_at"], "2026-07-25T07:55:19Z")
 
+    def test_build_refresh_counts_domain_suburb_only_card_without_inventing_address(self):
+        snapshot = {
+            "meta": {
+                "captured_at": "2026-07-23T00:00:00Z",
+                "last_alert_email_at": "2026-07-23T00:00:00Z",
+                "alert_messages": 2,
+                "observations_fetched": 4,
+                "unique_listings_analysed": 4,
+            },
+            "markets": [],
+            "listings": [],
+        }
+        message = alert(
+            "Home Alert for Maylands WA 6051",
+            '<a href="https://example.test/headline">Build Brand New in Maylands</a>'
+            '<div>$1,256,100</div>'
+            '<a href="https://example.test/suburb">Maylands</a>'
+            '<div>4</div><div>beds</div><div>2</div><div>baths</div>'
+            '<div>2</div><div>cars</div>'
+            '<a href="https://example.test/details">Find out more</a>',
+            "2026-07-25T07:49:32Z",
+        )
+        refreshed = refresh.build_refresh(snapshot, [message])
+        self.assertEqual(refreshed["listings"], [])
+        self.assertEqual(refreshed["meta"]["alert_messages"], 3)
+        self.assertEqual(refreshed["meta"]["observations_fetched"], 4)
+        self.assertEqual(refreshed["meta"]["unattributed_alert_cards_skipped"], 1)
+        self.assertEqual(refreshed["meta"]["last_alert_email_at"], "2026-07-25T07:49:32Z")
+
     def test_recognized_alert_with_changed_template_stops_refresh(self):
         snapshot = {
             "meta": {

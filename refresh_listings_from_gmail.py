@@ -336,6 +336,32 @@ def hidden_rea_card_count(body, subject):
     return count
 
 
+def unattributed_domain_card_count(body, subject):
+    scope = re.search(r"\bHome Alert for\s+(.+?)\s+(NSW|VIC|QLD|WA)\s+(\d{4})\s*$", subject, re.I)
+    if not scope:
+        return 0
+    expected_suburb = scope.group(1).strip().lower()
+    lines = markdown_lines(body)
+    count = 0
+    for index, line in enumerate(lines):
+        label, _ = markdown_link(line)
+        if (label or "").strip().lower() != expected_suburb:
+            continue
+        window = lines[index + 1:index + 10]
+        fact_text = " ".join(window)
+        has_facts = all(
+            re.search(pattern, fact_text, re.I)
+            for pattern in (r"\b\d+\s+beds?\b", r"\b\d+\s+baths?\b", r"\b\d+\s+cars?\b")
+        )
+        has_details_link = any(
+            (markdown_link(candidate)[0] or "").strip().lower() == "find out more"
+            for candidate in window
+        )
+        if has_facts and has_details_link:
+            count += 1
+    return count
+
+
 def parse_domain_single(body, subject, captured_at, off_market=False):
     lines = markdown_lines(body)
     if off_market:
@@ -467,11 +493,14 @@ def build_refresh(snapshot, messages):
     for message in fresh_messages:
         parsed = parse_message(message)
         if not parsed:
-            hidden_cards = hidden_rea_card_count(
-                message_body(message), message.get("Subject") or ""
+            body = message_body(message)
+            subject = message.get("Subject") or ""
+            unattributed_cards = (
+                hidden_rea_card_count(body, subject)
+                + unattributed_domain_card_count(body, subject)
             )
-            if hidden_cards:
-                hidden_cards_skipped += hidden_cards
+            if unattributed_cards:
+                hidden_cards_skipped += unattributed_cards
                 continue
             raise RuntimeError(
                 "Recognized a portal alert but could not parse any listing cards: "
