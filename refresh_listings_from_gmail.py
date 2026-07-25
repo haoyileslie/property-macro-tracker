@@ -318,6 +318,24 @@ def parse_rea(body, subject, captured_at, coming_soon=False):
     return records
 
 
+def hidden_rea_card_count(body, subject):
+    match = re.search(r'Alert for your "[^\"]+,\s*(?:NSW|VIC|QLD|WA)\s+(\d{4})"', subject, re.I)
+    if not match:
+        return 0
+    expected_postcode = match.group(1)
+    lines = markdown_lines(body)
+    count = 0
+    for index, line in enumerate(lines):
+        label, _ = markdown_link(line)
+        hidden = re.match(r"^Address available on request,\s*.+\s+(\d{4})$", label or "", re.I)
+        if not hidden or hidden.group(1) != expected_postcode:
+            continue
+        window = lines[index + 1:index + 10]
+        if any((markdown_link(candidate)[0] or "").lower() == "view property" for candidate in window):
+            count += 1
+    return count
+
+
 def parse_domain_single(body, subject, captured_at, off_market=False):
     lines = markdown_lines(body)
     if off_market:
@@ -445,9 +463,16 @@ def build_refresh(snapshot, messages):
         if parse_timestamp(message_timestamp(message)) > cutoff and supported_alert(message)
     ]
     observed = []
+    hidden_cards_skipped = 0
     for message in fresh_messages:
         parsed = parse_message(message)
         if not parsed:
+            hidden_cards = hidden_rea_card_count(
+                message_body(message), message.get("Subject") or ""
+            )
+            if hidden_cards:
+                hidden_cards_skipped += hidden_cards
+                continue
             raise RuntimeError(
                 "Recognized a portal alert but could not parse any listing cards: "
                 + (message.get("Subject") or "No subject")
@@ -470,6 +495,10 @@ def build_refresh(snapshot, messages):
         "listing_count": len(listings),
         "observations_fetched": int(snapshot["meta"].get("observations_fetched") or 0) + len(observed),
         "unique_listings_analysed": int(snapshot["meta"].get("unique_listings_analysed") or 0) + len(new_ids),
+        "unattributed_alert_cards_skipped": (
+            int(snapshot["meta"].get("unattributed_alert_cards_skipped") or 0)
+            + hidden_cards_skipped
+        ),
     }
     return {"meta": meta, "markets": markets, "listings": listings}
 
