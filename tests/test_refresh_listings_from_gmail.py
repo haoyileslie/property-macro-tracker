@@ -123,6 +123,33 @@ class RefreshListingsTests(unittest.TestCase):
         )
         self.assertIsNone(refresh.build_refresh(snapshot, [message]))
 
+    def test_build_refresh_counts_hidden_address_card_without_publishing_it(self):
+        snapshot = {
+            "meta": {
+                "captured_at": "2026-07-23T00:00:00Z",
+                "last_alert_email_at": "2026-07-23T00:00:00Z",
+                "alert_messages": 2,
+                "observations_fetched": 4,
+                "unique_listings_analysed": 4,
+            },
+            "markets": [],
+            "listings": [],
+        }
+        message = alert(
+            'New to market: Alert for your "Footscray, VIC 3011" saved search',
+            '<div>$750,000</div>'
+            '<a href="https://example.test/hidden">Address available on request, Footscray 3011</a>'
+            '<div>2</div><div>3</div><div>1</div>'
+            '<a href="https://example.test/hidden">View Property</a>',
+            "2026-07-25T07:55:19Z",
+        )
+        refreshed = refresh.build_refresh(snapshot, [message])
+        self.assertEqual(refreshed["listings"], [])
+        self.assertEqual(refreshed["meta"]["alert_messages"], 3)
+        self.assertEqual(refreshed["meta"]["observations_fetched"], 4)
+        self.assertEqual(refreshed["meta"]["unattributed_alert_cards_skipped"], 1)
+        self.assertEqual(refreshed["meta"]["last_alert_email_at"], "2026-07-25T07:55:19Z")
+
     def test_recognized_alert_with_changed_template_stops_refresh(self):
         snapshot = {
             "meta": {
