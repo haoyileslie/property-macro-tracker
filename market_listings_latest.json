@@ -5,18 +5,18 @@
       "https://www.domain.com.au/",
       "https://www.realestate.com.au/"
     ],
-    "captured_at": "2026-07-25T07:55:12Z",
-    "published_at": "2026-07-25T15:03:52Z",
+    "captured_at": "2026-07-26T07:40:38Z",
+    "published_at": "2026-07-26T13:14:35Z",
     "status": "ok",
-    "alert_messages": 297,
-    "market_count": 98,
-    "listing_count": 249,
-    "observations_fetched": 809,
-    "unique_listings_analysed": 738,
+    "alert_messages": 305,
+    "market_count": 103,
+    "listing_count": 261,
+    "observations_fetched": 842,
+    "unique_listings_analysed": 770,
     "public_sample_per_market": 3,
     "coverage_note": "Recent saved-search alert evidence, not a complete market census. Up to three examples are shown per suburb, with both portals represented where available.",
-    "last_alert_email_at": "2026-07-25T07:55:19Z",
-    "unattributed_alert_cards_skipped": 7
+    "last_alert_email_at": "2026-07-26T07:40:38Z",
+    "unattributed_alert_cards_skipped": 9
   },
   "markets": [
     {
@@ -99,13 +99,13 @@
       "suburb": "Cannon Hill",
       "state": "QLD",
       "postcode": "4005",
-      "listing_count": 2,
+      "listing_count": 3,
       "auction_count": 0,
       "auction_share_pct": 0.0,
-      "price_disclosed_count": 2,
+      "price_disclosed_count": 3,
       "median_asking_midpoint_aud": null,
       "source_counts": {
-        "Domain": 2,
+        "Domain": 3,
         "REA": 0
       }
     },
@@ -158,14 +158,14 @@
       "city": "Brisbane",
       "suburb": "Fig Tree Pocket",
       "state": "QLD",
-      "postcode": "4069",
-      "listing_count": 1,
+      "postcode": "4005",
+      "listing_count": 2,
       "auction_count": 0,
       "auction_share_pct": 0.0,
-      "price_disclosed_count": 1,
+      "price_disclosed_count": 2,
       "median_asking_midpoint_aud": null,
       "source_counts": {
-        "Domain": 1,
+        "Domain": 2,
         "REA": 0
       }
     },
@@ -189,13 +189,13 @@
       "suburb": "Graceville",
       "state": "QLD",
       "postcode": "4005",
-      "listing_count": 2,
+      "listing_count": 3,
       "auction_count": 0,
       "auction_share_pct": 0.0,
       "price_disclosed_count": 1,
       "median_asking_midpoint_aud": null,
       "source_counts": {
-        "Domain": 2,
+        "Domain": 3,
         "REA": 0
       }
     },
@@ -237,7 +237,7 @@
       "listing_count": 3,
       "auction_count": 0,
       "auction_share_pct": 0.0,
-      "price_disclosed_count": 2,
+      "price_disclosed_count": 3,
       "median_asking_midpoint_aud": null,
       "source_counts": {
         "Domain": 3,
@@ -249,13 +249,13 @@
       "suburb": "Kenmore",
       "state": "QLD",
       "postcode": "4005",
-      "listing_count": 2,
+      "listing_count": 3,
       "auction_count": 0,
       "auction_share_pct": 0.0,
-      "price_disclosed_count": 0,
+      "price_disclosed_count": 1,
       "median_asking_midpoint_aud": null,
       "source_counts": {
-        "Domain": 2,
+        "Domain": 3,
         "REA": 0
       }
     },
@@ -312,7 +312,7 @@
       "listing_count": 3,
       "auction_count": 0,
       "auction_share_pct": 0.0,
-      "price_disclosed_count": 3,
+      "price_disclosed_count": 2,
       "median_asking_midpoint_aud": null,
       "source_counts": {
         "Domain": 2,
@@ -705,8 +705,8 @@
       "price_disclosed_count": 3,
       "median_asking_midpoint_aud": null,
       "source_counts": {
-        "Domain": 1,
-        "REA": 2
+        "Domain": 2,
+        "REA": 1
       }
     },
     {
@@ -891,6 +891,21 @@
     },
     {
       "city": "Perth",
+      "suburb": "000",
+      "state": "WA",
+      "postcode": "6008",
+      "listing_count": 1,
+      "auction_count": 0,
+      "auction_share_pct": 0.0,
+      "price_disclosed_count": 0,
+      "median_asking_midpoint_aud": null,
+      "source_counts": {
+        "Domain": 1,
+        "REA": 0
+      }
+    },
+    {
+      "city": "Perth",
       "suburb": "2 Bathroom Apartment with Sweeping Southern Views!",
       "state": "WA",
       "postcode": "6027",
@@ -912,11 +927,11 @@
       "listing_count": 3,
       "auction_count": 0,
       "auction_share_pct": 0.0,
-      "price_disclosed_count": 2,
+      "price_disclosed_count": 3,
       "median_asking_midpoint_aud": null,
       "source_counts": {
-        "Domain": 0,
-        "REA": 3
+        "Domain": 1,
+        "REA": 2
       }
     },
     {
@@ -1017,7 +1032,7 @@
       "listing_count": 3,
       "auction_count": 0,
       "auction_share_pct": 0.0,
-      "price_disclosed_count": 3,
+      "price_disclosed_count": 2,
       "median_asking_midpoint_aud": null,
       "source_counts": {
         "Domain": 3,
@@ -1200,8 +1215,8 @@
       "price_disclosed_count": 3,
       "median_asking_midpoint_aud": null,
       "source_counts": {
-        "Domain": 1,
-        "REA": 2
+        "Domain": 2,
+        "REA": 1
       }
     },
     {
@@ -1266,6 +1281,21 @@
     },
     {
       "city": "Sydney",
+      "suburb": "000",
+      "state": "NSW",
+      "postcode": "2150",
+      "listing_count": 1,
+      "auction_count": 0,
+      "auction_share_pct": 0.0,
+      "price_disclosed_count": 0,
+      "median_asking_midpoint_aud": null,
+      "source_counts": {
+        "Domain": 1,
+        "REA": 0
+      }
+    },
+    {
+      "city": "Sydney",
       "suburb": "Blacktown",
       "state": "NSW",
       "postcode": "2148",
@@ -1314,13 +1344,13 @@
       "suburb": "Girraween",
       "state": "NSW",
       "postcode": "2150",
-      "listing_count": 1,
+      "listing_count": 2,
       "auction_count": 1,
-      "auction_share_pct": 100.0,
+      "auction_share_pct": 50.0,
       "price_disclosed_count": 1,
       "median_asking_midpoint_aud": null,
       "source_counts": {
-        "Domain": 1,
+        "Domain": 2,
         "REA": 0
       }
     },
@@ -1367,6 +1397,21 @@
       "source_counts": {
         "Domain": 1,
         "REA": 2
+      }
+    },
+    {
+      "city": "Sydney",
+      "suburb": "Merrylands",
+      "state": "NSW",
+      "postcode": "2150",
+      "listing_count": 3,
+      "auction_count": 0,
+      "auction_share_pct": 0.0,
+      "price_disclosed_count": 3,
+      "median_asking_midpoint_aud": null,
+      "source_counts": {
+        "Domain": 3,
+        "REA": 0
       }
     },
     {
@@ -1457,6 +1502,36 @@
       "source_counts": {
         "Domain": 0,
         "REA": 3
+      }
+    },
+    {
+      "city": "Sydney",
+      "suburb": "Wentworthville",
+      "state": "NSW",
+      "postcode": "2150",
+      "listing_count": 1,
+      "auction_count": 0,
+      "auction_share_pct": 0.0,
+      "price_disclosed_count": 1,
+      "median_asking_midpoint_aud": null,
+      "source_counts": {
+        "Domain": 1,
+        "REA": 0
+      }
+    },
+    {
+      "city": "Sydney",
+      "suburb": "Westmead",
+      "state": "NSW",
+      "postcode": "2150",
+      "listing_count": 1,
+      "auction_count": 0,
+      "auction_share_pct": 0.0,
+      "price_disclosed_count": 0,
+      "median_asking_midpoint_aud": null,
+      "source_counts": {
+        "Domain": 1,
+        "REA": 0
       }
     },
     {
@@ -1663,6 +1738,25 @@
       "last_seen_at": "2026-07-20T08:21:59Z"
     },
     {
+      "property_id": "0ecb2b287954d16e",
+      "source": "Domain",
+      "city": "Brisbane",
+      "suburb": "Bulimba",
+      "state": "QLD",
+      "postcode": "4005",
+      "address": "84 Mcconnell Street, Bulimba QLD 4005",
+      "property_type": null,
+      "sale_type": null,
+      "price_text": "For Sale",
+      "asking_price_low": null,
+      "asking_price_high": null,
+      "bedrooms": 4,
+      "bathrooms": 2,
+      "parking": 2,
+      "first_seen_at": "2026-07-26T07:40:38Z",
+      "last_seen_at": "2026-07-26T07:40:38Z"
+    },
+    {
       "property_id": "40086c57561ce849",
       "source": "Domain",
       "city": "Brisbane",
@@ -1701,23 +1795,23 @@
       "last_seen_at": "2026-07-21T08:27:25Z"
     },
     {
-      "property_id": "e97f28a0c2db34d3",
+      "property_id": "b576c0630b85ffe3",
       "source": "Domain",
       "city": "Brisbane",
-      "suburb": "Bulimba",
+      "suburb": "Cannon Hill",
       "state": "QLD",
       "postcode": "4005",
-      "address": "5/15 Wambool Street, Bulimba QLD 4005",
+      "address": "106 Erica Street, Cannon Hill QLD 4005",
       "property_type": null,
       "sale_type": null,
-      "price_text": "For Sale",
+      "price_text": "NOW $1.285m + Act Fast!",
       "asking_price_low": null,
       "asking_price_high": null,
-      "bedrooms": 2.0,
-      "bathrooms": 1.0,
-      "parking": 1.0,
-      "first_seen_at": "2026-07-20T08:21:59Z",
-      "last_seen_at": "2026-07-20T08:21:59Z"
+      "bedrooms": 3,
+      "bathrooms": 1,
+      "parking": 1,
+      "first_seen_at": "2026-07-26T07:40:38Z",
+      "last_seen_at": "2026-07-26T07:40:38Z"
     },
     {
       "property_id": "991ad67045304dd3",
@@ -1929,6 +2023,25 @@
       "last_seen_at": "2026-07-22T08:09:22Z"
     },
     {
+      "property_id": "36432b65d37e4600",
+      "source": "Domain",
+      "city": "Brisbane",
+      "suburb": "Fig Tree Pocket",
+      "state": "QLD",
+      "postcode": "4005",
+      "address": "14 Quinty Street, Fig Tree Pocket QLD 4005",
+      "property_type": null,
+      "sale_type": null,
+      "price_text": "Offers Over $1,495,000",
+      "asking_price_low": null,
+      "asking_price_high": null,
+      "bedrooms": 4,
+      "bathrooms": 2,
+      "parking": 2,
+      "first_seen_at": "2026-07-26T07:40:38Z",
+      "last_seen_at": "2026-07-26T07:40:38Z"
+    },
+    {
       "property_id": "c6451f7444e8a3b7",
       "source": "Domain",
       "city": "Brisbane",
@@ -2005,6 +2118,25 @@
       "last_seen_at": "2026-07-23T08:32:53Z"
     },
     {
+      "property_id": "cbd407caa6803463",
+      "source": "Domain",
+      "city": "Brisbane",
+      "suburb": "Graceville",
+      "state": "QLD",
+      "postcode": "4005",
+      "address": "54 Graceville Avenue, Graceville QLD 4005",
+      "property_type": null,
+      "sale_type": null,
+      "price_text": null,
+      "asking_price_low": null,
+      "asking_price_high": null,
+      "bedrooms": 3,
+      "bathrooms": 1,
+      "parking": 3,
+      "first_seen_at": "2026-07-26T07:40:38Z",
+      "last_seen_at": "2026-07-26T07:40:38Z"
+    },
+    {
       "property_id": "a7ca506ade3c137d",
       "source": "Domain",
       "city": "Brisbane",
@@ -2062,23 +2194,23 @@
       "last_seen_at": "2026-07-20T08:21:59Z"
     },
     {
-      "property_id": "8b5c11aaca18a409",
+      "property_id": "0873fb283914e2fa",
       "source": "Domain",
       "city": "Brisbane",
       "suburb": "Indooroopilly",
       "state": "QLD",
       "postcode": "4068",
-      "address": "635/135 Meiers Road, Indooroopilly QLD 4068",
+      "address": "6 Teague Street, Indooroopilly QLD 4068",
       "property_type": null,
       "sale_type": null,
-      "price_text": "$1,550,000",
+      "price_text": "OFFERS OVER $1,450,000",
       "asking_price_low": null,
       "asking_price_high": null,
-      "bedrooms": 2,
-      "bathrooms": 2,
-      "parking": 1,
-      "first_seen_at": "2026-07-24T08:50:34Z",
-      "last_seen_at": "2026-07-24T08:50:34Z"
+      "bedrooms": 3,
+      "bathrooms": 3,
+      "parking": 2,
+      "first_seen_at": "2026-07-26T07:40:38Z",
+      "last_seen_at": "2026-07-26T07:40:38Z"
     },
     {
       "property_id": "c66df673204888dd",
@@ -2119,6 +2251,25 @@
       "last_seen_at": "2026-07-24T09:03:26Z"
     },
     {
+      "property_id": "caf1014d3bf09b4e",
+      "source": "Domain",
+      "city": "Brisbane",
+      "suburb": "Kangaroo Point",
+      "state": "QLD",
+      "postcode": "4005",
+      "address": "13/75 Thorn Street, Kangaroo Point QLD 4005",
+      "property_type": null,
+      "sale_type": null,
+      "price_text": "Auction",
+      "asking_price_low": null,
+      "asking_price_high": null,
+      "bedrooms": 1,
+      "bathrooms": 1,
+      "parking": 1,
+      "first_seen_at": "2026-07-26T07:40:38Z",
+      "last_seen_at": "2026-07-26T07:40:38Z"
+    },
+    {
       "property_id": "85b6885b5222801e",
       "source": "Domain",
       "city": "Brisbane",
@@ -2157,23 +2308,23 @@
       "last_seen_at": "2026-07-23T08:32:53Z"
     },
     {
-      "property_id": "bfb5a2ac6e774aa6",
+      "property_id": "fe2c53acbfc3c0ad",
       "source": "Domain",
       "city": "Brisbane",
-      "suburb": "Kangaroo Point",
+      "suburb": "Kenmore",
       "state": "QLD",
       "postcode": "4005",
-      "address": "24/45 Wharf Street, Kangaroo Point QLD 4005",
+      "address": "21 Scandia Street, Kenmore QLD 4005",
       "property_type": null,
       "sale_type": null,
-      "price_text": null,
+      "price_text": "Auction",
       "asking_price_low": null,
       "asking_price_high": null,
-      "bedrooms": 1.0,
-      "bathrooms": 1.0,
-      "parking": 1.0,
-      "first_seen_at": "2026-07-21T08:27:25Z",
-      "last_seen_at": "2026-07-21T08:27:25Z"
+      "bedrooms": 4,
+      "bathrooms": 2,
+      "parking": 2,
+      "first_seen_at": "2026-07-26T07:40:38Z",
+      "last_seen_at": "2026-07-26T07:40:38Z"
     },
     {
       "property_id": "79db94148ad79646",
@@ -2385,13 +2536,13 @@
       "last_seen_at": "2026-07-24T08:50:16Z"
     },
     {
-      "property_id": "aed10aa5fd548cfb",
+      "property_id": "dcbc091736eebb49",
       "source": "Domain",
       "city": "Brisbane",
       "suburb": "New Farm",
       "state": "QLD",
       "postcode": "4005",
-      "address": "21/21 Dixon Street, New Farm QLD 4005",
+      "address": "48/166 Sydney Street, New Farm QLD 4005",
       "property_type": null,
       "sale_type": null,
       "price_text": "For Sale",
@@ -2400,8 +2551,8 @@
       "bedrooms": 3,
       "bathrooms": 2,
       "parking": 2,
-      "first_seen_at": "2026-07-23T08:32:53Z",
-      "last_seen_at": "2026-07-23T08:32:53Z"
+      "first_seen_at": "2026-07-26T07:40:38Z",
+      "last_seen_at": "2026-07-26T07:40:38Z"
     },
     {
       "property_id": "b991c7c589a35a61",
@@ -2423,23 +2574,23 @@
       "last_seen_at": "2026-07-21T08:43:27Z"
     },
     {
-      "property_id": "c0df2e9d7e65ccc2",
+      "property_id": "5332c26f4f30ce51",
       "source": "Domain",
       "city": "Brisbane",
       "suburb": "New Farm",
       "state": "QLD",
       "postcode": "4005",
-      "address": "10/191 Kent Street, New Farm QLD 4005",
+      "address": "21 Abbott Street, New Farm QLD 4005",
       "property_type": null,
       "sale_type": null,
-      "price_text": "OFFERS OVER $700,000",
+      "price_text": null,
       "asking_price_low": null,
       "asking_price_high": null,
-      "bedrooms": 2,
+      "bedrooms": 4,
       "bathrooms": 1,
-      "parking": 1,
-      "first_seen_at": "2026-07-22T08:09:22Z",
-      "last_seen_at": "2026-07-22T08:09:22Z"
+      "parking": 4,
+      "first_seen_at": "2026-07-26T07:40:38Z",
+      "last_seen_at": "2026-07-26T07:40:38Z"
     },
     {
       "property_id": "2cc8b08193b6d5d1",
@@ -2822,6 +2973,25 @@
       "last_seen_at": "2026-07-24T08:50:34Z"
     },
     {
+      "property_id": "0ba301b9947d0dea",
+      "source": "Domain",
+      "city": "Brisbane",
+      "suburb": "St Lucia",
+      "state": "QLD",
+      "postcode": "4005",
+      "address": "209/68 Sir Fred Schonell Drive, St Lucia QLD 4005",
+      "property_type": null,
+      "sale_type": null,
+      "price_text": "$1,000,000 - $1,100,000",
+      "asking_price_low": null,
+      "asking_price_high": null,
+      "bedrooms": 2,
+      "bathrooms": 2,
+      "parking": 1,
+      "first_seen_at": "2026-07-26T07:40:38Z",
+      "last_seen_at": "2026-07-26T07:40:38Z"
+    },
+    {
       "property_id": "3b75d7526507959c",
       "source": "Domain",
       "city": "Brisbane",
@@ -2855,25 +3025,6 @@
       "asking_price_high": null,
       "bedrooms": 4,
       "bathrooms": 3,
-      "parking": 2,
-      "first_seen_at": "2026-07-24T08:50:34Z",
-      "last_seen_at": "2026-07-24T08:50:34Z"
-    },
-    {
-      "property_id": "a72d460a5a680bee",
-      "source": "Domain",
-      "city": "Brisbane",
-      "suburb": "St Lucia",
-      "state": "QLD",
-      "postcode": "4005",
-      "address": "1/32 Mitre Street, St Lucia QLD 4005",
-      "property_type": null,
-      "sale_type": null,
-      "price_text": "OFFERS OVER $855,000",
-      "asking_price_low": null,
-      "asking_price_high": null,
-      "bedrooms": 2,
-      "bathrooms": 2,
       "parking": 2,
       "first_seen_at": "2026-07-24T08:50:34Z",
       "last_seen_at": "2026-07-24T08:50:34Z"
@@ -3005,11 +3156,11 @@
       "price_text": "For Sale",
       "asking_price_low": null,
       "asking_price_high": null,
-      "bedrooms": 2.0,
-      "bathrooms": 2.0,
-      "parking": 1.0,
+      "bedrooms": 2,
+      "bathrooms": 2,
+      "parking": 1,
       "first_seen_at": "2026-07-20T08:21:59Z",
-      "last_seen_at": "2026-07-20T08:21:59Z"
+      "last_seen_at": "2026-07-26T07:40:38Z"
     },
     {
       "property_id": "14039c0a3efda856",
@@ -3658,23 +3809,23 @@
       "last_seen_at": "2026-07-20T08:30:57Z"
     },
     {
-      "property_id": "f1d7675cf245ab71",
+      "property_id": "ef376a50bb19dfd5",
       "source": "Domain",
       "city": "Melbourne",
       "suburb": "Coburg",
       "state": "VIC",
       "postcode": "3121",
-      "address": "5/40 Bell Street, Coburg VIC 3121",
+      "address": "155 Munro St, Coburg VIC 3121",
       "property_type": null,
       "sale_type": null,
-      "price_text": "Auction",
+      "price_text": "$975,000",
       "asking_price_low": null,
       "asking_price_high": null,
       "bedrooms": 3,
-      "bathrooms": 2,
-      "parking": 1,
-      "first_seen_at": "2026-07-23T08:32:43Z",
-      "last_seen_at": "2026-07-23T08:32:43Z"
+      "bathrooms": 1,
+      "parking": 2,
+      "first_seen_at": "2026-07-26T07:40:38Z",
+      "last_seen_at": "2026-07-26T07:40:38Z"
     },
     {
       "property_id": "d40224a59d7a507f",
@@ -3696,23 +3847,23 @@
       "last_seen_at": "2026-07-24T09:03:14Z"
     },
     {
-      "property_id": "d8d4a32b3a87db15",
-      "source": "REA",
+      "property_id": "04ec18d261f313d4",
+      "source": "Domain",
       "city": "Melbourne",
       "suburb": "Coburg",
       "state": "VIC",
       "postcode": "3058",
-      "address": "28 Wattle Grove, Coburg VIC 3058",
+      "address": "155 Munro St, Coburg VIC 3058",
       "property_type": null,
       "sale_type": null,
-      "price_text": "$2.15M - $2.35M",
+      "price_text": "$975,000",
       "asking_price_low": null,
       "asking_price_high": null,
-      "bedrooms": 5,
-      "bathrooms": 2,
+      "bedrooms": 3,
+      "bathrooms": 1,
       "parking": 2,
-      "first_seen_at": "2026-07-23T09:00:05Z",
-      "last_seen_at": "2026-07-23T09:00:05Z"
+      "first_seen_at": "2026-07-26T07:27:14Z",
+      "last_seen_at": "2026-07-26T07:27:14Z"
     },
     {
       "property_id": "1e13693fe9494bdd",
@@ -3905,6 +4056,25 @@
       "last_seen_at": "2026-07-24T09:03:14Z"
     },
     {
+      "property_id": "200a5a8cc420bac8",
+      "source": "Domain",
+      "city": "Melbourne",
+      "suburb": "Hawthorn",
+      "state": "VIC",
+      "postcode": "3121",
+      "address": "8/22-24 Muir Street, Hawthorn VIC 3121",
+      "property_type": null,
+      "sale_type": null,
+      "price_text": "$930,000",
+      "asking_price_low": null,
+      "asking_price_high": null,
+      "bedrooms": 2,
+      "bathrooms": 1,
+      "parking": 2,
+      "first_seen_at": "2026-07-26T07:40:38Z",
+      "last_seen_at": "2026-07-26T07:40:38Z"
+    },
+    {
       "property_id": "a041d21ce8265329",
       "source": "Domain",
       "city": "Melbourne",
@@ -3943,23 +4113,42 @@
       "last_seen_at": "2026-07-24T08:50:20Z"
     },
     {
-      "property_id": "a6e4ae00873c047c",
+      "property_id": "15a831331f403832",
       "source": "Domain",
       "city": "Melbourne",
-      "suburb": "Hawthorn",
+      "suburb": "Kew",
       "state": "VIC",
       "postcode": "3121",
-      "address": "29 Grove Road, Hawthorn VIC 3121",
+      "address": "211/1 Derby Street, Kew VIC 3121",
       "property_type": null,
       "sale_type": null,
-      "price_text": "$4,850,000 - $5,250,000",
+      "price_text": "Private Sale - $495,000",
       "asking_price_low": null,
       "asking_price_high": null,
-      "bedrooms": 5,
-      "bathrooms": 3,
-      "parking": 2,
-      "first_seen_at": "2026-07-24T08:50:20Z",
-      "last_seen_at": "2026-07-24T08:50:20Z"
+      "bedrooms": 1,
+      "bathrooms": 1,
+      "parking": 1,
+      "first_seen_at": "2026-07-26T07:40:38Z",
+      "last_seen_at": "2026-07-26T07:40:38Z"
+    },
+    {
+      "property_id": "b7303db5ca09e236",
+      "source": "Domain",
+      "city": "Melbourne",
+      "suburb": "Kew",
+      "state": "VIC",
+      "postcode": "3121",
+      "address": "2/168 Princess Street, Kew VIC 3121",
+      "property_type": null,
+      "sale_type": null,
+      "price_text": "Private Sale - $520,000",
+      "asking_price_low": null,
+      "asking_price_high": null,
+      "bedrooms": 2,
+      "bathrooms": 1,
+      "parking": 1,
+      "first_seen_at": "2026-07-26T07:40:38Z",
+      "last_seen_at": "2026-07-26T07:40:38Z"
     },
     {
       "property_id": "a26a7be6bd3e75c2",
@@ -3981,99 +4170,61 @@
       "last_seen_at": "2026-07-24T08:50:20Z"
     },
     {
-      "property_id": "c37c6c1f70904b49",
-      "source": "Domain",
-      "city": "Melbourne",
-      "suburb": "Kew",
-      "state": "VIC",
-      "postcode": "3121",
-      "address": "871 Glenferrie Road, Kew VIC 3121",
-      "property_type": null,
-      "sale_type": null,
-      "price_text": "Private Auction Saturday 15 August",
-      "asking_price_low": null,
-      "asking_price_high": null,
-      "bedrooms": 4,
-      "bathrooms": 4,
-      "parking": 3,
-      "first_seen_at": "2026-07-24T08:50:20Z",
-      "last_seen_at": "2026-07-24T08:50:20Z"
-    },
-    {
-      "property_id": "fa808ec85421f256",
-      "source": "Domain",
-      "city": "Melbourne",
-      "suburb": "Kew",
-      "state": "VIC",
-      "postcode": "3121",
-      "address": "25 Scott Street, Kew VIC 3121",
-      "property_type": null,
-      "sale_type": null,
-      "price_text": "Expressions of Interest Close Mon 17 August at 5pm",
-      "asking_price_low": null,
-      "asking_price_high": null,
-      "bedrooms": 4,
-      "bathrooms": 2,
-      "parking": 4,
-      "first_seen_at": "2026-07-24T08:50:20Z",
-      "last_seen_at": "2026-07-24T08:50:20Z"
-    },
-    {
-      "property_id": "c806359feafcb486",
+      "property_id": "e47aae65111e3fa3",
       "source": "Domain",
       "city": "Melbourne",
       "suburb": "Melbourne",
       "state": "VIC",
       "postcode": "3121",
-      "address": "209/547 Flinders Lane, Melbourne VIC 3121",
+      "address": "805/182 Collins Street, Melbourne VIC 3121",
       "property_type": null,
       "sale_type": null,
-      "price_text": "$499,000 - $509,000",
+      "price_text": "$490,000 - $520,000",
       "asking_price_low": null,
       "asking_price_high": null,
-      "bedrooms": 2,
-      "bathrooms": 2,
+      "bedrooms": 1,
+      "bathrooms": 1,
       "parking": null,
-      "first_seen_at": "2026-07-24T08:50:20Z",
-      "last_seen_at": "2026-07-24T08:50:20Z"
+      "first_seen_at": "2026-07-26T07:40:38Z",
+      "last_seen_at": "2026-07-26T07:40:38Z"
     },
     {
-      "property_id": "0df1a90293200888",
+      "property_id": "db2fe88b0985e7ce",
       "source": "Domain",
       "city": "Melbourne",
       "suburb": "Melbourne",
       "state": "VIC",
       "postcode": "3121",
-      "address": "1302/181 Exhibition Street, Melbourne VIC 3121",
+      "address": "731/572 St Kilda Rd, Melbourne VIC 3121",
       "property_type": null,
       "sale_type": null,
-      "price_text": "Private Sale: $750,000 - $800,000",
-      "asking_price_low": null,
-      "asking_price_high": null,
-      "bedrooms": 3,
-      "bathrooms": 2,
-      "parking": 1,
-      "first_seen_at": "2026-07-24T08:50:20Z",
-      "last_seen_at": "2026-07-24T08:50:20Z"
-    },
-    {
-      "property_id": "c8f0cf72ce936ba9",
-      "source": "Domain",
-      "city": "Melbourne",
-      "suburb": "Melbourne",
-      "state": "VIC",
-      "postcode": "3121",
-      "address": "730/539 St Kilda Road, Melbourne VIC 3121",
-      "property_type": null,
-      "sale_type": null,
-      "price_text": "$385,000 - $420,000",
+      "price_text": "$280,000 to $290,000",
       "asking_price_low": null,
       "asking_price_high": null,
       "bedrooms": 1,
       "bathrooms": 1,
       "parking": 1,
-      "first_seen_at": "2026-07-23T08:32:43Z",
-      "last_seen_at": "2026-07-23T08:32:43Z"
+      "first_seen_at": "2026-07-26T07:40:38Z",
+      "last_seen_at": "2026-07-26T07:40:38Z"
+    },
+    {
+      "property_id": "3696274df37b5681",
+      "source": "Domain",
+      "city": "Melbourne",
+      "suburb": "Melbourne",
+      "state": "VIC",
+      "postcode": "3121",
+      "address": "408/603 St Kilda Road, Melbourne VIC 3121",
+      "property_type": null,
+      "sale_type": null,
+      "price_text": "$650,000 - $715,000",
+      "asking_price_low": null,
+      "asking_price_high": null,
+      "bedrooms": 2,
+      "bathrooms": 2,
+      "parking": 1,
+      "first_seen_at": "2026-07-26T07:40:38Z",
+      "last_seen_at": "2026-07-26T07:40:38Z"
     },
     {
       "property_id": "abf1d89a281e0159",
@@ -4323,6 +4474,25 @@
       "last_seen_at": "2026-07-21T08:26:19Z"
     },
     {
+      "property_id": "6a5b6eab965a3a17",
+      "source": "Domain",
+      "city": "Perth",
+      "suburb": "000",
+      "state": "WA",
+      "postcode": "6008",
+      "address": "800, 000 WA 6008",
+      "property_type": null,
+      "sale_type": null,
+      "price_text": null,
+      "asking_price_low": null,
+      "asking_price_high": null,
+      "bedrooms": 2,
+      "bathrooms": 2,
+      "parking": 2,
+      "first_seen_at": "2026-07-26T07:40:38Z",
+      "last_seen_at": "2026-07-26T07:40:38Z"
+    },
+    {
       "property_id": "9aaa8371895056fd",
       "source": "Domain",
       "city": "Perth",
@@ -4340,6 +4510,25 @@
       "parking": 1.0,
       "first_seen_at": "2026-07-21T08:27:20Z",
       "last_seen_at": "2026-07-21T08:27:20Z"
+    },
+    {
+      "property_id": "e556e1de2624f4e3",
+      "source": "Domain",
+      "city": "Perth",
+      "suburb": "Bassendean",
+      "state": "WA",
+      "postcode": "6054",
+      "address": "88C Second Avenue, Bassendean WA 6054",
+      "property_type": null,
+      "sale_type": null,
+      "price_text": "mid $800K",
+      "asking_price_low": null,
+      "asking_price_high": null,
+      "bedrooms": 3,
+      "bathrooms": 2,
+      "parking": 2,
+      "first_seen_at": "2026-07-26T07:26:57Z",
+      "last_seen_at": "2026-07-26T07:26:57Z"
     },
     {
       "property_id": "53838321e224ffe4",
@@ -4378,25 +4567,6 @@
       "parking": 2,
       "first_seen_at": "2026-07-24T09:03:23Z",
       "last_seen_at": "2026-07-24T09:03:23Z"
-    },
-    {
-      "property_id": "b50ebc55e51c2d7d",
-      "source": "REA",
-      "city": "Perth",
-      "suburb": "Bassendean",
-      "state": "WA",
-      "postcode": "6054",
-      "address": "87 Penzance Street, Bassendean WA 6054",
-      "property_type": null,
-      "sale_type": null,
-      "price_text": null,
-      "asking_price_low": null,
-      "asking_price_high": null,
-      "bedrooms": 4.0,
-      "bathrooms": 2.0,
-      "parking": 2.0,
-      "first_seen_at": "2026-07-21T08:25:54Z",
-      "last_seen_at": "2026-07-21T08:43:47Z"
     },
     {
       "property_id": "acb5a38897e344e6",
@@ -4741,6 +4911,25 @@
       "last_seen_at": "2026-07-21T08:43:49Z"
     },
     {
+      "property_id": "3b4f3f833957514e",
+      "source": "Domain",
+      "city": "Perth",
+      "suburb": "East Perth",
+      "state": "WA",
+      "postcode": "6008",
+      "address": "46/2 Goderich Street, East Perth WA 6008",
+      "property_type": null,
+      "sale_type": null,
+      "price_text": null,
+      "asking_price_low": null,
+      "asking_price_high": null,
+      "bedrooms": 2,
+      "bathrooms": 2,
+      "parking": 2,
+      "first_seen_at": "2026-07-26T07:40:38Z",
+      "last_seen_at": "2026-07-26T07:40:38Z"
+    },
+    {
       "property_id": "e73f752dcb78392b",
       "source": "Domain",
       "city": "Perth",
@@ -4775,25 +4964,6 @@
       "bedrooms": 2,
       "bathrooms": 1,
       "parking": 2,
-      "first_seen_at": "2026-07-24T08:50:31Z",
-      "last_seen_at": "2026-07-24T08:50:31Z"
-    },
-    {
-      "property_id": "7bfbc4d569c05b77",
-      "source": "Domain",
-      "city": "Perth",
-      "suburb": "East Perth",
-      "state": "WA",
-      "postcode": "6008",
-      "address": "37/11 Bennett Street, East Perth WA 6008",
-      "property_type": null,
-      "sale_type": null,
-      "price_text": "Inviting Offers From $795,000",
-      "asking_price_low": null,
-      "asking_price_high": null,
-      "bedrooms": 2,
-      "bathrooms": 2,
-      "parking": 1,
       "first_seen_at": "2026-07-24T08:50:31Z",
       "last_seen_at": "2026-07-24T08:50:31Z"
     },
@@ -5311,23 +5481,23 @@
       "last_seen_at": "2026-07-23T08:59:35Z"
     },
     {
-      "property_id": "768c2e802283e062",
+      "property_id": "7564ff846be1ea68",
       "source": "Domain",
       "city": "Perth",
       "suburb": "Victoria Park",
       "state": "WA",
       "postcode": "6100",
-      "address": "27/68 Mcmaster Street, Victoria Park WA 6100",
+      "address": "59 & 59A Mackie Street, Victoria Park WA 6100",
       "property_type": null,
       "sale_type": null,
-      "price_text": "From $429,000 +",
+      "price_text": "OFFERS / AUCTION",
       "asking_price_low": null,
       "asking_price_high": null,
-      "bedrooms": 1,
-      "bathrooms": 1,
-      "parking": 1,
-      "first_seen_at": "2026-07-24T08:50:31Z",
-      "last_seen_at": "2026-07-24T08:50:31Z"
+      "bedrooms": 6,
+      "bathrooms": 3,
+      "parking": 4,
+      "first_seen_at": "2026-07-26T07:40:38Z",
+      "last_seen_at": "2026-07-26T07:40:38Z"
     },
     {
       "property_id": "41e7ae3bd2cc1f98",
@@ -5349,23 +5519,23 @@
       "last_seen_at": "2026-07-24T09:03:26Z"
     },
     {
-      "property_id": "b312f1b6466b214e",
-      "source": "REA",
+      "property_id": "768c2e802283e062",
+      "source": "Domain",
       "city": "Perth",
       "suburb": "Victoria Park",
       "state": "WA",
       "postcode": "6100",
-      "address": "1/15 McMillan Street, Victoria Park WA 6100",
+      "address": "27/68 Mcmaster Street, Victoria Park WA 6100",
       "property_type": null,
       "sale_type": null,
-      "price_text": "$1,025,000 NEG",
+      "price_text": "From $429,000 +",
       "asking_price_low": null,
       "asking_price_high": null,
-      "bedrooms": 3,
-      "bathrooms": 2,
-      "parking": 2,
-      "first_seen_at": "2026-07-23T09:00:35Z",
-      "last_seen_at": "2026-07-23T09:00:35Z"
+      "bedrooms": 1,
+      "bathrooms": 1,
+      "parking": 1,
+      "first_seen_at": "2026-07-24T08:50:31Z",
+      "last_seen_at": "2026-07-24T08:50:31Z"
     },
     {
       "property_id": "ea891e0eef164e23",
@@ -5425,6 +5595,25 @@
       "last_seen_at": "2026-07-24T09:03:13Z"
     },
     {
+      "property_id": "14e3b907ec7cf778",
+      "source": "Domain",
+      "city": "Perth",
+      "suburb": "Wembley",
+      "state": "WA",
+      "postcode": "6008",
+      "address": "19a/49 Herdsman Parade, Wembley WA 6008",
+      "property_type": null,
+      "sale_type": null,
+      "price_text": "Offers From $499,000",
+      "asking_price_low": null,
+      "asking_price_high": null,
+      "bedrooms": 2,
+      "bathrooms": 1,
+      "parking": 1,
+      "first_seen_at": "2026-07-26T07:40:38Z",
+      "last_seen_at": "2026-07-26T07:40:38Z"
+    },
+    {
       "property_id": "9c7f85c938c29eb3",
       "source": "Domain",
       "city": "Perth",
@@ -5454,25 +5643,6 @@
       "property_type": null,
       "sale_type": null,
       "price_text": "Offers Over $519,000",
-      "asking_price_low": null,
-      "asking_price_high": null,
-      "bedrooms": 2,
-      "bathrooms": 1,
-      "parking": 1,
-      "first_seen_at": "2026-07-22T08:09:32Z",
-      "last_seen_at": "2026-07-22T08:09:32Z"
-    },
-    {
-      "property_id": "62d6cfcbeec9ffc5",
-      "source": "Domain",
-      "city": "Perth",
-      "suburb": "Wembley",
-      "state": "WA",
-      "postcode": "6008",
-      "address": "25C/49 Herdsman Parade, Wembley WA 6008",
-      "property_type": null,
-      "sale_type": null,
-      "price_text": "Offers Over $579,000",
       "asking_price_low": null,
       "asking_price_high": null,
       "bedrooms": 2,
@@ -5556,6 +5726,25 @@
       "parking": 1,
       "first_seen_at": "2026-07-23T08:31:55Z",
       "last_seen_at": "2026-07-23T08:31:55Z"
+    },
+    {
+      "property_id": "63d2395c58b77087",
+      "source": "Domain",
+      "city": "Sydney",
+      "suburb": "000",
+      "state": "NSW",
+      "postcode": "2150",
+      "address": "2 Bedroom Residences From $1,740, 000 NSW 2150",
+      "property_type": null,
+      "sale_type": null,
+      "price_text": null,
+      "asking_price_low": null,
+      "asking_price_high": null,
+      "bedrooms": 2,
+      "bathrooms": 2,
+      "parking": 1,
+      "first_seen_at": "2026-07-26T07:40:38Z",
+      "last_seen_at": "2026-07-26T07:40:38Z"
     },
     {
       "property_id": "0d637d9c956d4f2d",
@@ -5727,6 +5916,25 @@
       "parking": 2,
       "first_seen_at": "2026-07-24T09:03:32Z",
       "last_seen_at": "2026-07-24T09:03:32Z"
+    },
+    {
+      "property_id": "a60480f2df4a2403",
+      "source": "Domain",
+      "city": "Sydney",
+      "suburb": "Girraween",
+      "state": "NSW",
+      "postcode": "2150",
+      "address": "6 Edith Street, Girraween NSW 2150",
+      "property_type": null,
+      "sale_type": null,
+      "price_text": null,
+      "asking_price_low": null,
+      "asking_price_high": null,
+      "bedrooms": 4,
+      "bathrooms": 2,
+      "parking": 4,
+      "first_seen_at": "2026-07-26T07:40:38Z",
+      "last_seen_at": "2026-07-26T07:40:38Z"
     },
     {
       "property_id": "23743f543744e1b4",
@@ -5919,6 +6127,63 @@
       "last_seen_at": "2026-07-23T08:59:38Z"
     },
     {
+      "property_id": "fe1afc2a7612412c",
+      "source": "Domain",
+      "city": "Sydney",
+      "suburb": "Merrylands",
+      "state": "NSW",
+      "postcode": "2150",
+      "address": "8/11-13 Birmingham Street, Merrylands NSW 2150",
+      "property_type": null,
+      "sale_type": null,
+      "price_text": "$450,000 to $490,000",
+      "asking_price_low": null,
+      "asking_price_high": null,
+      "bedrooms": 2,
+      "bathrooms": 1,
+      "parking": 1,
+      "first_seen_at": "2026-07-26T07:40:38Z",
+      "last_seen_at": "2026-07-26T07:40:38Z"
+    },
+    {
+      "property_id": "47bbc2ce5d0f9ef8",
+      "source": "Domain",
+      "city": "Sydney",
+      "suburb": "Merrylands",
+      "state": "NSW",
+      "postcode": "2150",
+      "address": "37/27-33 Addlestone Road, Merrylands NSW 2150",
+      "property_type": null,
+      "sale_type": null,
+      "price_text": "Contact Agent",
+      "asking_price_low": null,
+      "asking_price_high": null,
+      "bedrooms": 2,
+      "bathrooms": 1,
+      "parking": 1,
+      "first_seen_at": "2026-07-26T07:40:38Z",
+      "last_seen_at": "2026-07-26T07:40:38Z"
+    },
+    {
+      "property_id": "65ef64695b8447ee",
+      "source": "Domain",
+      "city": "Sydney",
+      "suburb": "Merrylands",
+      "state": "NSW",
+      "postcode": "2150",
+      "address": "214/27 Dressler Court, Merrylands NSW 2150",
+      "property_type": null,
+      "sale_type": null,
+      "price_text": "$520,000 - $540,000",
+      "asking_price_low": null,
+      "asking_price_high": null,
+      "bedrooms": 2,
+      "bathrooms": 2,
+      "parking": 1,
+      "first_seen_at": "2026-07-26T07:40:38Z",
+      "last_seen_at": "2026-07-26T07:40:38Z"
+    },
+    {
       "property_id": "51f1727ff0b289f6",
       "source": "Domain",
       "city": "Sydney",
@@ -5957,23 +6222,23 @@
       "last_seen_at": "2026-07-21T08:25:56Z"
     },
     {
-      "property_id": "f3e7c3f8c9274740",
+      "property_id": "bcc8f73378c11b7a",
       "source": "Domain",
       "city": "Sydney",
       "suburb": "Parramatta",
       "state": "NSW",
       "postcode": "2150",
-      "address": "23/68-70 Great Western Highway, Parramatta NSW 2150",
+      "address": "4 Pemberton Lane, Parramatta NSW 2150",
       "property_type": null,
       "sale_type": null,
-      "price_text": null,
+      "price_text": "Guide $2.6m | Auction On-Site Sat 15th Aug at 11am",
       "asking_price_low": null,
       "asking_price_high": null,
-      "bedrooms": 2,
-      "bathrooms": 1,
-      "parking": 1,
-      "first_seen_at": "2026-07-24T08:50:10Z",
-      "last_seen_at": "2026-07-24T08:50:10Z"
+      "bedrooms": 6,
+      "bathrooms": 6,
+      "parking": 2,
+      "first_seen_at": "2026-07-26T07:40:38Z",
+      "last_seen_at": "2026-07-26T07:40:38Z"
     },
     {
       "property_id": "ac3c566f3d27c97d",
@@ -5995,16 +6260,16 @@
       "last_seen_at": "2026-07-24T09:03:52Z"
     },
     {
-      "property_id": "463c02f893ac9875",
+      "property_id": "f3e7c3f8c9274740",
       "source": "Domain",
       "city": "Sydney",
       "suburb": "Parramatta",
       "state": "NSW",
       "postcode": "2150",
-      "address": "106/125 Arthur Street, Parramatta NSW 2150",
+      "address": "23/68-70 Great Western Highway, Parramatta NSW 2150",
       "property_type": null,
       "sale_type": null,
-      "price_text": "$453,000 Brand New",
+      "price_text": null,
       "asking_price_low": null,
       "asking_price_high": null,
       "bedrooms": 2,
@@ -6183,6 +6448,44 @@
       "parking": 1,
       "first_seen_at": "2026-07-22T08:56:36Z",
       "last_seen_at": "2026-07-22T08:56:36Z"
+    },
+    {
+      "property_id": "bf2cdb886d72cf58",
+      "source": "Domain",
+      "city": "Sydney",
+      "suburb": "Wentworthville",
+      "state": "NSW",
+      "postcode": "2150",
+      "address": "6 Irwin Place, Wentworthville NSW 2150",
+      "property_type": null,
+      "sale_type": null,
+      "price_text": "CONTACT AGENT",
+      "asking_price_low": null,
+      "asking_price_high": null,
+      "bedrooms": 4,
+      "bathrooms": 2,
+      "parking": 5,
+      "first_seen_at": "2026-07-26T07:40:38Z",
+      "last_seen_at": "2026-07-26T07:40:38Z"
+    },
+    {
+      "property_id": "cdb5c1aefe476021",
+      "source": "Domain",
+      "city": "Sydney",
+      "suburb": "Westmead",
+      "state": "NSW",
+      "postcode": "2150",
+      "address": "3/3 Queens Road, Westmead NSW 2150",
+      "property_type": null,
+      "sale_type": null,
+      "price_text": null,
+      "asking_price_low": null,
+      "asking_price_high": null,
+      "bedrooms": 2,
+      "bathrooms": 1,
+      "parking": 1,
+      "first_seen_at": "2026-07-26T07:40:38Z",
+      "last_seen_at": "2026-07-26T07:40:38Z"
     },
     {
       "property_id": "3441ecd60f4d5cf5",
