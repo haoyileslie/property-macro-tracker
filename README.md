@@ -355,6 +355,42 @@ The current JSON includes:
 - ABS private- and public-sector full-time adult average weekly ordinary
   earnings in current dollars, six-monthly from November 2015
 
+### Extended routine research series
+
+The scheduled macro refresh also maintains 32 public RBA series using the
+same JSON schema, freshness metadata, vintage archive and display components
+as the original indicators:
+
+- domestic inflation: non-tradables CPI, the CPI housing group, consumer and
+  economist expectations, and 10-year breakeven inflation
+- labour costs and supply: total WPI, unit labour costs, productivity,
+  employment growth and participation
+- activity: real GDP, real GDP per capita, household consumption, dwelling
+  investment, consumer sentiment and business conditions
+- housing credit and rates: total, owner-occupier and investor credit growth,
+  plus marginal and outstanding owner-occupier/investor lending rates
+- global and financial conditions: AUD/USD, the trade-weighted AUD, commodity
+  prices and an Australian five-year BBB corporate yield
+- the Australian curve: RBA F17 analytical zero-coupon yields at 2, 5, 8, 9
+  and 10 years, sampled at the final published daily observation each month
+
+Each series records the exact RBA series ID, statistical table, source URL,
+frequency and assumed publication lag. This is a **pseudo-real-time** setup:
+forecasting code can enforce release timing, while the published history is
+the latest revised RBA history rather than a reconstructed historical-vintage
+database. Refresh snapshots accumulate prospectively in `data_vintages.json`.
+
+The F17 zero yields are analytical curve inputs rather than investable total
+returns. Breakeven inflation is labelled as inflation compensation—not a pure
+expectation—because inflation-risk and liquidity premia are embedded.
+
+The normal scheduled command updates these series automatically. For a
+targeted maintenance run that avoids the unrelated web feeds, use:
+
+```bash
+python3 ingest_macro.py --enhancements-only
+```
+
 These are now rendered in the "Macro Indicator Time Series" panel. The
 older city/property indicators remain in the original region-comparison
 chart panel.
