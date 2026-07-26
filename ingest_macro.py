@@ -21,6 +21,7 @@ import urllib.error
 from pathlib import Path
 
 from derived_indicators import DERIVATION_VERSION, build_derived_series
+from rba_enhancements import RBA_ENHANCEMENT_SERIES, RBA_SOURCE_NAMES
 from validate_data import validate_dataset, validate_vintage_archive
 
 
@@ -41,6 +42,17 @@ SOURCES = {
     "average_weekly_earnings": "https://www.abs.gov.au/statistics/labour/earnings-and-working-conditions/average-weekly-earnings-australia/latest-release",
     "fred_dgs3": "https://fred.stlouisfed.org/graph/fredgraph.csv?id=DGS3",
     "fred_dgs10": "https://fred.stlouisfed.org/graph/fredgraph.csv?id=DGS10",
+    "housing_cpi_history": "https://www.rba.gov.au/statistics/tables/csv/g2-data.csv",
+    "inflation_expectations": "https://www.rba.gov.au/statistics/tables/csv/g3-data.csv",
+    "financial_aggregates_growth": "https://www.rba.gov.au/statistics/tables/csv/d1-data.csv",
+    "corporate_bond_yields": "https://www.rba.gov.au/statistics/tables/csv/f3-data.csv",
+    "exchange_rates": "https://www.rba.gov.au/statistics/tables/csv/f11.1-data.csv",
+    "zero_coupon_yields": "https://www.rba.gov.au/statistics/tables/csv/f17-yields.csv",
+    "gdp_income": "https://www.rba.gov.au/statistics/tables/csv/h1-data.csv",
+    "demand_income": "https://www.rba.gov.au/statistics/tables/csv/h2-data.csv",
+    "monthly_activity": "https://www.rba.gov.au/statistics/tables/csv/h3-data.csv",
+    "labour_costs_productivity": "https://www.rba.gov.au/statistics/tables/csv/h4-data.csv",
+    "commodity_prices": "https://www.rba.gov.au/statistics/tables/csv/i2-data.csv",
 }
 
 YAHOO_SERIES = {
@@ -161,7 +173,11 @@ def parse_rba_csv_series(markup, series_id, start=None):
         if not row or target_idx >= len(row):
             continue
         try:
-            date_obj = dt.datetime.strptime(row[0].strip(), "%d/%m/%Y").date()
+            raw_date = row[0].strip()
+            try:
+                date_obj = dt.datetime.strptime(raw_date, "%d/%m/%Y").date()
+            except ValueError:
+                date_obj = dt.datetime.strptime(raw_date, "%d-%b-%Y").date()
             value = float(row[target_idx].strip())
         except (ValueError, IndexError):
             continue
@@ -170,6 +186,14 @@ def parse_rba_csv_series(markup, series_id, start=None):
     if not points:
         raise ValueError(f"No observations parsed for RBA series {series_id}")
     return points
+
+
+def monthly_last(points):
+    """Collapse daily or duplicated monthly observations to the last value."""
+    by_month = {}
+    for point in points:
+        by_month[point["date"]] = point
+    return [by_month[date] for date in sorted(by_month)]
 
 
 def parse_rba_cash_rate(markup):
@@ -465,6 +489,47 @@ def ensure_external_macro_series(data):
         })
 
 
+def ensure_rba_enhancement_series(data):
+    """Create metadata shells without overwriting any stored observations."""
+    for key, spec in RBA_ENHANCEMENT_SERIES.items():
+        series = data["series"].setdefault(key, {})
+        default_definition = (
+            f"RBA analytical zero-coupon yield at the {key.split('_')[-1][:-1]}-year maturity, "
+            "sampled at the last available observation each month."
+            if key.startswith("au_zero_yield_")
+            else spec["label"]
+        )
+        series.update({
+            "label": spec["label"],
+            "unit": spec["unit"],
+            "definition": spec.get("definition", default_definition),
+            "usage": spec.get(
+                "usage",
+                "Use as a public analytical yield-curve input for rate scenarios and synthetic bond-return diagnostics.",
+            ),
+            "housing_market_link": spec.get(
+                "housing_market_link",
+                "Long yields influence fixed mortgage pricing, discount rates and property relative valuation.",
+            ),
+            "frequency": spec["frequency"],
+            "release_lag_days": spec["release_lag_days"],
+            "data": series.get("data", {"National": []}),
+            "access_tier": "public",
+            "source_series_id": spec["series_id"],
+            "source_table": spec["table"],
+        })
+        if key.startswith("au_zero_yield_"):
+            series["methodology_note"] = (
+                "RBA F17 analytical zero-coupon yield; useful for research and synthetic repricing, "
+                "but not itself an investable bond-return series. The current public history begins in 2017."
+            )
+        elif key == "breakeven_inflation_10y":
+            series["methodology_note"] = (
+                "Breakeven inflation combines expected inflation with inflation-risk and liquidity premia; "
+                "it must not be interpreted as a pure inflation forecast."
+            )
+
+
 def ensure_source_registry(data):
     registry = data["meta"].setdefault("source_registry", [])
     by_category = {item["category"]: item for item in registry}
@@ -542,6 +607,43 @@ def update_series(data, key, points, status, source_period=None, note=None, sour
         series["source"] = source_name
     if note:
       series["status_note"] = note
+
+
+def refresh_rba_enhancements(data):
+    """Refresh the additional public macro/credit/curve series table by table."""
+    ensure_rba_enhancement_series(data)
+    payloads = {}
+    for table in sorted({spec["table"] for spec in RBA_ENHANCEMENT_SERIES.values()}):
+        payloads[table] = fetch(SOURCES[table])
+
+    for key, spec in RBA_ENHANCEMENT_SERIES.items():
+        points = parse_rba_csv_series(payloads[spec["table"]], spec["series_id"])
+        if spec.get("monthly_last"):
+            points = monthly_last(points)
+        update_series(
+            data,
+            key,
+            points,
+            "fresh",
+            points[-1]["date"],
+            (
+                f"Public RBA series {spec['series_id']}; latest published observation is "
+                f"{points[-1]['date']} ({points[-1]['value']})."
+            ),
+            source_url=SOURCES[spec["table"]],
+            source_name=RBA_SOURCE_NAMES[spec["table"]],
+        )
+        data["series"][key]["availability_basis"] = (
+            "Pseudo-real-time metadata only: the latest revised historical series is used, "
+            "with the stated publication lag enforced in forecasting applications."
+        )
+
+    data["meta"]["last_updated"] = TODAY
+    data["meta"]["macro_enhancement_note"] = (
+        "Additional public RBA time series were integrated for model enhancement and macro/property research. "
+        "They use latest revised history plus explicit release-lag metadata; they are not a true vintage database."
+    )
+    return data
 
 
 def refresh(data):
@@ -778,6 +880,7 @@ def refresh(data):
             "Original six-monthly average. It is affected by workforce composition and is not directly comparable with the fixed-job Wage Price Index."
         )
 
+    refresh_rba_enhancements(data)
     data["derived_series"] = build_derived_series(data)
     data["meta"]["derived_series_version"] = DERIVATION_VERSION
     data["meta"]["last_updated"] = TODAY
@@ -817,10 +920,20 @@ def prepare_vintage(data):
 def main():
     parser = argparse.ArgumentParser()
     parser.add_argument("--dry-run", action="store_true", help="Fetch and parse, but do not write property_data.json")
+    parser.add_argument(
+        "--enhancements-only",
+        action="store_true",
+        help="Refresh only the additional public RBA macro, credit and yield-curve series",
+    )
     args = parser.parse_args()
 
     data = json.loads(DATA_PATH.read_text())
-    refreshed = refresh(data)
+    if args.enhancements_only:
+        refreshed = refresh_rba_enhancements(data)
+        refreshed["derived_series"] = build_derived_series(refreshed)
+        refreshed["meta"]["derived_series_version"] = DERIVATION_VERSION
+    else:
+        refreshed = refresh(data)
 
     if args.dry_run:
         validate_dataset(refreshed, require_refresh_metadata=False)
@@ -829,9 +942,10 @@ def main():
         validate_dataset(refreshed)
         validate_vintage_archive(archive, refreshed)
 
-    summary = {
-        key: refreshed["series"][key]["data"]["National"][-1]
-        for key in [
+    summary_keys = (
+        list(RBA_ENHANCEMENT_SERIES)
+        if args.enhancements_only
+        else [
             "cash_rate",
             "unemployment_rate",
             "employed_people",
@@ -843,6 +957,10 @@ def main():
             "lending_new_loan_commitments_dwellings_value",
             "lending_new_loan_commitments_dwellings_qoq",
         ]
+    )
+    summary = {
+        key: refreshed["series"][key]["data"]["National"][-1]
+        for key in summary_keys
     }
     print(json.dumps(summary, indent=2))
 
