@@ -106,6 +106,19 @@ class RefreshListingsTests(unittest.TestCase):
         self.assertEqual(rows[0]["bathrooms"], 2)
         self.assertEqual(rows[0]["parking"], 1)
 
+    def test_domain_saved_search_accepts_explicit_unit_prefix(self):
+        message = alert(
+            "Home Alert for Oxley QLD 4075",
+            '<a href="https://example.test/price">Contact Agent</a>'
+            '<a href="https://example.test/listing">Unit 15/84 Estramina Street, Oxley</a>'
+            '<div>4</div><div>Beds</div><div>2</div><div>Baths</div>'
+            '<div>2</div><div>Cars</div>',
+        )
+        rows = refresh.parse_message(message)
+        self.assertEqual(len(rows), 1)
+        self.assertEqual(rows[0]["address"], "Unit 15/84 Estramina Street, Oxley QLD 4075")
+        self.assertEqual((rows[0]["bedrooms"], rows[0]["bathrooms"], rows[0]["parking"]), (4, 2, 2))
+
     def test_merge_enforces_three_per_suburb_and_preserves_both_sources(self):
         rows = [
             refresh.public_item(

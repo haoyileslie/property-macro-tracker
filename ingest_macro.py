@@ -237,11 +237,11 @@ def parse_abs_employed_people(markup):
 
 def parse_abs_cpi(markup):
     text = textify(markup)
-    marker = "CPI annual inflation fell, while Trimmed mean inflation rose"
+    marker = "All groups CPI and Trimmed mean, Australia, annual movement (%)"
     if marker not in text:
         raise ValueError("ABS CPI annual-vs-trimmed table not found")
     block = text.split(marker, 1)[1]
-    block = block.split("Annual inflation for Goods", 1)[0]
+    block = block.split("CPI Goods and Services components, annual movement (%)", 1)[0]
     rows = re.findall(r"([A-Z][a-z]{2}-\d{2})\s+(-?\d+\.\d|-?\d+)\s+(-?\d+\.\d|-?\d+)", block)
     if not rows:
         raise ValueError("ABS CPI annual-vs-trimmed rows not found")

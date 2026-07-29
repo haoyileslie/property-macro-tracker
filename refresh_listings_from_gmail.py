@@ -241,7 +241,7 @@ def parse_domain_saved_search(body, subject, captured_at):
         if not label:
             continue
         match = re.match(r"^(.+),\s*([^,]+)$", label)
-        if not match or not re.match(r"^\d", match.group(1)):
+        if not match or not re.match(r"^(?:\d|Unit\s+\d)", match.group(1), re.I):
             continue
         street, suburb = match.groups()
         state, postcode = locations.get(suburb.strip().lower(), default)

@@ -7,6 +7,7 @@ from ingest_macro import (
     ensure_rba_enhancement_series,
     fetch,
     monthly_last,
+    parse_abs_cpi,
 )
 
 
@@ -35,6 +36,23 @@ class FetchRetryTests(unittest.TestCase):
 
         self.assertEqual(urlopen.call_count, 2)
         sleep.assert_called_once_with(1)
+
+
+class AbsParserTests(unittest.TestCase):
+    def test_cpi_parser_uses_stable_chart_title(self):
+        markup = """
+        <h3>CPI annual inflation fell, while Trimmed mean inflation was unchanged</h3>
+        <div>All groups CPI and Trimmed mean, Australia, annual movement (%)</div>
+        <table>
+          <tr><td>Apr-26</td><td>4.2</td><td>3.4</td></tr>
+          <tr><td>May-26</td><td>4.0</td><td>3.6</td></tr>
+          <tr><td>Jun-26</td><td>3.8</td><td>3.6</td></tr>
+        </table>
+        <div>CPI Goods and Services components, annual movement (%)</div>
+        """
+        headline, trimmed = parse_abs_cpi(markup)
+        self.assertEqual(headline[-1], {"date": "2026-06", "value": 3.8})
+        self.assertEqual(trimmed[-1], {"date": "2026-06", "value": 3.6})
 
 
 class EnhancementDatabaseTests(unittest.TestCase):
