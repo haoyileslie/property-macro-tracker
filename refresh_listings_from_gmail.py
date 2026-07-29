@@ -300,7 +300,12 @@ def parse_rea(body, subject, captured_at, coming_soon=False):
             if len(numeric) == 3:
                 facts = dict(zip(("bedrooms", "bathrooms", "parking"), numeric))
         land_only = bool(re.match(r"^Lot\s+\d", street, re.I)) and not facts
-        if len(facts) != 3 and not land_only:
+        has_view_link = any(
+            (markdown_link(candidate)[0] or "").strip().lower() == "view property"
+            for candidate in fact_lines
+        )
+        verified_without_facts = not facts and has_view_link
+        if len(facts) != 3 and not land_only and not verified_without_facts:
             continue
         price = None
         for prior in reversed(lines[max(0, index - 4):index]):

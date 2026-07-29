@@ -74,6 +74,22 @@ class RefreshListingsTests(unittest.TestCase):
         self.assertIsNone(rows[0]["bathrooms"])
         self.assertIsNone(rows[0]["parking"])
 
+    def test_rea_alert_parses_verified_address_when_facts_are_omitted(self):
+        message = alert(
+            'New to market: Alert for your "Bassendean, WA 6054" saved search',
+            '<a href="https://example.test/image">3B Hardy Road</a>'
+            '<div>End Date Process</div>'
+            '<a href="https://example.test/listing">3B Hardy Road, Bassendean 6054</a>'
+            '<a href="https://example.test/listing">View Property</a>',
+        )
+        rows = refresh.parse_message(message)
+        self.assertEqual(len(rows), 1)
+        self.assertEqual(rows[0]["address"], "3B Hardy Road, Bassendean WA 6054")
+        self.assertIsNone(rows[0]["property_type"])
+        self.assertIsNone(rows[0]["bedrooms"])
+        self.assertIsNone(rows[0]["bathrooms"])
+        self.assertIsNone(rows[0]["parking"])
+
     def test_domain_saved_search_parses_card(self):
         message = alert(
             "Domain Home Alert for Richmond VIC 3121",
