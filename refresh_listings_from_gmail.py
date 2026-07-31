@@ -390,13 +390,22 @@ def unattributed_domain_featured_card_count(body, subject):
         label, _ = markdown_link(line)
         if (label or line).strip().casefold() != expected_location:
             continue
-        window = lines[index + 1:index + 8]
+        window = lines[index + 1:index + 12]
         numeric_facts = [value for value in window[:3] if value.isdigit()]
+        fact_text = " ".join(window)
+        labelled_facts = all(
+            re.search(pattern, fact_text, re.I)
+            for pattern in (
+                r"\bBeds?(?:rooms?)?\s*\d+",
+                r"\bBaths?(?:rooms?)?\s*\d+",
+                r"\b(?:Cars?|Parking(?:\s+spaces?)?)\s*\d+",
+            )
+        )
         has_details_link = any(
             (markdown_link(candidate)[0] or "").strip().casefold() == "find out more"
             for candidate in window
         )
-        if len(numeric_facts) == 3 and has_details_link:
+        if (len(numeric_facts) == 3 or labelled_facts) and has_details_link:
             return 1
     return 0
 
