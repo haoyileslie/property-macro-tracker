@@ -17,6 +17,9 @@ framework. Core components:
   series into financing, affordability, supply and relative-market signals.
 - `ingest_listings.py` — privacy and schema validator for the public listing export.
 - `refresh_listings_from_gmail.py` — unattended read-only Gmail alert ingestor.
+- `listing_event_store.py` — append-only local SQLite ledger for private listing lifecycle research.
+- `sync_private_listing_events.py` — local Gmail-to-SQLite sync that retains every attributable alert observation.
+- `import_gmail_connector_export.py` — private backfill bridge for connected Gmail reads; raw bodies are not retained.
 - `gmail_oauth_setup.py` — one-time helper for placing Google credentials in encrypted GitHub Secrets.
 - `market_listings_latest.json` — the newest listing snapshot consumed by `listings.html`.
 - `market_listings_vintages.json` — append-only listing snapshots for change tracking.
@@ -166,6 +169,48 @@ refresh before treating it as durable production infrastructure.
 The workflow has read-only Gmail scope. Public output excludes message IDs, raw
 email content, notes, recipient details and portal tracking links. Details links
 on the page remain exact-address public searches.
+
+### Private listing-event ledger
+
+The public website remains capped at three examples per suburb. For research,
+the local SQLite ledger stores every attributable alert before that cap is
+applied. It retains the Gmail message ID and original listing link privately,
+and records off-market, coming-soon and public-market observations as immutable
+events. A separate current-state table makes it easy to identify transitions
+such as off-market to auction or public sale. Future sale outcomes and prices
+have dedicated nullable fields and can be added without rewriting earlier
+observations.
+
+Create the ignored local database and seed it from the retained public sample:
+
+```bash
+python3 listing_event_store.py init
+python3 listing_event_store.py seed
+python3 listing_event_store.py stats
+```
+
+To capture every new alert directly into the private ledger, provide the same
+three Gmail OAuth values as local environment variables, then run:
+
+```bash
+python3 sync_private_listing_events.py
+```
+
+After verifying an outcome from a portal result, agent page or later official
+record, append it without changing the earlier alert history:
+
+```bash
+python3 listing_event_store.py outcome \
+  --property-id PROPERTY_ID --outcome sold \
+  --observed-at 2026-08-15T01:00:00Z --sale-price 1250000 \
+  --evidence-url https://example.com/result
+```
+
+The database defaults to `private/listing_events.sqlite3`. Both that directory
+and SQLite files are ignored by Git, so address-level evidence, message IDs and
+portal URLs cannot be published by the GitHub Pages workflow. The public GitHub
+Action continues to update only the privacy-safe JSON sample; a local scheduled
+run or a separate private repository is required for durable private automation.
 
 ### Access and download links (public)
 

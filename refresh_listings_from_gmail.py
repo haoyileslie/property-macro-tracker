@@ -220,7 +220,13 @@ def public_item(source, address, suburb, state, postcode, captured_at, **facts):
         "parking": facts.get("parking"),
         "first_seen_at": captured_at,
         "last_seen_at": captured_at,
+        "_evidence_url": facts.get("evidence_url"),
     }
+
+
+def public_projection(item):
+    """Remove private ingestion metadata before writing the public JSON."""
+    return {key: value for key, value in item.items() if not key.startswith("_")}
 
 
 def parse_domain_saved_search(body, subject, captured_at):
@@ -237,11 +243,11 @@ def parse_domain_saved_search(body, subject, captured_at):
     lines = markdown_lines(body)
     records = []
     for index, line in enumerate(lines):
-        label, _ = markdown_link(line)
+        label, url = markdown_link(line)
         if not label:
             continue
         match = re.match(r"^(.+),\s*([^,]+)$", label)
-        if not match or not re.match(r"^(?:\d|Unit\s+\d)", match.group(1), re.I):
+        if not match or not re.match(r"^(?:\d|(?:Apartment|Unit)\s+\d)", match.group(1), re.I):
             continue
         street, suburb = match.groups()
         state, postcode = locations.get(suburb.strip().lower(), default)
@@ -262,7 +268,8 @@ def parse_domain_saved_search(body, subject, captured_at):
                 break
         records.append(public_item(
             "Domain", f"{street}, {suburb} {state} {postcode}", suburb, state, postcode,
-            captured_at, property_type=property_type, price_text=price, **facts,
+            captured_at, property_type=property_type, price_text=price,
+            evidence_url=url, **facts,
         ))
     return records
 
@@ -275,7 +282,7 @@ def parse_rea(body, subject, captured_at, coming_soon=False):
     lines = markdown_lines(body)
     records = []
     for index, line in enumerate(lines):
-        label, _ = markdown_link(line)
+        label, url = markdown_link(line)
         if not label:
             continue
         address_match = re.match(r"^(.+),\s*([^,]+)\s+(\d{4})$", label)
@@ -318,7 +325,8 @@ def parse_rea(body, subject, captured_at, coming_soon=False):
         records.append(public_item(
             "REA", f"{street}, {suburb} {state} {postcode}", suburb, state, postcode,
             captured_at, sale_type="Coming Soon" if coming_soon else None,
-            price_text=price, property_type="Land" if land_only else None, **facts,
+            price_text=price, property_type="Land" if land_only else None,
+            evidence_url=url, **facts,
         ))
     return records
 
@@ -349,22 +357,48 @@ def unattributed_domain_card_count(body, subject):
     lines = markdown_lines(body)
     count = 0
     for index, line in enumerate(lines):
-        label, _ = markdown_link(line)
+        label, url = markdown_link(line)
         if (label or "").strip().lower() != expected_suburb:
             continue
         window = lines[index + 1:index + 10]
         fact_text = " ".join(window)
         has_facts = all(
             re.search(pattern, fact_text, re.I)
-            for pattern in (r"\b\d+\s+beds?\b", r"\b\d+\s+baths?\b", r"\b\d+\s+cars?\b")
+            for pattern in (r"\b\d+\s+beds?\b", r"\b\d+\s+baths?\b")
         )
         has_details_link = any(
-            (markdown_link(candidate)[0] or "").strip().lower() == "find out more"
+            (markdown_link(candidate)[0] or "").strip().lower() in {"find out more", "details"}
             for candidate in window
         )
         if has_facts and has_details_link:
             count += 1
     return count
+
+
+def unattributed_domain_featured_card_count(body, subject):
+    """Count a featured card that contains facts but no street address."""
+    scope = re.search(
+        r"^(.+?)\s+(NSW|VIC|QLD|WA)\s+(\d{4}).*?:\s+For\s+(?:sale|auction)$",
+        subject, re.I,
+    )
+    if not scope:
+        return 0
+    suburb, state, postcode = scope.groups()
+    expected_location = f"{suburb} {state} {postcode}".casefold()
+    lines = markdown_lines(body)
+    for index, line in enumerate(lines):
+        label, _ = markdown_link(line)
+        if (label or line).strip().casefold() != expected_location:
+            continue
+        window = lines[index + 1:index + 8]
+        numeric_facts = [value for value in window[:3] if value.isdigit()]
+        has_details_link = any(
+            (markdown_link(candidate)[0] or "").strip().casefold() == "find out more"
+            for candidate in window
+        )
+        if len(numeric_facts) == 3 and has_details_link:
+            return 1
+    return 0
 
 
 def parse_domain_single(body, subject, captured_at, off_market=False):
@@ -379,7 +413,7 @@ def parse_domain_single(body, subject, captured_at, off_market=False):
         return []
     expected_state, expected_postcode = subject_match.group(1).upper(), subject_match.group(2)
     for index, line in enumerate(lines):
-        label, _ = markdown_link(line)
+        label, url = markdown_link(line)
         candidate = label or line
         match = re.match(address_pattern, candidate, re.I)
         if not match:
@@ -404,6 +438,7 @@ def parse_domain_single(body, subject, captured_at, off_market=False):
             bedrooms=int(facts[0]) if numeric else None,
             bathrooms=int(facts[1]) if numeric else None,
             parking=int(facts[2]) if numeric else None,
+            evidence_url=url,
         )]
     return []
 
@@ -438,7 +473,8 @@ def supported_alert(message):
 
 def merge_listings(existing, observed, limit=3):
     by_id = {item["property_id"]: dict(item) for item in existing}
-    for item in observed:
+    for raw_item in observed:
+        item = public_projection(raw_item)
         previous = by_id.get(item["property_id"])
         if previous:
             item["first_seen_at"] = min(previous["first_seen_at"], item["first_seen_at"])
@@ -487,7 +523,7 @@ def market_summaries(listings):
     return markets
 
 
-def build_refresh(snapshot, messages):
+def build_refresh(snapshot, messages, event_store_path=None):
     cutoff = parse_timestamp(snapshot["meta"].get("last_alert_email_at") or snapshot["meta"]["captured_at"])
     fresh_messages = [
         message for message in messages
@@ -503,6 +539,7 @@ def build_refresh(snapshot, messages):
             unattributed_cards = (
                 hidden_rea_card_count(body, subject)
                 + unattributed_domain_card_count(body, subject)
+                + unattributed_domain_featured_card_count(body, subject)
             )
             if unattributed_cards:
                 hidden_cards_skipped += unattributed_cards
@@ -511,9 +548,15 @@ def build_refresh(snapshot, messages):
                 "Recognized a portal alert but could not parse any listing cards: "
                 + (message.get("Subject") or "No subject")
             )
+        message_id = message.get("X-Property-Desk-Message-Id")
+        for item in parsed:
+            item["_source_message_id"] = message_id
         observed.extend(parsed)
     if not fresh_messages:
         return None
+    if event_store_path:
+        from listing_event_store import record_listing_events
+        record_listing_events(event_store_path, observed)
     latest_email_at = max(message_timestamp(message) for message in fresh_messages)
     listings = merge_listings(snapshot.get("listings", []), observed, limit=3)
     markets = market_summaries(listings)
@@ -557,7 +600,7 @@ def main():
         fetch_message(token, message_id)
         for message_id in list_message_ids(token, query, label_id)
     ]
-    refreshed = build_refresh(snapshot, messages)
+    refreshed = build_refresh(snapshot, messages, os.environ.get("PRIVATE_LISTING_DB"))
     if refreshed is None:
         print("No new Property Desk alert messages.")
         return
