@@ -46,6 +46,8 @@ def validate_snapshot(snapshot):
         leaked = forbidden.intersection(item)
         if leaked:
             raise ValueError(f"Private fields present in public listing: {sorted(leaked)}")
+        if any(key.startswith("_") for key in item):
+            raise ValueError(f"Private ingestion metadata present in public listing {item.get('property_id')}")
     return snapshot
 
 

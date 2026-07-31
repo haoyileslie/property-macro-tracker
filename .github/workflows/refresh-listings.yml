@@ -11,7 +11,12 @@ on:
       - "market_listings_vintages.json"
       - "ingest_listings.py"
       - "refresh_listings_from_gmail.py"
+      - "listing_event_store.py"
+      - "sync_private_listing_events.py"
+      - "import_gmail_connector_export.py"
       - "tests/test_ingest_listings.py"
+      - "tests/test_listing_event_store.py"
+      - "tests/test_import_gmail_connector_export.py"
       - "tests/test_refresh_listings_from_gmail.py"
       - ".github/workflows/refresh-listings.yml"
 
@@ -45,7 +50,7 @@ jobs:
         run: python3 ingest_listings.py
 
       - name: Run listing regression tests
-        run: python3 -m unittest tests.test_ingest_listings tests.test_refresh_listings_from_gmail -v
+        run: python3 -m unittest tests.test_ingest_listings tests.test_import_gmail_connector_export tests.test_listing_event_store tests.test_refresh_listings_from_gmail -v
 
       - name: Publish refreshed listing data
         if: github.event_name != 'pull_request'
