@@ -301,7 +301,7 @@ class RefreshListingsTests(unittest.TestCase):
         self.assertEqual(refreshed["meta"]["unattributed_alert_cards_skipped"], 1)
         self.assertEqual(refreshed["meta"]["last_alert_email_at"], "2026-07-31T04:16:59Z")
 
-    def test_recognized_alert_with_changed_template_stops_refresh(self):
+    def test_recognized_alert_with_changed_template_is_quarantined(self):
         snapshot = {
             "meta": {
                 "captured_at": "2026-07-22T00:00:00Z",
@@ -314,8 +314,46 @@ class RefreshListingsTests(unittest.TestCase):
             'New to market: Alert for your "Indooroopilly, QLD 4068"',
             "<div>A changed card layout with no address</div>",
         )
-        with self.assertRaisesRegex(RuntimeError, "could not parse"):
-            refresh.build_refresh(snapshot, [message])
+        refreshed = refresh.build_refresh(snapshot, [message])
+        self.assertEqual(refreshed["listings"], [])
+        self.assertEqual(refreshed["meta"]["last_alert_email_at"], "2026-07-23T01:00:00Z")
+        self.assertEqual(refreshed["meta"]["unparsed_alert_messages"], 1)
+        self.assertEqual(refreshed["meta"]["recent_unparsed_alerts"], [{
+            "portal": "REA",
+            "subject": 'New to market: Alert for your "Indooroopilly, QLD 4068"',
+            "received_at": "2026-07-23T01:00:00Z",
+            "reason": "recognized_alert_without_parseable_listing_cards",
+        }])
+        self.assertNotIn("message_id", str(refreshed["meta"]))
+
+    def test_changed_template_does_not_block_other_valid_alerts(self):
+        snapshot = {
+            "meta": {
+                "captured_at": "2026-07-22T00:00:00Z",
+                "last_alert_email_at": "2026-07-22T00:00:00Z",
+                "alert_messages": 2,
+                "observations_fetched": 2,
+                "unique_listings_analysed": 2,
+            },
+            "markets": [],
+            "listings": [],
+        }
+        changed = alert(
+            'New to market: Alert for your "Bondi Junction, NSW 2022" saved search',
+            "<div>A changed card layout with no address</div>",
+            "2026-07-23T01:00:00Z",
+        )
+        valid = alert(
+            'New to market: Alert for your "Indooroopilly, QLD 4068" saved search',
+            '<a href="https://example.test/listing">4 Test Road, Indooroopilly 4068</a>'
+            '<div>2</div><div>1</div><div>1</div>',
+            "2026-07-23T02:00:00Z",
+        )
+        refreshed = refresh.build_refresh(snapshot, [changed, valid])
+        self.assertEqual(len(refreshed["listings"]), 1)
+        self.assertEqual(refreshed["listings"][0]["address"], "4 Test Road, Indooroopilly QLD 4068")
+        self.assertEqual(refreshed["meta"]["unparsed_alert_messages"], 1)
+        self.assertEqual(refreshed["meta"]["last_alert_email_at"], "2026-07-23T02:00:00Z")
 
     def test_refresh_token_is_never_logged_or_embedded(self):
         with patch.object(refresh, "request_json", return_value={"access_token": "temporary"}) as request:

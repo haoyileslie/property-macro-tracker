@@ -540,6 +540,7 @@ def build_refresh(snapshot, messages, event_store_path=None):
     ]
     observed = []
     hidden_cards_skipped = 0
+    quarantined_alerts = []
     for message in fresh_messages:
         parsed = parse_message(message)
         if not parsed:
@@ -553,10 +554,14 @@ def build_refresh(snapshot, messages, event_store_path=None):
             if unattributed_cards:
                 hidden_cards_skipped += unattributed_cards
                 continue
-            raise RuntimeError(
-                "Recognized a portal alert but could not parse any listing cards: "
-                + (message.get("Subject") or "No subject")
-            )
+            subject = message.get("Subject") or "No subject"
+            quarantined_alerts.append({
+                "portal": "REA" if re.search(r"new to market|coming soon", subject, re.I) else "Domain",
+                "subject": subject,
+                "received_at": message_timestamp(message),
+                "reason": "recognized_alert_without_parseable_listing_cards",
+            })
+            continue
         message_id = message.get("X-Property-Desk-Message-Id")
         for item in parsed:
             item["_source_message_id"] = message_id
@@ -585,6 +590,14 @@ def build_refresh(snapshot, messages, event_store_path=None):
             int(snapshot["meta"].get("unattributed_alert_cards_skipped") or 0)
             + hidden_cards_skipped
         ),
+        "unparsed_alert_messages": (
+            int(snapshot["meta"].get("unparsed_alert_messages") or 0)
+            + len(quarantined_alerts)
+        ),
+        "recent_unparsed_alerts": (
+            list(snapshot["meta"].get("recent_unparsed_alerts") or [])
+            + quarantined_alerts
+        )[-10:],
     }
     return {"meta": meta, "markets": markets, "listings": listings}
 
