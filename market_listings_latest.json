@@ -5,18 +5,18 @@
       "https://www.domain.com.au/",
       "https://www.realestate.com.au/"
     ],
-    "captured_at": "2026-08-08T08:11:03Z",
-    "published_at": "2026-08-08T21:38:04Z",
+    "captured_at": "2026-08-09T07:29:18Z",
+    "published_at": "2026-08-09T21:38:16Z",
     "status": "ok",
-    "alert_messages": 957,
+    "alert_messages": 964,
     "market_count": 129,
     "listing_count": 332,
-    "observations_fetched": 2649,
-    "unique_listings_analysed": 2495,
+    "observations_fetched": 2654,
+    "unique_listings_analysed": 2500,
     "public_sample_per_market": 3,
     "coverage_note": "Recent saved-search alert evidence, not a complete market census. Up to three examples are shown per suburb, with both portals represented where available.",
-    "last_alert_email_at": "2026-08-08T08:11:03Z",
-    "unattributed_alert_cards_skipped": 46,
+    "last_alert_email_at": "2026-08-09T07:29:18Z",
+    "unattributed_alert_cards_skipped": 48,
     "unparsed_alert_messages": 1,
     "recent_unparsed_alerts": [
       {
@@ -336,11 +336,11 @@
       "listing_count": 3,
       "auction_count": 0,
       "auction_share_pct": 0.0,
-      "price_disclosed_count": 1,
+      "price_disclosed_count": 2,
       "median_asking_midpoint_aud": null,
       "source_counts": {
-        "Domain": 1,
-        "REA": 2
+        "Domain": 2,
+        "REA": 1
       }
     },
     {
@@ -441,7 +441,7 @@
       "listing_count": 3,
       "auction_count": 0,
       "auction_share_pct": 0.0,
-      "price_disclosed_count": 3,
+      "price_disclosed_count": 2,
       "median_asking_midpoint_aud": null,
       "source_counts": {
         "Domain": 1,
@@ -699,8 +699,8 @@
       "price_disclosed_count": 3,
       "median_asking_midpoint_aud": null,
       "source_counts": {
-        "Domain": 1,
-        "REA": 2
+        "Domain": 2,
+        "REA": 1
       }
     },
     {
@@ -1654,13 +1654,13 @@
       "state": "NSW",
       "postcode": "2077",
       "listing_count": 3,
-      "auction_count": 0,
-      "auction_share_pct": 0.0,
-      "price_disclosed_count": 2,
+      "auction_count": 1,
+      "auction_share_pct": 33.3,
+      "price_disclosed_count": 1,
       "median_asking_midpoint_aud": null,
       "source_counts": {
-        "Domain": 1,
-        "REA": 2
+        "Domain": 2,
+        "REA": 1
       }
     },
     {
@@ -2992,23 +2992,23 @@
       "last_seen_at": "2026-08-05T08:23:14Z"
     },
     {
-      "property_id": "fd8d99d645217a33",
+      "property_id": "e9d519f99b91a9f4",
       "source": "Domain",
       "city": "Brisbane",
       "suburb": "Manly",
       "state": "QLD",
       "postcode": "4179",
-      "address": "175 Stratton Terrace, Manly QLD 4179",
+      "address": "3 Raeburn Street, Manly QLD 4179",
       "property_type": null,
       "sale_type": null,
-      "price_text": "Contact Agent",
+      "price_text": "$1,250,000",
       "asking_price_low": null,
       "asking_price_high": null,
-      "bedrooms": 2,
+      "bedrooms": 3,
       "bathrooms": 1,
-      "parking": 2,
-      "first_seen_at": "2026-08-06T08:21:33Z",
-      "last_seen_at": "2026-08-06T08:21:33Z"
+      "parking": 3,
+      "first_seen_at": "2026-08-09T07:29:18Z",
+      "last_seen_at": "2026-08-09T07:29:18Z"
     },
     {
       "property_id": "69806f6dd6dd8e2f",
@@ -3030,23 +3030,23 @@
       "last_seen_at": "2026-08-06T09:05:22Z"
     },
     {
-      "property_id": "5eedfc54c8cfdf1d",
-      "source": "REA",
+      "property_id": "fd8d99d645217a33",
+      "source": "Domain",
       "city": "Brisbane",
       "suburb": "Manly",
       "state": "QLD",
       "postcode": "4179",
-      "address": "103 Grattan Terrace, Manly QLD 4179",
+      "address": "175 Stratton Terrace, Manly QLD 4179",
       "property_type": null,
       "sale_type": null,
-      "price_text": null,
+      "price_text": "Contact Agent",
       "asking_price_low": null,
       "asking_price_high": null,
-      "bedrooms": 4,
-      "bathrooms": 3,
+      "bedrooms": 2,
+      "bathrooms": 1,
       "parking": 2,
-      "first_seen_at": "2026-08-05T09:01:25Z",
-      "last_seen_at": "2026-08-05T09:01:25Z"
+      "first_seen_at": "2026-08-06T08:21:33Z",
+      "last_seen_at": "2026-08-06T08:21:33Z"
     },
     {
       "property_id": "82a22cf514f4d601",
@@ -3410,6 +3410,25 @@
       "last_seen_at": "2026-08-06T08:19:03Z"
     },
     {
+      "property_id": "6af24c729d4baa38",
+      "source": "REA",
+      "city": "Brisbane",
+      "suburb": "Nundah",
+      "state": "QLD",
+      "postcode": "4012",
+      "address": "6/11 Collins Street, Nundah QLD 4012",
+      "property_type": null,
+      "sale_type": null,
+      "price_text": null,
+      "asking_price_low": null,
+      "asking_price_high": null,
+      "bedrooms": 2,
+      "bathrooms": 2,
+      "parking": 1,
+      "first_seen_at": "2026-08-09T06:49:39Z",
+      "last_seen_at": "2026-08-09T06:49:39Z"
+    },
+    {
       "property_id": "8754d167443c908e",
       "source": "REA",
       "city": "Brisbane",
@@ -3424,25 +3443,6 @@
       "asking_price_high": null,
       "bedrooms": 1,
       "bathrooms": 1,
-      "parking": 1,
-      "first_seen_at": "2026-08-06T09:05:40Z",
-      "last_seen_at": "2026-08-06T09:05:40Z"
-    },
-    {
-      "property_id": "c264627c131ec3c3",
-      "source": "REA",
-      "city": "Brisbane",
-      "suburb": "Nundah",
-      "state": "QLD",
-      "postcode": "4012",
-      "address": "2/45 Oliver Street, Nundah QLD 4012",
-      "property_type": null,
-      "sale_type": null,
-      "price_text": "Mid to High $700,000",
-      "asking_price_low": null,
-      "asking_price_high": null,
-      "bedrooms": 2,
-      "bathrooms": 2,
       "parking": 1,
       "first_seen_at": "2026-08-06T09:05:40Z",
       "last_seen_at": "2026-08-06T09:05:40Z"
@@ -4208,23 +4208,23 @@
       "last_seen_at": "2026-07-22T08:09:20Z"
     },
     {
-      "property_id": "2816aa826b322d28",
+      "property_id": "6af5c4c2f422f159",
       "source": "Domain",
       "city": "Melbourne",
       "suburb": "Bentleigh",
       "state": "VIC",
       "postcode": "3204",
-      "address": "26 Riddle Street, Bentleigh VIC 3204",
+      "address": "17 Hobart Street, Bentleigh VIC 3204",
       "property_type": null,
       "sale_type": null,
-      "price_text": "$1,700,000",
+      "price_text": "$2,430,000",
       "asking_price_low": null,
       "asking_price_high": null,
-      "bedrooms": 3,
-      "bathrooms": 1,
+      "bedrooms": 5,
+      "bathrooms": 3,
       "parking": 3,
-      "first_seen_at": "2026-08-07T08:45:35Z",
-      "last_seen_at": "2026-08-07T08:45:35Z"
+      "first_seen_at": "2026-08-09T07:29:14Z",
+      "last_seen_at": "2026-08-09T07:29:14Z"
     },
     {
       "property_id": "ac7ca5a07f5bb548",
@@ -4246,23 +4246,23 @@
       "last_seen_at": "2026-08-07T09:11:02Z"
     },
     {
-      "property_id": "0161293645e65d3c",
-      "source": "REA",
+      "property_id": "2816aa826b322d28",
+      "source": "Domain",
       "city": "Melbourne",
       "suburb": "Bentleigh",
       "state": "VIC",
       "postcode": "3204",
-      "address": "5b Luckins Road, Bentleigh VIC 3204",
+      "address": "26 Riddle Street, Bentleigh VIC 3204",
       "property_type": null,
       "sale_type": null,
-      "price_text": "$1,500,000 - $1,600,000",
+      "price_text": "$1,700,000",
       "asking_price_low": null,
       "asking_price_high": null,
       "bedrooms": 3,
-      "bathrooms": 2,
-      "parking": 2,
-      "first_seen_at": "2026-08-06T09:06:15Z",
-      "last_seen_at": "2026-08-06T09:06:15Z"
+      "bathrooms": 1,
+      "parking": 3,
+      "first_seen_at": "2026-08-07T08:45:35Z",
+      "last_seen_at": "2026-08-07T08:45:35Z"
     },
     {
       "property_id": "40dfb0ce24290fd0",
@@ -7362,23 +7362,23 @@
       "last_seen_at": "2026-07-28T08:25:50Z"
     },
     {
-      "property_id": "fec1c7f85a143c85",
+      "property_id": "00732e2234b4f210",
       "source": "Domain",
       "city": "Sydney",
       "suburb": "Hornsby",
       "state": "NSW",
       "postcode": "2077",
-      "address": "9A Lodge Street, Hornsby NSW 2077",
+      "address": "24/3-7 Edgeworth David Avenue, Hornsby NSW 2077",
       "property_type": null,
-      "sale_type": null,
-      "price_text": "For Sale - Contact Agent",
+      "sale_type": "Auction",
+      "price_text": null,
       "asking_price_low": null,
       "asking_price_high": null,
-      "bedrooms": 4,
-      "bathrooms": 2,
-      "parking": 4,
-      "first_seen_at": "2026-08-07T08:46:15Z",
-      "last_seen_at": "2026-08-07T08:46:15Z"
+      "bedrooms": null,
+      "bathrooms": null,
+      "parking": null,
+      "first_seen_at": "2026-08-09T06:06:56Z",
+      "last_seen_at": "2026-08-09T06:06:56Z"
     },
     {
       "property_id": "a160e7eb136efb0d",
@@ -7400,23 +7400,23 @@
       "last_seen_at": "2026-08-07T09:10:38Z"
     },
     {
-      "property_id": "28325ed9273b631d",
-      "source": "REA",
+      "property_id": "9b552babe9715912",
+      "source": "Domain",
       "city": "Sydney",
       "suburb": "Hornsby",
       "state": "NSW",
       "postcode": "2077",
-      "address": "8/75-79 Jersey Street North, Hornsby NSW 2077",
+      "address": "24/121-133 Pacific Highway, Hornsby NSW 2077",
       "property_type": null,
-      "sale_type": null,
-      "price_text": "Guide $335,000",
+      "sale_type": "Private Sale",
+      "price_text": "For Sale - Contact Agent",
       "asking_price_low": null,
       "asking_price_high": null,
-      "bedrooms": 1,
-      "bathrooms": 1,
-      "parking": 1,
-      "first_seen_at": "2026-08-07T09:10:38Z",
-      "last_seen_at": "2026-08-07T09:10:38Z"
+      "bedrooms": null,
+      "bathrooms": null,
+      "parking": null,
+      "first_seen_at": "2026-08-09T04:41:39Z",
+      "last_seen_at": "2026-08-09T04:41:39Z"
     },
     {
       "property_id": "4ac8b63759fefb2b",
