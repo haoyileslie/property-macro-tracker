@@ -1,5 +1,7 @@
 import copy
+import io
 import unittest
+import zipfile
 from unittest.mock import MagicMock, patch
 
 from ingest_macro import (
@@ -8,6 +10,10 @@ from ingest_macro import (
     fetch,
     monthly_last,
     parse_abs_cpi,
+    parse_abs_lending_shares,
+    parse_abs_xlsx_series,
+    quarter_points,
+    _horizontal_ratio,
 )
 
 
@@ -53,6 +59,59 @@ class AbsParserTests(unittest.TestCase):
         headline, trimmed = parse_abs_cpi(markup)
         self.assertEqual(headline[-1], {"date": "2026-06", "value": 3.8})
         self.assertEqual(trimmed[-1], {"date": "2026-06", "value": 3.6})
+
+    def test_abs_xlsx_parser_reads_data1_by_series_id(self):
+        shared = (
+            '<?xml version="1.0" encoding="UTF-8"?>'
+            '<sst xmlns="http://schemas.openxmlformats.org/spreadsheetml/2006/main">'
+            '<si><t>Example series</t></si><si><t>TEST123</t></si></sst>'
+        )
+        sheet = (
+            '<?xml version="1.0" encoding="UTF-8"?>'
+            '<worksheet xmlns="http://schemas.openxmlformats.org/spreadsheetml/2006/main"><sheetData>'
+            '<row r="1"><c r="B1" t="s"><v>0</v></c></row>'
+            '<row r="10"><c r="B10" t="s"><v>1</v></c></row>'
+            '<row r="11"><c r="A11"><v>46082</v></c><c r="B11"><v>123.4</v></c></row>'
+            '</sheetData></worksheet>'
+        )
+        payload = io.BytesIO()
+        with zipfile.ZipFile(payload, "w") as workbook:
+            workbook.writestr("xl/sharedStrings.xml", shared)
+            workbook.writestr("xl/worksheets/sheet2.xml", sheet)
+        parsed = parse_abs_xlsx_series(payload.getvalue(), {"TEST123"})
+        self.assertEqual(parsed["TEST123"], [{"date": "2026-Q1", "value": 123.4}])
+
+    def test_quarter_points_normalises_rba_quarter_end_dates(self):
+        self.assertEqual(
+            quarter_points([{"date": "2009-03", "value": 8.3}, {"date": "2009-06", "value": 8.1}]),
+            [{"date": "2009-Q1", "value": 8.3}, {"date": "2009-Q2", "value": 8.1}],
+        )
+
+    def test_abs_lending_share_parser_calculates_borrower_mix(self):
+        markup = """
+        Number of new loan commitments for dwellings (a), seasonally adjusted and trend, Australia
+        Mar-26 100,000 70,000 30,000 14,000
+        Jun-26 110,000 75,000 35,000 15,000
+        Value of new loan commitments for dwellings
+        """
+        first_home, investor = parse_abs_lending_shares(markup)
+        self.assertEqual(first_home[-1], {"date": "2026-Q2", "value": 20.0})
+        self.assertEqual(investor[-1], {"date": "2026-Q2", "value": 31.82})
+
+    def test_horizontal_ratio_uses_excel_dates_and_selected_rows(self):
+        rows = {
+            4: {"C": "46082", "D": "46173"},
+            9: {"C": "80", "D": "90"},
+            10: {"C": "20", "D": "10"},
+            35: {"C": "15", "D": "10"},
+        }
+        self.assertEqual(
+            _horizontal_ratio(rows, [35], [9, 10]),
+            [
+                {"date": "2026-Q1", "value": 15.0},
+                {"date": "2026-Q2", "value": 10.0},
+            ],
+        )
 
 
 class EnhancementDatabaseTests(unittest.TestCase):

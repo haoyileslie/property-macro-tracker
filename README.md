@@ -93,6 +93,42 @@ history-count and status metadata. Use
 `python3 ingest_macro.py --dry-run` first when you want to check what
 would be ingested without writing the file.
 
+To refresh only the long-run research foundations without calling the
+equity-market and other routine sources:
+
+```bash
+python3 ingest_macro.py --foundations-only
+```
+
+To refresh only the additional housing-condition layer (borrower risk and
+composition, capital-city rents and turnover, dwelling stock and metro
+population growth), run:
+
+```bash
+python3 ingest_macro.py --housing-conditions-only
+```
+
+This layer adds ten public series from APRA and ABS. The refresh stores the
+latest revised histories in `property_data.json` and preserves each completed
+refresh in `data_vintages.json`. Geography is labelled explicitly: rents,
+transfers and population growth use capital-city regions; dwelling-stock city
+tabs are state proxies.
+
+This mode maintains twelve public series used for housing-cycle research:
+
+- BIS nominal and real residential property price indices from 1970;
+- RBA household, housing and owner-occupier debt-to-income ratios;
+- RBA housing interest, scheduled repayment and excess-payment burdens;
+- ABS dwelling commencements and completions for Australia and four state
+  proxies;
+- ABS estimated resident population and net overseas migration for Australia
+  and the same state proxies.
+
+The price history contains documented coverage breaks. The city labels on
+construction and population series are state proxies, not capital-city-only
+observations. Each series stores this warning, its source series identifiers
+and an estimated release lag for backtesting.
+
 Network requests are retried up to three times with bounded backoff. The
 workflow logs the exact failing URL when a provider times out or rejects a
 request, which keeps source outages distinguishable from parser or data
