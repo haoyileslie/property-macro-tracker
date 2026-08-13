@@ -540,7 +540,7 @@
   </section>
 
   <footer>
-    <span>Data: ABS, RBA, FRED, PropTrack and SQM Research; market-index prices retrieved via Yahoo Finance. References: S&amp;P DJI, MSCI, ASX, APRA, Domain and government agencies.</span>
+    <span>Data: ABS, RBA, BIS via FRED, PropTrack and SQM Research; market-index prices retrieved via Yahoo Finance. References: S&amp;P DJI, MSCI, ASX, APRA, Domain and government agencies.</span>
     <span id="footNote">Personal research tool — not investment advice.</span>
   </footer>
 </div>
@@ -1098,7 +1098,7 @@ function renderSeriesExplorer(){
     seriesMap: DATA.series,
     listId: 'seriesList',
     detailId: 'seriesDetail',
-    preferred: ['cash_rate','unemployment_rate','employed_people','cpi_headline_yoy','cpi_trimmed_mean_yoy','building_approvals_total_dwellings','building_approvals_total_dwellings_state_proxy','housing_lending_rate_owner_occupier_variable','lending_new_loan_commitments_dwellings_number','lending_new_loan_commitments_dwellings_value','wage_growth_private_yoy','wage_growth_public_yoy','average_weekly_earnings_private','average_weekly_earnings_public','us_treasury_3y','us_treasury_10y','asx_200','sp_500','msci_acwi','asx_200_real_estate','asx_200_areit'],
+    preferred: ['house_price_nominal_index','house_price_real_index','cash_rate','housing_lending_rate_owner_occupier_variable','household_debt_to_income','housing_debt_to_income','owner_occupier_housing_debt_to_income','housing_interest_charged_to_income','scheduled_housing_repayments_to_income','excess_housing_payments_to_income','new_housing_loans_high_dti_share','new_housing_loans_high_lvr_share','new_housing_loans_interest_only_share','housing_mortgage_non_performing_share','unemployment_rate','employed_people','cpi_headline_yoy','cpi_trimmed_mean_yoy','capital_city_rent_index','estimated_resident_population','net_overseas_migration','capital_city_population_growth','residential_dwelling_stock','building_approvals_total_dwellings','building_approvals_total_dwellings_state_proxy','dwelling_commencements','dwelling_completions','residential_property_transfers','lending_new_loan_commitments_dwellings_number','lending_new_loan_commitments_dwellings_value','first_home_buyer_share','investor_lending_share','wage_growth_private_yoy','wage_growth_public_yoy','average_weekly_earnings_private','average_weekly_earnings_public','us_treasury_3y','us_treasury_10y','asx_200','sp_500','msci_acwi','asx_200_real_estate','asx_200_areit'],
     excluded: ['home_value_index_mom','vacancy_rate','lending_new_loan_commitments_dwellings_qoq'],
     selectedKey: selectedSeriesKey,
     selectKey: key=>{selectedSeriesKey=key;},
