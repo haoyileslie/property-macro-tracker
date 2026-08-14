@@ -257,8 +257,8 @@
         "scope": "Australian listed securities; separate residential-exposure basket recommended"
       }
     ],
-    "last_refreshed_at": "2026-08-14T07:22:45+00:00",
-    "latest_refresh_id": "2026-08-14T072245+0000",
+    "last_refreshed_at": "2026-08-14T22:51:08+00:00",
+    "latest_refresh_id": "2026-08-14T225108+0000",
     "vintage_file": "data_vintages.json",
     "derived_series_version": 3,
     "macro_enhancement_note": "Additional public RBA time series were integrated for model enhancement and macro/property research. They use latest revised history plus explicit release-lag metadata; they are not a true vintage database.",
@@ -24022,7 +24022,7 @@
           },
           {
             "date": "2026-07",
-            "value": 9209.4
+            "value": 9188.5
           },
           {
             "date": "2026-08",
@@ -26050,7 +26050,7 @@
           },
           {
             "date": "2026-08",
-            "value": 7798.99
+            "value": 7785.76
           }
         ]
       },
@@ -27930,7 +27930,7 @@
           },
           {
             "date": "2026-08",
-            "value": 1161.35
+            "value": 1160.34
           }
         ]
       },
@@ -28390,7 +28390,7 @@
           },
           {
             "date": "2026-07",
-            "value": 3632.0
+            "value": 3626.9
           },
           {
             "date": "2026-08",
@@ -29490,7 +29490,7 @@
           },
           {
             "date": "2026-07",
-            "value": 1690.1
+            "value": 1687.5
           },
           {
             "date": "2026-08",
@@ -32622,7 +32622,7 @@
           },
           {
             "date": "2026-08",
-            "value": 4.25
+            "value": 4.2
           }
         ]
       },
@@ -32635,7 +32635,7 @@
       "update_method": "automated",
       "source_url": "https://fred.stlouisfed.org/series/DGS3",
       "source": "Federal Reserve Bank of St. Louis (FRED DGS3)",
-      "status_note": "Last available daily FRED observation in each month; latest month-end value is 4.25%."
+      "status_note": "Last available daily FRED observation in each month; latest month-end value is 4.2%."
     },
     "us_treasury_10y": {
       "label": "US Treasury 10-year yield",
@@ -35748,7 +35748,7 @@
           },
           {
             "date": "2026-08",
-            "value": 4.68
+            "value": 4.63
           }
         ]
       },
@@ -35761,7 +35761,7 @@
       "update_method": "automated",
       "source_url": "https://fred.stlouisfed.org/series/DGS10",
       "source": "Federal Reserve Bank of St. Louis (FRED DGS10)",
-      "status_note": "Last available daily FRED observation in each month; latest month-end value is 4.68%."
+      "status_note": "Last available daily FRED observation in each month; latest month-end value is 4.63%."
     },
     "wage_growth_private_yoy": {
       "label": "Private-sector wage growth, year-on-year",
@@ -99589,7 +99589,7 @@
           },
           {
             "date": "2026-07",
-            "value": 72.32
+            "value": 72.38
           },
           {
             "date": "2026-08",
@@ -100703,7 +100703,7 @@
           },
           {
             "date": "2026-07",
-            "value": 38.8
+            "value": 38.83
           },
           {
             "date": "2026-08",
@@ -101470,7 +101470,7 @@
           },
           {
             "date": "2026-08",
-            "value": 0.25
+            "value": 0.2492
           }
         ]
       },
@@ -102125,7 +102125,7 @@
           },
           {
             "date": "2026-08",
-            "value": 0.2997
+            "value": 0.2989
           }
         ]
       }
@@ -102964,7 +102964,7 @@
           },
           {
             "date": "2026-08",
-            "value": 0.125
+            "value": 0.1246
           }
         ],
         "Credit Availability": [
@@ -104263,7 +104263,7 @@
           },
           {
             "date": "2026-08",
-            "value": 0.4365
+            "value": 0.4361
           }
         ]
       }
@@ -106362,7 +106362,7 @@
           },
           {
             "date": "2026-08",
-            "value": -0.004
+            "value": -0.0046
           }
         ],
         "Credit Availability": [
@@ -109309,7 +109309,7 @@
         },
         {
           "date": "2026-08",
-          "value": 84.5
+          "value": 84.1
         }
       ],
       "positive_direction": "tighter",
@@ -110301,7 +110301,7 @@
           },
           {
             "date": "2026-08",
-            "value": 0.218
+            "value": 0.2174
           }
         ]
       }
@@ -111012,7 +111012,7 @@
           },
           {
             "date": "2026-08",
-            "value": 0.125
+            "value": 0.1246
           }
         ],
         "Credit Availability": [
@@ -111863,7 +111863,7 @@
           },
           {
             "date": "2026-08",
-            "value": 0.3162
+            "value": 0.3158
           }
         ]
       }
