@@ -5,17 +5,17 @@
       "https://www.domain.com.au/",
       "https://www.realestate.com.au/"
     ],
-    "captured_at": "2026-08-13T09:02:01Z",
-    "published_at": "2026-08-13T21:40:34Z",
+    "captured_at": "2026-08-14T04:20:16Z",
+    "published_at": "2026-08-14T07:23:50Z",
     "status": "ok",
-    "alert_messages": 1205,
+    "alert_messages": 1208,
     "market_count": 134,
-    "listing_count": 343,
-    "observations_fetched": 3386,
-    "unique_listings_analysed": 3185,
+    "listing_count": 344,
+    "observations_fetched": 3389,
+    "unique_listings_analysed": 3188,
     "public_sample_per_market": 3,
     "coverage_note": "Recent saved-search alert evidence, not a complete market census. Up to three examples are shown per suburb, with both portals represented where available.",
-    "last_alert_email_at": "2026-08-13T09:02:01Z",
+    "last_alert_email_at": "2026-08-14T04:20:16Z",
     "unattributed_alert_cards_skipped": 59,
     "unparsed_alert_messages": 2,
     "recent_unparsed_alerts": [
@@ -864,13 +864,13 @@
       "suburb": "Coburg North",
       "state": "VIC",
       "postcode": "3121",
-      "listing_count": 2,
+      "listing_count": 3,
       "auction_count": 0,
       "auction_share_pct": 0.0,
-      "price_disclosed_count": 2,
+      "price_disclosed_count": 3,
       "median_asking_midpoint_aud": null,
       "source_counts": {
-        "Domain": 2,
+        "Domain": 3,
         "REA": 0
       }
     },
@@ -1525,13 +1525,13 @@
       "state": "NSW",
       "postcode": "2022",
       "listing_count": 3,
-      "auction_count": 1,
-      "auction_share_pct": 33.3,
-      "price_disclosed_count": 1,
+      "auction_count": 2,
+      "auction_share_pct": 66.7,
+      "price_disclosed_count": 2,
       "median_asking_midpoint_aud": null,
       "source_counts": {
-        "Domain": 1,
-        "REA": 2
+        "Domain": 2,
+        "REA": 1
       }
     },
     {
@@ -4821,23 +4821,23 @@
       "last_seen_at": "2026-08-12T09:07:42Z"
     },
     {
-      "property_id": "fcc0c1fec407270d",
+      "property_id": "c9783692fe8911d9",
       "source": "Domain",
       "city": "Melbourne",
       "suburb": "Coburg",
       "state": "VIC",
       "postcode": "3058",
-      "address": "6/345 Moreland Road, Coburg VIC 3058",
+      "address": "274 Bell Street, Coburg VIC 3058",
       "property_type": null,
-      "sale_type": null,
-      "price_text": "$300,000 to $320,000",
+      "sale_type": "Off Market",
+      "price_text": "$900,000 - $920,000",
       "asking_price_low": null,
       "asking_price_high": null,
-      "bedrooms": 1,
+      "bedrooms": 3,
       "bathrooms": 1,
-      "parking": 1,
-      "first_seen_at": "2026-08-13T08:15:45Z",
-      "last_seen_at": "2026-08-13T08:15:45Z"
+      "parking": 2,
+      "first_seen_at": "2026-08-14T04:20:16Z",
+      "last_seen_at": "2026-08-14T04:20:16Z"
     },
     {
       "property_id": "6e05acf1f57a18aa",
@@ -4876,6 +4876,25 @@
       "parking": 2,
       "first_seen_at": "2026-08-13T09:01:42Z",
       "last_seen_at": "2026-08-13T09:01:42Z"
+    },
+    {
+      "property_id": "c8047a252c1e615f",
+      "source": "Domain",
+      "city": "Melbourne",
+      "suburb": "Coburg North",
+      "state": "VIC",
+      "postcode": "3058",
+      "address": "25 Newlands Road, Coburg North VIC 3058",
+      "property_type": null,
+      "sale_type": "Off Market",
+      "price_text": "Contact Agent for Price Guide",
+      "asking_price_low": null,
+      "asking_price_high": null,
+      "bedrooms": 2,
+      "bathrooms": 1,
+      "parking": 2,
+      "first_seen_at": "2026-08-14T04:05:39Z",
+      "last_seen_at": "2026-08-14T04:05:39Z"
     },
     {
       "property_id": "01a6220fb870c773",
@@ -7082,23 +7101,23 @@
       "last_seen_at": "2026-08-13T09:01:52Z"
     },
     {
-      "property_id": "d9b381f415417a8f",
+      "property_id": "70915cc6be3317ad",
       "source": "Domain",
       "city": "Sydney",
       "suburb": "Bondi Junction",
       "state": "NSW",
       "postcode": "2022",
-      "address": "1211/83-85 Spring Street, Bondi Junction NSW 2022",
+      "address": "23 Hough Street, Bondi Junction NSW 2022",
       "property_type": null,
       "sale_type": "Auction",
-      "price_text": "Contact Agent",
+      "price_text": "Auction | 5th September",
       "asking_price_low": null,
       "asking_price_high": null,
       "bedrooms": null,
       "bathrooms": null,
       "parking": null,
-      "first_seen_at": "2026-08-13T02:45:48Z",
-      "last_seen_at": "2026-08-13T02:45:48Z"
+      "first_seen_at": "2026-08-14T03:17:20Z",
+      "last_seen_at": "2026-08-14T03:17:20Z"
     },
     {
       "property_id": "345c49316c924886",
@@ -7120,23 +7139,23 @@
       "last_seen_at": "2026-08-13T09:02:00Z"
     },
     {
-      "property_id": "680c882b98878b70",
-      "source": "REA",
+      "property_id": "d9b381f415417a8f",
+      "source": "Domain",
       "city": "Sydney",
       "suburb": "Bondi Junction",
       "state": "NSW",
       "postcode": "2022",
-      "address": "69 Newland Street, Bondi Junction NSW 2022",
+      "address": "1211/83-85 Spring Street, Bondi Junction NSW 2022",
       "property_type": null,
-      "sale_type": null,
-      "price_text": null,
+      "sale_type": "Auction",
+      "price_text": "Contact Agent",
       "asking_price_low": null,
       "asking_price_high": null,
-      "bedrooms": 3,
-      "bathrooms": 2,
-      "parking": 0,
-      "first_seen_at": "2026-08-12T09:08:00Z",
-      "last_seen_at": "2026-08-12T09:08:00Z"
+      "bedrooms": null,
+      "bathrooms": null,
+      "parking": null,
+      "first_seen_at": "2026-08-13T02:45:48Z",
+      "last_seen_at": "2026-08-13T02:45:48Z"
     },
     {
       "property_id": "0b9e0097ff1b9b21",
