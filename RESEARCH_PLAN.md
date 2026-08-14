@@ -107,9 +107,10 @@ The lifecycle data are the most distinctive part of the project. They must retai
 
 ### Next few days
 
-- Define the HFCI variable dictionary, signs, transformations and release lags.
-- Build a transparent equal-block-weight baseline index.
-- Add historical percentiles and block-contribution charts.
+- **Completed:** define the HFCI variable dictionary, signs, transformations and release lags.
+- **Completed:** build transparent Core, Augmented, Long-history and Full equal-block-weight indexes.
+- **Completed:** add historical percentiles and block-contribution charts.
+- **Completed:** add turnover, price-to-rent, average loan-to-income, mortgage credit-quality, completions-per-capita, demographic supply-gap and borrower-segment credit-impulse indicators.
 - Add mortgage repayment pressure and borrowing-capacity scenarios.
 - Mark RBA tightening, easing and hold phases on relevant charts.
 
