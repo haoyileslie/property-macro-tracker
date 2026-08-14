@@ -88,7 +88,10 @@ function renderTable(){
   document.getElementById('dataRows').innerHTML=[...points].reverse().map(item=>`<tr><td>${item.date}</td><td>${Number(item.value).toLocaleString()}</td><td>${series.unit||''}</td></tr>`).join('')||'<tr><td colspan="3">No observations logged.</td></tr>';
   const sourceLabel=series.component_sources?.length?'Component sources':'Source';
   document.getElementById('sourceNote').innerHTML=`<strong>${sourceLabel}:</strong> ${sourceHtml(series)}.${series.methodology_note?` <strong>Method:</strong> ${series.methodology_note}`:''}`;
-  document.getElementById('backToChart').href=`index.html?series=${encodeURIComponent(selectedKey)}#${selectedKind==='derived'?'derivedSeriesTitle':'seriesTitle'}`;
+  const chartAnchor = selectedKey.startsWith('hfci_')
+    ? 'hfciTitle'
+    : (selectedKind === 'derived' ? 'derivedSeriesTitle' : 'seriesTitle');
+  document.getElementById('backToChart').href=`index.html?series=${encodeURIComponent(selectedKey)}#${chartAnchor}`;
 }
 async function init(){
   try{const response=await fetch('./property_data.json',{cache:'no-store'});if(!response.ok)throw new Error('Data file unavailable');DATA=await response.json();}

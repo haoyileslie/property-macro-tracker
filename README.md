@@ -361,6 +361,25 @@ every refresh. It currently includes:
 - the implied average value of a new dwelling loan commitment
 - annual dwelling-approvals growth
 - ASX 200 Real Estate and A-REIT performance relative to the ASX 200
+- housing turnover and an indexed house-price-to-rent ratio
+- average new-loan-to-income and mortgage credit-quality risk proxies
+- dwelling completions per 1,000 people and a transparent demographic demand-minus-completions scenario
+- separate first-home-buyer and investor credit-impulse proxies
+
+The dashboard also publishes four research versions of a Housing Financial
+Conditions Index. **Core** contains financial prices and market signals;
+**Augmented** adds credit quantities, employment and real wages;
+**Long-history** uses a reduced variable set for cycle analysis from roughly
+2006; and **Full** adds detailed APRA borrower composition and household
+repayment-capacity measures for the recent period. Positive values mean tighter
+conditions. All inputs are sign-aligned, shifted by estimated publication lags
+and standardised using only expanding history available at each date.
+
+The HFCI workspace reports the latest historical percentile, block
+contributions and its full variable dictionary. The indexes are transparent
+research indicators, not official statistics or causal estimates. The richer
+mortgage series begins in July 2019, and its expanding standardisation requires
+an initial calibration period before an index reading is published.
 
 Each derived series carries its formula, component-series keys, component
 source links and a methodology note. `validate_data.py` independently

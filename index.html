@@ -311,6 +311,63 @@
   .large-chart canvas{
     max-height:300px;
   }
+  .hfci-direction{
+    margin:0 0 14px;
+    padding:10px 12px;
+    border-left:3px solid var(--navy);
+    background:#EEF1F5;
+    color:var(--navy-deep);
+    font-size:0.76rem;
+    line-height:1.5;
+  }
+  .hfci-diagnostics{
+    margin-top:20px;
+    padding-top:16px;
+    border-top:1px solid var(--line);
+  }
+  .hfci-diagnostics h4{
+    margin:0 0 5px;
+    color:var(--navy-deep);
+    font-size:0.82rem;
+  }
+  .hfci-diagnostics > p{
+    margin:0 0 12px;
+    color:var(--slate);
+    font-size:0.74rem;
+    line-height:1.45;
+  }
+  .contribution-chart{
+    min-height:290px;
+    margin-bottom:18px;
+  }
+  .contribution-chart canvas{max-height:240px;}
+  .hfci-variable-wrap{
+    overflow-x:auto;
+    border:1px solid var(--line);
+    background:#fff;
+  }
+  table.hfci-variable-table{
+    width:100%;
+    border-collapse:collapse;
+    font-size:0.72rem;
+  }
+  .hfci-variable-table th,
+  .hfci-variable-table td{
+    padding:8px 9px;
+    border-bottom:1px solid #ECE8DD;
+    text-align:left;
+    vertical-align:top;
+  }
+  .hfci-variable-table th{
+    background:#F4F1E8;
+    color:var(--navy-deep);
+    font-size:0.64rem;
+    text-transform:uppercase;
+    letter-spacing:0.06em;
+    white-space:nowrap;
+  }
+  .hfci-variable-table td:nth-child(1),
+  .hfci-variable-table td:nth-child(4){white-space:nowrap;}
   .indicator-guide{
     display:grid;
     grid-template-columns:repeat(3, minmax(0,1fr));
@@ -520,6 +577,17 @@
     </div>
   </section>
 
+  <section class="panel-section" aria-labelledby="hfciTitle">
+    <div class="section-head">
+      <h2 id="hfciTitle">Housing Financial Conditions Monitor</h2>
+      <p>Compare four publication-lag-adjusted indexes spanning financial prices, credit availability and household capacity. Positive readings indicate tighter conditions; block contributions show what is driving each move.</p>
+    </div>
+    <div class="series-workbench">
+      <div class="series-list" id="hfciSeriesList"></div>
+      <div class="series-detail" id="hfciSeriesDetail"></div>
+    </div>
+  </section>
+
   <section class="panel-section" aria-labelledby="derivedSeriesTitle">
     <div class="section-head">
       <h2 id="derivedSeriesTitle">Derived Housing &amp; Market Indicators</h2>
@@ -640,6 +708,7 @@ const SLATE = '#5C6773';
 let currentRegion = 'National';
 let selectedSeriesKey = 'cash_rate';
 let selectedDerivedSeriesKey = 'real_cash_rate_trimmed_mean';
+let selectedHfciSeriesKey = 'hfci_core';
 let DATA = null;
 
 async function loadData(){
@@ -652,7 +721,10 @@ async function loadData(){
   }
   const requestedSeries = new URLSearchParams(window.location.search).get('series');
   if(requestedSeries && DATA.series[requestedSeries]) selectedSeriesKey = requestedSeries;
-  if(requestedSeries && DATA.derived_series?.[requestedSeries]) selectedDerivedSeriesKey = requestedSeries;
+  if(requestedSeries && DATA.derived_series?.[requestedSeries]){
+    if(requestedSeries.startsWith('hfci_')) selectedHfciSeriesKey = requestedSeries;
+    else selectedDerivedSeriesKey = requestedSeries;
+  }
   render();
 }
 
@@ -669,6 +741,7 @@ function formatValue(point, series){
   if(series.unit === 'percentage points') return `${value} pp`;
   if(series.unit === 'AUD') return `$${value}`;
   if(series.unit === 'index points') return `${value} points`;
+  if(series.unit?.startsWith('index points')) return `${value} points`;
   return series.unit ? `${value}${series.unit.startsWith(' ') ? '' : ' '}${series.unit}` : value;
 }
 
@@ -678,6 +751,7 @@ function axisUnit(series){
   if(series.unit === 'percentage points') return 'Percentage points';
   if(series.unit === 'AUD') return 'Australian dollars';
   if(series.unit === 'index points') return 'Index points';
+  if(series.unit?.startsWith('index points')) return 'Index points (0 = historical average)';
   return (series.unit || 'Value').trim();
 }
 
@@ -985,6 +1059,68 @@ function drawSeriesCanvas(container, points, series){
   }
 }
 
+function drawContributionChart(container, series){
+  const contributionMap = series.block_contributions || {};
+  const blocks = Object.keys(contributionMap);
+  const points = contributionMap[blocks[0]] || [];
+  if(!blocks.length || !points.length) return;
+  if(typeof Chart === 'undefined'){
+    container.innerHTML = '<div class="empty-note">Contribution chart unavailable.</div>';
+    return;
+  }
+  const colours = {
+    'Pricing': '#1F3A6E',
+    'Market Pricing': '#66758F',
+    'Credit Availability': '#C08A3E',
+    'Household Capacity': '#6F8577'
+  };
+  let chart;
+  const [startIndex, endIndex] = addTimeSlicer(container, points, (start, end)=>{
+    if(!chart) return;
+    chart.data.labels = points.slice(start, end + 1).map(point=>point.date);
+    chart.data.datasets.forEach(dataset=>{
+      dataset.data = contributionMap[dataset.label].slice(start, end + 1).map(point=>point.value);
+    });
+    chart.update('none');
+  });
+  const canvas = document.createElement('canvas');
+  container.appendChild(canvas);
+  chart = new Chart(canvas, {
+    type:'bar',
+    data:{
+      labels:points.slice(startIndex, endIndex + 1).map(point=>point.date),
+      datasets:blocks.map(block=>({
+        label:block,
+        data:contributionMap[block].slice(startIndex, endIndex + 1).map(point=>point.value),
+        backgroundColor:colours[block] || SLATE,
+        borderWidth:0,
+        borderRadius:1,
+        barPercentage:0.9,
+        categoryPercentage:0.94
+      }))
+    },
+    options:{
+      responsive:true,
+      maintainAspectRatio:false,
+      interaction:{mode:'index',intersect:false},
+      plugins:{
+        legend:{labels:{color:SLATE,usePointStyle:true,boxWidth:8,font:{family:'IBM Plex Sans',size:11}}},
+        tooltip:{
+          callbacks:{
+            title:items=>items[0]?.label || '',
+            label:ctx=>`${ctx.dataset.label}: ${Number(ctx.parsed.y).toFixed(2)} points`,
+            footer:items=>`Index: ${items.reduce((sum,item)=>sum + Number(item.parsed.y),0).toFixed(2)} points`
+          }
+        }
+      },
+      scales:{
+        x:{stacked:true,ticks:{color:SLATE,font:{family:'IBM Plex Mono',size:10},maxRotation:0,autoSkip:true,maxTicksLimit:10},grid:{display:false}},
+        y:{stacked:true,title:{display:true,text:'Index-point contribution',color:SLATE,font:{family:'IBM Plex Sans',size:11}},ticks:{color:SLATE,font:{family:'IBM Plex Mono',size:10}},grid:{color:'#E7E1D3'}}
+      }
+    }
+  });
+}
+
 function csvEscape(value){
   const text = String(value ?? '');
   return /[",\n]/.test(text) ? `"${text.replace(/"/g, '""')}"` : text;
@@ -1058,6 +1194,7 @@ function renderSeriesWorkbench({seriesMap, listId, detailId, preferred, excluded
   const series = seriesMap[selectedKey];
   const points = series.data.National || [];
   const latestPoint = latest(points);
+  const latestPercentile = latest(series.historical_percentile || []);
   detail.innerHTML = `
     <div class="series-toolbar">
       <div>
@@ -1070,12 +1207,14 @@ function renderSeriesWorkbench({seriesMap, listId, detailId, preferred, excluded
       </div>
     </div>
     ${series.calculation ? `<p class="series-formula"><strong>Formula:</strong> ${series.calculation}</p>` : ''}
+    ${series.positive_direction ? `<p class="hfci-direction"><strong>Reading the index:</strong> Positive values mean ${series.positive_direction} housing financial conditions; negative values mean easier conditions. The level is relative to the history available at each date.</p>` : ''}
     <div class="series-meta">
       <div><span>History</span><strong>${points.length ? points[0].date : 'no data'} to ${latestPoint ? latestPoint.date : 'no data'}</strong></div>
       <div><span>Observations</span><strong>${points.length}</strong></div>
       <div><span>Latest</span><strong>${latestPoint ? latestPoint.date : 'no data'}</strong></div>
       <div><span>Value</span><strong>${formatValue(latestPoint, series)}</strong></div>
       <div><span>Status</span><strong>${series.status || 'unrated'}</strong></div>
+      ${latestPercentile ? `<div><span>Historical percentile</span><strong>${Number(latestPercentile.value).toFixed(1)}th</strong></div>` : ''}
       <div><span>Checked</span><strong>${series.last_source_check || 'not logged'}</strong></div>
     </div>
     <div class="indicator-guide">
@@ -1088,6 +1227,42 @@ function renderSeriesWorkbench({seriesMap, listId, detailId, preferred, excluded
   chartBox.className = 'large-chart';
   detail.appendChild(chartBox);
   if(points.length) drawSeriesCanvas(chartBox, points, series);
+
+  if(series.block_contributions){
+    const diagnostics = document.createElement('div');
+    diagnostics.className = 'hfci-diagnostics';
+    diagnostics.innerHTML = `
+      <h4>Block contributions</h4>
+      <p>Each bar decomposes the index into its weighted blocks. Contributions above zero tighten conditions; contributions below zero ease them.</p>
+    `;
+    const contributionBox = document.createElement('div');
+    contributionBox.className = 'contribution-chart';
+    diagnostics.appendChild(contributionBox);
+
+    if(series.variable_dictionary?.length){
+      const rows = series.variable_dictionary.map(item=>`
+        <tr>
+          <td>${item.block}</td>
+          <td>${item.label}</td>
+          <td>${item.transformation}</td>
+          <td>${item.direction}</td>
+          <td>${item.release_lag_months} month${item.release_lag_months === 1 ? '' : 's'}</td>
+        </tr>
+      `).join('');
+      diagnostics.insertAdjacentHTML('beforeend', `
+        <h4>Variable dictionary</h4>
+        <p>Inputs are standardised using expanding history only, then shifted by the stated release lag before entering the index.</p>
+        <div class="hfci-variable-wrap">
+          <table class="hfci-variable-table">
+            <thead><tr><th>Block</th><th>Variable</th><th>Transformation</th><th>Direction</th><th>Release lag</th></tr></thead>
+            <tbody>${rows}</tbody>
+          </table>
+        </div>
+      `);
+    }
+    detail.appendChild(diagnostics);
+    drawContributionChart(contributionBox, series);
+  }
 
   const download = detail.querySelector('.download-series');
   if(download) download.onclick = ()=>downloadSeriesCsv(selectedKey, points, series);
@@ -1113,10 +1288,24 @@ function renderDerivedSeriesExplorer(){
     listId: 'derivedSeriesList',
     detailId: 'derivedSeriesDetail',
     preferred: ['real_cash_rate_trimmed_mean','real_mortgage_rate_headline','mortgage_cash_spread','real_wage_growth_private','real_wage_growth_public','average_new_dwelling_loan_value','dwelling_approvals_yoy','us_yield_curve_10y_3y','asx_real_estate_relative','asx_areit_relative'],
-    excluded: [],
+    excluded: ['hfci_core','hfci_augmented','hfci_long_history','hfci_full'],
     selectedKey: selectedDerivedSeriesKey,
     selectKey: key=>{selectedDerivedSeriesKey=key;},
     rerender: renderDerivedSeriesExplorer,
+    dataKind: 'derived'
+  });
+}
+
+function renderHfciExplorer(){
+  renderSeriesWorkbench({
+    seriesMap: DATA.derived_series || {},
+    listId: 'hfciSeriesList',
+    detailId: 'hfciSeriesDetail',
+    preferred: ['hfci_core','hfci_augmented','hfci_long_history','hfci_full'],
+    excluded: Object.keys(DATA.derived_series || {}).filter(key=>!key.startsWith('hfci_')),
+    selectedKey: selectedHfciSeriesKey,
+    selectKey: key=>{selectedHfciSeriesKey=key;},
+    rerender: renderHfciExplorer,
     dataKind: 'derived'
   });
 }
@@ -1176,6 +1365,7 @@ function render(){
   renderStatStrip();
   renderRegionTabs();
   renderSeriesExplorer();
+  renderHfciExplorer();
   renderDerivedSeriesExplorer();
   renderCharts();
   renderSourceRegistry();
