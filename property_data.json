@@ -1,6 +1,6 @@
 {
   "meta": {
-    "last_updated": "2026-08-13",
+    "last_updated": "2026-08-14",
     "regions": [
       "National",
       "Sydney",
@@ -257,8 +257,8 @@
         "scope": "Australian listed securities; separate residential-exposure basket recommended"
       }
     ],
-    "last_refreshed_at": "2026-08-13T13:37:23+00:00",
-    "latest_refresh_id": "2026-08-13T133723+0000",
+    "last_refreshed_at": "2026-08-14T07:22:45+00:00",
+    "latest_refresh_id": "2026-08-14T072245+0000",
     "vintage_file": "data_vintages.json",
     "derived_series_version": 3,
     "macro_enhancement_note": "Additional public RBA time series were integrated for model enhancement and macro/property research. They use latest revised history plus explicit release-lag metadata; they are not a true vintage database.",
@@ -326,7 +326,7 @@
       "source_url": "https://www.abs.gov.au/statistics/industry/building-and-construction/building-approvals-australia/latest-release",
       "frequency": "monthly",
       "release_lag_days": 35,
-      "last_source_check": "2026-08-12",
+      "last_source_check": "2026-08-14",
       "latest_source_period": "2026-06",
       "status": "fresh",
       "status_note": "Latest parsed ABS seasonally adjusted dwelling approvals value is 18328.",
@@ -2417,7 +2417,7 @@
       "source_url": "https://www.abs.gov.au/statistics/industry/building-and-construction/building-approvals-australia/latest-release",
       "frequency": "monthly",
       "release_lag_days": 35,
-      "last_source_check": "2026-08-12",
+      "last_source_check": "2026-08-14",
       "latest_source_period": "2026-06",
       "status": "fresh",
       "status_note": "National is the Australia total. City labels are state proxies: Sydney\u2192NSW, Melbourne\u2192VIC, Brisbane\u2192QLD, Perth\u2192WA.",
@@ -12774,7 +12774,7 @@
       "source_url": "https://www.rba.gov.au/statistics/cash-rate/",
       "frequency": "as-changed",
       "release_lag_days": 1,
-      "last_source_check": "2026-08-12",
+      "last_source_check": "2026-08-14",
       "latest_source_period": "2026-08-12",
       "status": "fresh",
       "status_note": "Latest parsed RBA cash rate target is 4.35%.",
@@ -14393,7 +14393,7 @@
       "source_url": "https://www.rba.gov.au/statistics/tables/csv/f6-data.csv",
       "frequency": "monthly",
       "release_lag_days": 14,
-      "last_source_check": "2026-08-12",
+      "last_source_check": "2026-08-14",
       "latest_source_period": "2026-06",
       "status": "fresh",
       "status_note": "Latest parsed RBA F6 owner-occupier outstanding variable housing lending rate (all institutions) is 6.3%.",
@@ -14752,7 +14752,7 @@
       "source_url": "https://www.rba.gov.au/statistics/tables/csv/h5-data.csv",
       "frequency": "monthly",
       "release_lag_days": 25,
-      "last_source_check": "2026-08-12",
+      "last_source_check": "2026-08-14",
       "latest_source_period": "2026-06",
       "status": "fresh",
       "status_note": "Latest parsed ABS seasonally adjusted unemployment rate is 4.4%.",
@@ -17099,7 +17099,7 @@
       "source_url": "https://www.rba.gov.au/statistics/tables/csv/h5-data.csv",
       "frequency": "monthly",
       "release_lag_days": 25,
-      "last_source_check": "2026-08-12",
+      "last_source_check": "2026-08-14",
       "latest_source_period": "2026-06",
       "status": "fresh",
       "status_note": "Latest parsed ABS seasonally adjusted employed people is 14823.3 ('000 persons).",
@@ -19446,7 +19446,7 @@
       "source_url": "https://www.abs.gov.au/statistics/economy/price-indexes-and-inflation/consumer-price-index-australia/latest-release",
       "frequency": "quarterly through 2025-03; monthly thereafter",
       "release_lag_days": 35,
-      "last_source_check": "2026-08-12",
+      "last_source_check": "2026-08-14",
       "latest_source_period": "2026-06",
       "status": "fresh",
       "status_note": "Full available RBA G1 quarterly trimmed mean inflation history joined to the ABS complete monthly CPI publication at its first available recent observation.",
@@ -20207,7 +20207,7 @@
       "source_url": "https://www.abs.gov.au/statistics/economy/price-indexes-and-inflation/consumer-price-index-australia/latest-release",
       "frequency": "quarterly through 2025-03; monthly thereafter",
       "release_lag_days": 35,
-      "last_source_check": "2026-08-12",
+      "last_source_check": "2026-08-14",
       "latest_source_period": "2026-06",
       "status": "fresh",
       "status_note": "Full available RBA G1 quarterly annual inflation history joined to the ABS complete monthly CPI publication at its first available recent observation.",
@@ -21924,8 +21924,8 @@
       "source_url": "https://www.abs.gov.au/statistics/economy/finance/lending-indicators/latest-release",
       "frequency": "quarterly",
       "release_lag_days": 45,
-      "last_source_check": "2026-08-12",
-      "latest_source_period": "2026-Q1",
+      "last_source_check": "2026-08-14",
+      "latest_source_period": "2026-Q2",
       "status": "fresh",
       "status_note": "Quarter-on-quarter change calculated from the ABS seasonally adjusted total number of new dwelling loan commitments; comparable total series begins in September quarter 2019.",
       "access_tier": "public",
@@ -21934,19 +21934,19 @@
         "National": [
           {
             "date": "2019-Q4",
-            "value": 3.3
+            "value": 3.5
           },
           {
             "date": "2020-Q1",
-            "value": -2.0
+            "value": -1.9
           },
           {
             "date": "2020-Q2",
-            "value": -13.4
+            "value": -13.7
           },
           {
             "date": "2020-Q3",
-            "value": 26.1
+            "value": 26.2
           },
           {
             "date": "2020-Q4",
@@ -21954,92 +21954,96 @@
           },
           {
             "date": "2021-Q1",
-            "value": 16.1
+            "value": 16.7
           },
           {
             "date": "2021-Q2",
-            "value": 1.4
+            "value": 0.4
           },
           {
             "date": "2021-Q3",
-            "value": -0.3
+            "value": 0.1
           },
           {
             "date": "2021-Q4",
-            "value": -1.6
+            "value": -1.7
           },
           {
             "date": "2022-Q1",
-            "value": -1.5
+            "value": -0.6
           },
           {
             "date": "2022-Q2",
-            "value": -6.9
+            "value": -8.2
           },
           {
             "date": "2022-Q3",
-            "value": -9.4
+            "value": -8.7
           },
           {
             "date": "2022-Q4",
-            "value": -10.1
+            "value": -10.4
           },
           {
             "date": "2023-Q1",
-            "value": -5.3
+            "value": -4.1
           },
           {
             "date": "2023-Q2",
-            "value": 6.0
+            "value": 4.1
           },
           {
             "date": "2023-Q3",
-            "value": -1.0
+            "value": -0.0
           },
           {
             "date": "2023-Q4",
-            "value": 5.9
-          },
-          {
-            "date": "2024-Q1",
-            "value": -1.1
-          },
-          {
-            "date": "2024-Q2",
-            "value": 10.7
-          },
-          {
-            "date": "2024-Q3",
-            "value": 0.2
-          },
-          {
-            "date": "2024-Q4",
-            "value": -2.0
-          },
-          {
-            "date": "2025-Q1",
-            "value": -2.0
-          },
-          {
-            "date": "2025-Q2",
-            "value": 4.9
-          },
-          {
-            "date": "2025-Q3",
-            "value": 4.8
-          },
-          {
-            "date": "2025-Q4",
             "value": 5.3
           },
           {
+            "date": "2024-Q1",
+            "value": 0.4
+          },
+          {
+            "date": "2024-Q2",
+            "value": 8.6
+          },
+          {
+            "date": "2024-Q3",
+            "value": 1.3
+          },
+          {
+            "date": "2024-Q4",
+            "value": -2.9
+          },
+          {
+            "date": "2025-Q1",
+            "value": -0.3
+          },
+          {
+            "date": "2025-Q2",
+            "value": 2.9
+          },
+          {
+            "date": "2025-Q3",
+            "value": 5.9
+          },
+          {
+            "date": "2025-Q4",
+            "value": 4.3
+          },
+          {
             "date": "2026-Q1",
-            "value": -6.2
+            "value": -4.1
+          },
+          {
+            "date": "2026-Q2",
+            "value": -5.4
           }
         ]
       },
       "history_start": "2019-Q4",
-      "observation_count": 26
+      "observation_count": 27
     },
     "vacancy_rate": {
       "label": "Rental vacancy rate",
@@ -22084,120 +22088,124 @@
         "National": [
           {
             "date": "2019-Q3",
-            "value": 108301
+            "value": 108184
           },
           {
             "date": "2019-Q4",
-            "value": 111837
+            "value": 111928
           },
           {
             "date": "2020-Q1",
-            "value": 109558
+            "value": 109778
           },
           {
             "date": "2020-Q2",
-            "value": 94915
+            "value": 94718
           },
           {
             "date": "2020-Q3",
-            "value": 119652
+            "value": 119552
           },
           {
             "date": "2020-Q4",
-            "value": 134789
+            "value": 134790
           },
           {
             "date": "2021-Q1",
-            "value": 156507
+            "value": 157321
           },
           {
             "date": "2021-Q2",
-            "value": 158671
+            "value": 157981
           },
           {
             "date": "2021-Q3",
-            "value": 158162
+            "value": 158119
           },
           {
             "date": "2021-Q4",
-            "value": 155572
+            "value": 155445
           },
           {
             "date": "2022-Q1",
-            "value": 153305
+            "value": 154440
           },
           {
             "date": "2022-Q2",
-            "value": 142698
+            "value": 141785
           },
           {
             "date": "2022-Q3",
-            "value": 129252
+            "value": 129398
           },
           {
             "date": "2022-Q4",
-            "value": 116189
+            "value": 115891
           },
           {
             "date": "2023-Q1",
-            "value": 110021
+            "value": 111160
           },
           {
             "date": "2023-Q2",
-            "value": 116594
+            "value": 115670
           },
           {
             "date": "2023-Q3",
-            "value": 115456
+            "value": 115666
           },
           {
             "date": "2023-Q4",
-            "value": 122279
+            "value": 121827
           },
           {
             "date": "2024-Q1",
-            "value": 120937
+            "value": 122288
           },
           {
             "date": "2024-Q2",
-            "value": 133859
+            "value": 132796
           },
           {
             "date": "2024-Q3",
-            "value": 134130
+            "value": 134549
           },
           {
             "date": "2024-Q4",
-            "value": 131392
+            "value": 130649
           },
           {
             "date": "2025-Q1",
-            "value": 128732
+            "value": 130273
           },
           {
             "date": "2025-Q2",
-            "value": 135055
+            "value": 134077
           },
           {
             "date": "2025-Q3",
-            "value": 141555
+            "value": 141945
           },
           {
             "date": "2025-Q4",
-            "value": 149066
+            "value": 148075
           },
           {
             "date": "2026-Q1",
-            "value": 139794
+            "value": 141936
+          },
+          {
+            "date": "2026-Q2",
+            "value": 134225
           }
         ]
       },
       "access_tier": "public",
-      "last_source_check": "2026-08-12",
-      "latest_source_period": "2026-Q1",
+      "last_source_check": "2026-08-14",
+      "latest_source_period": "2026-Q2",
       "status": "fresh",
       "history_start": "2019-Q3",
-      "observation_count": 27,
+      "observation_count": 28,
       "update_method": "automated",
       "status_note": "ABS seasonally adjusted total number of borrower-accepted new dwelling loan commitments; excludes refinancing and the comparable total series begins in September quarter 2019."
     },
@@ -22213,32 +22221,28 @@
       "data": {
         "National": [
           {
-            "date": "2016-Q1",
-            "value": 53.252
-          },
-          {
             "date": "2016-Q2",
-            "value": 56.224
+            "value": 56.227
           },
           {
             "date": "2016-Q3",
-            "value": 56.576
+            "value": 56.578
           },
           {
             "date": "2016-Q4",
-            "value": 60.024
+            "value": 60.023
           },
           {
             "date": "2017-Q1",
-            "value": 62.631
+            "value": 62.623
           },
           {
             "date": "2017-Q2",
-            "value": 61.055
+            "value": 61.058
           },
           {
             "date": "2017-Q3",
-            "value": 61.487
+            "value": 61.494
           },
           {
             "date": "2017-Q4",
@@ -22246,143 +22250,147 @@
           },
           {
             "date": "2018-Q1",
-            "value": 57.739
+            "value": 57.725
           },
           {
             "date": "2018-Q2",
-            "value": 56.744
+            "value": 56.748
           },
           {
             "date": "2018-Q3",
-            "value": 54.034
+            "value": 54.042
           },
           {
             "date": "2018-Q4",
-            "value": 50.26
+            "value": 50.265
           },
           {
             "date": "2019-Q1",
-            "value": 46.169
+            "value": 46.144
           },
           {
             "date": "2019-Q2",
-            "value": 45.361
+            "value": 45.369
           },
           {
             "date": "2019-Q3",
-            "value": 50.074
+            "value": 50.086
           },
           {
             "date": "2019-Q4",
-            "value": 54.329
+            "value": 54.337
           },
           {
             "date": "2020-Q1",
-            "value": 54.416
+            "value": 54.371
           },
           {
             "date": "2020-Q2",
-            "value": 47.328
+            "value": 47.345
           },
           {
             "date": "2020-Q3",
-            "value": 58.512
+            "value": 58.529
           },
           {
             "date": "2020-Q4",
-            "value": 67.326
+            "value": 67.335
           },
           {
             "date": "2021-Q1",
-            "value": 80.39
+            "value": 80.292
           },
           {
             "date": "2021-Q2",
-            "value": 86.688
+            "value": 86.752
           },
           {
             "date": "2021-Q3",
-            "value": 89.978
+            "value": 90.022
           },
           {
             "date": "2021-Q4",
-            "value": 90.997
+            "value": 91.007
           },
           {
             "date": "2022-Q1",
-            "value": 93.592
+            "value": 93.366
           },
           {
             "date": "2022-Q2",
-            "value": 86.515
+            "value": 86.655
           },
           {
             "date": "2022-Q3",
-            "value": 76.869
+            "value": 76.916
           },
           {
             "date": "2022-Q4",
-            "value": 68.804
+            "value": 68.808
           },
           {
             "date": "2023-Q1",
-            "value": 65.754
+            "value": 65.52
           },
           {
             "date": "2023-Q2",
-            "value": 68.173
+            "value": 68.351
           },
           {
             "date": "2023-Q3",
-            "value": 69.321
+            "value": 69.399
           },
           {
             "date": "2023-Q4",
-            "value": 74.585
+            "value": 74.52
           },
           {
             "date": "2024-Q1",
-            "value": 75.718
+            "value": 75.392
           },
           {
             "date": "2024-Q2",
-            "value": 84.316
+            "value": 84.632
           },
           {
             "date": "2024-Q3",
-            "value": 86.928
+            "value": 87.078
           },
           {
             "date": "2024-Q4",
-            "value": 86.666
+            "value": 86.492
           },
           {
             "date": "2025-Q1",
-            "value": 86.905
+            "value": 86.507
           },
           {
             "date": "2025-Q2",
-            "value": 91.005
+            "value": 91.416
           },
           {
             "date": "2025-Q3",
-            "value": 98.26
+            "value": 98.454
           },
           {
             "date": "2025-Q4",
-            "value": 107.006
+            "value": 106.63
           },
           {
             "date": "2026-Q1",
-            "value": 102.959
+            "value": 103.028
+          },
+          {
+            "date": "2026-Q2",
+            "value": 97.648
           }
         ]
       },
       "access_tier": "public",
-      "last_source_check": "2026-08-12",
-      "latest_source_period": "2026-Q1",
+      "last_source_check": "2026-08-14",
+      "latest_source_period": "2026-Q2",
       "status": "fresh",
-      "history_start": "2016-Q1",
+      "history_start": "2016-Q2",
       "observation_count": 41,
       "update_method": "automated",
       "status_note": "ABS seasonally adjusted dollar value of borrower-accepted new dwelling loan commitments; excludes refinancing."
@@ -24014,16 +24022,16 @@
           },
           {
             "date": "2026-07",
-            "value": 9250.6
+            "value": 9209.4
           },
           {
             "date": "2026-08",
-            "value": 9209.4
+            "value": 9115.2
           }
         ]
       },
       "access_tier": "public",
-      "last_source_check": "2026-08-12",
+      "last_source_check": "2026-08-14",
       "latest_source_period": "2026-08",
       "status": "fresh",
       "history_start": "1992-11",
@@ -26042,12 +26050,12 @@
           },
           {
             "date": "2026-08",
-            "value": 7748.82
+            "value": 7798.99
           }
         ]
       },
       "access_tier": "public",
-      "last_source_check": "2026-08-12",
+      "last_source_check": "2026-08-14",
       "latest_source_period": "2026-08",
       "status": "fresh",
       "history_start": "1985-01",
@@ -27922,12 +27930,12 @@
           },
           {
             "date": "2026-08",
-            "value": 1154.8
+            "value": 1161.35
           }
         ]
       },
       "access_tier": "public",
-      "last_source_check": "2026-08-12",
+      "last_source_check": "2026-08-14",
       "latest_source_period": "2026-08",
       "status": "fresh",
       "history_start": "1988-01",
@@ -28382,16 +28390,16 @@
           },
           {
             "date": "2026-07",
-            "value": 3668.5
+            "value": 3632.0
           },
           {
             "date": "2026-08",
-            "value": 3632.0
+            "value": 3599.9
           }
         ]
       },
       "access_tier": "public",
-      "last_source_check": "2026-08-12",
+      "last_source_check": "2026-08-14",
       "latest_source_period": "2026-08",
       "status": "fresh",
       "history_start": "2017-07",
@@ -29482,16 +29490,16 @@
           },
           {
             "date": "2026-07",
-            "value": 1707.5
+            "value": 1690.1
           },
           {
             "date": "2026-08",
-            "value": 1690.1
+            "value": 1674.3
           }
         ]
       },
       "access_tier": "public",
-      "last_source_check": "2026-08-12",
+      "last_source_check": "2026-08-14",
       "latest_source_period": "2026-08",
       "status": "fresh",
       "history_start": "2004-04",
@@ -32614,12 +32622,12 @@
           },
           {
             "date": "2026-08",
-            "value": 4.31
+            "value": 4.25
           }
         ]
       },
       "access_tier": "public",
-      "last_source_check": "2026-08-12",
+      "last_source_check": "2026-08-14",
       "latest_source_period": "2026-08",
       "status": "fresh",
       "history_start": "1962-01",
@@ -32627,7 +32635,7 @@
       "update_method": "automated",
       "source_url": "https://fred.stlouisfed.org/series/DGS3",
       "source": "Federal Reserve Bank of St. Louis (FRED DGS3)",
-      "status_note": "Last available daily FRED observation in each month; latest month-end value is 4.31%."
+      "status_note": "Last available daily FRED observation in each month; latest month-end value is 4.25%."
     },
     "us_treasury_10y": {
       "label": "US Treasury 10-year yield",
@@ -35740,12 +35748,12 @@
           },
           {
             "date": "2026-08",
-            "value": 4.72
+            "value": 4.68
           }
         ]
       },
       "access_tier": "public",
-      "last_source_check": "2026-08-12",
+      "last_source_check": "2026-08-14",
       "latest_source_period": "2026-08",
       "status": "fresh",
       "history_start": "1962-01",
@@ -35753,7 +35761,7 @@
       "update_method": "automated",
       "source_url": "https://fred.stlouisfed.org/series/DGS10",
       "source": "Federal Reserve Bank of St. Louis (FRED DGS10)",
-      "status_note": "Last available daily FRED observation in each month; latest month-end value is 4.72%."
+      "status_note": "Last available daily FRED observation in each month; latest month-end value is 4.68%."
     },
     "wage_growth_private_yoy": {
       "label": "Private-sector wage growth, year-on-year",
@@ -36011,7 +36019,7 @@
         ]
       },
       "access_tier": "public",
-      "last_source_check": "2026-08-12",
+      "last_source_check": "2026-08-14",
       "latest_source_period": "2026-Q1",
       "status": "fresh",
       "history_start": "2011-Q1",
@@ -36277,7 +36285,7 @@
         ]
       },
       "access_tier": "public",
-      "last_source_check": "2026-08-12",
+      "last_source_check": "2026-08-14",
       "latest_source_period": "2026-Q1",
       "status": "fresh",
       "history_start": "2011-Q1",
@@ -36296,10 +36304,6 @@
       "frequency": "six-monthly",
       "data": {
         "National": [
-          {
-            "date": "2015-11",
-            "value": 1468.4
-          },
           {
             "date": "2016-05",
             "value": 1483.3
@@ -36379,19 +36383,23 @@
           {
             "date": "2025-11",
             "value": 2006.0
+          },
+          {
+            "date": "2026-05",
+            "value": 2034.1
           }
         ]
       },
       "access_tier": "public",
-      "last_source_check": "2026-08-12",
-      "latest_source_period": "2025-11",
+      "last_source_check": "2026-08-14",
+      "latest_source_period": "2026-05",
       "status": "fresh",
-      "history_start": "2015-11",
+      "history_start": "2016-05",
       "observation_count": 21,
       "update_method": "automated",
       "source_url": "https://www.abs.gov.au/statistics/labour/earnings-and-working-conditions/average-weekly-earnings-australia/latest-release",
       "source": "ABS Average Weekly Earnings, Australia",
-      "status_note": "ABS original full-time adult average weekly ordinary time earnings for the private sector; latest value is $2,006.00 per week.",
+      "status_note": "ABS original full-time adult average weekly ordinary time earnings for the private sector; latest value is $2,034.10 per week.",
       "methodology_note": "Original six-monthly average. It is affected by workforce composition and is not directly comparable with the fixed-job Wage Price Index."
     },
     "average_weekly_earnings_public": {
@@ -36403,10 +36411,6 @@
       "frequency": "six-monthly",
       "data": {
         "National": [
-          {
-            "date": "2015-11",
-            "value": 1619.5
-          },
           {
             "date": "2016-05",
             "value": 1640.7
@@ -36486,19 +36490,23 @@
           {
             "date": "2025-11",
             "value": 2215.9
+          },
+          {
+            "date": "2026-05",
+            "value": 2263.1
           }
         ]
       },
       "access_tier": "public",
-      "last_source_check": "2026-08-12",
-      "latest_source_period": "2025-11",
+      "last_source_check": "2026-08-14",
+      "latest_source_period": "2026-05",
       "status": "fresh",
-      "history_start": "2015-11",
+      "history_start": "2016-05",
       "observation_count": 21,
       "update_method": "automated",
       "source_url": "https://www.abs.gov.au/statistics/labour/earnings-and-working-conditions/average-weekly-earnings-australia/latest-release",
       "source": "ABS Average Weekly Earnings, Australia",
-      "status_note": "ABS original full-time adult average weekly ordinary time earnings for the public sector; latest value is $2,215.90 per week.",
+      "status_note": "ABS original full-time adult average weekly ordinary time earnings for the public sector; latest value is $2,263.10 per week.",
       "methodology_note": "Original six-monthly average. It is affected by workforce composition and is not directly comparable with the fixed-job Wage Price Index."
     },
     "cpi_nontradables_yoy": {
@@ -37212,7 +37220,7 @@
       "access_tier": "public",
       "source_series_id": "GCPINTIYP",
       "source_table": "cpi_history",
-      "last_source_check": "2026-08-12",
+      "last_source_check": "2026-08-14",
       "latest_source_period": "2026-06",
       "status": "fresh",
       "history_start": "1983-03",
@@ -38086,7 +38094,7 @@
       "access_tier": "public",
       "source_series_id": "GCPIHOYP",
       "source_table": "housing_cpi_history",
-      "last_source_check": "2026-08-12",
+      "last_source_check": "2026-08-14",
       "latest_source_period": "2026-06",
       "status": "fresh",
       "history_start": "1973-09",
@@ -38184,7 +38192,7 @@
       "access_tier": "public",
       "source_series_id": "GCONEXP",
       "source_table": "inflation_expectations",
-      "last_source_check": "2026-08-12",
+      "last_source_check": "2026-08-14",
       "latest_source_period": "2026-06",
       "status": "fresh",
       "history_start": "2022-03",
@@ -38660,21 +38668,25 @@
           {
             "date": "2026-06",
             "value": 3.0
+          },
+          {
+            "date": "2026-09",
+            "value": 3.0
           }
         ]
       },
       "access_tier": "public",
       "source_series_id": "GMAREXPY",
       "source_table": "inflation_expectations",
-      "last_source_check": "2026-08-12",
-      "latest_source_period": "2026-06",
+      "last_source_check": "2026-08-14",
+      "latest_source_period": "2026-09",
       "status": "fresh",
       "history_start": "1993-09",
-      "observation_count": 114,
+      "observation_count": 115,
       "update_method": "automated",
       "source_url": "https://www.rba.gov.au/statistics/tables/csv/g3-data.csv",
       "source": "RBA Statistical Table G3 (Inflation Expectations)",
-      "status_note": "Public RBA series GMAREXPY; latest published observation is 2026-06 (3.0).",
+      "status_note": "Public RBA series GMAREXPY; latest published observation is 2026-09 (3.0).",
       "availability_basis": "Pseudo-real-time metadata only: the latest revised historical series is used, with the stated publication lag enforced in forecasting applications."
     },
     "market_economist_inflation_expectations_2y": {
@@ -39114,21 +39126,25 @@
           {
             "date": "2026-06",
             "value": 2.6
+          },
+          {
+            "date": "2026-09",
+            "value": 2.5
           }
         ]
       },
       "access_tier": "public",
       "source_series_id": "GMAREXPYY",
       "source_table": "inflation_expectations",
-      "last_source_check": "2026-08-12",
-      "latest_source_period": "2026-06",
+      "last_source_check": "2026-08-14",
+      "latest_source_period": "2026-09",
       "status": "fresh",
       "history_start": "1994-09",
-      "observation_count": 107,
+      "observation_count": 108,
       "update_method": "automated",
       "source_url": "https://www.rba.gov.au/statistics/tables/csv/g3-data.csv",
       "source": "RBA Statistical Table G3 (Inflation Expectations)",
-      "status_note": "Public RBA series GMAREXPYY; latest published observation is 2026-06 (2.6).",
+      "status_note": "Public RBA series GMAREXPYY; latest published observation is 2026-09 (2.5).",
       "availability_basis": "Pseudo-real-time metadata only: the latest revised historical series is used, with the stated publication lag enforced in forecasting applications."
     },
     "breakeven_inflation_10y": {
@@ -39331,7 +39347,7 @@
       "source_series_id": "GBONYLD",
       "source_table": "inflation_expectations",
       "methodology_note": "Breakeven inflation combines expected inflation with inflation-risk and liquidity premia; it must not be interpreted as a pure inflation forecast.",
-      "last_source_check": "2026-08-12",
+      "last_source_check": "2026-08-14",
       "latest_source_period": "2026-06",
       "status": "fresh",
       "history_start": "2015-03",
@@ -39801,7 +39817,7 @@
       "access_tier": "public",
       "source_series_id": "GWPIYP",
       "source_table": "labour_costs_productivity",
-      "last_source_check": "2026-08-12",
+      "last_source_check": "2026-08-14",
       "latest_source_period": "2026-03",
       "status": "fresh",
       "history_start": "1998-09",
@@ -40407,7 +40423,7 @@
       "access_tier": "public",
       "source_series_id": "GNFULCYP",
       "source_table": "labour_costs_productivity",
-      "last_source_check": "2026-08-12",
+      "last_source_check": "2026-08-14",
       "latest_source_period": "2026-03",
       "status": "fresh",
       "history_start": "1990-03",
@@ -41069,7 +41085,7 @@
       "access_tier": "public",
       "source_series_id": "GNFPROSQP",
       "source_table": "labour_costs_productivity",
-      "last_source_check": "2026-08-12",
+      "last_source_check": "2026-08-14",
       "latest_source_period": "2026-03",
       "status": "fresh",
       "history_start": "1986-09",
@@ -42147,7 +42163,7 @@
       "access_tier": "public",
       "source_series_id": "GGDPCVGDPY",
       "source_table": "gdp_income",
-      "last_source_check": "2026-08-12",
+      "last_source_check": "2026-08-14",
       "latest_source_period": "2026-03",
       "status": "fresh",
       "history_start": "1960-09",
@@ -43001,7 +43017,7 @@
       "access_tier": "public",
       "source_series_id": "GGDPCVGDPFY",
       "source_table": "gdp_income",
-      "last_source_check": "2026-08-12",
+      "last_source_check": "2026-08-14",
       "latest_source_period": "2026-03",
       "status": "fresh",
       "history_start": "1974-09",
@@ -44079,7 +44095,7 @@
       "access_tier": "public",
       "source_series_id": "GGDPECCVPSHY",
       "source_table": "demand_income",
-      "last_source_check": "2026-08-12",
+      "last_source_check": "2026-08-14",
       "latest_source_period": "2026-03",
       "status": "fresh",
       "history_start": "1960-09",
@@ -45157,7 +45173,7 @@
       "access_tier": "public",
       "source_series_id": "GGDPECCVPSDY",
       "source_table": "demand_income",
-      "last_source_check": "2026-08-12",
+      "last_source_check": "2026-08-14",
       "latest_source_period": "2026-03",
       "status": "fresh",
       "history_start": "1960-09",
@@ -45979,7 +45995,7 @@
       "access_tier": "public",
       "source_series_id": "GICWMICS",
       "source_table": "monthly_activity",
-      "last_source_check": "2026-08-12",
+      "last_source_check": "2026-08-14",
       "latest_source_period": "2026-07",
       "status": "fresh",
       "history_start": "2010-01",
@@ -47417,7 +47433,7 @@
       "access_tier": "public",
       "source_series_id": "GICNBC",
       "source_table": "monthly_activity",
-      "last_source_check": "2026-08-12",
+      "last_source_check": "2026-08-14",
       "latest_source_period": "2026-07",
       "status": "fresh",
       "history_start": "1997-03",
@@ -49719,7 +49735,7 @@
       "access_tier": "public",
       "source_series_id": "GLFSEPTSYP",
       "source_table": "labour_force_history",
-      "last_source_check": "2026-08-12",
+      "last_source_check": "2026-08-14",
       "latest_source_period": "2026-06",
       "status": "fresh",
       "history_start": "1979-02",
@@ -52069,7 +52085,7 @@
       "access_tier": "public",
       "source_series_id": "GLFSPRSA",
       "source_table": "labour_force_history",
-      "last_source_check": "2026-08-12",
+      "last_source_check": "2026-08-14",
       "latest_source_period": "2026-06",
       "status": "fresh",
       "history_start": "1978-02",
@@ -54443,7 +54459,7 @@
       "access_tier": "public",
       "source_series_id": "DGFACH12",
       "source_table": "financial_aggregates_growth",
-      "last_source_check": "2026-08-12",
+      "last_source_check": "2026-08-14",
       "latest_source_period": "2026-06",
       "status": "fresh",
       "history_start": "1977-08",
@@ -56173,7 +56189,7 @@
       "access_tier": "public",
       "source_series_id": "DGFACOH12",
       "source_table": "financial_aggregates_growth",
-      "last_source_check": "2026-08-12",
+      "last_source_check": "2026-08-14",
       "latest_source_period": "2026-06",
       "status": "fresh",
       "history_start": "1991-01",
@@ -57903,7 +57919,7 @@
       "access_tier": "public",
       "source_series_id": "DGFACIH12",
       "source_table": "financial_aggregates_growth",
-      "last_source_check": "2026-08-12",
+      "last_source_check": "2026-08-14",
       "latest_source_period": "2026-06",
       "status": "fresh",
       "history_start": "1991-01",
@@ -58265,7 +58281,7 @@
       "access_tier": "public",
       "source_series_id": "FLRHOFTA",
       "source_table": "housing_lending_rates",
-      "last_source_check": "2026-08-12",
+      "last_source_check": "2026-08-14",
       "latest_source_period": "2026-06",
       "status": "fresh",
       "history_start": "2019-07",
@@ -58627,7 +58643,7 @@
       "access_tier": "public",
       "source_series_id": "FLRHIOTA",
       "source_table": "housing_lending_rates",
-      "last_source_check": "2026-08-12",
+      "last_source_check": "2026-08-14",
       "latest_source_period": "2026-06",
       "status": "fresh",
       "history_start": "2019-07",
@@ -58989,7 +59005,7 @@
       "access_tier": "public",
       "source_series_id": "FLRHIFTA",
       "source_table": "housing_lending_rates",
-      "last_source_check": "2026-08-12",
+      "last_source_check": "2026-08-14",
       "latest_source_period": "2026-06",
       "status": "fresh",
       "history_start": "2019-07",
@@ -59191,7 +59207,7 @@
       "access_tier": "public",
       "source_series_id": "FXRTWI",
       "source_table": "exchange_rates",
-      "last_source_check": "2026-08-12",
+      "last_source_check": "2026-08-14",
       "latest_source_period": "2026-08",
       "status": "fresh",
       "history_start": "2023-01",
@@ -59386,14 +59402,14 @@
           },
           {
             "date": "2026-08",
-            "value": 0.7061
+            "value": 0.7068
           }
         ]
       },
       "access_tier": "public",
       "source_series_id": "FXRUSD",
       "source_table": "exchange_rates",
-      "last_source_check": "2026-08-12",
+      "last_source_check": "2026-08-14",
       "latest_source_period": "2026-08",
       "status": "fresh",
       "history_start": "2023-01",
@@ -59401,7 +59417,7 @@
       "update_method": "automated",
       "source_url": "https://www.rba.gov.au/statistics/tables/csv/f11.1-data.csv",
       "source": "RBA Statistical Table F11.1 (Exchange Rates)",
-      "status_note": "Public RBA series FXRUSD; latest published observation is 2026-08 (0.7061).",
+      "status_note": "Public RBA series FXRUSD; latest published observation is 2026-08 (0.7068).",
       "availability_basis": "Pseudo-real-time metadata only: the latest revised historical series is used, with the stated publication lag enforced in forecasting applications."
     },
     "commodity_price_index_aud": {
@@ -61535,7 +61551,7 @@
       "access_tier": "public",
       "source_series_id": "GRCPAIAD",
       "source_table": "commodity_prices",
-      "last_source_check": "2026-08-12",
+      "last_source_check": "2026-08-14",
       "latest_source_period": "2026-07",
       "status": "fresh",
       "history_start": "1982-07",
@@ -62593,7 +62609,7 @@
       "access_tier": "public",
       "source_series_id": "FNFYBBB5M",
       "source_table": "corporate_bond_yields",
-      "last_source_check": "2026-08-12",
+      "last_source_check": "2026-08-14",
       "latest_source_period": "2026-06",
       "status": "fresh",
       "history_start": "2005-01",
@@ -63080,7 +63096,7 @@
       "source_series_id": "FZCY200D",
       "source_table": "zero_coupon_yields",
       "methodology_note": "RBA F17 analytical zero-coupon yield; useful for research and synthetic repricing, but not itself an investable bond-return series. The current public history begins in 2017.",
-      "last_source_check": "2026-08-12",
+      "last_source_check": "2026-08-14",
       "latest_source_period": "2026-07",
       "status": "fresh",
       "history_start": "2017-01",
@@ -63567,7 +63583,7 @@
       "source_series_id": "FZCY500D",
       "source_table": "zero_coupon_yields",
       "methodology_note": "RBA F17 analytical zero-coupon yield; useful for research and synthetic repricing, but not itself an investable bond-return series. The current public history begins in 2017.",
-      "last_source_check": "2026-08-12",
+      "last_source_check": "2026-08-14",
       "latest_source_period": "2026-07",
       "status": "fresh",
       "history_start": "2017-01",
@@ -64054,7 +64070,7 @@
       "source_series_id": "FZCY800D",
       "source_table": "zero_coupon_yields",
       "methodology_note": "RBA F17 analytical zero-coupon yield; useful for research and synthetic repricing, but not itself an investable bond-return series. The current public history begins in 2017.",
-      "last_source_check": "2026-08-12",
+      "last_source_check": "2026-08-14",
       "latest_source_period": "2026-07",
       "status": "fresh",
       "history_start": "2017-01",
@@ -64541,7 +64557,7 @@
       "source_series_id": "FZCY900D",
       "source_table": "zero_coupon_yields",
       "methodology_note": "RBA F17 analytical zero-coupon yield; useful for research and synthetic repricing, but not itself an investable bond-return series. The current public history begins in 2017.",
-      "last_source_check": "2026-08-12",
+      "last_source_check": "2026-08-14",
       "latest_source_period": "2026-07",
       "status": "fresh",
       "history_start": "2017-01",
@@ -65028,7 +65044,7 @@
       "source_series_id": "FZCY1000D",
       "source_table": "zero_coupon_yields",
       "methodology_note": "RBA F17 analytical zero-coupon yield; useful for research and synthetic repricing, but not itself an investable bond-return series. The current public history begins in 2017.",
-      "last_source_check": "2026-08-12",
+      "last_source_check": "2026-08-14",
       "latest_source_period": "2026-07",
       "status": "fresh",
       "history_start": "2017-01",
@@ -65958,7 +65974,7 @@
       },
       "access_tier": "public",
       "methodology_note": "Linked BIS history: state-capital median prices to 1986 Q2, detached houses in eight cities to 2003 Q2, all dwellings in eight cities to 2021 Q4, and national all-dwelling coverage thereafter. Do not interpret the joins as a single unchanged hedonic sample.",
-      "last_source_check": "2026-08-13",
+      "last_source_check": "2026-08-14",
       "latest_source_period": "2026-Q1",
       "status": "fresh",
       "history_start": "1970-Q1",
@@ -66888,7 +66904,7 @@
       },
       "access_tier": "public",
       "methodology_note": "Linked BIS history: state-capital median prices to 1986 Q2, detached houses in eight cities to 2003 Q2, all dwellings in eight cities to 2021 Q4, and national all-dwelling coverage thereafter. Do not interpret the joins as a single unchanged hedonic sample.",
-      "last_source_check": "2026-08-13",
+      "last_source_check": "2026-08-14",
       "latest_source_period": "2026-Q1",
       "status": "fresh",
       "history_start": "1970-Q1",
@@ -67526,7 +67542,7 @@
       },
       "access_tier": "public",
       "methodology_note": "Latest revised history; use release-lag metadata in pseudo-real-time backtests.",
-      "last_source_check": "2026-08-13",
+      "last_source_check": "2026-08-14",
       "latest_source_period": "2026-Q1",
       "status": "fresh",
       "history_start": "1988-Q2",
@@ -68160,7 +68176,7 @@
       },
       "access_tier": "public",
       "methodology_note": "Latest revised history; use release-lag metadata in pseudo-real-time backtests.",
-      "last_source_check": "2026-08-13",
+      "last_source_check": "2026-08-14",
       "latest_source_period": "2026-Q1",
       "status": "fresh",
       "history_start": "1988-Q3",
@@ -68770,7 +68786,7 @@
       },
       "access_tier": "public",
       "methodology_note": "Latest revised history; use release-lag metadata in pseudo-real-time backtests.",
-      "last_source_check": "2026-08-13",
+      "last_source_check": "2026-08-14",
       "latest_source_period": "2026-Q1",
       "status": "fresh",
       "history_start": "1990-Q1",
@@ -69076,7 +69092,7 @@
       },
       "access_tier": "public",
       "methodology_note": "Latest revised history; use release-lag metadata in pseudo-real-time backtests.",
-      "last_source_check": "2026-08-13",
+      "last_source_check": "2026-08-14",
       "latest_source_period": "2026-Q1",
       "status": "fresh",
       "history_start": "2009-Q1",
@@ -69382,7 +69398,7 @@
       },
       "access_tier": "public",
       "methodology_note": "Latest revised history; use release-lag metadata in pseudo-real-time backtests.",
-      "last_source_check": "2026-08-13",
+      "last_source_check": "2026-08-14",
       "latest_source_period": "2026-Q1",
       "status": "fresh",
       "history_start": "2009-Q1",
@@ -69688,7 +69704,7 @@
       },
       "access_tier": "public",
       "methodology_note": "Latest revised history; use release-lag metadata in pseudo-real-time backtests.",
-      "last_source_check": "2026-08-13",
+      "last_source_check": "2026-08-14",
       "latest_source_period": "2026-Q1",
       "status": "fresh",
       "history_start": "2009-Q1",
@@ -73061,7 +73077,7 @@
       },
       "access_tier": "public",
       "methodology_note": "Latest revised history; use release-lag metadata in pseudo-real-time backtests.",
-      "last_source_check": "2026-08-13",
+      "last_source_check": "2026-08-14",
       "latest_source_period": "2026-Q1",
       "status": "fresh",
       "history_start": "1984-Q3",
@@ -76447,7 +76463,7 @@
       },
       "access_tier": "public",
       "methodology_note": "Latest revised history; use release-lag metadata in pseudo-real-time backtests.",
-      "last_source_check": "2026-08-13",
+      "last_source_check": "2026-08-14",
       "latest_source_period": "2026-Q1",
       "status": "fresh",
       "history_start": "1984-Q3",
@@ -80073,7 +80089,7 @@
       },
       "access_tier": "public",
       "methodology_note": "Latest revised history; use release-lag metadata in pseudo-real-time backtests.",
-      "last_source_check": "2026-08-13",
+      "last_source_check": "2026-08-14",
       "latest_source_period": "2025-Q4",
       "status": "fresh",
       "history_start": "1981-Q2",
@@ -83699,7 +83715,7 @@
       },
       "access_tier": "public",
       "methodology_note": "Latest revised history; use release-lag metadata in pseudo-real-time backtests.",
-      "last_source_check": "2026-08-13",
+      "last_source_check": "2026-08-14",
       "latest_source_period": "2025-Q4",
       "status": "fresh",
       "history_start": "1981-Q2",
@@ -83853,7 +83869,7 @@
       },
       "access_tier": "public",
       "methodology_note": "Latest revised public history; apply the stated release lag in pseudo-real-time tests.",
-      "last_source_check": "2026-08-13",
+      "last_source_check": "2026-08-14",
       "latest_source_period": "2026-Q1",
       "status": "fresh",
       "history_start": "2019-Q1",
@@ -83994,7 +84010,7 @@
       },
       "access_tier": "public",
       "methodology_note": "Latest revised public history; apply the stated release lag in pseudo-real-time tests.",
-      "last_source_check": "2026-08-13",
+      "last_source_check": "2026-08-14",
       "latest_source_period": "2026-Q1",
       "status": "fresh",
       "history_start": "2019-Q1",
@@ -84135,7 +84151,7 @@
       },
       "access_tier": "public",
       "methodology_note": "Latest revised public history; apply the stated release lag in pseudo-real-time tests.",
-      "last_source_check": "2026-08-13",
+      "last_source_check": "2026-08-14",
       "latest_source_period": "2026-Q1",
       "status": "fresh",
       "history_start": "2019-Q1",
@@ -84276,7 +84292,7 @@
       },
       "access_tier": "public",
       "methodology_note": "Latest revised public history; apply the stated release lag in pseudo-real-time tests.",
-      "last_source_check": "2026-08-13",
+      "last_source_check": "2026-08-14",
       "latest_source_period": "2026-Q1",
       "status": "fresh",
       "history_start": "2019-Q1",
@@ -84299,121 +84315,125 @@
         "National": [
           {
             "date": "2019-Q3",
-            "value": 34.87
+            "value": 35.02
           },
           {
             "date": "2019-Q4",
-            "value": 35.51
+            "value": 35.48
           },
           {
             "date": "2020-Q1",
-            "value": 36.36
+            "value": 36.15
           },
           {
             "date": "2020-Q2",
-            "value": 38.07
+            "value": 38.13
           },
           {
             "date": "2020-Q3",
-            "value": 41.93
+            "value": 42.23
           },
           {
             "date": "2020-Q4",
-            "value": 41.28
+            "value": 41.21
           },
           {
             "date": "2021-Q1",
-            "value": 40.68
+            "value": 40.29
           },
           {
             "date": "2021-Q2",
-            "value": 37.09
+            "value": 37.21
           },
           {
             "date": "2021-Q3",
-            "value": 34.92
+            "value": 35.26
           },
           {
             "date": "2021-Q4",
-            "value": 34.03
-          },
-          {
-            "date": "2022-Q1",
-            "value": 33.36
-          },
-          {
-            "date": "2022-Q2",
-            "value": 32.89
-          },
-          {
-            "date": "2022-Q3",
-            "value": 33.46
-          },
-          {
-            "date": "2022-Q4",
             "value": 33.93
           },
           {
+            "date": "2022-Q1",
+            "value": 32.91
+          },
+          {
+            "date": "2022-Q2",
+            "value": 33.07
+          },
+          {
+            "date": "2022-Q3",
+            "value": 33.83
+          },
+          {
+            "date": "2022-Q4",
+            "value": 33.84
+          },
+          {
             "date": "2023-Q1",
-            "value": 36.3
+            "value": 35.69
           },
           {
             "date": "2023-Q2",
-            "value": 36.05
+            "value": 36.33
           },
           {
             "date": "2023-Q3",
-            "value": 35.75
+            "value": 36.16
           },
           {
             "date": "2023-Q4",
-            "value": 36.94
+            "value": 36.86
           },
           {
             "date": "2024-Q1",
-            "value": 37.12
+            "value": 36.41
           },
           {
             "date": "2024-Q2",
-            "value": 35.72
+            "value": 36.04
           },
           {
             "date": "2024-Q3",
-            "value": 35.35
+            "value": 35.75
           },
           {
             "date": "2024-Q4",
-            "value": 35.12
+            "value": 35.08
           },
           {
             "date": "2025-Q1",
-            "value": 35.8
+            "value": 35.04
           },
           {
             "date": "2025-Q2",
-            "value": 34.86
+            "value": 35.34
           },
           {
             "date": "2025-Q3",
-            "value": 35.15
+            "value": 35.65
           },
           {
             "date": "2025-Q4",
-            "value": 35.68
+            "value": 35.75
           },
           {
             "date": "2026-Q1",
-            "value": 36.68
+            "value": 35.81
+          },
+          {
+            "date": "2026-Q2",
+            "value": 35.92
           }
         ]
       },
       "access_tier": "public",
       "methodology_note": "Latest revised public history; apply the stated release lag in pseudo-real-time tests.",
-      "last_source_check": "2026-08-13",
-      "latest_source_period": "2026-Q1",
+      "last_source_check": "2026-08-14",
+      "latest_source_period": "2026-Q2",
       "status": "fresh",
       "history_start": "2019-Q3",
-      "observation_count": 27,
+      "observation_count": 28,
       "update_method": "automated",
       "source_url": "https://www.abs.gov.au/statistics/economy/finance/lending-indicators/latest-release",
       "source": "ABS Lending Indicators",
@@ -84431,23 +84451,23 @@
         "National": [
           {
             "date": "2019-Q3",
-            "value": 28.74
+            "value": 28.77
           },
           {
             "date": "2019-Q4",
-            "value": 28.13
+            "value": 28.12
           },
           {
             "date": "2020-Q1",
-            "value": 27.08
+            "value": 27.02
           },
           {
             "date": "2020-Q2",
-            "value": 25.41
+            "value": 25.46
           },
           {
             "date": "2020-Q3",
-            "value": 24.39
+            "value": 24.41
           },
           {
             "date": "2020-Q4",
@@ -84455,97 +84475,101 @@
           },
           {
             "date": "2021-Q1",
-            "value": 24.24
+            "value": 24.11
           },
           {
             "date": "2021-Q2",
-            "value": 27.28
+            "value": 27.38
           },
           {
             "date": "2021-Q3",
-            "value": 31.28
+            "value": 31.31
           },
           {
             "date": "2021-Q4",
-            "value": 33.69
+            "value": 33.71
           },
           {
             "date": "2022-Q1",
-            "value": 34.6
+            "value": 34.35
           },
           {
             "date": "2022-Q2",
-            "value": 34.36
+            "value": 34.55
           },
           {
             "date": "2022-Q3",
-            "value": 33.45
+            "value": 33.47
           },
           {
             "date": "2022-Q4",
-            "value": 33.85
+            "value": 33.91
           },
           {
             "date": "2023-Q1",
-            "value": 33.43
+            "value": 33.08
           },
           {
             "date": "2023-Q2",
-            "value": 33.46
+            "value": 33.69
           },
           {
             "date": "2023-Q3",
-            "value": 34.58
+            "value": 34.65
           },
           {
             "date": "2023-Q4",
-            "value": 35.29
+            "value": 35.35
           },
           {
             "date": "2024-Q1",
-            "value": 36.46
+            "value": 36.02
           },
           {
             "date": "2024-Q2",
-            "value": 37.44
-          },
-          {
-            "date": "2024-Q3",
-            "value": 38.0
-          },
-          {
-            "date": "2024-Q4",
-            "value": 37.23
-          },
-          {
-            "date": "2025-Q1",
-            "value": 37.5
-          },
-          {
-            "date": "2025-Q2",
             "value": 37.69
           },
           {
+            "date": "2024-Q3",
+            "value": 38.11
+          },
+          {
+            "date": "2024-Q4",
+            "value": 37.3
+          },
+          {
+            "date": "2025-Q1",
+            "value": 37.0
+          },
+          {
+            "date": "2025-Q2",
+            "value": 38.15
+          },
+          {
             "date": "2025-Q3",
-            "value": 40.36
+            "value": 40.69
           },
           {
             "date": "2025-Q4",
-            "value": 40.61
+            "value": 40.8
           },
           {
             "date": "2026-Q1",
-            "value": 41.02
+            "value": 40.56
+          },
+          {
+            "date": "2026-Q2",
+            "value": 39.19
           }
         ]
       },
       "access_tier": "public",
       "methodology_note": "Latest revised public history; apply the stated release lag in pseudo-real-time tests.",
-      "last_source_check": "2026-08-13",
-      "latest_source_period": "2026-Q1",
+      "last_source_check": "2026-08-14",
+      "latest_source_period": "2026-Q2",
       "status": "fresh",
       "history_start": "2019-Q3",
-      "observation_count": 27,
+      "observation_count": 28,
       "update_method": "automated",
       "source_url": "https://www.abs.gov.au/statistics/economy/finance/lending-indicators/latest-release",
       "source": "ABS Lending Indicators",
@@ -85533,7 +85557,7 @@
       },
       "access_tier": "public",
       "methodology_note": "ABS introduced complete monthly CPI publication and a new rents data source from July 2022. This series deliberately avoids mechanically splicing differently referenced older quarterly indexes.",
-      "last_source_check": "2026-08-13",
+      "last_source_check": "2026-08-14",
       "latest_source_period": "2026-06",
       "status": "fresh",
       "history_start": "2022-07",
@@ -87512,7 +87536,7 @@
       },
       "access_tier": "public",
       "methodology_note": "Latest revised public history; apply the stated release lag in pseudo-real-time tests.",
-      "last_source_check": "2026-08-13",
+      "last_source_check": "2026-08-14",
       "latest_source_period": "2026-Q1",
       "status": "fresh",
       "history_start": "2002-Q1",
@@ -88731,7 +88755,7 @@
       },
       "access_tier": "public",
       "methodology_note": "Latest revised public history; apply the stated release lag in pseudo-real-time tests.",
-      "last_source_check": "2026-08-13",
+      "last_source_check": "2026-08-14",
       "latest_source_period": "2026-Q1",
       "status": "fresh",
       "history_start": "2011-Q3",
@@ -89250,7 +89274,7 @@
       },
       "access_tier": "public",
       "methodology_note": "Latest revised public history; apply the stated release lag in pseudo-real-time tests.",
-      "last_source_check": "2026-08-13",
+      "last_source_check": "2026-08-14",
       "latest_source_period": "2025",
       "status": "fresh",
       "history_start": "2002",
@@ -89296,7 +89320,7 @@
       "methodology_note": "The cash rate is carried to each CPI observation period. This is an analytical proxy, not an expected real rate.",
       "derivation_version": 3,
       "status": "fresh",
-      "last_source_check": "2026-08-12",
+      "last_source_check": "2026-08-14",
       "latest_source_period": "2026-06",
       "history_start": "1990-03",
       "observation_count": 156,
@@ -89958,7 +89982,7 @@
       "methodology_note": "The latest CPI observation at or before each mortgage-rate month is used. Borrower-specific rates differ from this system average.",
       "derivation_version": 3,
       "status": "fresh",
-      "last_source_check": "2026-08-12",
+      "last_source_check": "2026-08-14",
       "latest_source_period": "2026-06",
       "history_start": "2019-07",
       "observation_count": 84,
@@ -90332,7 +90356,7 @@
       "methodology_note": "The latest cash-rate setting in each mortgage-rate month is used.",
       "derivation_version": 3,
       "status": "fresh",
-      "last_source_check": "2026-08-12",
+      "last_source_check": "2026-08-14",
       "latest_source_period": "2026-06",
       "history_start": "2019-07",
       "observation_count": 84,
@@ -90706,7 +90730,7 @@
       "methodology_note": "The latest CPI observation at or before each wage quarter is used. This is a growth differential, not a household-income level.",
       "derivation_version": 3,
       "status": "fresh",
-      "last_source_check": "2026-08-12",
+      "last_source_check": "2026-08-14",
       "latest_source_period": "2026-Q1",
       "history_start": "2011-Q1",
       "observation_count": 61,
@@ -90988,7 +91012,7 @@
       "methodology_note": "The latest CPI observation at or before each wage quarter is used. This is a growth differential, not a household-income level.",
       "derivation_version": 3,
       "status": "fresh",
-      "last_source_check": "2026-08-12",
+      "last_source_check": "2026-08-14",
       "latest_source_period": "2026-Q1",
       "history_start": "2011-Q1",
       "observation_count": 61,
@@ -91270,7 +91294,7 @@
       "methodology_note": "Calculated from matched monthly FRED observations.",
       "derivation_version": 3,
       "status": "fresh",
-      "last_source_check": "2026-08-12",
+      "last_source_check": "2026-08-14",
       "latest_source_period": "2026-08",
       "history_start": "1962-01",
       "observation_count": 776,
@@ -94380,7 +94404,7 @@
           },
           {
             "date": "2026-08",
-            "value": 0.41
+            "value": 0.43
           }
         ]
       }
@@ -94408,121 +94432,125 @@
       "methodology_note": "Aggregate value divided by aggregate count. It is not the ABS median loan size and excludes refinancing consistently with the inputs.",
       "derivation_version": 3,
       "status": "fresh",
-      "last_source_check": "2026-08-12",
-      "latest_source_period": "2026-Q1",
+      "last_source_check": "2026-08-14",
+      "latest_source_period": "2026-Q2",
       "history_start": "2019-Q3",
-      "observation_count": 27,
+      "observation_count": 28,
       "access_tier": "calculated from public inputs",
       "update_method": "automated derivation",
       "data": {
         "National": [
           {
             "date": "2019-Q3",
-            "value": 462360.0
+            "value": 462970.0
           },
           {
             "date": "2019-Q4",
-            "value": 485787.0
+            "value": 485464.0
           },
           {
             "date": "2020-Q1",
-            "value": 496687.0
+            "value": 495281.0
           },
           {
             "date": "2020-Q2",
-            "value": 498636.0
+            "value": 499852.0
           },
           {
             "date": "2020-Q3",
-            "value": 489018.0
+            "value": 489569.0
           },
           {
             "date": "2020-Q4",
-            "value": 499492.0
+            "value": 499555.0
           },
           {
             "date": "2021-Q1",
-            "value": 513651.0
+            "value": 510371.0
           },
           {
             "date": "2021-Q2",
-            "value": 546338.0
+            "value": 549129.0
           },
           {
             "date": "2021-Q3",
-            "value": 568898.0
+            "value": 569331.0
           },
           {
             "date": "2021-Q4",
-            "value": 584919.0
+            "value": 585461.0
           },
           {
             "date": "2022-Q1",
-            "value": 610495.0
+            "value": 604545.0
           },
           {
             "date": "2022-Q2",
-            "value": 606280.0
+            "value": 611172.0
           },
           {
             "date": "2022-Q3",
-            "value": 594722.0
+            "value": 594414.0
           },
           {
             "date": "2022-Q4",
-            "value": 592173.0
+            "value": 593730.0
           },
           {
             "date": "2023-Q1",
-            "value": 597650.0
+            "value": 589421.0
           },
           {
             "date": "2023-Q2",
-            "value": 584704.0
+            "value": 590914.0
           },
           {
             "date": "2023-Q3",
-            "value": 600411.0
+            "value": 599995.0
           },
           {
             "date": "2023-Q4",
-            "value": 609958.0
+            "value": 611687.0
           },
           {
             "date": "2024-Q1",
-            "value": 626095.0
+            "value": 616512.0
           },
           {
             "date": "2024-Q2",
-            "value": 629887.0
+            "value": 637308.0
           },
           {
             "date": "2024-Q3",
-            "value": 648088.0
+            "value": 647184.0
           },
           {
             "date": "2024-Q4",
-            "value": 659599.0
+            "value": 662018.0
           },
           {
             "date": "2025-Q1",
-            "value": 675085.0
+            "value": 664044.0
           },
           {
             "date": "2025-Q2",
-            "value": 673837.0
+            "value": 681817.0
           },
           {
             "date": "2025-Q3",
-            "value": 694147.0
+            "value": 693607.0
           },
           {
             "date": "2025-Q4",
-            "value": 717843.0
+            "value": 720108.0
           },
           {
             "date": "2026-Q1",
-            "value": 736505.0
+            "value": 725876.0
+          },
+          {
+            "date": "2026-Q2",
+            "value": 727495.0
           }
         ]
       }
@@ -94550,7 +94578,7 @@
       "methodology_note": "The numerator sums eight capital cities while the available denominator is Australia-wide dwelling stock, so the level understates a like-for-like capital-city turnover rate. It is not annualised and can include transfers that are not ordinary arm's-length sales.",
       "derivation_version": 3,
       "status": "fresh",
-      "last_source_check": "2026-08-13",
+      "last_source_check": "2026-08-14",
       "latest_source_period": "2026-Q1",
       "history_start": "2011-Q3",
       "observation_count": 59,
@@ -94824,7 +94852,7 @@
       "methodology_note": "The latest quarterly house-price observation is carried to each monthly rent observation. This is an indexed proxy, not a dollar price-to-annual-rent multiple.",
       "derivation_version": 3,
       "status": "fresh",
-      "last_source_check": "2026-08-13",
+      "last_source_check": "2026-08-14",
       "latest_source_period": "2026-06",
       "history_start": "2022-07",
       "observation_count": 48,
@@ -95055,10 +95083,10 @@
       "methodology_note": "The latest available semiannual earnings observation is carried to each lending quarter. This is not household disposable income and is not an individual loan-serviceability measure.",
       "derivation_version": 3,
       "status": "fresh",
-      "last_source_check": "2026-08-12",
-      "latest_source_period": "2026-Q1",
+      "last_source_check": "2026-08-14",
+      "latest_source_period": "2026-Q2",
       "history_start": "2019-Q3",
-      "observation_count": 27,
+      "observation_count": 28,
       "access_tier": "calculated from public inputs",
       "update_method": "automated derivation",
       "data": {
@@ -95069,19 +95097,19 @@
           },
           {
             "date": "2019-Q4",
-            "value": 5.78
+            "value": 5.77
           },
           {
             "date": "2020-Q1",
-            "value": 5.91
+            "value": 5.89
           },
           {
             "date": "2020-Q2",
-            "value": 5.73
+            "value": 5.74
           },
           {
             "date": "2020-Q3",
-            "value": 5.62
+            "value": 5.63
           },
           {
             "date": "2020-Q4",
@@ -95089,11 +95117,11 @@
           },
           {
             "date": "2021-Q1",
-            "value": 5.92
+            "value": 5.88
           },
           {
             "date": "2021-Q2",
-            "value": 6.18
+            "value": 6.22
           },
           {
             "date": "2021-Q3",
@@ -95101,31 +95129,31 @@
           },
           {
             "date": "2021-Q4",
-            "value": 6.59
+            "value": 6.6
           },
           {
             "date": "2022-Q1",
-            "value": 6.88
+            "value": 6.81
           },
           {
             "date": "2022-Q2",
-            "value": 6.76
+            "value": 6.81
           },
           {
             "date": "2022-Q3",
-            "value": 6.63
+            "value": 6.62
           },
           {
             "date": "2022-Q4",
-            "value": 6.44
+            "value": 6.46
           },
           {
             "date": "2023-Q1",
-            "value": 6.5
+            "value": 6.41
           },
           {
             "date": "2023-Q2",
-            "value": 6.26
+            "value": 6.32
           },
           {
             "date": "2023-Q3",
@@ -95133,43 +95161,47 @@
           },
           {
             "date": "2023-Q4",
-            "value": 6.36
+            "value": 6.38
           },
           {
             "date": "2024-Q1",
-            "value": 6.53
+            "value": 6.43
           },
           {
             "date": "2024-Q2",
-            "value": 6.45
+            "value": 6.52
           },
           {
             "date": "2024-Q3",
-            "value": 6.63
+            "value": 6.62
           },
           {
             "date": "2024-Q4",
-            "value": 6.56
+            "value": 6.58
           },
           {
             "date": "2025-Q1",
-            "value": 6.71
+            "value": 6.6
           },
           {
             "date": "2025-Q2",
-            "value": 6.59
+            "value": 6.67
           },
           {
             "date": "2025-Q3",
-            "value": 6.79
+            "value": 6.78
           },
           {
             "date": "2025-Q4",
-            "value": 6.88
+            "value": 6.9
           },
           {
             "date": "2026-Q1",
-            "value": 7.06
+            "value": 6.96
+          },
+          {
+            "date": "2026-Q2",
+            "value": 6.88
           }
         ]
       }
@@ -95199,7 +95231,7 @@
       "methodology_note": "All inputs are sign-aligned so higher means riskier, shifted by an estimated three-month release lag and standardised using expanding history only.",
       "derivation_version": 3,
       "status": "fresh",
-      "last_source_check": "2026-08-13",
+      "last_source_check": "2026-08-14",
       "latest_source_period": "2026-08",
       "history_start": "2022-03",
       "observation_count": 54,
@@ -95453,7 +95485,7 @@
       "methodology_note": "Population is matched as of each completion quarter. State/city extensions should retain the existing state-proxy labels.",
       "derivation_version": 3,
       "status": "fresh",
-      "last_source_check": "2026-08-13",
+      "last_source_check": "2026-08-14",
       "latest_source_period": "2026-Q1",
       "history_start": "1985-Q2",
       "observation_count": 164,
@@ -96147,7 +96179,7 @@
       "methodology_note": "Uses a fixed 2.5 persons-per-dwelling assumption for transparency. Future work should replace it with household-formation projections and account for demolitions and vacant stock.",
       "derivation_version": 3,
       "status": "fresh",
-      "last_source_check": "2026-08-13",
+      "last_source_check": "2026-08-14",
       "latest_source_period": "2025-Q4",
       "history_start": "1985-Q2",
       "observation_count": 163,
@@ -96834,89 +96866,93 @@
       "methodology_note": "Segment counts are imputed from aggregate commitment counts and published count shares. The impulse is the annual change in the segment's year-on-year growth rate, not a dollar credit-flow measure.",
       "derivation_version": 3,
       "status": "fresh",
-      "last_source_check": "2026-08-12",
-      "latest_source_period": "2026-Q1",
+      "last_source_check": "2026-08-14",
+      "latest_source_period": "2026-Q2",
       "history_start": "2021-Q3",
-      "observation_count": 19,
+      "observation_count": 20,
       "access_tier": "calculated from public inputs",
       "update_method": "automated derivation",
       "data": {
         "National": [
           {
             "date": "2021-Q3",
-            "value": -40.91
+            "value": -41.07
           },
           {
             "date": "2021-Q4",
-            "value": -66.17
+            "value": -66.1
           },
           {
             "date": "2022-Q1",
-            "value": -96.71
+            "value": -96.72
           },
           {
             "date": "2022-Q2",
-            "value": -86.79
+            "value": -86.68
           },
           {
             "date": "2022-Q3",
-            "value": -24.22
+            "value": -24.3
           },
           {
             "date": "2022-Q4",
-            "value": -8.36
+            "value": -8.32
           },
           {
             "date": "2023-Q1",
-            "value": 10.15
+            "value": 10.2
           },
           {
             "date": "2023-Q2",
-            "value": 18.79
+            "value": 18.91
           },
           {
             "date": "2023-Q3",
-            "value": 17.99
+            "value": 17.8
           },
           {
             "date": "2023-Q4",
-            "value": 37.79
+            "value": 37.88
           },
           {
             "date": "2024-Q1",
-            "value": 27.8
+            "value": 27.73
           },
           {
             "date": "2024-Q2",
-            "value": 16.17
+            "value": 16.22
           },
           {
             "date": "2024-Q3",
-            "value": 15.05
+            "value": 15.07
           },
           {
             "date": "2024-Q4",
-            "value": -12.98
+            "value": -13.03
           },
           {
             "date": "2025-Q1",
-            "value": -6.31
+            "value": -6.35
           },
           {
             "date": "2025-Q2",
-            "value": -8.88
+            "value": -8.75
           },
           {
             "date": "2025-Q3",
-            "value": -7.93
+            "value": -8.1
           },
           {
             "date": "2025-Q4",
-            "value": 9.95
+            "value": 10.08
           },
           {
             "date": "2026-Q1",
-            "value": 4.02
+            "value": 4.11
+          },
+          {
+            "date": "2026-Q2",
+            "value": 1.77
           }
         ]
       }
@@ -96944,17 +96980,17 @@
       "methodology_note": "Segment counts are imputed from aggregate commitment counts and published count shares. The impulse is the annual change in the segment's year-on-year growth rate, not a dollar credit-flow measure.",
       "derivation_version": 3,
       "status": "fresh",
-      "last_source_check": "2026-08-12",
-      "latest_source_period": "2026-Q1",
+      "last_source_check": "2026-08-14",
+      "latest_source_period": "2026-Q2",
       "history_start": "2021-Q3",
-      "observation_count": 19,
+      "observation_count": 20,
       "access_tier": "calculated from public inputs",
       "update_method": "automated derivation",
       "data": {
         "National": [
           {
             "date": "2021-Q3",
-            "value": 75.77
+            "value": 75.89
           },
           {
             "date": "2021-Q4",
@@ -96962,15 +96998,15 @@
           },
           {
             "date": "2022-Q1",
-            "value": 11.95
+            "value": 11.99
           },
           {
             "date": "2022-Q2",
-            "value": -66.2
+            "value": -66.12
           },
           {
             "date": "2022-Q3",
-            "value": -82.14
+            "value": -82.17
           },
           {
             "date": "2022-Q4",
@@ -96978,7 +97014,7 @@
           },
           {
             "date": "2023-Q1",
-            "value": -70.48
+            "value": -70.54
           },
           {
             "date": "2023-Q2",
@@ -96986,15 +97022,15 @@
           },
           {
             "date": "2023-Q3",
-            "value": 4.95
+            "value": 5.06
           },
           {
             "date": "2023-Q4",
-            "value": 34.68
+            "value": 34.59
           },
           {
             "date": "2024-Q1",
-            "value": 50.54
+            "value": 50.47
           },
           {
             "date": "2024-Q2",
@@ -97002,31 +97038,35 @@
           },
           {
             "date": "2024-Q3",
-            "value": 35.32
+            "value": 35.4
           },
           {
             "date": "2024-Q4",
-            "value": 3.64
+            "value": 3.57
           },
           {
             "date": "2025-Q1",
-            "value": -10.4
+            "value": -10.36
           },
           {
             "date": "2025-Q2",
-            "value": -26.89
+            "value": -26.24
           },
           {
             "date": "2025-Q3",
-            "value": -15.57
+            "value": -15.3
           },
           {
             "date": "2025-Q4",
-            "value": 10.39
+            "value": 10.81
           },
           {
             "date": "2026-Q1",
-            "value": 9.31
+            "value": 10.01
+          },
+          {
+            "date": "2026-Q2",
+            "value": 0.64
           }
         ]
       }
@@ -97053,7 +97093,7 @@
       "methodology_note": "Calculated only where an observation exists exactly 12 months earlier.",
       "derivation_version": 3,
       "status": "fresh",
-      "last_source_check": "2026-08-12",
+      "last_source_check": "2026-08-14",
       "latest_source_period": "2026-06",
       "history_start": "1984-07",
       "observation_count": 504,
@@ -99107,7 +99147,7 @@
       "methodology_note": "Monthly price-index levels are divided and rebased. Dividends are excluded where the component series is a price-return index.",
       "derivation_version": 3,
       "status": "fresh",
-      "last_source_check": "2026-08-12",
+      "last_source_check": "2026-08-14",
       "latest_source_period": "2026-08",
       "history_start": "2017-07",
       "observation_count": 110,
@@ -99549,11 +99589,11 @@
           },
           {
             "date": "2026-07",
-            "value": 72.72
+            "value": 72.32
           },
           {
             "date": "2026-08",
-            "value": 72.32
+            "value": 72.42
           }
         ]
       }
@@ -99585,7 +99625,7 @@
       "methodology_note": "Monthly price-index levels are divided and rebased. Dividends are excluded where the component series is a price-return index.",
       "derivation_version": 3,
       "status": "fresh",
-      "last_source_check": "2026-08-12",
+      "last_source_check": "2026-08-14",
       "latest_source_period": "2026-08",
       "history_start": "2004-04",
       "observation_count": 269,
@@ -100663,11 +100703,11 @@
           },
           {
             "date": "2026-07",
-            "value": 39.02
+            "value": 38.8
           },
           {
             "date": "2026-08",
-            "value": 38.8
+            "value": 38.83
           }
         ]
       }
@@ -101430,7 +101470,7 @@
           },
           {
             "date": "2026-08",
-            "value": 0.2438
+            "value": 0.25
           }
         ]
       },
@@ -101759,7 +101799,7 @@
       "positive_direction": "tighter",
       "derivation_version": 3,
       "status": "fresh",
-      "last_source_check": "2026-08-12",
+      "last_source_check": "2026-08-14",
       "latest_source_period": "2026-08",
       "history_start": "2020-01",
       "observation_count": 80,
@@ -102085,7 +102125,7 @@
           },
           {
             "date": "2026-08",
-            "value": 0.2935
+            "value": 0.2997
           }
         ]
       }
@@ -102924,329 +102964,329 @@
           },
           {
             "date": "2026-08",
-            "value": 0.1219
+            "value": 0.125
           }
         ],
         "Credit Availability": [
           {
             "date": "2020-01",
-            "value": 0.3168
+            "value": 0.3047
           },
           {
             "date": "2020-02",
-            "value": 0.2364
+            "value": 0.2152
           },
           {
             "date": "2020-03",
-            "value": 0.235
+            "value": 0.2139
           },
           {
             "date": "2020-04",
-            "value": 0.2302
+            "value": 0.209
           },
           {
             "date": "2020-05",
-            "value": 0.1925
+            "value": 0.1764
           },
           {
             "date": "2020-06",
-            "value": 0.1932
+            "value": 0.1771
           },
           {
             "date": "2020-07",
-            "value": 0.1926
+            "value": 0.1765
           },
           {
             "date": "2020-08",
-            "value": 0.2573
+            "value": 0.247
           },
           {
             "date": "2020-09",
-            "value": 0.2535
+            "value": 0.2432
           },
           {
             "date": "2020-10",
-            "value": 0.2498
+            "value": 0.2395
           },
           {
             "date": "2020-11",
-            "value": 0.1959
+            "value": 0.1857
           },
           {
             "date": "2020-12",
-            "value": 0.1915
+            "value": 0.1812
           },
           {
             "date": "2021-01",
-            "value": 0.1856
+            "value": 0.1753
           },
           {
             "date": "2021-02",
-            "value": 0.1606
+            "value": 0.1535
           },
           {
             "date": "2021-03",
-            "value": 0.1537
+            "value": 0.1466
           },
           {
             "date": "2021-04",
-            "value": 0.144
+            "value": 0.1369
           },
           {
             "date": "2021-05",
-            "value": 0.0784
+            "value": 0.077
           },
           {
             "date": "2021-06",
-            "value": 0.0658
+            "value": 0.0643
           },
           {
             "date": "2021-07",
-            "value": 0.0464
+            "value": 0.0449
           },
           {
             "date": "2021-08",
-            "value": 0.0006
+            "value": 0.0037
           },
           {
             "date": "2021-09",
-            "value": -0.0126
+            "value": -0.0095
           },
           {
             "date": "2021-10",
-            "value": -0.0222
+            "value": -0.0192
           },
           {
             "date": "2021-11",
-            "value": 0.0548
+            "value": 0.0563
           },
           {
             "date": "2021-12",
-            "value": 0.0425
+            "value": 0.044
           },
           {
             "date": "2022-01",
-            "value": 0.0323
+            "value": 0.0339
           },
           {
             "date": "2022-02",
-            "value": 0.0693
+            "value": 0.0699
           },
           {
             "date": "2022-03",
-            "value": 0.064
+            "value": 0.0646
           },
           {
             "date": "2022-04",
-            "value": 0.0614
+            "value": 0.062
           },
           {
             "date": "2022-05",
-            "value": 0.106
+            "value": 0.1059
           },
           {
             "date": "2022-06",
-            "value": 0.1069
+            "value": 0.1067
           },
           {
             "date": "2022-07",
-            "value": 0.1089
+            "value": 0.1088
           },
           {
             "date": "2022-08",
-            "value": 0.1536
+            "value": 0.152
           },
           {
             "date": "2022-09",
-            "value": 0.1576
+            "value": 0.156
           },
           {
             "date": "2022-10",
-            "value": 0.166
+            "value": 0.1644
           },
           {
             "date": "2022-11",
-            "value": 0.2054
+            "value": 0.2034
           },
           {
             "date": "2022-12",
-            "value": 0.2168
+            "value": 0.2147
           },
           {
             "date": "2023-01",
-            "value": 0.2306
+            "value": 0.2285
           },
           {
             "date": "2023-02",
-            "value": 0.2617
+            "value": 0.2592
           },
           {
             "date": "2023-03",
-            "value": 0.2714
+            "value": 0.269
           },
           {
             "date": "2023-04",
-            "value": 0.281
+            "value": 0.2786
           },
           {
             "date": "2023-05",
-            "value": 0.2985
+            "value": 0.2961
           },
           {
             "date": "2023-06",
-            "value": 0.3072
-          },
-          {
-            "date": "2023-07",
-            "value": 0.314
-          },
-          {
-            "date": "2023-08",
-            "value": 0.2968
-          },
-          {
-            "date": "2023-09",
-            "value": 0.3022
-          },
-          {
-            "date": "2023-10",
             "value": 0.3048
           },
           {
+            "date": "2023-07",
+            "value": 0.3116
+          },
+          {
+            "date": "2023-08",
+            "value": 0.2945
+          },
+          {
+            "date": "2023-09",
+            "value": 0.2999
+          },
+          {
+            "date": "2023-10",
+            "value": 0.3025
+          },
+          {
             "date": "2023-11",
-            "value": 0.2768
+            "value": 0.275
           },
           {
             "date": "2023-12",
-            "value": 0.2761
+            "value": 0.2743
           },
           {
             "date": "2024-01",
-            "value": 0.276
+            "value": 0.2742
           },
           {
             "date": "2024-02",
-            "value": 0.2308
+            "value": 0.23
           },
           {
             "date": "2024-03",
-            "value": 0.2286
+            "value": 0.2278
           },
           {
             "date": "2024-04",
-            "value": 0.2246
+            "value": 0.2238
           },
           {
             "date": "2024-05",
-            "value": 0.2032
+            "value": 0.2027
           },
           {
             "date": "2024-06",
-            "value": 0.198
+            "value": 0.1975
           },
           {
             "date": "2024-07",
-            "value": 0.1941
+            "value": 0.1935
           },
           {
             "date": "2024-08",
-            "value": 0.1681
+            "value": 0.1674
           },
           {
             "date": "2024-09",
-            "value": 0.1636
+            "value": 0.1629
           },
           {
             "date": "2024-10",
-            "value": 0.16
+            "value": 0.1593
           },
           {
             "date": "2024-11",
-            "value": 0.1524
+            "value": 0.152
           },
           {
             "date": "2024-12",
-            "value": 0.1461
+            "value": 0.1457
           },
           {
             "date": "2025-01",
-            "value": 0.1418
+            "value": 0.1414
           },
           {
             "date": "2025-02",
-            "value": 0.162
+            "value": 0.1618
           },
           {
             "date": "2025-03",
-            "value": 0.1591
+            "value": 0.1589
           },
           {
             "date": "2025-04",
-            "value": 0.1574
+            "value": 0.1572
           },
           {
             "date": "2025-05",
-            "value": 0.1585
+            "value": 0.158
           },
           {
             "date": "2025-06",
-            "value": 0.1575
+            "value": 0.157
           },
           {
             "date": "2025-07",
-            "value": 0.154
+            "value": 0.1535
           },
           {
             "date": "2025-08",
-            "value": 0.1683
+            "value": 0.1673
           },
           {
             "date": "2025-09",
-            "value": 0.1648
+            "value": 0.1638
           },
           {
             "date": "2025-10",
-            "value": 0.1587
+            "value": 0.1577
           },
           {
             "date": "2025-11",
-            "value": 0.1379
+            "value": 0.1372
           },
           {
             "date": "2025-12",
-            "value": 0.1344
+            "value": 0.1338
           },
           {
             "date": "2026-01",
-            "value": 0.1243
+            "value": 0.1236
           },
           {
             "date": "2026-02",
-            "value": 0.0937
+            "value": 0.094
           },
           {
             "date": "2026-03",
-            "value": 0.0903
+            "value": 0.0906
           },
           {
             "date": "2026-04",
-            "value": 0.0835
+            "value": 0.0838
           },
           {
             "date": "2026-05",
-            "value": 0.0923
+            "value": 0.0902
           },
           {
             "date": "2026-06",
-            "value": 0.0901
+            "value": 0.0881
           },
           {
             "date": "2026-07",
-            "value": 0.0907
+            "value": 0.0887
           },
           {
             "date": "2026-08",
-            "value": 0.0907
+            "value": 0.1219
           }
         ],
         "Household Capacity": [
@@ -103667,15 +103707,15 @@
         },
         {
           "date": "2021-12",
-          "value": 25.0
+          "value": 29.2
         },
         {
           "date": "2022-01",
-          "value": 36.0
+          "value": 32.0
         },
         {
           "date": "2022-02",
-          "value": 38.5
+          "value": 42.3
         },
         {
           "date": "2022-03",
@@ -103763,7 +103803,7 @@
         },
         {
           "date": "2023-12",
-          "value": 64.6
+          "value": 66.7
         },
         {
           "date": "2024-01",
@@ -103779,15 +103819,15 @@
         },
         {
           "date": "2024-04",
-          "value": 51.9
+          "value": 53.8
         },
         {
           "date": "2024-05",
-          "value": 52.8
+          "value": 54.7
         },
         {
           "date": "2024-06",
-          "value": 50.0
+          "value": 51.9
         },
         {
           "date": "2024-07",
@@ -103807,7 +103847,7 @@
         },
         {
           "date": "2024-11",
-          "value": 44.1
+          "value": 45.8
         },
         {
           "date": "2024-12",
@@ -103831,7 +103871,7 @@
         },
         {
           "date": "2025-05",
-          "value": 38.5
+          "value": 40.0
         },
         {
           "date": "2025-06",
@@ -103843,19 +103883,19 @@
         },
         {
           "date": "2025-08",
-          "value": 36.8
+          "value": 38.2
         },
         {
           "date": "2025-09",
-          "value": 42.0
+          "value": 43.5
         },
         {
           "date": "2025-10",
-          "value": 42.9
+          "value": 44.3
         },
         {
           "date": "2025-11",
-          "value": 63.4
+          "value": 64.8
         },
         {
           "date": "2025-12",
@@ -103891,13 +103931,13 @@
         },
         {
           "date": "2026-08",
-          "value": 76.2
+          "value": 80.0
         }
       ],
       "positive_direction": "tighter",
       "derivation_version": 3,
       "status": "fresh",
-      "last_source_check": "2026-08-12",
+      "last_source_check": "2026-08-14",
       "latest_source_period": "2026-08",
       "history_start": "2020-01",
       "observation_count": 80,
@@ -103907,323 +103947,323 @@
         "National": [
           {
             "date": "2020-01",
-            "value": -0.1708
+            "value": -0.183
           },
           {
             "date": "2020-02",
-            "value": -0.2807
+            "value": -0.3019
           },
           {
             "date": "2020-03",
-            "value": -0.1263
+            "value": -0.1475
           },
           {
             "date": "2020-04",
-            "value": -0.0306
+            "value": -0.0517
           },
           {
             "date": "2020-05",
-            "value": 0.2501
+            "value": 0.234
           },
           {
             "date": "2020-06",
-            "value": 0.4891
+            "value": 0.473
           },
           {
             "date": "2020-07",
-            "value": 0.527
+            "value": 0.511
           },
           {
             "date": "2020-08",
-            "value": 0.2302
+            "value": 0.2199
           },
           {
             "date": "2020-09",
-            "value": 0.1385
+            "value": 0.1282
           },
           {
             "date": "2020-10",
-            "value": 0.1091
+            "value": 0.0988
           },
           {
             "date": "2020-11",
-            "value": 0.0818
+            "value": 0.0715
           },
           {
             "date": "2020-12",
-            "value": 0.048
+            "value": 0.0378
           },
           {
             "date": "2021-01",
-            "value": 0.0541
+            "value": 0.0439
           },
           {
             "date": "2021-02",
-            "value": 0.0037
+            "value": -0.0034
           },
           {
             "date": "2021-03",
-            "value": -0.0738
+            "value": -0.0809
           },
           {
             "date": "2021-04",
-            "value": -0.1013
+            "value": -0.1084
           },
           {
             "date": "2021-05",
-            "value": -0.5877
+            "value": -0.5891
           },
           {
             "date": "2021-06",
-            "value": -0.8658
+            "value": -0.8672
           },
           {
             "date": "2021-07",
-            "value": -0.9019
+            "value": -0.9034
           },
           {
             "date": "2021-08",
-            "value": -0.5608
+            "value": -0.5577
           },
           {
             "date": "2021-09",
-            "value": -0.3596
+            "value": -0.3566
           },
           {
             "date": "2021-10",
-            "value": -0.2545
+            "value": -0.2514
           },
           {
             "date": "2021-11",
-            "value": -0.0589
+            "value": -0.0573
           },
           {
             "date": "2021-12",
-            "value": -0.2868
+            "value": -0.2853
           },
           {
             "date": "2022-01",
-            "value": -0.2543
+            "value": -0.2527
           },
           {
             "date": "2022-02",
-            "value": -0.1761
+            "value": -0.1755
           },
           {
             "date": "2022-03",
-            "value": -0.065
+            "value": -0.0643
           },
           {
             "date": "2022-04",
-            "value": -0.0138
+            "value": -0.0132
           },
           {
             "date": "2022-05",
-            "value": 0.2806
+            "value": 0.2805
           },
           {
             "date": "2022-06",
-            "value": 0.3689
+            "value": 0.3688
           },
           {
             "date": "2022-07",
-            "value": 0.3214
+            "value": 0.3213
           },
           {
             "date": "2022-08",
-            "value": 0.4404
+            "value": 0.4388
           },
           {
             "date": "2022-09",
-            "value": 0.4422
+            "value": 0.4406
           },
           {
             "date": "2022-10",
-            "value": 0.3644
+            "value": 0.3628
           },
           {
             "date": "2022-11",
-            "value": 0.3866
+            "value": 0.3845
           },
           {
             "date": "2022-12",
-            "value": 0.5376
+            "value": 0.5355
           },
           {
             "date": "2023-01",
-            "value": 0.5817
+            "value": 0.5796
           },
           {
             "date": "2023-02",
-            "value": 0.5517
+            "value": 0.5493
           },
           {
             "date": "2023-03",
-            "value": 0.6239
+            "value": 0.6215
           },
           {
             "date": "2023-04",
-            "value": 0.5532
+            "value": 0.5507
           },
           {
             "date": "2023-05",
-            "value": 0.4186
+            "value": 0.4162
           },
           {
             "date": "2023-06",
-            "value": 0.4729
+            "value": 0.4705
           },
           {
             "date": "2023-07",
-            "value": 0.6653
+            "value": 0.6629
           },
           {
             "date": "2023-08",
-            "value": 0.495
+            "value": 0.4928
           },
           {
             "date": "2023-09",
-            "value": 0.5014
+            "value": 0.4991
           },
           {
             "date": "2023-10",
-            "value": 0.6284
+            "value": 0.626
           },
           {
             "date": "2023-11",
-            "value": 0.4939
+            "value": 0.4921
           },
           {
             "date": "2023-12",
-            "value": 0.3865
+            "value": 0.3847
           },
           {
             "date": "2024-01",
-            "value": 0.4091
+            "value": 0.4073
           },
           {
             "date": "2024-02",
-            "value": 0.265
+            "value": 0.2642
           },
           {
             "date": "2024-03",
-            "value": 0.1445
-          },
-          {
-            "date": "2024-04",
-            "value": 0.2487
-          },
-          {
-            "date": "2024-05",
-            "value": 0.2488
-          },
-          {
-            "date": "2024-06",
-            "value": 0.2482
-          },
-          {
-            "date": "2024-07",
-            "value": 0.2133
-          },
-          {
-            "date": "2024-08",
-            "value": 0.1404
-          },
-          {
-            "date": "2024-09",
-            "value": 0.065
-          },
-          {
-            "date": "2024-10",
-            "value": 0.0636
-          },
-          {
-            "date": "2024-11",
-            "value": 0.1334
-          },
-          {
-            "date": "2024-12",
-            "value": 0.165
-          },
-          {
-            "date": "2025-01",
-            "value": 0.1196
-          },
-          {
-            "date": "2025-02",
-            "value": 0.1465
-          },
-          {
-            "date": "2025-03",
-            "value": 0.3095
-          },
-          {
-            "date": "2025-04",
-            "value": 0.203
-          },
-          {
-            "date": "2025-05",
-            "value": 0.1087
-          },
-          {
-            "date": "2025-06",
             "value": 0.1437
           },
           {
+            "date": "2024-04",
+            "value": 0.2479
+          },
+          {
+            "date": "2024-05",
+            "value": 0.2483
+          },
+          {
+            "date": "2024-06",
+            "value": 0.2477
+          },
+          {
+            "date": "2024-07",
+            "value": 0.2128
+          },
+          {
+            "date": "2024-08",
+            "value": 0.1396
+          },
+          {
+            "date": "2024-09",
+            "value": 0.0643
+          },
+          {
+            "date": "2024-10",
+            "value": 0.0629
+          },
+          {
+            "date": "2024-11",
+            "value": 0.133
+          },
+          {
+            "date": "2024-12",
+            "value": 0.1646
+          },
+          {
+            "date": "2025-01",
+            "value": 0.1192
+          },
+          {
+            "date": "2025-02",
+            "value": 0.1462
+          },
+          {
+            "date": "2025-03",
+            "value": 0.3094
+          },
+          {
+            "date": "2025-04",
+            "value": 0.2028
+          },
+          {
+            "date": "2025-05",
+            "value": 0.1082
+          },
+          {
+            "date": "2025-06",
+            "value": 0.1432
+          },
+          {
             "date": "2025-07",
-            "value": 0.1706
+            "value": 0.1702
           },
           {
             "date": "2025-08",
-            "value": 0.1086
+            "value": 0.1076
           },
           {
             "date": "2025-09",
-            "value": 0.1303
+            "value": 0.1293
           },
           {
             "date": "2025-10",
-            "value": 0.1303
+            "value": 0.1293
           },
           {
             "date": "2025-11",
-            "value": 0.25
+            "value": 0.2494
           },
           {
             "date": "2025-12",
-            "value": 0.3049
+            "value": 0.3042
           },
           {
             "date": "2026-01",
-            "value": 0.3339
+            "value": 0.3332
           },
           {
             "date": "2026-02",
-            "value": 0.3407
+            "value": 0.3409
           },
           {
             "date": "2026-03",
-            "value": 0.2951
+            "value": 0.2954
           },
           {
             "date": "2026-04",
-            "value": 0.2944
+            "value": 0.2947
           },
           {
             "date": "2026-05",
-            "value": 0.4943
+            "value": 0.4923
           },
           {
             "date": "2026-06",
-            "value": 0.421
+            "value": 0.419
           },
           {
             "date": "2026-07",
-            "value": 0.374
+            "value": 0.372
           },
           {
             "date": "2026-08",
-            "value": 0.4023
+            "value": 0.4365
           }
         ]
       }
@@ -106322,7 +106362,7 @@
           },
           {
             "date": "2026-08",
-            "value": -0.0086
+            "value": -0.004
           }
         ],
         "Credit Availability": [
@@ -109269,13 +109309,13 @@
         },
         {
           "date": "2026-08",
-          "value": 83.7
+          "value": 84.5
         }
       ],
       "positive_direction": "tighter",
       "derivation_version": 3,
       "status": "fresh",
-      "last_source_check": "2026-08-12",
+      "last_source_check": "2026-08-14",
       "latest_source_period": "2026-08",
       "history_start": "2006-04",
       "observation_count": 245,
@@ -110261,7 +110301,7 @@
           },
           {
             "date": "2026-08",
-            "value": 0.2134
+            "value": 0.218
           }
         ]
       }
@@ -110972,17 +111012,17 @@
           },
           {
             "date": "2026-08",
-            "value": 0.1219
+            "value": 0.125
           }
         ],
         "Credit Availability": [
           {
             "date": "2022-05",
-            "value": -0.0291
+            "value": -0.0292
           },
           {
             "date": "2022-06",
-            "value": 0.0043
+            "value": 0.0042
           },
           {
             "date": "2022-07",
@@ -110990,199 +111030,199 @@
           },
           {
             "date": "2022-08",
-            "value": 0.0277
+            "value": 0.0269
           },
           {
             "date": "2022-09",
-            "value": 0.0113
+            "value": 0.0105
           },
           {
             "date": "2022-10",
-            "value": 0.0155
+            "value": 0.0147
           },
           {
             "date": "2022-11",
-            "value": 0.0352
+            "value": 0.0342
           },
           {
             "date": "2022-12",
-            "value": 0.0926
+            "value": 0.0915
           },
           {
             "date": "2023-01",
-            "value": 0.0995
+            "value": 0.0984
           },
           {
             "date": "2023-02",
-            "value": 0.115
+            "value": 0.1138
           },
           {
             "date": "2023-03",
-            "value": 0.1735
+            "value": 0.1722
           },
           {
             "date": "2023-04",
-            "value": 0.1783
+            "value": 0.1771
           },
           {
             "date": "2023-05",
-            "value": 0.187
+            "value": 0.1858
           },
           {
             "date": "2023-06",
-            "value": 0.2503
+            "value": 0.2492
           },
           {
             "date": "2023-07",
-            "value": 0.2537
+            "value": 0.2525
           },
           {
             "date": "2023-08",
-            "value": 0.2451
+            "value": 0.244
           },
           {
             "date": "2023-09",
-            "value": 0.2538
+            "value": 0.2526
           },
           {
             "date": "2023-10",
-            "value": 0.2551
+            "value": 0.254
           },
           {
             "date": "2023-11",
-            "value": 0.2411
+            "value": 0.2402
           },
           {
             "date": "2023-12",
-            "value": 0.258
+            "value": 0.2571
           },
           {
             "date": "2024-01",
-            "value": 0.258
+            "value": 0.2571
           },
           {
             "date": "2024-02",
-            "value": 0.2354
+            "value": 0.235
           },
           {
             "date": "2024-03",
-            "value": 0.1765
+            "value": 0.1761
           },
           {
             "date": "2024-04",
-            "value": 0.1745
+            "value": 0.1741
           },
           {
             "date": "2024-05",
-            "value": 0.1638
+            "value": 0.1636
           },
           {
             "date": "2024-06",
-            "value": 0.1485
+            "value": 0.1483
           },
           {
             "date": "2024-07",
-            "value": 0.1466
+            "value": 0.1464
           },
           {
             "date": "2024-08",
-            "value": 0.1336
+            "value": 0.1333
           },
           {
             "date": "2024-09",
-            "value": 0.1324
+            "value": 0.1321
           },
           {
             "date": "2024-10",
-            "value": 0.1306
+            "value": 0.1302
           },
           {
             "date": "2024-11",
-            "value": 0.1268
+            "value": 0.1266
           },
           {
             "date": "2024-12",
-            "value": 0.1383
+            "value": 0.1381
           },
           {
             "date": "2025-01",
-            "value": 0.1362
+            "value": 0.136
           },
           {
             "date": "2025-02",
-            "value": 0.1463
+            "value": 0.1462
           },
           {
             "date": "2025-03",
-            "value": 0.1343
+            "value": 0.1342
           },
           {
             "date": "2025-04",
-            "value": 0.1335
+            "value": 0.1334
           },
           {
             "date": "2025-05",
-            "value": 0.1341
+            "value": 0.1338
           },
           {
             "date": "2025-06",
-            "value": 0.1607
+            "value": 0.1604
           },
           {
             "date": "2025-07",
-            "value": 0.1589
+            "value": 0.1587
           },
           {
             "date": "2025-08",
-            "value": 0.1661
+            "value": 0.1656
           },
           {
             "date": "2025-09",
-            "value": 0.1346
+            "value": 0.1341
           },
           {
             "date": "2025-10",
-            "value": 0.1316
+            "value": 0.131
           },
           {
             "date": "2025-11",
-            "value": 0.1212
+            "value": 0.1208
           },
           {
             "date": "2025-12",
-            "value": 0.0995
+            "value": 0.0992
           },
           {
             "date": "2026-01",
-            "value": 0.0945
+            "value": 0.0941
           },
           {
             "date": "2026-02",
-            "value": 0.0791
+            "value": 0.0793
           },
           {
             "date": "2026-03",
-            "value": 0.0259
+            "value": 0.026
           },
           {
             "date": "2026-04",
-            "value": 0.0225
+            "value": 0.0226
           },
           {
             "date": "2026-05",
-            "value": 0.0268
+            "value": 0.0258
           },
           {
             "date": "2026-06",
-            "value": 0.0164
+            "value": 0.0154
           },
           {
             "date": "2026-07",
-            "value": 0.0167
+            "value": 0.0157
           },
           {
             "date": "2026-08",
-            "value": 0.0167
+            "value": 0.0323
           }
         ],
         "Household Capacity": [
@@ -111595,7 +111635,7 @@
         },
         {
           "date": "2026-06",
-          "value": 68.0
+          "value": 66.0
         },
         {
           "date": "2026-07",
@@ -111609,7 +111649,7 @@
       "positive_direction": "tighter",
       "derivation_version": 3,
       "status": "fresh",
-      "last_source_check": "2026-08-12",
+      "last_source_check": "2026-08-14",
       "latest_source_period": "2026-08",
       "history_start": "2022-05",
       "observation_count": 52,
@@ -111627,203 +111667,203 @@
           },
           {
             "date": "2022-07",
-            "value": -0.0006
+            "value": -0.0007
           },
           {
             "date": "2022-08",
-            "value": 0.0708
+            "value": 0.0701
           },
           {
             "date": "2022-09",
-            "value": 0.1326
+            "value": 0.1318
           },
           {
             "date": "2022-10",
-            "value": 0.1051
+            "value": 0.1043
           },
           {
             "date": "2022-11",
-            "value": 0.1551
+            "value": 0.1541
           },
           {
             "date": "2022-12",
-            "value": 0.2339
+            "value": 0.2329
           },
           {
             "date": "2023-01",
-            "value": 0.2423
+            "value": 0.2413
           },
           {
             "date": "2023-02",
-            "value": 0.266
+            "value": 0.2648
           },
           {
             "date": "2023-03",
-            "value": 0.3703
+            "value": 0.3691
           },
           {
             "date": "2023-04",
-            "value": 0.3188
+            "value": 0.3175
           },
           {
             "date": "2023-05",
-            "value": 0.27
+            "value": 0.2688
           },
           {
             "date": "2023-06",
-            "value": 0.391
+            "value": 0.3898
           },
           {
             "date": "2023-07",
-            "value": 0.549
+            "value": 0.5478
           },
           {
             "date": "2023-08",
-            "value": 0.4451
+            "value": 0.444
           },
           {
             "date": "2023-09",
-            "value": 0.4549
+            "value": 0.4537
           },
           {
             "date": "2023-10",
-            "value": 0.5736
+            "value": 0.5724
           },
           {
             "date": "2023-11",
-            "value": 0.5326
+            "value": 0.5317
           },
           {
             "date": "2023-12",
-            "value": 0.4357
+            "value": 0.4348
           },
           {
             "date": "2024-01",
-            "value": 0.4463
+            "value": 0.4454
           },
           {
             "date": "2024-02",
-            "value": 0.3759
+            "value": 0.3755
           },
           {
             "date": "2024-03",
-            "value": 0.2137
+            "value": 0.2134
           },
           {
             "date": "2024-04",
-            "value": 0.2862
+            "value": 0.2858
           },
           {
             "date": "2024-05",
-            "value": 0.3205
+            "value": 0.3202
           },
           {
             "date": "2024-06",
-            "value": 0.2884
+            "value": 0.2882
           },
           {
             "date": "2024-07",
-            "value": 0.2605
+            "value": 0.2602
           },
           {
             "date": "2024-08",
-            "value": 0.2424
+            "value": 0.2421
           },
           {
             "date": "2024-09",
-            "value": 0.1536
+            "value": 0.1533
           },
           {
             "date": "2024-10",
-            "value": 0.1664
+            "value": 0.1661
           },
           {
             "date": "2024-11",
-            "value": 0.218
+            "value": 0.2178
           },
           {
             "date": "2024-12",
-            "value": 0.2534
+            "value": 0.2532
           },
           {
             "date": "2025-01",
-            "value": 0.2465
-          },
-          {
-            "date": "2025-02",
-            "value": 0.2717
-          },
-          {
-            "date": "2025-03",
-            "value": 0.3626
-          },
-          {
-            "date": "2025-04",
-            "value": 0.2766
-          },
-          {
-            "date": "2025-05",
-            "value": 0.204
-          },
-          {
-            "date": "2025-06",
-            "value": 0.2522
-          },
-          {
-            "date": "2025-07",
-            "value": 0.266
-          },
-          {
-            "date": "2025-08",
-            "value": 0.1895
-          },
-          {
-            "date": "2025-09",
-            "value": 0.1688
-          },
-          {
-            "date": "2025-10",
-            "value": 0.1691
-          },
-          {
-            "date": "2025-11",
-            "value": 0.2291
-          },
-          {
-            "date": "2025-12",
             "value": 0.2463
           },
           {
+            "date": "2025-02",
+            "value": 0.2716
+          },
+          {
+            "date": "2025-03",
+            "value": 0.3625
+          },
+          {
+            "date": "2025-04",
+            "value": 0.2764
+          },
+          {
+            "date": "2025-05",
+            "value": 0.2038
+          },
+          {
+            "date": "2025-06",
+            "value": 0.2519
+          },
+          {
+            "date": "2025-07",
+            "value": 0.2658
+          },
+          {
+            "date": "2025-08",
+            "value": 0.189
+          },
+          {
+            "date": "2025-09",
+            "value": 0.1683
+          },
+          {
+            "date": "2025-10",
+            "value": 0.1685
+          },
+          {
+            "date": "2025-11",
+            "value": 0.2288
+          },
+          {
+            "date": "2025-12",
+            "value": 0.2459
+          },
+          {
             "date": "2026-01",
-            "value": 0.276
+            "value": 0.2757
           },
           {
             "date": "2026-02",
-            "value": 0.2809
+            "value": 0.2811
           },
           {
             "date": "2026-03",
-            "value": 0.2196
+            "value": 0.2198
           },
           {
             "date": "2026-04",
-            "value": 0.2224
+            "value": 0.2225
           },
           {
             "date": "2026-05",
-            "value": 0.3509
+            "value": 0.3499
           },
           {
             "date": "2026-06",
-            "value": 0.282
+            "value": 0.281
           },
           {
             "date": "2026-07",
-            "value": 0.2693
+            "value": 0.2682
           },
           {
             "date": "2026-08",
-            "value": 0.2975
+            "value": 0.3162
           }
         ]
       }
