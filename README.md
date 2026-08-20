@@ -366,8 +366,8 @@ every refresh. It currently includes:
 - dwelling completions per 1,000 people and a transparent demographic demand-minus-completions scenario
 - separate first-home-buyer and investor credit-impulse proxies
 
-The dashboard also publishes four research versions of a Housing Financial
-Conditions Index. **Core** contains financial prices and market signals;
+The separate `research.html` workspace publishes four research versions of a
+Housing Financial Conditions Index. **Core** contains financial prices and market signals;
 **Augmented** adds credit quantities, employment and real wages;
 **Long-history** uses a reduced variable set for cycle analysis from roughly
 2006; and **Full** adds detailed APRA borrower composition and household
@@ -376,7 +376,10 @@ conditions. All inputs are sign-aligned, shifted by estimated publication lags
 and standardised using only expanding history available at each date.
 
 The HFCI workspace reports the latest historical percentile, block
-contributions and its full variable dictionary. The indexes are transparent
+contributions, its full variable dictionary, index comparisons and expanding-window
+pseudo-real-time backtests. The generated `HFCI_REPORT.md` documents the numbered
+formulas, input descriptive statistics, literature basis and equal-weight design.
+The indexes are transparent
 research indicators, not official statistics or causal estimates. The richer
 mortgage series begins in July 2019, and its expanding standardisation requires
 an initial calibration period before an index reading is published.
