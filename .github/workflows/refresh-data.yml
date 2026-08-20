@@ -29,6 +29,11 @@ jobs:
       - name: Fetch and validate source data
         run: python3 ingest_macro.py
 
+      - name: Rebuild HFCI research outputs
+        run: |
+          python3 backtest_hfci.py
+          python3 generate_hfci_report.py
+
       - name: Revalidate published files
         run: python3 validate_data.py | tee validation-summary.txt
 
@@ -39,7 +44,7 @@ jobs:
         id: changes
         shell: bash
         run: |
-          git add property_data.json data_vintages.json
+          git add property_data.json data_vintages.json hfci_backtest.json HFCI_REPORT.md assets/hfci_comparison.svg
           if git diff --cached --quiet; then
             echo "changed=false" >> "$GITHUB_OUTPUT"
           else

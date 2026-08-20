@@ -592,6 +592,35 @@ def build_hfci_series(data, candidate_points):
     return result
 
 
+def build_hfci_candidates(data, derived):
+    """Return the transformed, pre-standardisation inputs used by every HFCI variant."""
+    raw = data["series"]
+    points = lambda key: raw[key]["data"]["National"]
+    return {
+        "real_cash_rate": derived["real_cash_rate_trimmed_mean"]["data"]["National"],
+        "new_mortgage_rate": points("housing_lending_rate_owner_occupier_new"),
+        "real_new_mortgage_rate": asof_binary(points("housing_lending_rate_owner_occupier_new"), points("cpi_headline_yoy"), lambda rate, inflation: rate - inflation),
+        "mortgage_cash_spread": asof_binary(points("housing_lending_rate_owner_occupier_new"), points("cash_rate"), lambda rate, cash: rate - cash),
+        "au_five_year_yield": points("au_zero_yield_5y"),
+        "bbb_cash_spread": asof_binary(points("corporate_bbb_yield_5y"), points("cash_rate"), lambda bbb, cash: bbb - cash),
+        "areit_relative_return": annual_growth(derived["asx_areit_relative"]["data"]["National"]),
+        "housing_credit_growth": points("housing_credit_growth_yoy"),
+        "owner_occupier_credit_growth": points("owner_occupier_credit_growth_yoy"),
+        "investor_credit_growth": points("investor_credit_growth_yoy"),
+        "new_lending_growth": annual_growth(points("lending_new_loan_commitments_dwellings_value")),
+        "high_dti_share": points("new_housing_loans_high_dti_share"),
+        "high_lvr_share": points("new_housing_loans_high_lvr_share"),
+        "interest_only_share": points("new_housing_loans_interest_only_share"),
+        "mortgage_non_performing_share": points("housing_mortgage_non_performing_share"),
+        "scheduled_repayment_burden": points("scheduled_housing_repayments_to_income"),
+        "interest_burden": points("housing_interest_charged_to_income"),
+        "unemployment": points("unemployment_rate"),
+        "employment_growth": points("employment_growth_yoy"),
+        "real_total_wage_growth": asof_binary(points("wage_growth_total_yoy"), points("cpi_headline_yoy"), lambda wages, inflation: wages - inflation),
+        "real_private_wage_growth": derived["real_wage_growth_private"]["data"]["National"],
+    }
+
+
 def build_derived_series(data):
     raw = data["series"]
     points = lambda key: raw[key]["data"]["National"]
@@ -797,30 +826,7 @@ def build_derived_series(data):
             housing_market_link="Relative performance captures market expectations for property earnings, funding costs and valuations, but listed exposures are not a direct measure of dwelling prices.",
             methodology_note="Monthly price-index levels are divided and rebased. Dividends are excluded where the component series is a price-return index.",
         )
-    hfci_candidates = {
-        "real_cash_rate": derived["real_cash_rate_trimmed_mean"]["data"]["National"],
-        "new_mortgage_rate": points("housing_lending_rate_owner_occupier_new"),
-        "real_new_mortgage_rate": asof_binary(points("housing_lending_rate_owner_occupier_new"), points("cpi_headline_yoy"), lambda rate, inflation: rate - inflation),
-        "mortgage_cash_spread": asof_binary(points("housing_lending_rate_owner_occupier_new"), points("cash_rate"), lambda rate, cash: rate - cash),
-        "au_five_year_yield": points("au_zero_yield_5y"),
-        "bbb_cash_spread": asof_binary(points("corporate_bbb_yield_5y"), points("cash_rate"), lambda bbb, cash: bbb - cash),
-        "areit_relative_return": annual_growth(derived["asx_areit_relative"]["data"]["National"]),
-        "housing_credit_growth": points("housing_credit_growth_yoy"),
-        "owner_occupier_credit_growth": points("owner_occupier_credit_growth_yoy"),
-        "investor_credit_growth": points("investor_credit_growth_yoy"),
-        "new_lending_growth": annual_growth(points("lending_new_loan_commitments_dwellings_value")),
-        "high_dti_share": points("new_housing_loans_high_dti_share"),
-        "high_lvr_share": points("new_housing_loans_high_lvr_share"),
-        "interest_only_share": points("new_housing_loans_interest_only_share"),
-        "mortgage_non_performing_share": points("housing_mortgage_non_performing_share"),
-        "scheduled_repayment_burden": points("scheduled_housing_repayments_to_income"),
-        "interest_burden": points("housing_interest_charged_to_income"),
-        "unemployment": points("unemployment_rate"),
-        "employment_growth": points("employment_growth_yoy"),
-        "real_total_wage_growth": asof_binary(points("wage_growth_total_yoy"), points("cpi_headline_yoy"), lambda wages, inflation: wages - inflation),
-        "real_private_wage_growth": derived["real_wage_growth_private"]["data"]["National"],
-    }
-    derived.update(build_hfci_series(data, hfci_candidates))
+    derived.update(build_hfci_series(data, build_hfci_candidates(data, derived)))
     return derived
 
 

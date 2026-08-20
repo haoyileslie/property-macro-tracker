@@ -40,6 +40,7 @@
 <main class="wrap">
   <nav class="page-nav" aria-label="Tracker pages">
     <a href="index.html">Dashboard</a>
+    <a href="research.html">HFCI research</a>
     <a href="data.html" aria-current="page">Data tables</a>
     <a href="freshness.html">Data freshness</a>
     <a href="listings.html">Market listings</a>
@@ -88,10 +89,10 @@ function renderTable(){
   document.getElementById('dataRows').innerHTML=[...points].reverse().map(item=>`<tr><td>${item.date}</td><td>${Number(item.value).toLocaleString()}</td><td>${series.unit||''}</td></tr>`).join('')||'<tr><td colspan="3">No observations logged.</td></tr>';
   const sourceLabel=series.component_sources?.length?'Component sources':'Source';
   document.getElementById('sourceNote').innerHTML=`<strong>${sourceLabel}:</strong> ${sourceHtml(series)}.${series.methodology_note?` <strong>Method:</strong> ${series.methodology_note}`:''}`;
-  const chartAnchor = selectedKey.startsWith('hfci_')
-    ? 'hfciTitle'
-    : (selectedKind === 'derived' ? 'derivedSeriesTitle' : 'seriesTitle');
-  document.getElementById('backToChart').href=`index.html?series=${encodeURIComponent(selectedKey)}#${chartAnchor}`;
+  const isHfci = selectedKey.startsWith('hfci_');
+  const chartAnchor = isHfci ? 'hfciTitle' : (selectedKind === 'derived' ? 'derivedSeriesTitle' : 'seriesTitle');
+  const chartPage = isHfci ? 'research.html' : 'index.html';
+  document.getElementById('backToChart').href=`${chartPage}?series=${encodeURIComponent(selectedKey)}#${chartAnchor}`;
 }
 async function init(){
   try{const response=await fetch('./property_data.json',{cache:'no-store'});if(!response.ok)throw new Error('Data file unavailable');DATA=await response.json();}

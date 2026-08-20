@@ -549,6 +549,7 @@
 
   <nav class="page-nav" aria-label="Tracker pages">
     <a href="index.html" aria-current="page">Dashboard</a>
+    <a href="research.html">HFCI research</a>
     <a href="data.html">Data tables</a>
     <a href="freshness.html">Data freshness</a>
     <a href="listings.html">Market listings</a>
@@ -574,17 +575,6 @@
     <div class="series-workbench">
       <div class="series-list" id="seriesList"></div>
       <div class="series-detail" id="seriesDetail"></div>
-    </div>
-  </section>
-
-  <section class="panel-section" aria-labelledby="hfciTitle">
-    <div class="section-head">
-      <h2 id="hfciTitle">Housing Financial Conditions Monitor</h2>
-      <p>Compare four publication-lag-adjusted indexes spanning financial prices, credit availability and household capacity. Positive readings indicate tighter conditions; block contributions show what is driving each move.</p>
-    </div>
-    <div class="series-workbench">
-      <div class="series-list" id="hfciSeriesList"></div>
-      <div class="series-detail" id="hfciSeriesDetail"></div>
     </div>
   </section>
 
@@ -708,7 +698,6 @@ const SLATE = '#5C6773';
 let currentRegion = 'National';
 let selectedSeriesKey = 'cash_rate';
 let selectedDerivedSeriesKey = 'real_cash_rate_trimmed_mean';
-let selectedHfciSeriesKey = 'hfci_core';
 let DATA = null;
 
 async function loadData(){
@@ -722,8 +711,7 @@ async function loadData(){
   const requestedSeries = new URLSearchParams(window.location.search).get('series');
   if(requestedSeries && DATA.series[requestedSeries]) selectedSeriesKey = requestedSeries;
   if(requestedSeries && DATA.derived_series?.[requestedSeries]){
-    if(requestedSeries.startsWith('hfci_')) selectedHfciSeriesKey = requestedSeries;
-    else selectedDerivedSeriesKey = requestedSeries;
+    if(!requestedSeries.startsWith('hfci_')) selectedDerivedSeriesKey = requestedSeries;
   }
   render();
 }
@@ -1296,20 +1284,6 @@ function renderDerivedSeriesExplorer(){
   });
 }
 
-function renderHfciExplorer(){
-  renderSeriesWorkbench({
-    seriesMap: DATA.derived_series || {},
-    listId: 'hfciSeriesList',
-    detailId: 'hfciSeriesDetail',
-    preferred: ['hfci_core','hfci_augmented','hfci_long_history','hfci_full'],
-    excluded: Object.keys(DATA.derived_series || {}).filter(key=>!key.startsWith('hfci_')),
-    selectedKey: selectedHfciSeriesKey,
-    selectKey: key=>{selectedHfciSeriesKey=key;},
-    rerender: renderHfciExplorer,
-    dataKind: 'derived'
-  });
-}
-
 function renderDataHealth(){
   const grid = document.getElementById('healthGrid');
   if(!grid) return;
@@ -1365,7 +1339,6 @@ function render(){
   renderStatStrip();
   renderRegionTabs();
   renderSeriesExplorer();
-  renderHfciExplorer();
   renderDerivedSeriesExplorer();
   renderCharts();
   renderSourceRegistry();
