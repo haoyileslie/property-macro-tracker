@@ -5,19 +5,19 @@
       "https://www.domain.com.au/",
       "https://www.realestate.com.au/"
     ],
-    "captured_at": "2026-08-21T09:05:13Z",
-    "published_at": "2026-08-21T21:35:24Z",
+    "captured_at": "2026-08-22T07:58:47Z",
+    "published_at": "2026-08-22T21:33:37Z",
     "status": "ok",
-    "alert_messages": 1596,
+    "alert_messages": 1608,
     "market_count": 137,
     "listing_count": 357,
-    "observations_fetched": 4479,
-    "unique_listings_analysed": 4227,
+    "observations_fetched": 4494,
+    "unique_listings_analysed": 4242,
     "public_sample_per_market": 3,
     "coverage_note": "Recent saved-search alert evidence, not a complete market census. Up to three examples are shown per suburb, with both portals represented where available.",
-    "last_alert_email_at": "2026-08-21T09:05:13Z",
-    "unattributed_alert_cards_skipped": 82,
-    "unparsed_alert_messages": 5,
+    "last_alert_email_at": "2026-08-22T07:58:47Z",
+    "unattributed_alert_cards_skipped": 83,
+    "unparsed_alert_messages": 8,
     "recent_unparsed_alerts": [
       {
         "portal": "REA",
@@ -47,6 +47,24 @@
         "portal": "REA",
         "subject": "New to market: Alert for your \"Bondi Junction, NSW 2022\" saved search",
         "received_at": "2026-08-20T09:06:14Z",
+        "reason": "recognized_alert_without_parseable_listing_cards"
+      },
+      {
+        "portal": "REA",
+        "subject": "New to market: Alert for your \"Brunswick, VIC 3056\" saved search",
+        "received_at": "2026-08-22T07:58:13Z",
+        "reason": "recognized_alert_without_parseable_listing_cards"
+      },
+      {
+        "portal": "REA",
+        "subject": "New to market: Alert for your \"St Leonards, NSW 2065\" saved search",
+        "received_at": "2026-08-22T07:58:12Z",
+        "reason": "recognized_alert_without_parseable_listing_cards"
+      },
+      {
+        "portal": "Domain",
+        "subject": "Home Alert for Parramatta NSW 2150, Chatswood NSW 2067",
+        "received_at": "2026-08-22T07:32:13Z",
         "reason": "recognized_alert_without_parseable_listing_cards"
       }
     ]
@@ -333,8 +351,8 @@
       "price_disclosed_count": 1,
       "median_asking_midpoint_aud": null,
       "source_counts": {
-        "Domain": 2,
-        "REA": 1
+        "Domain": 1,
+        "REA": 2
       }
     },
     {
@@ -900,7 +918,7 @@
       "listing_count": 3,
       "auction_count": 0,
       "auction_share_pct": 0.0,
-      "price_disclosed_count": 3,
+      "price_disclosed_count": 2,
       "median_asking_midpoint_aud": null,
       "source_counts": {
         "Domain": 1,
@@ -975,11 +993,11 @@
       "listing_count": 3,
       "auction_count": 0,
       "auction_share_pct": 0.0,
-      "price_disclosed_count": 2,
+      "price_disclosed_count": 3,
       "median_asking_midpoint_aud": null,
       "source_counts": {
-        "Domain": 2,
-        "REA": 1
+        "Domain": 1,
+        "REA": 2
       }
     },
     {
@@ -2025,7 +2043,7 @@
       "listing_count": 3,
       "auction_count": 0,
       "auction_share_pct": 0.0,
-      "price_disclosed_count": 1,
+      "price_disclosed_count": 0,
       "median_asking_midpoint_aud": null,
       "source_counts": {
         "Domain": 0,
@@ -3079,13 +3097,13 @@
       "last_seen_at": "2026-08-21T08:47:52Z"
     },
     {
-      "property_id": "662f6218ac83f9cc",
+      "property_id": "cbfb19554800abb2",
       "source": "REA",
       "city": "Brisbane",
       "suburb": "Indooroopilly",
       "state": "QLD",
       "postcode": "4068",
-      "address": "50/95 Clarence Road, Indooroopilly QLD 4068",
+      "address": "6/69 Coonan Street, Indooroopilly QLD 4068",
       "property_type": null,
       "sale_type": null,
       "price_text": null,
@@ -3094,12 +3112,12 @@
       "bedrooms": 2,
       "bathrooms": 2,
       "parking": 1,
-      "first_seen_at": "2026-08-20T09:06:03Z",
-      "last_seen_at": "2026-08-20T09:06:03Z"
+      "first_seen_at": "2026-08-22T07:58:39Z",
+      "last_seen_at": "2026-08-22T07:58:39Z"
     },
     {
-      "property_id": "ec8230fe57505834",
-      "source": "Domain",
+      "property_id": "f006ee6bfb064f8a",
+      "source": "REA",
       "city": "Brisbane",
       "suburb": "Indooroopilly",
       "state": "QLD",
@@ -3113,8 +3131,8 @@
       "bedrooms": 5,
       "bathrooms": 5,
       "parking": 10,
-      "first_seen_at": "2026-08-21T08:47:52Z",
-      "last_seen_at": "2026-08-21T08:47:52Z"
+      "first_seen_at": "2026-08-22T07:58:39Z",
+      "last_seen_at": "2026-08-22T07:58:39Z"
     },
     {
       "property_id": "9874d8ac8a4bca98",
@@ -5055,42 +5073,42 @@
       "last_seen_at": "2026-08-21T08:48:06Z"
     },
     {
-      "property_id": "d9664b9a59dd051b",
+      "property_id": "f4a8e53a2615000d",
       "source": "REA",
       "city": "Melbourne",
       "suburb": "Coburg",
       "state": "VIC",
       "postcode": "3058",
-      "address": "74 Saunders Street, Coburg VIC 3058",
+      "address": "6 Flinders Street, Coburg VIC 3058",
       "property_type": null,
       "sale_type": null,
-      "price_text": "Auction $900,000 - $990,000",
+      "price_text": "Auction $800,000 - $880,000",
       "asking_price_low": null,
       "asking_price_high": null,
-      "bedrooms": 3,
-      "bathrooms": 2,
-      "parking": 1,
-      "first_seen_at": "2026-08-21T09:05:01Z",
-      "last_seen_at": "2026-08-21T09:05:01Z"
+      "bedrooms": 2,
+      "bathrooms": 1,
+      "parking": 0,
+      "first_seen_at": "2026-08-22T07:58:47Z",
+      "last_seen_at": "2026-08-22T07:58:47Z"
     },
     {
-      "property_id": "704b6a6c91f6560d",
+      "property_id": "40f7398282d727b3",
       "source": "REA",
       "city": "Melbourne",
       "suburb": "Coburg",
       "state": "VIC",
       "postcode": "3058",
-      "address": "30 Moore Street, Coburg VIC 3058",
+      "address": "47 Berry Street, Coburg VIC 3058",
       "property_type": null,
       "sale_type": null,
-      "price_text": "Expressions of Interest: $1,300,000 - $1,400,000",
+      "price_text": null,
       "asking_price_low": null,
       "asking_price_high": null,
-      "bedrooms": 5,
-      "bathrooms": 2,
-      "parking": 2,
-      "first_seen_at": "2026-08-21T09:05:01Z",
-      "last_seen_at": "2026-08-21T09:05:01Z"
+      "bedrooms": 4,
+      "bathrooms": 1,
+      "parking": 1,
+      "first_seen_at": "2026-08-22T07:58:47Z",
+      "last_seen_at": "2026-08-22T07:58:47Z"
     },
     {
       "property_id": "7b3910724f6a7d7d",
@@ -5302,42 +5320,42 @@
       "last_seen_at": "2026-08-21T08:47:53Z"
     },
     {
-      "property_id": "a7eb9c084612bf32",
+      "property_id": "3793c608b793b312",
       "source": "REA",
       "city": "Melbourne",
       "suburb": "Footscray",
       "state": "VIC",
       "postcode": "3011",
-      "address": "51 Summerhill Road, Footscray VIC 3011",
+      "address": "1501/8 Joseph Road, Footscray VIC 3011",
       "property_type": null,
       "sale_type": null,
-      "price_text": null,
+      "price_text": "$560,000 - $610,000",
       "asking_price_low": null,
       "asking_price_high": null,
-      "bedrooms": 3,
+      "bedrooms": 2,
       "bathrooms": 2,
-      "parking": 3,
-      "first_seen_at": "2026-08-20T09:05:53Z",
-      "last_seen_at": "2026-08-20T09:05:53Z"
+      "parking": 1,
+      "first_seen_at": "2026-08-22T07:58:34Z",
+      "last_seen_at": "2026-08-22T07:58:34Z"
     },
     {
-      "property_id": "cbf0eb7b41e842fc",
-      "source": "Domain",
+      "property_id": "43d9ef749025f406",
+      "source": "REA",
       "city": "Melbourne",
       "suburb": "Footscray",
       "state": "VIC",
       "postcode": "3011",
-      "address": "1-9/13 Hyde Street, Footscray VIC 3011",
+      "address": "1303/8 Joseph Road, Footscray VIC 3011",
       "property_type": null,
       "sale_type": null,
-      "price_text": "$3,700,000 - $4,000,000 EOI CLOSE 22 SEPT 2026",
+      "price_text": "$575,000 to $595,000",
       "asking_price_low": null,
       "asking_price_high": null,
-      "bedrooms": 18,
-      "bathrooms": 9,
-      "parking": 8,
-      "first_seen_at": "2026-08-21T08:47:53Z",
-      "last_seen_at": "2026-08-21T08:47:53Z"
+      "bedrooms": 2,
+      "bathrooms": 2,
+      "parking": 1,
+      "first_seen_at": "2026-08-22T07:58:34Z",
+      "last_seen_at": "2026-08-22T07:58:34Z"
     },
     {
       "property_id": "bafe588e65abc643",
@@ -5530,42 +5548,42 @@
       "last_seen_at": "2026-08-21T08:46:58Z"
     },
     {
-      "property_id": "1de0fed37b2ed01d",
+      "property_id": "4da52a79acabaf29",
       "source": "REA",
       "city": "Melbourne",
       "suburb": "Preston",
       "state": "VIC",
       "postcode": "3072",
-      "address": "42 Belgrove Street, Preston VIC 3072",
+      "address": "29/388 Murray Road, Preston VIC 3072",
       "property_type": null,
       "sale_type": null,
-      "price_text": "$840,000 - $880,000",
+      "price_text": "EOI $400,000 - $440,000",
       "asking_price_low": null,
       "asking_price_high": null,
       "bedrooms": 2,
-      "bathrooms": 2,
+      "bathrooms": 1,
       "parking": 1,
-      "first_seen_at": "2026-08-21T09:05:00Z",
-      "last_seen_at": "2026-08-21T09:05:00Z"
+      "first_seen_at": "2026-08-22T07:58:31Z",
+      "last_seen_at": "2026-08-22T07:58:31Z"
     },
     {
-      "property_id": "62d567260e43bd47",
+      "property_id": "3514d1f87ca12ae0",
       "source": "REA",
       "city": "Melbourne",
       "suburb": "Preston",
       "state": "VIC",
       "postcode": "3072",
-      "address": "9/122 High Street, Preston VIC 3072",
+      "address": "24 Ruby Street, Preston VIC 3072",
       "property_type": null,
       "sale_type": null,
-      "price_text": "EOI $400,000 - $430,000",
+      "price_text": "$790K-$840K",
       "asking_price_low": null,
       "asking_price_high": null,
-      "bedrooms": 1,
-      "bathrooms": 1,
-      "parking": 1,
-      "first_seen_at": "2026-08-20T09:06:01Z",
-      "last_seen_at": "2026-08-20T09:06:01Z"
+      "bedrooms": 4,
+      "bathrooms": 2,
+      "parking": 4,
+      "first_seen_at": "2026-08-22T07:58:31Z",
+      "last_seen_at": "2026-08-22T07:58:31Z"
     },
     {
       "property_id": "d6aee179c4ffd6ff",
@@ -6746,6 +6764,25 @@
       "last_seen_at": "2026-08-21T08:48:08Z"
     },
     {
+      "property_id": "0ff6467dcd276cb7",
+      "source": "REA",
+      "city": "Perth",
+      "suburb": "Maylands",
+      "state": "WA",
+      "postcode": "6051",
+      "address": "10/35 Sherwood Street, Maylands WA 6051",
+      "property_type": null,
+      "sale_type": null,
+      "price_text": "FROM $559,000",
+      "asking_price_low": null,
+      "asking_price_high": null,
+      "bedrooms": 2,
+      "bathrooms": 1,
+      "parking": 1,
+      "first_seen_at": "2026-08-22T07:58:41Z",
+      "last_seen_at": "2026-08-22T07:58:41Z"
+    },
+    {
       "property_id": "e218c8484541dba2",
       "source": "REA",
       "city": "Perth",
@@ -6761,25 +6798,6 @@
       "bedrooms": 2,
       "bathrooms": 1,
       "parking": 1,
-      "first_seen_at": "2026-08-21T09:05:06Z",
-      "last_seen_at": "2026-08-21T09:05:06Z"
-    },
-    {
-      "property_id": "b65fe07a8bcd9626",
-      "source": "REA",
-      "city": "Perth",
-      "suburb": "Maylands",
-      "state": "WA",
-      "postcode": "6051",
-      "address": "273 Railway Parade, Maylands WA 6051",
-      "property_type": null,
-      "sale_type": null,
-      "price_text": "Offers From $975,000",
-      "asking_price_low": null,
-      "asking_price_high": null,
-      "bedrooms": 3,
-      "bathrooms": 1,
-      "parking": 2,
       "first_seen_at": "2026-08-21T09:05:06Z",
       "last_seen_at": "2026-08-21T09:05:06Z"
     },
@@ -6974,6 +6992,25 @@
       "last_seen_at": "2026-08-20T08:31:00Z"
     },
     {
+      "property_id": "5c639570e06039bb",
+      "source": "REA",
+      "city": "Perth",
+      "suburb": "Victoria Park",
+      "state": "WA",
+      "postcode": "6100",
+      "address": "7 & 9 McMaster Street, Victoria Park WA 6100",
+      "property_type": null,
+      "sale_type": null,
+      "price_text": null,
+      "asking_price_low": null,
+      "asking_price_high": null,
+      "bedrooms": 5,
+      "bathrooms": 2,
+      "parking": 4,
+      "first_seen_at": "2026-08-22T07:58:41Z",
+      "last_seen_at": "2026-08-22T07:58:41Z"
+    },
+    {
       "property_id": "4a4edb74faf11e52",
       "source": "REA",
       "city": "Perth",
@@ -6991,25 +7028,6 @@
       "parking": 2,
       "first_seen_at": "2026-08-20T09:05:58Z",
       "last_seen_at": "2026-08-20T09:05:58Z"
-    },
-    {
-      "property_id": "5446dcbaa5a5facf",
-      "source": "REA",
-      "city": "Perth",
-      "suburb": "Victoria Park",
-      "state": "WA",
-      "postcode": "6100",
-      "address": "17 Mytilene Drive, Victoria Park WA 6100",
-      "property_type": null,
-      "sale_type": null,
-      "price_text": null,
-      "asking_price_low": null,
-      "asking_price_high": null,
-      "bedrooms": 3,
-      "bathrooms": 2,
-      "parking": 2,
-      "first_seen_at": "2026-08-18T08:48:09Z",
-      "last_seen_at": "2026-08-18T08:48:09Z"
     },
     {
       "property_id": "43deb8a65899bac2",
@@ -7259,6 +7277,25 @@
       "last_seen_at": "2026-07-26T07:40:38Z"
     },
     {
+      "property_id": "d052b3a17052855f",
+      "source": "REA",
+      "city": "Sydney",
+      "suburb": "Blacktown",
+      "state": "NSW",
+      "postcode": "2148",
+      "address": "14 Kingsford Street, Blacktown NSW 2148",
+      "property_type": null,
+      "sale_type": null,
+      "price_text": null,
+      "asking_price_low": null,
+      "asking_price_high": null,
+      "bedrooms": 5,
+      "bathrooms": 2,
+      "parking": 3,
+      "first_seen_at": "2026-08-22T07:58:33Z",
+      "last_seen_at": "2026-08-22T07:58:33Z"
+    },
+    {
       "property_id": "eebc534bdb22c1c3",
       "source": "REA",
       "city": "Sydney",
@@ -7293,25 +7330,6 @@
       "bedrooms": 3,
       "bathrooms": 2,
       "parking": 4,
-      "first_seen_at": "2026-08-21T09:05:01Z",
-      "last_seen_at": "2026-08-21T09:05:01Z"
-    },
-    {
-      "property_id": "da2953b599a0ce54",
-      "source": "REA",
-      "city": "Sydney",
-      "suburb": "Blacktown",
-      "state": "NSW",
-      "postcode": "2148",
-      "address": "62-62A Tallawong Avenue, Blacktown NSW 2148",
-      "property_type": null,
-      "sale_type": null,
-      "price_text": null,
-      "asking_price_low": null,
-      "asking_price_high": null,
-      "bedrooms": 7,
-      "bathrooms": 6,
-      "parking": 6,
       "first_seen_at": "2026-08-21T09:05:01Z",
       "last_seen_at": "2026-08-21T09:05:01Z"
     },
@@ -8589,6 +8607,25 @@
       "last_seen_at": "2026-08-21T08:43:33Z"
     },
     {
+      "property_id": "15cea3544490a45a",
+      "source": "REA",
+      "city": "Sydney",
+      "suburb": "Strathfield",
+      "state": "NSW",
+      "postcode": "2135",
+      "address": "28 Barker Road, Strathfield NSW 2135",
+      "property_type": null,
+      "sale_type": null,
+      "price_text": null,
+      "asking_price_low": null,
+      "asking_price_high": null,
+      "bedrooms": 5,
+      "bathrooms": 5,
+      "parking": 6,
+      "first_seen_at": "2026-08-22T07:58:39Z",
+      "last_seen_at": "2026-08-22T07:58:39Z"
+    },
+    {
       "property_id": "298f802171c8ad0d",
       "source": "REA",
       "city": "Sydney",
@@ -8625,25 +8662,6 @@
       "parking": 2,
       "first_seen_at": "2026-08-21T09:05:07Z",
       "last_seen_at": "2026-08-21T09:05:07Z"
-    },
-    {
-      "property_id": "b3d81ff276434fa8",
-      "source": "REA",
-      "city": "Sydney",
-      "suburb": "Strathfield",
-      "state": "NSW",
-      "postcode": "2135",
-      "address": "5/30-34 Homebush Road, Strathfield NSW 2135",
-      "property_type": null,
-      "sale_type": null,
-      "price_text": "Guide $1,380,000-$1,480,000",
-      "asking_price_low": null,
-      "asking_price_high": null,
-      "bedrooms": 3,
-      "bathrooms": 2,
-      "parking": 2,
-      "first_seen_at": "2026-08-20T09:06:01Z",
-      "last_seen_at": "2026-08-20T09:06:01Z"
     },
     {
       "property_id": "10f7cdcbabf8a2b1",
