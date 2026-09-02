@@ -5,6 +5,7 @@ import argparse
 import json
 import math
 import re
+from decimal import Decimal, ROUND_HALF_EVEN, localcontext
 from pathlib import Path
 
 
@@ -258,6 +259,16 @@ def monthly_last(points):
     ]
 
 
+def decimal_value(value):
+    """Convert published numeric inputs to platform-independent decimals."""
+    return Decimal(str(value))
+
+
+def decimal_round(value, digits):
+    quantum = Decimal(1).scaleb(-digits)
+    return float(value.quantize(quantum, rounding=ROUND_HALF_EVEN))
+
+
 def expanding_zscore(points, *, sign=1, lag_months=0, minimum_observations=24, digits=6):
     """Standardise each observation using only history available at that observation."""
     points = monthly_last(points)
@@ -267,14 +278,19 @@ def expanding_zscore(points, *, sign=1, lag_months=0, minimum_observations=24, d
         history.append(float(point["value"]))
         if len(history) < minimum_observations:
             continue
-        mean = sum(history) / len(history)
-        variance = sum((value - mean) ** 2 for value in history) / len(history)
-        if variance <= 0:
-            continue
-        value = sign * (history[-1] - mean) / math.sqrt(variance)
+        with localcontext() as context:
+            context.prec = 50
+            decimal_history = [decimal_value(value) for value in history]
+            mean = sum(decimal_history, Decimal(0)) / Decimal(len(decimal_history))
+            variance = sum(
+                ((value - mean) ** 2 for value in decimal_history), Decimal(0)
+            ) / Decimal(len(decimal_history))
+            if variance <= 0:
+                continue
+            value = Decimal(sign) * (decimal_history[-1] - mean) / variance.sqrt()
         result.append({
             "date": month_label(period_index(point["date"]) + lag_months),
-            "value": round(value, digits),
+            "value": decimal_round(value, digits),
         })
     return result
 
@@ -295,9 +311,13 @@ def monthly_block_average(component_scores, *, end_period, digits=4):
             if index in series:
                 latest[key] = series[index]
         if all(value is not None for value in latest.values()):
+            values_for_month = [decimal_value(value) for value in latest.values()]
             result.append({
                 "date": month_label(index),
-                "value": round(sum(latest.values()) / len(latest), digits),
+                "value": decimal_round(
+                    sum(values_for_month, Decimal(0)) / Decimal(len(values_for_month)),
+                    digits,
+                ),
             })
     return result
 
@@ -321,10 +341,16 @@ def weighted_blocks(blocks, weights, *, end_period, digits=4):
         if not all(value is not None for value in latest.values()):
             continue
         date = month_label(index)
-        weighted = {key: latest[key] * weights[key] for key in blocks}
-        index_points.append({"date": date, "value": round(sum(weighted.values()), digits)})
+        weighted = {
+            key: decimal_value(latest[key]) * decimal_value(weights[key])
+            for key in blocks
+        }
+        index_points.append({
+            "date": date,
+            "value": decimal_round(sum(weighted.values(), Decimal(0)), digits),
+        })
         for key, value in weighted.items():
-            contributions[key].append({"date": date, "value": round(value, digits)})
+            contributions[key].append({"date": date, "value": decimal_round(value, digits)})
     return index_points, contributions
 
 
