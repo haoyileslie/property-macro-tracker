@@ -29,6 +29,17 @@ class RefreshListingsTests(unittest.TestCase):
         self.assertEqual(rows[0]["_evidence_url"], "https://example.test/listing")
         self.assertNotIn("url", rows[0])
 
+    def test_rea_alert_accepts_letter_prefixed_apartment_number(self):
+        message = alert(
+            'New to market: Alert for your "St Leonards, NSW 2065" saved search',
+            '<a href="https://example.test/listing">B903/30 Berry Road, St Leonards 2065</a>'
+            '<div>3</div><div>2</div><div>2</div>',
+        )
+        rows = refresh.parse_message(message)
+        self.assertEqual(len(rows), 1)
+        self.assertEqual(rows[0]["address"], "B903/30 Berry Road, St Leonards NSW 2065")
+        self.assertEqual((rows[0]["bedrooms"], rows[0]["bathrooms"], rows[0]["parking"]), (3, 2, 2))
+
     def test_rea_alert_parses_live_inline_icon_facts(self):
         message = alert(
             'New to market: Alert for your "Strathfield, NSW 2135" saved search',

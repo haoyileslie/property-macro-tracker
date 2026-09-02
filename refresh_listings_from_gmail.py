@@ -289,7 +289,10 @@ def parse_rea(body, subject, captured_at, coming_soon=False):
         if not address_match:
             continue
         street, suburb, address_postcode = address_match.groups()
-        if not re.match(r"^(?:\d|Lot\s+\d)", street, re.I) or address_postcode != postcode:
+        # Apartment identifiers can include a leading letter (for example
+        # B903/30 Berry Road), while ordinary street numbers still begin with
+        # a digit. Keep the match anchored so marketing copy is not accepted.
+        if not re.match(r"^(?:\d|[A-Z]\d+[A-Z]?/|Lot\s+\d)", street, re.I) or address_postcode != postcode:
             continue
         fact_lines = lines[index + 1:index + 8]
         facts = {}
