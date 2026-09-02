@@ -1,6 +1,6 @@
 {
   "meta": {
-    "last_updated": "2026-08-20",
+    "last_updated": "2026-09-02",
     "regions": [
       "National",
       "Sydney",
@@ -257,8 +257,8 @@
         "scope": "Australian listed securities; separate residential-exposure basket recommended"
       }
     ],
-    "last_refreshed_at": "2026-08-20T07:24:08+00:00",
-    "latest_refresh_id": "2026-08-20T072408+0000",
+    "last_refreshed_at": "2026-09-02T12:21:20+00:00",
+    "latest_refresh_id": "2026-09-02T122120+0000",
     "vintage_file": "data_vintages.json",
     "derived_series_version": 3,
     "macro_enhancement_note": "Additional public RBA time series were integrated for model enhancement and macro/property research. They use latest revised history plus explicit release-lag metadata; they are not a true vintage database.",
@@ -326,10 +326,10 @@
       "source_url": "https://www.abs.gov.au/statistics/industry/building-and-construction/building-approvals-australia/latest-release",
       "frequency": "monthly",
       "release_lag_days": 35,
-      "last_source_check": "2026-08-20",
-      "latest_source_period": "2026-06",
+      "last_source_check": "2026-09-02",
+      "latest_source_period": "2026-07",
       "status": "fresh",
-      "status_note": "Latest parsed ABS seasonally adjusted dwelling approvals value is 18328.",
+      "status_note": "Latest parsed ABS seasonally adjusted dwelling approvals value is 17687.",
       "access_tier": "public",
       "update_method": "automated",
       "data": {
@@ -1680,7 +1680,7 @@
           },
           {
             "date": "2011-07",
-            "value": 13090
+            "value": 13089
           },
           {
             "date": "2011-08",
@@ -1692,7 +1692,7 @@
           },
           {
             "date": "2011-10",
-            "value": 11663
+            "value": 11662
           },
           {
             "date": "2011-11",
@@ -1704,19 +1704,19 @@
           },
           {
             "date": "2012-01",
-            "value": 10862
+            "value": 10858
           },
           {
             "date": "2012-02",
-            "value": 11530
+            "value": 11534
           },
           {
             "date": "2012-03",
-            "value": 11788
+            "value": 11791
           },
           {
             "date": "2012-04",
-            "value": 10928
+            "value": 10924
           },
           {
             "date": "2012-05",
@@ -1724,19 +1724,19 @@
           },
           {
             "date": "2012-06",
-            "value": 14826
+            "value": 14833
           },
           {
             "date": "2012-07",
-            "value": 11814
+            "value": 11809
           },
           {
             "date": "2012-08",
-            "value": 13024
+            "value": 13027
           },
           {
             "date": "2012-09",
-            "value": 15749
+            "value": 15751
           },
           {
             "date": "2012-10",
@@ -1744,11 +1744,11 @@
           },
           {
             "date": "2012-11",
-            "value": 14251
+            "value": 14249
           },
           {
             "date": "2012-12",
-            "value": 14370
+            "value": 14371
           },
           {
             "date": "2013-01",
@@ -1760,47 +1760,47 @@
           },
           {
             "date": "2013-03",
-            "value": 13338
+            "value": 13337
           },
           {
             "date": "2013-04",
-            "value": 14930
+            "value": 14920
           },
           {
             "date": "2013-05",
-            "value": 14328
+            "value": 14333
           },
           {
             "date": "2013-06",
-            "value": 13622
+            "value": 13624
           },
           {
             "date": "2013-07",
-            "value": 15051
+            "value": 15052
           },
           {
             "date": "2013-08",
-            "value": 14740
+            "value": 14746
           },
           {
             "date": "2013-09",
-            "value": 19054
+            "value": 19041
           },
           {
             "date": "2013-10",
-            "value": 17865
+            "value": 17866
           },
           {
             "date": "2013-11",
-            "value": 17690
+            "value": 17698
           },
           {
             "date": "2013-12",
-            "value": 17376
+            "value": 17360
           },
           {
             "date": "2014-01",
-            "value": 16836
+            "value": 16842
           },
           {
             "date": "2014-02",
@@ -1808,47 +1808,47 @@
           },
           {
             "date": "2014-03",
-            "value": 16007
+            "value": 16009
           },
           {
             "date": "2014-04",
-            "value": 16198
+            "value": 16199
           },
           {
             "date": "2014-05",
-            "value": 16967
+            "value": 16975
           },
           {
             "date": "2014-06",
-            "value": 16591
+            "value": 16577
           },
           {
             "date": "2014-07",
-            "value": 17030
+            "value": 17031
           },
           {
             "date": "2014-08",
-            "value": 18312
+            "value": 18310
           },
           {
             "date": "2014-09",
-            "value": 16743
+            "value": 16729
           },
           {
             "date": "2014-10",
-            "value": 18296
+            "value": 18307
           },
           {
             "date": "2014-11",
-            "value": 20549
+            "value": 20556
           },
           {
             "date": "2014-12",
-            "value": 20382
+            "value": 20383
           },
           {
             "date": "2015-01",
-            "value": 19121
+            "value": 19128
           },
           {
             "date": "2015-02",
@@ -1856,39 +1856,39 @@
           },
           {
             "date": "2015-03",
-            "value": 20726
+            "value": 20698
           },
           {
             "date": "2015-04",
-            "value": 19180
+            "value": 19195
           },
           {
             "date": "2015-05",
-            "value": 21124
+            "value": 21123
           },
           {
             "date": "2015-06",
-            "value": 19293
+            "value": 19285
           },
           {
             "date": "2015-07",
-            "value": 19859
+            "value": 19867
           },
           {
             "date": "2015-08",
-            "value": 19109
+            "value": 19112
           },
           {
             "date": "2015-09",
-            "value": 20542
+            "value": 20543
           },
           {
             "date": "2015-10",
-            "value": 22029
+            "value": 22044
           },
           {
             "date": "2015-11",
-            "value": 19228
+            "value": 19221
           },
           {
             "date": "2015-12",
@@ -1900,51 +1900,51 @@
           },
           {
             "date": "2016-02",
-            "value": 19769
+            "value": 19770
           },
           {
             "date": "2016-03",
-            "value": 20365
+            "value": 20363
           },
           {
             "date": "2016-04",
-            "value": 21175
+            "value": 21180
           },
           {
             "date": "2016-05",
-            "value": 20415
+            "value": 20404
           },
           {
             "date": "2016-06",
-            "value": 18375
+            "value": 18380
           },
           {
             "date": "2016-07",
-            "value": 21737
+            "value": 21736
           },
           {
             "date": "2016-08",
-            "value": 21406
+            "value": 21405
           },
           {
             "date": "2016-09",
-            "value": 19582
+            "value": 19580
           },
           {
             "date": "2016-10",
-            "value": 16804
+            "value": 16807
           },
           {
             "date": "2016-11",
-            "value": 18609
+            "value": 18610
           },
           {
             "date": "2016-12",
-            "value": 18369
+            "value": 18377
           },
           {
             "date": "2017-01",
-            "value": 16378
+            "value": 16379
           },
           {
             "date": "2017-02",
@@ -1952,11 +1952,11 @@
           },
           {
             "date": "2017-03",
-            "value": 16372
+            "value": 16370
           },
           {
             "date": "2017-04",
-            "value": 18566
+            "value": 18565
           },
           {
             "date": "2017-05",
@@ -1980,11 +1980,11 @@
           },
           {
             "date": "2017-10",
-            "value": 19900
+            "value": 19904
           },
           {
             "date": "2017-11",
-            "value": 23234
+            "value": 23233
           },
           {
             "date": "2017-12",
@@ -1992,7 +1992,7 @@
           },
           {
             "date": "2018-01",
-            "value": 18411
+            "value": 18408
           },
           {
             "date": "2018-02",
@@ -2000,15 +2000,15 @@
           },
           {
             "date": "2018-03",
-            "value": 19685
+            "value": 19684
           },
           {
             "date": "2018-04",
-            "value": 18769
+            "value": 18767
           },
           {
             "date": "2018-05",
-            "value": 17972
+            "value": 17971
           },
           {
             "date": "2018-06",
@@ -2016,15 +2016,15 @@
           },
           {
             "date": "2018-07",
-            "value": 18895
+            "value": 18894
           },
           {
             "date": "2018-08",
-            "value": 16287
+            "value": 16291
           },
           {
             "date": "2018-09",
-            "value": 16991
+            "value": 16993
           },
           {
             "date": "2018-10",
@@ -2032,15 +2032,15 @@
           },
           {
             "date": "2018-11",
-            "value": 15317
+            "value": 15321
           },
           {
             "date": "2018-12",
-            "value": 14130
+            "value": 14132
           },
           {
             "date": "2019-01",
-            "value": 13881
+            "value": 13888
           },
           {
             "date": "2019-02",
@@ -2048,111 +2048,111 @@
           },
           {
             "date": "2019-03",
-            "value": 15121
+            "value": 15116
           },
           {
             "date": "2019-04",
-            "value": 14725
+            "value": 14721
           },
           {
             "date": "2019-05",
-            "value": 14611
+            "value": 14612
           },
           {
             "date": "2019-06",
-            "value": 14646
+            "value": 14650
           },
           {
             "date": "2019-07",
-            "value": 13596
+            "value": 13589
           },
           {
             "date": "2019-08",
-            "value": 13725
+            "value": 13735
           },
           {
             "date": "2019-09",
-            "value": 14938
+            "value": 14930
           },
           {
             "date": "2019-10",
-            "value": 14067
+            "value": 14076
           },
           {
             "date": "2019-11",
-            "value": 15156
+            "value": 15161
           },
           {
             "date": "2019-12",
-            "value": 15828
+            "value": 15825
           },
           {
             "date": "2020-01",
-            "value": 12759
+            "value": 12762
           },
           {
             "date": "2020-02",
-            "value": 16554
+            "value": 16564
           },
           {
             "date": "2020-03",
-            "value": 15294
+            "value": 15273
           },
           {
             "date": "2020-04",
-            "value": 15270
+            "value": 15271
           },
           {
             "date": "2020-05",
-            "value": 13606
+            "value": 13611
           },
           {
             "date": "2020-06",
-            "value": 12784
+            "value": 12780
           },
           {
             "date": "2020-07",
-            "value": 15219
+            "value": 15218
           },
           {
             "date": "2020-08",
-            "value": 14520
+            "value": 14524
           },
           {
             "date": "2020-09",
-            "value": 16424
+            "value": 16427
           },
           {
             "date": "2020-10",
-            "value": 17500
+            "value": 17514
           },
           {
             "date": "2020-11",
-            "value": 18028
+            "value": 18014
           },
           {
             "date": "2020-12",
-            "value": 18650
+            "value": 18664
           },
           {
             "date": "2021-01",
-            "value": 16446
+            "value": 16456
           },
           {
             "date": "2021-02",
-            "value": 20208
+            "value": 20209
           },
           {
             "date": "2021-03",
-            "value": 22876
+            "value": 22812
           },
           {
             "date": "2021-04",
-            "value": 20856
+            "value": 20874
           },
           {
             "date": "2021-05",
-            "value": 21276
+            "value": 21250
           },
           {
             "date": "2021-06",
@@ -2160,243 +2160,247 @@
           },
           {
             "date": "2021-07",
-            "value": 18794
+            "value": 18810
           },
           {
             "date": "2021-08",
-            "value": 19184
+            "value": 19200
           },
           {
             "date": "2021-09",
-            "value": 19040
+            "value": 19042
           },
           {
             "date": "2021-10",
-            "value": 16401
+            "value": 16404
           },
           {
             "date": "2021-11",
-            "value": 16551
+            "value": 16542
           },
           {
             "date": "2021-12",
-            "value": 16990
+            "value": 17003
           },
           {
             "date": "2022-01",
-            "value": 13576
+            "value": 13575
           },
           {
             "date": "2022-02",
-            "value": 18629
+            "value": 18627
           },
           {
             "date": "2022-03",
-            "value": 14941
+            "value": 14923
           },
           {
             "date": "2022-04",
-            "value": 16132
+            "value": 16128
           },
           {
             "date": "2022-05",
-            "value": 16731
+            "value": 16718
           },
           {
             "date": "2022-06",
-            "value": 16190
+            "value": 16192
           },
           {
             "date": "2022-07",
-            "value": 14282
+            "value": 14298
           },
           {
             "date": "2022-08",
-            "value": 17144
+            "value": 17142
           },
           {
             "date": "2022-09",
-            "value": 17079
+            "value": 17091
           },
           {
             "date": "2022-10",
-            "value": 15655
+            "value": 15628
           },
           {
             "date": "2022-11",
-            "value": 15126
+            "value": 15132
           },
           {
             "date": "2022-12",
-            "value": 16965
+            "value": 16997
           },
           {
             "date": "2023-01",
-            "value": 12344
+            "value": 12337
           },
           {
             "date": "2023-02",
-            "value": 13583
+            "value": 13578
           },
           {
             "date": "2023-03",
-            "value": 13319
+            "value": 13302
           },
           {
             "date": "2023-04",
-            "value": 13285
+            "value": 13279
           },
           {
             "date": "2023-05",
-            "value": 15831
+            "value": 15771
           },
           {
             "date": "2023-06",
-            "value": 13640
+            "value": 13633
           },
           {
             "date": "2023-07",
-            "value": 12911
+            "value": 12931
           },
           {
             "date": "2023-08",
-            "value": 13367
+            "value": 13403
           },
           {
             "date": "2023-09",
-            "value": 14138
+            "value": 14128
           },
           {
             "date": "2023-10",
-            "value": 14548
+            "value": 14517
           },
           {
             "date": "2023-11",
-            "value": 14695
+            "value": 14739
           },
           {
             "date": "2023-12",
-            "value": 13901
+            "value": 13892
           },
           {
             "date": "2024-01",
-            "value": 13152
+            "value": 13155
           },
           {
             "date": "2024-02",
-            "value": 13097
+            "value": 13110
           },
           {
             "date": "2024-03",
-            "value": 13568
+            "value": 13530
           },
           {
             "date": "2024-04",
-            "value": 13844
+            "value": 13789
           },
           {
             "date": "2024-05",
-            "value": 14749
+            "value": 14754
           },
           {
             "date": "2024-06",
-            "value": 13220
+            "value": 13182
           },
           {
             "date": "2024-07",
-            "value": 15079
+            "value": 15134
           },
           {
             "date": "2024-08",
-            "value": 14471
+            "value": 14502
           },
           {
             "date": "2024-09",
-            "value": 15281
+            "value": 15270
           },
           {
             "date": "2024-10",
-            "value": 16271
+            "value": 16288
           },
           {
             "date": "2024-11",
-            "value": 15543
+            "value": 15545
           },
           {
             "date": "2024-12",
-            "value": 15584
+            "value": 15537
           },
           {
             "date": "2025-01",
-            "value": 15535
+            "value": 15581
           },
           {
             "date": "2025-02",
-            "value": 16772
+            "value": 16768
           },
           {
             "date": "2025-03",
-            "value": 15715
+            "value": 15683
           },
           {
             "date": "2025-04",
-            "value": 15499
+            "value": 15445
           },
           {
             "date": "2025-05",
-            "value": 16200
+            "value": 16165
           },
           {
             "date": "2025-06",
-            "value": 16827
+            "value": 16760
           },
           {
             "date": "2025-07",
-            "value": 16065
+            "value": 16226
           },
           {
             "date": "2025-08",
-            "value": 15377
+            "value": 15403
           },
           {
             "date": "2025-09",
-            "value": 18201
+            "value": 18099
           },
           {
             "date": "2025-10",
-            "value": 16339
+            "value": 16374
           },
           {
             "date": "2025-11",
-            "value": 18932
+            "value": 18920
           },
           {
             "date": "2025-12",
-            "value": 15935
+            "value": 15962
           },
           {
             "date": "2026-01",
-            "value": 13809
+            "value": 13813
           },
           {
             "date": "2026-02",
-            "value": 19906
+            "value": 19896
           },
           {
             "date": "2026-03",
-            "value": 17292
+            "value": 17213
           },
           {
             "date": "2026-04",
-            "value": 17375
+            "value": 17425
           },
           {
             "date": "2026-05",
-            "value": 17090
+            "value": 17169
           },
           {
             "date": "2026-06",
-            "value": 18328
+            "value": 18351
+          },
+          {
+            "date": "2026-07",
+            "value": 17687
           }
         ],
         "Sydney": [],
@@ -2405,7 +2409,7 @@
         "Perth": []
       },
       "history_start": "1983-07",
-      "observation_count": 516
+      "observation_count": 517
     },
     "building_approvals_total_dwellings_state_proxy": {
       "label": "Dwelling approvals (Australia total; state proxies for cities)",
@@ -2417,8 +2421,8 @@
       "source_url": "https://www.abs.gov.au/statistics/industry/building-and-construction/building-approvals-australia/latest-release",
       "frequency": "monthly",
       "release_lag_days": 35,
-      "last_source_check": "2026-08-20",
-      "latest_source_period": "2026-06",
+      "last_source_check": "2026-09-02",
+      "latest_source_period": "2026-07",
       "status": "fresh",
       "status_note": "National is the Australia total. City labels are state proxies: Sydney\u2192NSW, Melbourne\u2192VIC, Brisbane\u2192QLD, Perth\u2192WA.",
       "access_tier": "public",
@@ -4488,6 +4492,10 @@
           {
             "date": "2026-06",
             "value": 18328
+          },
+          {
+            "date": "2026-07",
+            "value": 17687
           }
         ],
         "Sydney": [
@@ -6554,6 +6562,10 @@
           {
             "date": "2026-06",
             "value": 5063
+          },
+          {
+            "date": "2026-07",
+            "value": 4586
           }
         ],
         "Melbourne": [
@@ -8620,6 +8632,10 @@
           {
             "date": "2026-06",
             "value": 4172
+          },
+          {
+            "date": "2026-07",
+            "value": 4642
           }
         ],
         "Brisbane": [
@@ -10686,6 +10702,10 @@
           {
             "date": "2026-06",
             "value": 4841
+          },
+          {
+            "date": "2026-07",
+            "value": 4200
           }
         ],
         "Perth": [
@@ -12752,16 +12772,20 @@
           {
             "date": "2026-06",
             "value": 2264
+          },
+          {
+            "date": "2026-07",
+            "value": 2270
           }
         ]
       },
       "history_start": "1983-07",
       "observation_count_by_region": {
-        "National": 516,
-        "Sydney": 516,
-        "Melbourne": 516,
-        "Brisbane": 516,
-        "Perth": 516
+        "National": 517,
+        "Sydney": 517,
+        "Melbourne": 517,
+        "Brisbane": 517,
+        "Perth": 517
       }
     },
     "cash_rate": {
@@ -12774,7 +12798,7 @@
       "source_url": "https://www.rba.gov.au/statistics/cash-rate/",
       "frequency": "as-changed",
       "release_lag_days": 1,
-      "last_source_check": "2026-08-20",
+      "last_source_check": "2026-09-02",
       "latest_source_period": "2026-08-12",
       "status": "fresh",
       "status_note": "Latest parsed RBA cash rate target is 4.35%.",
@@ -14393,7 +14417,7 @@
       "source_url": "https://www.rba.gov.au/statistics/tables/csv/f6-data.csv",
       "frequency": "monthly",
       "release_lag_days": 14,
-      "last_source_check": "2026-08-20",
+      "last_source_check": "2026-09-02",
       "latest_source_period": "2026-06",
       "status": "fresh",
       "status_note": "Latest parsed RBA F6 owner-occupier outstanding variable housing lending rate (all institutions) is 6.3%.",
@@ -14752,10 +14776,10 @@
       "source_url": "https://www.rba.gov.au/statistics/tables/csv/h5-data.csv",
       "frequency": "monthly",
       "release_lag_days": 25,
-      "last_source_check": "2026-08-20",
-      "latest_source_period": "2026-06",
+      "last_source_check": "2026-09-02",
+      "latest_source_period": "2026-07",
       "status": "fresh",
-      "status_note": "Latest parsed ABS seasonally adjusted unemployment rate is 4.4%.",
+      "status_note": "Latest parsed ABS seasonally adjusted unemployment rate is 4.5%.",
       "access_tier": "public",
       "update_method": "automated",
       "data": {
@@ -15430,7 +15454,7 @@
           },
           {
             "date": "1992-01",
-            "value": 10.3
+            "value": 10.4
           },
           {
             "date": "1992-02",
@@ -16810,7 +16834,7 @@
           },
           {
             "date": "2020-10",
-            "value": 7.0
+            "value": 6.9
           },
           {
             "date": "2020-11",
@@ -17046,7 +17070,7 @@
           },
           {
             "date": "2025-09",
-            "value": 4.5
+            "value": 4.4
           },
           {
             "date": "2025-10",
@@ -17083,11 +17107,15 @@
           {
             "date": "2026-06",
             "value": 4.4
+          },
+          {
+            "date": "2026-07",
+            "value": 4.5
           }
         ]
       },
       "history_start": "1978-02",
-      "observation_count": 581
+      "observation_count": 582
     },
     "employed_people": {
       "label": "Employed people, seasonally adjusted",
@@ -17099,10 +17127,10 @@
       "source_url": "https://www.rba.gov.au/statistics/tables/csv/h5-data.csv",
       "frequency": "monthly",
       "release_lag_days": 25,
-      "last_source_check": "2026-08-20",
-      "latest_source_period": "2026-06",
+      "last_source_check": "2026-09-02",
+      "latest_source_period": "2026-07",
       "status": "fresh",
-      "status_note": "Latest parsed ABS seasonally adjusted employed people is 14823.3 ('000 persons).",
+      "status_note": "Latest parsed ABS seasonally adjusted employed people is 14807.2 ('000 persons).",
       "access_tier": "public",
       "update_method": "automated",
       "data": {
@@ -17129,7 +17157,7 @@
           },
           {
             "date": "1978-07",
-            "value": 6030.4
+            "value": 6030.5
           },
           {
             "date": "1978-08",
@@ -17201,7 +17229,7 @@
           },
           {
             "date": "1980-01",
-            "value": 6203.8
+            "value": 6203.7
           },
           {
             "date": "1980-02",
@@ -17369,7 +17397,7 @@
           },
           {
             "date": "1983-07",
-            "value": 6276.7
+            "value": 6276.6
           },
           {
             "date": "1983-08",
@@ -17417,7 +17445,7 @@
           },
           {
             "date": "1984-07",
-            "value": 6510.6
+            "value": 6510.5
           },
           {
             "date": "1984-08",
@@ -17461,11 +17489,11 @@
           },
           {
             "date": "1985-06",
-            "value": 6660.1
+            "value": 6660.2
           },
           {
             "date": "1985-07",
-            "value": 6685.4
+            "value": 6685.3
           },
           {
             "date": "1985-08",
@@ -17557,7 +17585,7 @@
           },
           {
             "date": "1987-06",
-            "value": 7125.4
+            "value": 7125.5
           },
           {
             "date": "1987-07",
@@ -17605,7 +17633,7 @@
           },
           {
             "date": "1988-06",
-            "value": 7360.6
+            "value": 7360.5
           },
           {
             "date": "1988-07",
@@ -17685,7 +17713,7 @@
           },
           {
             "date": "1990-02",
-            "value": 7846.6
+            "value": 7846.5
           },
           {
             "date": "1990-03",
@@ -17693,7 +17721,7 @@
           },
           {
             "date": "1990-04",
-            "value": 7866.1
+            "value": 7866.0
           },
           {
             "date": "1990-05",
@@ -17729,7 +17757,7 @@
           },
           {
             "date": "1991-01",
-            "value": 7744.2
+            "value": 7744.1
           },
           {
             "date": "1991-02",
@@ -17753,7 +17781,7 @@
           },
           {
             "date": "1991-07",
-            "value": 7630.4
+            "value": 7630.5
           },
           {
             "date": "1991-08",
@@ -17929,7 +17957,7 @@
           },
           {
             "date": "1995-03",
-            "value": 8102.3
+            "value": 8102.2
           },
           {
             "date": "1995-04",
@@ -18101,11 +18129,11 @@
           },
           {
             "date": "1998-10",
-            "value": 8585.5
+            "value": 8585.4
           },
           {
             "date": "1998-11",
-            "value": 8564.7
+            "value": 8564.6
           },
           {
             "date": "1998-12",
@@ -18133,7 +18161,7 @@
           },
           {
             "date": "1999-06",
-            "value": 8662.0
+            "value": 8661.9
           },
           {
             "date": "1999-07",
@@ -18197,7 +18225,7 @@
           },
           {
             "date": "2000-10",
-            "value": 8960.5
+            "value": 8960.4
           },
           {
             "date": "2000-11",
@@ -18225,7 +18253,7 @@
           },
           {
             "date": "2001-05",
-            "value": 9007.9
+            "value": 9007.8
           },
           {
             "date": "2001-06",
@@ -18233,7 +18261,7 @@
           },
           {
             "date": "2001-07",
-            "value": 9024.5
+            "value": 9024.4
           },
           {
             "date": "2001-08",
@@ -18249,7 +18277,7 @@
           },
           {
             "date": "2001-11",
-            "value": 9078.7
+            "value": 9078.6
           },
           {
             "date": "2001-12",
@@ -18329,7 +18357,7 @@
           },
           {
             "date": "2003-07",
-            "value": 9343.2
+            "value": 9343.1
           },
           {
             "date": "2003-08",
@@ -18385,7 +18413,7 @@
           },
           {
             "date": "2004-09",
-            "value": 9591.4
+            "value": 9591.3
           },
           {
             "date": "2004-10",
@@ -18413,7 +18441,7 @@
           },
           {
             "date": "2005-04",
-            "value": 9855.3
+            "value": 9855.2
           },
           {
             "date": "2005-05",
@@ -18433,7 +18461,7 @@
           },
           {
             "date": "2005-09",
-            "value": 9928.2
+            "value": 9928.1
           },
           {
             "date": "2005-10",
@@ -18449,7 +18477,7 @@
           },
           {
             "date": "2006-01",
-            "value": 9958.1
+            "value": 9958.0
           },
           {
             "date": "2006-02",
@@ -18513,7 +18541,7 @@
           },
           {
             "date": "2007-05",
-            "value": 10401.7
+            "value": 10401.6
           },
           {
             "date": "2007-06",
@@ -18525,11 +18553,11 @@
           },
           {
             "date": "2007-08",
-            "value": 10484.6
+            "value": 10484.5
           },
           {
             "date": "2007-09",
-            "value": 10513.7
+            "value": 10513.6
           },
           {
             "date": "2007-10",
@@ -18557,7 +18585,7 @@
           },
           {
             "date": "2008-04",
-            "value": 10708.6
+            "value": 10708.5
           },
           {
             "date": "2008-05",
@@ -18581,7 +18609,7 @@
           },
           {
             "date": "2008-10",
-            "value": 10787.5
+            "value": 10787.4
           },
           {
             "date": "2008-11",
@@ -18613,7 +18641,7 @@
           },
           {
             "date": "2009-06",
-            "value": 10755.2
+            "value": 10755.1
           },
           {
             "date": "2009-07",
@@ -18761,7 +18789,7 @@
           },
           {
             "date": "2012-07",
-            "value": 11348.6
+            "value": 11348.5
           },
           {
             "date": "2012-08",
@@ -18805,7 +18833,7 @@
           },
           {
             "date": "2013-06",
-            "value": 11470.2
+            "value": 11470.1
           },
           {
             "date": "2013-07",
@@ -18817,7 +18845,7 @@
           },
           {
             "date": "2013-09",
-            "value": 11474.1
+            "value": 11474.2
           },
           {
             "date": "2013-10",
@@ -18829,7 +18857,7 @@
           },
           {
             "date": "2013-12",
-            "value": 11419.2
+            "value": 11419.1
           },
           {
             "date": "2014-01",
@@ -18853,7 +18881,7 @@
           },
           {
             "date": "2014-06",
-            "value": 11528.8
+            "value": 11528.7
           },
           {
             "date": "2014-07",
@@ -18865,7 +18893,7 @@
           },
           {
             "date": "2014-09",
-            "value": 11547.1
+            "value": 11547.2
           },
           {
             "date": "2014-10",
@@ -18901,11 +18929,11 @@
           },
           {
             "date": "2015-06",
-            "value": 11727.5
+            "value": 11727.4
           },
           {
             "date": "2015-07",
-            "value": 11760.5
+            "value": 11760.6
           },
           {
             "date": "2015-08",
@@ -18937,7 +18965,7 @@
           },
           {
             "date": "2016-03",
-            "value": 11941.8
+            "value": 11941.7
           },
           {
             "date": "2016-04",
@@ -18949,11 +18977,11 @@
           },
           {
             "date": "2016-06",
-            "value": 11963.0
+            "value": 11962.8
           },
           {
             "date": "2016-07",
-            "value": 11996.0
+            "value": 11996.1
           },
           {
             "date": "2016-08",
@@ -18961,7 +18989,7 @@
           },
           {
             "date": "2016-09",
-            "value": 11942.3
+            "value": 11942.4
           },
           {
             "date": "2016-10",
@@ -18969,7 +18997,7 @@
           },
           {
             "date": "2016-11",
-            "value": 11987.3
+            "value": 11987.4
           },
           {
             "date": "2016-12",
@@ -18985,23 +19013,23 @@
           },
           {
             "date": "2017-03",
-            "value": 12075.7
+            "value": 12075.6
           },
           {
             "date": "2017-04",
-            "value": 12133.0
+            "value": 12132.9
           },
           {
             "date": "2017-05",
-            "value": 12164.9
+            "value": 12164.8
           },
           {
             "date": "2017-06",
-            "value": 12197.3
+            "value": 12197.1
           },
           {
             "date": "2017-07",
-            "value": 12232.9
+            "value": 12233.0
           },
           {
             "date": "2017-08",
@@ -19009,7 +19037,7 @@
           },
           {
             "date": "2017-09",
-            "value": 12321.7
+            "value": 12321.8
           },
           {
             "date": "2017-10",
@@ -19017,7 +19045,7 @@
           },
           {
             "date": "2017-11",
-            "value": 12368.3
+            "value": 12368.4
           },
           {
             "date": "2017-12",
@@ -19025,19 +19053,19 @@
           },
           {
             "date": "2018-01",
-            "value": 12437.5
+            "value": 12437.6
           },
           {
             "date": "2018-02",
-            "value": 12421.9
+            "value": 12421.8
           },
           {
             "date": "2018-03",
-            "value": 12442.4
+            "value": 12442.3
           },
           {
             "date": "2018-04",
-            "value": 12460.6
+            "value": 12460.4
           },
           {
             "date": "2018-05",
@@ -19045,11 +19073,11 @@
           },
           {
             "date": "2018-06",
-            "value": 12522.1
+            "value": 12521.9
           },
           {
             "date": "2018-07",
-            "value": 12522.9
+            "value": 12523.2
           },
           {
             "date": "2018-08",
@@ -19057,7 +19085,7 @@
           },
           {
             "date": "2018-09",
-            "value": 12601.5
+            "value": 12601.7
           },
           {
             "date": "2018-10",
@@ -19069,7 +19097,7 @@
           },
           {
             "date": "2018-12",
-            "value": 12670.2
+            "value": 12670.1
           },
           {
             "date": "2019-01",
@@ -19077,15 +19105,15 @@
           },
           {
             "date": "2019-02",
-            "value": 12725.2
+            "value": 12725.1
           },
           {
             "date": "2019-03",
-            "value": 12748.9
+            "value": 12748.8
           },
           {
             "date": "2019-04",
-            "value": 12785.9
+            "value": 12785.7
           },
           {
             "date": "2019-05",
@@ -19093,19 +19121,19 @@
           },
           {
             "date": "2019-06",
-            "value": 12804.7
+            "value": 12804.4
           },
           {
             "date": "2019-07",
-            "value": 12837.3
+            "value": 12837.6
           },
           {
             "date": "2019-08",
-            "value": 12882.8
+            "value": 12883.0
           },
           {
             "date": "2019-09",
-            "value": 12902.9
+            "value": 12903.1
           },
           {
             "date": "2019-10",
@@ -19113,11 +19141,11 @@
           },
           {
             "date": "2019-11",
-            "value": 12874.2
+            "value": 12874.3
           },
           {
             "date": "2019-12",
-            "value": 12924.0
+            "value": 12923.9
           },
           {
             "date": "2020-01",
@@ -19125,107 +19153,107 @@
           },
           {
             "date": "2020-02",
-            "value": 12930.7
+            "value": 12930.6
           },
           {
             "date": "2020-03",
-            "value": 12925.7
+            "value": 12925.6
           },
           {
             "date": "2020-04",
-            "value": 12347.1
+            "value": 12346.9
           },
           {
             "date": "2020-05",
-            "value": 12051.7
+            "value": 12051.6
           },
           {
             "date": "2020-06",
-            "value": 12279.9
+            "value": 12279.7
           },
           {
             "date": "2020-07",
-            "value": 12416.4
+            "value": 12416.5
           },
           {
             "date": "2020-08",
-            "value": 12552.0
+            "value": 12552.4
           },
           {
             "date": "2020-09",
-            "value": 12519.7
+            "value": 12520.0
           },
           {
             "date": "2020-10",
-            "value": 12658.0
+            "value": 12658.1
           },
           {
             "date": "2020-11",
-            "value": 12741.9
+            "value": 12742.1
           },
           {
             "date": "2020-12",
-            "value": 12797.6
+            "value": 12797.4
           },
           {
             "date": "2021-01",
-            "value": 12841.2
+            "value": 12841.0
           },
           {
             "date": "2021-02",
-            "value": 12893.4
+            "value": 12893.3
           },
           {
             "date": "2021-03",
-            "value": 12953.1
+            "value": 12952.9
           },
           {
             "date": "2021-04",
-            "value": 12948.3
+            "value": 12948.2
           },
           {
             "date": "2021-05",
-            "value": 13038.8
+            "value": 13038.7
           },
           {
             "date": "2021-06",
-            "value": 13059.4
+            "value": 13058.9
           },
           {
             "date": "2021-07",
-            "value": 13085.0
+            "value": 13085.1
           },
           {
             "date": "2021-08",
-            "value": 12952.2
+            "value": 12952.9
           },
           {
             "date": "2021-09",
-            "value": 12826.9
+            "value": 12827.4
           },
           {
             "date": "2021-10",
-            "value": 12777.8
+            "value": 12778.0
           },
           {
             "date": "2021-11",
-            "value": 13143.7
+            "value": 13143.9
           },
           {
             "date": "2021-12",
-            "value": 13226.7
+            "value": 13226.5
           },
           {
             "date": "2022-01",
-            "value": 13292.1
+            "value": 13291.8
           },
           {
             "date": "2022-02",
-            "value": 13366.6
+            "value": 13366.4
           },
           {
             "date": "2022-03",
-            "value": 13388.5
+            "value": 13388.2
           },
           {
             "date": "2022-04",
@@ -19233,123 +19261,123 @@
           },
           {
             "date": "2022-05",
-            "value": 13488.8
+            "value": 13488.7
           },
           {
             "date": "2022-06",
-            "value": 13583.1
+            "value": 13582.3
           },
           {
             "date": "2022-07",
-            "value": 13593.4
+            "value": 13593.3
           },
           {
             "date": "2022-08",
-            "value": 13665.3
+            "value": 13666.4
           },
           {
             "date": "2022-09",
-            "value": 13673.4
+            "value": 13674.3
           },
           {
             "date": "2022-10",
-            "value": 13712.4
+            "value": 13712.9
           },
           {
             "date": "2022-11",
-            "value": 13780.9
+            "value": 13781.1
           },
           {
             "date": "2022-12",
-            "value": 13778.1
+            "value": 13777.9
           },
           {
             "date": "2023-01",
-            "value": 13801.0
+            "value": 13800.6
           },
           {
             "date": "2023-02",
-            "value": 13839.7
+            "value": 13839.3
           },
           {
             "date": "2023-03",
-            "value": 13929.9
+            "value": 13929.3
           },
           {
             "date": "2023-04",
-            "value": 13929.6
+            "value": 13930.2
           },
           {
             "date": "2023-05",
-            "value": 14018.8
+            "value": 14017.8
           },
           {
             "date": "2023-06",
-            "value": 14028.7
+            "value": 14027.2
           },
           {
             "date": "2023-07",
-            "value": 14028.0
+            "value": 14028.7
           },
           {
             "date": "2023-08",
-            "value": 14100.7
+            "value": 14102.0
           },
           {
             "date": "2023-09",
-            "value": 14094.8
+            "value": 14095.9
           },
           {
             "date": "2023-10",
-            "value": 14150.9
+            "value": 14151.7
           },
           {
             "date": "2023-11",
-            "value": 14199.9
+            "value": 14200.1
           },
           {
             "date": "2023-12",
-            "value": 14147.0
+            "value": 14146.7
           },
           {
             "date": "2024-01",
-            "value": 14145.6
+            "value": 14145.0
           },
           {
             "date": "2024-02",
-            "value": 14252.5
+            "value": 14251.7
           },
           {
             "date": "2024-03",
-            "value": 14231.1
+            "value": 14230.1
           },
           {
             "date": "2024-04",
-            "value": 14267.3
+            "value": 14268.3
           },
           {
             "date": "2024-05",
-            "value": 14298.6
+            "value": 14296.5
           },
           {
             "date": "2024-06",
-            "value": 14320.8
+            "value": 14319.2
           },
           {
             "date": "2024-07",
-            "value": 14375.8
+            "value": 14377.8
           },
           {
             "date": "2024-08",
-            "value": 14408.7
+            "value": 14410.5
           },
           {
             "date": "2024-09",
-            "value": 14445.7
+            "value": 14447.0
           },
           {
             "date": "2024-10",
-            "value": 14443.9
+            "value": 14444.7
           },
           {
             "date": "2024-11",
@@ -19357,84 +19385,88 @@
           },
           {
             "date": "2024-12",
-            "value": 14510.9
+            "value": 14510.5
           },
           {
             "date": "2025-01",
-            "value": 14544.0
+            "value": 14543.3
           },
           {
             "date": "2025-02",
-            "value": 14469.2
+            "value": 14468.1
           },
           {
             "date": "2025-03",
-            "value": 14500.3
+            "value": 14498.7
           },
           {
             "date": "2025-04",
-            "value": 14604.3
+            "value": 14605.9
           },
           {
             "date": "2025-05",
-            "value": 14598.0
+            "value": 14594.6
           },
           {
             "date": "2025-06",
-            "value": 14571.3
+            "value": 14569.4
           },
           {
             "date": "2025-07",
-            "value": 14611.8
+            "value": 14615.4
           },
           {
             "date": "2025-08",
-            "value": 14598.7
+            "value": 14600.8
           },
           {
             "date": "2025-09",
-            "value": 14608.7
+            "value": 14610.1
           },
           {
             "date": "2025-10",
-            "value": 14642.3
+            "value": 14643.3
           },
           {
             "date": "2025-11",
-            "value": 14604.2
+            "value": 14604.1
           },
           {
             "date": "2025-12",
-            "value": 14661.9
+            "value": 14661.4
           },
           {
             "date": "2026-01",
-            "value": 14698.3
+            "value": 14697.5
           },
           {
             "date": "2026-02",
-            "value": 14721.2
+            "value": 14719.6
           },
           {
             "date": "2026-03",
-            "value": 14741.6
+            "value": 14739.6
           },
           {
             "date": "2026-04",
-            "value": 14703.0
+            "value": 14704.7
           },
           {
             "date": "2026-05",
-            "value": 14746.9
+            "value": 14742.8
           },
           {
             "date": "2026-06",
-            "value": 14823.3
+            "value": 14823.1
+          },
+          {
+            "date": "2026-07",
+            "value": 14807.2
           }
         ]
       },
       "history_start": "1978-02",
-      "observation_count": 581
+      "observation_count": 582
     },
     "cpi_trimmed_mean_yoy": {
       "label": "Trimmed mean inflation, year-on-year",
@@ -19446,8 +19478,8 @@
       "source_url": "https://www.abs.gov.au/statistics/economy/price-indexes-and-inflation/consumer-price-index-australia/latest-release",
       "frequency": "quarterly through 2025-03; monthly thereafter",
       "release_lag_days": 35,
-      "last_source_check": "2026-08-20",
-      "latest_source_period": "2026-06",
+      "last_source_check": "2026-09-02",
+      "latest_source_period": "2026-07",
       "status": "fresh",
       "status_note": "Full available RBA G1 quarterly trimmed mean inflation history joined to the ABS complete monthly CPI publication at its first available recent observation.",
       "access_tier": "public",
@@ -20144,7 +20176,7 @@
           },
           {
             "date": "2025-07",
-            "value": 3.0
+            "value": 3.1
           },
           {
             "date": "2025-08",
@@ -20184,16 +20216,20 @@
           },
           {
             "date": "2026-05",
-            "value": 3.6
+            "value": 3.5
           },
           {
             "date": "2026-06",
+            "value": 3.6
+          },
+          {
+            "date": "2026-07",
             "value": 3.6
           }
         ]
       },
       "history_start": "1983-03",
-      "observation_count": 184,
+      "observation_count": 185,
       "history_source_url": "https://www.rba.gov.au/statistics/tables/csv/g1-data.csv",
       "methodology_note": "Quarterly RBA G1 history is joined to the ABS complete monthly CPI series. Treat the frequency transition as a documented series break when reading cycles."
     },
@@ -20207,8 +20243,8 @@
       "source_url": "https://www.abs.gov.au/statistics/economy/price-indexes-and-inflation/consumer-price-index-australia/latest-release",
       "frequency": "quarterly through 2025-03; monthly thereafter",
       "release_lag_days": 35,
-      "last_source_check": "2026-08-20",
-      "latest_source_period": "2026-06",
+      "last_source_check": "2026-09-02",
+      "latest_source_period": "2026-07",
       "status": "fresh",
       "status_note": "Full available RBA G1 quarterly annual inflation history joined to the ABS complete monthly CPI publication at its first available recent observation.",
       "access_tier": "public",
@@ -21906,11 +21942,15 @@
           {
             "date": "2026-06",
             "value": 3.8
+          },
+          {
+            "date": "2026-07",
+            "value": 3.5
           }
         ]
       },
       "history_start": "1923-06",
-      "observation_count": 423,
+      "observation_count": 424,
       "history_source_url": "https://www.rba.gov.au/statistics/tables/csv/g1-data.csv",
       "methodology_note": "Quarterly RBA G1 history is joined to the ABS complete monthly CPI series. Treat the frequency transition as a documented series break when reading cycles."
     },
@@ -21924,7 +21964,7 @@
       "source_url": "https://www.abs.gov.au/statistics/economy/finance/lending-indicators/latest-release",
       "frequency": "quarterly",
       "release_lag_days": 45,
-      "last_source_check": "2026-08-20",
+      "last_source_check": "2026-09-02",
       "latest_source_period": "2026-Q2",
       "status": "fresh",
       "status_note": "Quarter-on-quarter change calculated from the ABS seasonally adjusted total number of new dwelling loan commitments; comparable total series begins in September quarter 2019.",
@@ -22201,7 +22241,7 @@
         ]
       },
       "access_tier": "public",
-      "last_source_check": "2026-08-20",
+      "last_source_check": "2026-09-02",
       "latest_source_period": "2026-Q2",
       "status": "fresh",
       "history_start": "2019-Q3",
@@ -22387,7 +22427,7 @@
         ]
       },
       "access_tier": "public",
-      "last_source_check": "2026-08-20",
+      "last_source_check": "2026-09-02",
       "latest_source_period": "2026-Q2",
       "status": "fresh",
       "history_start": "2016-Q2",
@@ -24022,24 +24062,24 @@
           },
           {
             "date": "2026-07",
-            "value": 9053.8
+            "value": 9076.0
           },
           {
-            "date": "2026-08",
-            "value": 9083.8
+            "date": "2026-09",
+            "value": 8978.4
           }
         ]
       },
       "access_tier": "public",
-      "last_source_check": "2026-08-20",
-      "latest_source_period": "2026-08",
+      "last_source_check": "2026-09-02",
+      "latest_source_period": "2026-09",
       "status": "fresh",
       "history_start": "1992-11",
       "observation_count": 406,
       "update_method": "automated",
       "source_url": "https://www.asx.com.au/markets/trade-our-cash-market/overview/indices",
       "source": "S&P/ASX 200",
-      "status_note": "Monthly closing index level retrieved via Yahoo Finance; latest observation is 2026-08.",
+      "status_note": "Monthly closing index level retrieved via Yahoo Finance; latest observation is 2026-09.",
       "data_provider": "Yahoo Finance chart endpoint",
       "methodology_note": "Monthly close; price-return index unless otherwise stated. Values may be revised by the data provider."
     },
@@ -26050,12 +26090,12 @@
           },
           {
             "date": "2026-08",
-            "value": 7707.98
+            "value": 7686.14
           }
         ]
       },
       "access_tier": "public",
-      "last_source_check": "2026-08-20",
+      "last_source_check": "2026-09-02",
       "latest_source_period": "2026-08",
       "status": "fresh",
       "history_start": "1985-01",
@@ -27930,20 +27970,24 @@
           },
           {
             "date": "2026-08",
-            "value": 1150.24
+            "value": 1149.22
+          },
+          {
+            "date": "2026-09",
+            "value": 1138.78
           }
         ]
       },
       "access_tier": "public",
-      "last_source_check": "2026-08-20",
-      "latest_source_period": "2026-08",
+      "last_source_check": "2026-09-02",
+      "latest_source_period": "2026-09",
       "status": "fresh",
       "history_start": "1988-01",
-      "observation_count": 464,
+      "observation_count": 465,
       "update_method": "automated",
       "source_url": "https://www.msci.com/indexes/index/892400/msci-acwi-index",
       "source": "MSCI ACWI (USD, price return)",
-      "status_note": "Monthly closing index level retrieved via Yahoo Finance; latest observation is 2026-08.",
+      "status_note": "Monthly closing index level retrieved via Yahoo Finance; latest observation is 2026-09.",
       "data_provider": "Yahoo Finance chart endpoint",
       "methodology_note": "Monthly close; price-return index unless otherwise stated. Values may be revised by the data provider."
     },
@@ -28390,24 +28434,24 @@
           },
           {
             "date": "2026-07",
-            "value": 3518.4
+            "value": 3382.1
           },
           {
-            "date": "2026-08",
-            "value": 3523.7
+            "date": "2026-09",
+            "value": 3337.0
           }
         ]
       },
       "access_tier": "public",
-      "last_source_check": "2026-08-20",
-      "latest_source_period": "2026-08",
+      "last_source_check": "2026-09-02",
+      "latest_source_period": "2026-09",
       "status": "fresh",
       "history_start": "2017-07",
       "observation_count": 110,
       "update_method": "automated",
       "source_url": "https://www.spglobal.com/spdji/en/indices/equity/sp-asx-200-real-estate-sector",
       "source": "S&P/ASX 200 Real Estate Index",
-      "status_note": "Monthly closing index level retrieved via Yahoo Finance; latest observation is 2026-08.",
+      "status_note": "Monthly closing index level retrieved via Yahoo Finance; latest observation is 2026-09.",
       "data_provider": "Yahoo Finance chart endpoint",
       "methodology_note": "Monthly close; price-return index unless otherwise stated. Values may be revised by the data provider."
     },
@@ -29490,24 +29534,24 @@
           },
           {
             "date": "2026-07",
-            "value": 1638.8
+            "value": 1573.7
           },
           {
-            "date": "2026-08",
-            "value": 1641.0
+            "date": "2026-09",
+            "value": 1552.4
           }
         ]
       },
       "access_tier": "public",
-      "last_source_check": "2026-08-20",
-      "latest_source_period": "2026-08",
+      "last_source_check": "2026-09-02",
+      "latest_source_period": "2026-09",
       "status": "fresh",
       "history_start": "2004-04",
       "observation_count": 269,
       "update_method": "automated",
       "source_url": "https://www.spglobal.com/spdji/en/indices/equity/sp-asx-200-a-reit/",
       "source": "S&P/ASX 200 A-REIT Index",
-      "status_note": "Monthly closing index level retrieved via Yahoo Finance; latest observation is 2026-08.",
+      "status_note": "Monthly closing index level retrieved via Yahoo Finance; latest observation is 2026-09.",
       "data_provider": "Yahoo Finance chart endpoint",
       "methodology_note": "Monthly close; price-return index unless otherwise stated. Values may be revised by the data provider."
     },
@@ -32622,12 +32666,12 @@
           },
           {
             "date": "2026-08",
-            "value": 4.26
+            "value": 4.4
           }
         ]
       },
       "access_tier": "public",
-      "last_source_check": "2026-08-20",
+      "last_source_check": "2026-09-02",
       "latest_source_period": "2026-08",
       "status": "fresh",
       "history_start": "1962-01",
@@ -32635,7 +32679,7 @@
       "update_method": "automated",
       "source_url": "https://fred.stlouisfed.org/series/DGS3",
       "source": "Federal Reserve Bank of St. Louis (FRED DGS3)",
-      "status_note": "Last available daily FRED observation in each month; latest month-end value is 4.26%."
+      "status_note": "Last available daily FRED observation in each month; latest month-end value is 4.4%."
     },
     "us_treasury_10y": {
       "label": "US Treasury 10-year yield",
@@ -35748,12 +35792,12 @@
           },
           {
             "date": "2026-08",
-            "value": 4.71
+            "value": 4.75
           }
         ]
       },
       "access_tier": "public",
-      "last_source_check": "2026-08-20",
+      "last_source_check": "2026-09-02",
       "latest_source_period": "2026-08",
       "status": "fresh",
       "history_start": "1962-01",
@@ -35761,7 +35805,7 @@
       "update_method": "automated",
       "source_url": "https://fred.stlouisfed.org/series/DGS10",
       "source": "Federal Reserve Bank of St. Louis (FRED DGS10)",
-      "status_note": "Last available daily FRED observation in each month; latest month-end value is 4.71%."
+      "status_note": "Last available daily FRED observation in each month; latest month-end value is 4.75%."
     },
     "wage_growth_private_yoy": {
       "label": "Private-sector wage growth, year-on-year",
@@ -36019,7 +36063,7 @@
         ]
       },
       "access_tier": "public",
-      "last_source_check": "2026-08-20",
+      "last_source_check": "2026-09-02",
       "latest_source_period": "2026-Q2",
       "status": "fresh",
       "history_start": "2011-Q2",
@@ -36285,7 +36329,7 @@
         ]
       },
       "access_tier": "public",
-      "last_source_check": "2026-08-20",
+      "last_source_check": "2026-09-02",
       "latest_source_period": "2026-Q2",
       "status": "fresh",
       "history_start": "2011-Q2",
@@ -36391,7 +36435,7 @@
         ]
       },
       "access_tier": "public",
-      "last_source_check": "2026-08-20",
+      "last_source_check": "2026-09-02",
       "latest_source_period": "2026-05",
       "status": "fresh",
       "history_start": "2016-05",
@@ -36498,7 +36542,7 @@
         ]
       },
       "access_tier": "public",
-      "last_source_check": "2026-08-20",
+      "last_source_check": "2026-09-02",
       "latest_source_period": "2026-05",
       "status": "fresh",
       "history_start": "2016-05",
@@ -37220,7 +37264,7 @@
       "access_tier": "public",
       "source_series_id": "GCPINTIYP",
       "source_table": "cpi_history",
-      "last_source_check": "2026-08-20",
+      "last_source_check": "2026-09-02",
       "latest_source_period": "2026-06",
       "status": "fresh",
       "history_start": "1983-03",
@@ -38094,7 +38138,7 @@
       "access_tier": "public",
       "source_series_id": "GCPIHOYP",
       "source_table": "housing_cpi_history",
-      "last_source_check": "2026-08-20",
+      "last_source_check": "2026-09-02",
       "latest_source_period": "2026-06",
       "status": "fresh",
       "history_start": "1973-09",
@@ -38192,7 +38236,7 @@
       "access_tier": "public",
       "source_series_id": "GCONEXP",
       "source_table": "inflation_expectations",
-      "last_source_check": "2026-08-20",
+      "last_source_check": "2026-09-02",
       "latest_source_period": "2026-06",
       "status": "fresh",
       "history_start": "2022-03",
@@ -38678,7 +38722,7 @@
       "access_tier": "public",
       "source_series_id": "GMAREXPY",
       "source_table": "inflation_expectations",
-      "last_source_check": "2026-08-20",
+      "last_source_check": "2026-09-02",
       "latest_source_period": "2026-09",
       "status": "fresh",
       "history_start": "1993-09",
@@ -39136,7 +39180,7 @@
       "access_tier": "public",
       "source_series_id": "GMAREXPYY",
       "source_table": "inflation_expectations",
-      "last_source_check": "2026-08-20",
+      "last_source_check": "2026-09-02",
       "latest_source_period": "2026-09",
       "status": "fresh",
       "history_start": "1994-09",
@@ -39347,7 +39391,7 @@
       "source_series_id": "GBONYLD",
       "source_table": "inflation_expectations",
       "methodology_note": "Breakeven inflation combines expected inflation with inflation-risk and liquidity premia; it must not be interpreted as a pure inflation forecast.",
-      "last_source_check": "2026-08-20",
+      "last_source_check": "2026-09-02",
       "latest_source_period": "2026-06",
       "status": "fresh",
       "history_start": "2015-03",
@@ -39821,7 +39865,7 @@
       "access_tier": "public",
       "source_series_id": "GWPIYP",
       "source_table": "labour_costs_productivity",
-      "last_source_check": "2026-08-20",
+      "last_source_check": "2026-09-02",
       "latest_source_period": "2026-06",
       "status": "fresh",
       "history_start": "1998-09",
@@ -40427,7 +40471,7 @@
       "access_tier": "public",
       "source_series_id": "GNFULCYP",
       "source_table": "labour_costs_productivity",
-      "last_source_check": "2026-08-20",
+      "last_source_check": "2026-09-02",
       "latest_source_period": "2026-03",
       "status": "fresh",
       "history_start": "1990-03",
@@ -41089,7 +41133,7 @@
       "access_tier": "public",
       "source_series_id": "GNFPROSQP",
       "source_table": "labour_costs_productivity",
-      "last_source_check": "2026-08-20",
+      "last_source_check": "2026-09-02",
       "latest_source_period": "2026-03",
       "status": "fresh",
       "history_start": "1986-09",
@@ -42167,7 +42211,7 @@
       "access_tier": "public",
       "source_series_id": "GGDPCVGDPY",
       "source_table": "gdp_income",
-      "last_source_check": "2026-08-20",
+      "last_source_check": "2026-09-02",
       "latest_source_period": "2026-03",
       "status": "fresh",
       "history_start": "1960-09",
@@ -43021,7 +43065,7 @@
       "access_tier": "public",
       "source_series_id": "GGDPCVGDPFY",
       "source_table": "gdp_income",
-      "last_source_check": "2026-08-20",
+      "last_source_check": "2026-09-02",
       "latest_source_period": "2026-03",
       "status": "fresh",
       "history_start": "1974-09",
@@ -44099,7 +44143,7 @@
       "access_tier": "public",
       "source_series_id": "GGDPECCVPSHY",
       "source_table": "demand_income",
-      "last_source_check": "2026-08-20",
+      "last_source_check": "2026-09-02",
       "latest_source_period": "2026-03",
       "status": "fresh",
       "history_start": "1960-09",
@@ -45177,7 +45221,7 @@
       "access_tier": "public",
       "source_series_id": "GGDPECCVPSDY",
       "source_table": "demand_income",
-      "last_source_check": "2026-08-20",
+      "last_source_check": "2026-09-02",
       "latest_source_period": "2026-03",
       "status": "fresh",
       "history_start": "1960-09",
@@ -46003,7 +46047,7 @@
       "access_tier": "public",
       "source_series_id": "GICWMICS",
       "source_table": "monthly_activity",
-      "last_source_check": "2026-08-20",
+      "last_source_check": "2026-09-02",
       "latest_source_period": "2026-08",
       "status": "fresh",
       "history_start": "2010-01",
@@ -47441,7 +47485,7 @@
       "access_tier": "public",
       "source_series_id": "GICNBC",
       "source_table": "monthly_activity",
-      "last_source_check": "2026-08-20",
+      "last_source_check": "2026-09-02",
       "latest_source_period": "2026-07",
       "status": "fresh",
       "history_start": "1997-03",
@@ -49692,7 +49736,7 @@
           },
           {
             "date": "2025-07",
-            "value": 1.6
+            "value": 1.7
           },
           {
             "date": "2025-08",
@@ -49737,21 +49781,25 @@
           {
             "date": "2026-06",
             "value": 1.7
+          },
+          {
+            "date": "2026-07",
+            "value": 1.3
           }
         ]
       },
       "access_tier": "public",
       "source_series_id": "GLFSEPTSYP",
       "source_table": "labour_force_history",
-      "last_source_check": "2026-08-20",
-      "latest_source_period": "2026-06",
+      "last_source_check": "2026-09-02",
+      "latest_source_period": "2026-07",
       "status": "fresh",
       "history_start": "1979-02",
-      "observation_count": 569,
+      "observation_count": 570,
       "update_method": "automated",
       "source_url": "https://www.rba.gov.au/statistics/tables/csv/h5-data.csv",
       "source": "RBA Statistical Table H5 (ABS Labour Force)",
-      "status_note": "Public RBA series GLFSEPTSYP; latest published observation is 2026-06 (1.7).",
+      "status_note": "Public RBA series GLFSEPTSYP; latest published observation is 2026-07 (1.3).",
       "availability_basis": "Pseudo-real-time metadata only: the latest revised historical series is used, with the stated publication lag enforced in forecasting applications."
     },
     "participation_rate": {
@@ -51746,7 +51794,7 @@
           },
           {
             "date": "2019-05",
-            "value": 65.7
+            "value": 65.8
           },
           {
             "date": "2019-06",
@@ -51982,7 +52030,7 @@
           },
           {
             "date": "2024-04",
-            "value": 66.7
+            "value": 66.8
           },
           {
             "date": "2024-05",
@@ -52038,7 +52086,7 @@
           },
           {
             "date": "2025-06",
-            "value": 67.0
+            "value": 66.9
           },
           {
             "date": "2025-07",
@@ -52087,21 +52135,25 @@
           {
             "date": "2026-06",
             "value": 67.0
+          },
+          {
+            "date": "2026-07",
+            "value": 66.9
           }
         ]
       },
       "access_tier": "public",
       "source_series_id": "GLFSPRSA",
       "source_table": "labour_force_history",
-      "last_source_check": "2026-08-20",
-      "latest_source_period": "2026-06",
+      "last_source_check": "2026-09-02",
+      "latest_source_period": "2026-07",
       "status": "fresh",
       "history_start": "1978-02",
-      "observation_count": 581,
+      "observation_count": 582,
       "update_method": "automated",
       "source_url": "https://www.rba.gov.au/statistics/tables/csv/h5-data.csv",
       "source": "RBA Statistical Table H5 (ABS Labour Force)",
-      "status_note": "Public RBA series GLFSPRSA; latest published observation is 2026-06 (67.0).",
+      "status_note": "Public RBA series GLFSPRSA; latest published observation is 2026-07 (66.9).",
       "availability_basis": "Pseudo-real-time metadata only: the latest revised historical series is used, with the stated publication lag enforced in forecasting applications."
     },
     "housing_credit_growth_yoy": {
@@ -54316,7 +54368,7 @@
           },
           {
             "date": "2023-06",
-            "value": 4.7
+            "value": 4.6
           },
           {
             "date": "2023-07",
@@ -54452,7 +54504,7 @@
           },
           {
             "date": "2026-04",
-            "value": 7.5
+            "value": 7.4
           },
           {
             "date": "2026-05",
@@ -54461,21 +54513,25 @@
           {
             "date": "2026-06",
             "value": 7.5
+          },
+          {
+            "date": "2026-07",
+            "value": 7.4
           }
         ]
       },
       "access_tier": "public",
       "source_series_id": "DGFACH12",
       "source_table": "financial_aggregates_growth",
-      "last_source_check": "2026-08-20",
-      "latest_source_period": "2026-06",
+      "last_source_check": "2026-09-02",
+      "latest_source_period": "2026-07",
       "status": "fresh",
       "history_start": "1977-08",
-      "observation_count": 587,
+      "observation_count": 588,
       "update_method": "automated",
       "source_url": "https://www.rba.gov.au/statistics/tables/csv/d1-data.csv",
       "source": "RBA Statistical Table D1 (Growth in Financial Aggregates)",
-      "status_note": "Public RBA series DGFACH12; latest published observation is 2026-06 (7.5).",
+      "status_note": "Public RBA series DGFACH12; latest published observation is 2026-07 (7.4).",
       "availability_basis": "Pseudo-real-time metadata only: the latest revised historical series is used, with the stated publication lag enforced in forecasting applications."
     },
     "owner_occupier_credit_growth_yoy": {
@@ -56191,21 +56247,25 @@
           {
             "date": "2026-06",
             "value": 6.1
+          },
+          {
+            "date": "2026-07",
+            "value": 6.1
           }
         ]
       },
       "access_tier": "public",
       "source_series_id": "DGFACOH12",
       "source_table": "financial_aggregates_growth",
-      "last_source_check": "2026-08-20",
-      "latest_source_period": "2026-06",
+      "last_source_check": "2026-09-02",
+      "latest_source_period": "2026-07",
       "status": "fresh",
       "history_start": "1991-01",
-      "observation_count": 426,
+      "observation_count": 427,
       "update_method": "automated",
       "source_url": "https://www.rba.gov.au/statistics/tables/csv/d1-data.csv",
       "source": "RBA Statistical Table D1 (Growth in Financial Aggregates)",
-      "status_note": "Public RBA series DGFACOH12; latest published observation is 2026-06 (6.1).",
+      "status_note": "Public RBA series DGFACOH12; latest published observation is 2026-07 (6.1).",
       "availability_basis": "Pseudo-real-time metadata only: the latest revised historical series is used, with the stated publication lag enforced in forecasting applications."
     },
     "investor_credit_growth_yoy": {
@@ -56272,11 +56332,11 @@
           },
           {
             "date": "1992-02",
-            "value": 15.9
+            "value": 15.8
           },
           {
             "date": "1992-03",
-            "value": 15.5
+            "value": 15.4
           },
           {
             "date": "1992-04",
@@ -56320,7 +56380,7 @@
           },
           {
             "date": "1993-02",
-            "value": 18.5
+            "value": 18.6
           },
           {
             "date": "1993-03",
@@ -56388,7 +56448,7 @@
           },
           {
             "date": "1994-07",
-            "value": 27.7
+            "value": 27.8
           },
           {
             "date": "1994-08",
@@ -56448,7 +56508,7 @@
           },
           {
             "date": "1995-10",
-            "value": 18.6
+            "value": 18.5
           },
           {
             "date": "1995-11",
@@ -56464,15 +56524,15 @@
           },
           {
             "date": "1996-02",
-            "value": 16.8
+            "value": 16.7
           },
           {
             "date": "1996-03",
-            "value": 16.6
+            "value": 16.7
           },
           {
             "date": "1996-04",
-            "value": 16.9
+            "value": 16.8
           },
           {
             "date": "1996-05",
@@ -56552,7 +56612,7 @@
           },
           {
             "date": "1997-12",
-            "value": 28.7
+            "value": 28.6
           },
           {
             "date": "1998-01",
@@ -56656,7 +56716,7 @@
           },
           {
             "date": "2000-02",
-            "value": 27.6
+            "value": 27.5
           },
           {
             "date": "2000-03",
@@ -57472,7 +57532,7 @@
           },
           {
             "date": "2017-02",
-            "value": 4.3
+            "value": 4.4
           },
           {
             "date": "2017-03",
@@ -57788,7 +57848,7 @@
           },
           {
             "date": "2023-09",
-            "value": 2.8
+            "value": 2.9
           },
           {
             "date": "2023-10",
@@ -57921,21 +57981,25 @@
           {
             "date": "2026-06",
             "value": 10.4
+          },
+          {
+            "date": "2026-07",
+            "value": 10.1
           }
         ]
       },
       "access_tier": "public",
       "source_series_id": "DGFACIH12",
       "source_table": "financial_aggregates_growth",
-      "last_source_check": "2026-08-20",
-      "latest_source_period": "2026-06",
+      "last_source_check": "2026-09-02",
+      "latest_source_period": "2026-07",
       "status": "fresh",
       "history_start": "1991-01",
-      "observation_count": 426,
+      "observation_count": 427,
       "update_method": "automated",
       "source_url": "https://www.rba.gov.au/statistics/tables/csv/d1-data.csv",
       "source": "RBA Statistical Table D1 (Growth in Financial Aggregates)",
-      "status_note": "Public RBA series DGFACIH12; latest published observation is 2026-06 (10.4).",
+      "status_note": "Public RBA series DGFACIH12; latest published observation is 2026-07 (10.1).",
       "availability_basis": "Pseudo-real-time metadata only: the latest revised historical series is used, with the stated publication lag enforced in forecasting applications."
     },
     "housing_lending_rate_owner_occupier_new": {
@@ -58289,7 +58353,7 @@
       "access_tier": "public",
       "source_series_id": "FLRHOFTA",
       "source_table": "housing_lending_rates",
-      "last_source_check": "2026-08-20",
+      "last_source_check": "2026-09-02",
       "latest_source_period": "2026-06",
       "status": "fresh",
       "history_start": "2019-07",
@@ -58651,7 +58715,7 @@
       "access_tier": "public",
       "source_series_id": "FLRHIOTA",
       "source_table": "housing_lending_rates",
-      "last_source_check": "2026-08-20",
+      "last_source_check": "2026-09-02",
       "latest_source_period": "2026-06",
       "status": "fresh",
       "history_start": "2019-07",
@@ -59013,7 +59077,7 @@
       "access_tier": "public",
       "source_series_id": "FLRHIFTA",
       "source_table": "housing_lending_rates",
-      "last_source_check": "2026-08-20",
+      "last_source_check": "2026-09-02",
       "latest_source_period": "2026-06",
       "status": "fresh",
       "history_start": "2019-07",
@@ -59208,22 +59272,26 @@
           },
           {
             "date": "2026-08",
-            "value": 65.7
+            "value": 66.2
+          },
+          {
+            "date": "2026-09",
+            "value": 66.1
           }
         ]
       },
       "access_tier": "public",
       "source_series_id": "FXRTWI",
       "source_table": "exchange_rates",
-      "last_source_check": "2026-08-20",
-      "latest_source_period": "2026-08",
+      "last_source_check": "2026-09-02",
+      "latest_source_period": "2026-09",
       "status": "fresh",
       "history_start": "2023-01",
-      "observation_count": 44,
+      "observation_count": 45,
       "update_method": "automated",
       "source_url": "https://www.rba.gov.au/statistics/tables/csv/f11.1-data.csv",
       "source": "RBA Statistical Table F11.1 (Exchange Rates)",
-      "status_note": "Public RBA series FXRTWI; latest published observation is 2026-08 (65.7).",
+      "status_note": "Public RBA series FXRTWI; latest published observation is 2026-09 (66.1).",
       "availability_basis": "Pseudo-real-time metadata only: the latest revised historical series is used, with the stated publication lag enforced in forecasting applications."
     },
     "aud_usd": {
@@ -59410,22 +59478,26 @@
           },
           {
             "date": "2026-08",
-            "value": 0.7116
+            "value": 0.7166
+          },
+          {
+            "date": "2026-09",
+            "value": 0.7143
           }
         ]
       },
       "access_tier": "public",
       "source_series_id": "FXRUSD",
       "source_table": "exchange_rates",
-      "last_source_check": "2026-08-20",
-      "latest_source_period": "2026-08",
+      "last_source_check": "2026-09-02",
+      "latest_source_period": "2026-09",
       "status": "fresh",
       "history_start": "2023-01",
-      "observation_count": 44,
+      "observation_count": 45,
       "update_method": "automated",
       "source_url": "https://www.rba.gov.au/statistics/tables/csv/f11.1-data.csv",
       "source": "RBA Statistical Table F11.1 (Exchange Rates)",
-      "status_note": "Public RBA series FXRUSD; latest published observation is 2026-08 (0.7116).",
+      "status_note": "Public RBA series FXRUSD; latest published observation is 2026-09 (0.7143).",
       "availability_basis": "Pseudo-real-time metadata only: the latest revised historical series is used, with the stated publication lag enforced in forecasting applications."
     },
     "commodity_price_index_aud": {
@@ -61524,7 +61596,7 @@
           },
           {
             "date": "2025-12",
-            "value": 103.6
+            "value": 102.9
           },
           {
             "date": "2026-01",
@@ -61536,38 +61608,42 @@
           },
           {
             "date": "2026-03",
-            "value": 104.6
+            "value": 104.8
           },
           {
             "date": "2026-04",
-            "value": 105.2
+            "value": 105.9
           },
           {
             "date": "2026-05",
-            "value": 102.8
+            "value": 103.9
           },
           {
             "date": "2026-06",
-            "value": 102.1
+            "value": 104.8
           },
           {
             "date": "2026-07",
-            "value": 103.3
+            "value": 104.9
+          },
+          {
+            "date": "2026-08",
+            "value": 105.0
           }
         ]
       },
       "access_tier": "public",
       "source_series_id": "GRCPAIAD",
       "source_table": "commodity_prices",
-      "last_source_check": "2026-08-20",
-      "latest_source_period": "2026-07",
+      "last_source_check": "2026-09-02",
+      "latest_source_period": "2026-08",
       "status": "fresh",
       "history_start": "1982-07",
-      "observation_count": 529,
+      "observation_count": 530,
       "update_method": "automated",
       "source_url": "https://www.rba.gov.au/statistics/tables/csv/i2-data.csv",
       "source": "RBA Statistical Table I2 (Commodity Prices)",
-      "status_note": "Public RBA series GRCPAIAD; latest published observation is 2026-07 (103.3).",
+      "status_note": "Public RBA series GRCPAIAD; latest published observation is 2026-08 (105.0).",
       "availability_basis": "Pseudo-real-time metadata only: the latest revised historical series is used, with the stated publication lag enforced in forecasting applications."
     },
     "corporate_bbb_yield_5y": {
@@ -62621,7 +62697,7 @@
       "access_tier": "public",
       "source_series_id": "FNFYBBB5M",
       "source_table": "corporate_bond_yields",
-      "last_source_check": "2026-08-20",
+      "last_source_check": "2026-09-02",
       "latest_source_period": "2026-07",
       "status": "fresh",
       "history_start": "2005-01",
@@ -63108,7 +63184,7 @@
       "source_series_id": "FZCY200D",
       "source_table": "zero_coupon_yields",
       "methodology_note": "RBA F17 analytical zero-coupon yield; useful for research and synthetic repricing, but not itself an investable bond-return series. The current public history begins in 2017.",
-      "last_source_check": "2026-08-20",
+      "last_source_check": "2026-09-02",
       "latest_source_period": "2026-07",
       "status": "fresh",
       "history_start": "2017-01",
@@ -63595,7 +63671,7 @@
       "source_series_id": "FZCY500D",
       "source_table": "zero_coupon_yields",
       "methodology_note": "RBA F17 analytical zero-coupon yield; useful for research and synthetic repricing, but not itself an investable bond-return series. The current public history begins in 2017.",
-      "last_source_check": "2026-08-20",
+      "last_source_check": "2026-09-02",
       "latest_source_period": "2026-07",
       "status": "fresh",
       "history_start": "2017-01",
@@ -64082,7 +64158,7 @@
       "source_series_id": "FZCY800D",
       "source_table": "zero_coupon_yields",
       "methodology_note": "RBA F17 analytical zero-coupon yield; useful for research and synthetic repricing, but not itself an investable bond-return series. The current public history begins in 2017.",
-      "last_source_check": "2026-08-20",
+      "last_source_check": "2026-09-02",
       "latest_source_period": "2026-07",
       "status": "fresh",
       "history_start": "2017-01",
@@ -64569,7 +64645,7 @@
       "source_series_id": "FZCY900D",
       "source_table": "zero_coupon_yields",
       "methodology_note": "RBA F17 analytical zero-coupon yield; useful for research and synthetic repricing, but not itself an investable bond-return series. The current public history begins in 2017.",
-      "last_source_check": "2026-08-20",
+      "last_source_check": "2026-09-02",
       "latest_source_period": "2026-07",
       "status": "fresh",
       "history_start": "2017-01",
@@ -65056,7 +65132,7 @@
       "source_series_id": "FZCY1000D",
       "source_table": "zero_coupon_yields",
       "methodology_note": "RBA F17 analytical zero-coupon yield; useful for research and synthetic repricing, but not itself an investable bond-return series. The current public history begins in 2017.",
-      "last_source_check": "2026-08-20",
+      "last_source_check": "2026-09-02",
       "latest_source_period": "2026-07",
       "status": "fresh",
       "history_start": "2017-01",
@@ -65986,7 +66062,7 @@
       },
       "access_tier": "public",
       "methodology_note": "Linked BIS history: state-capital median prices to 1986 Q2, detached houses in eight cities to 2003 Q2, all dwellings in eight cities to 2021 Q4, and national all-dwelling coverage thereafter. Do not interpret the joins as a single unchanged hedonic sample.",
-      "last_source_check": "2026-08-20",
+      "last_source_check": "2026-09-02",
       "latest_source_period": "2026-Q1",
       "status": "fresh",
       "history_start": "1970-Q1",
@@ -66902,11 +66978,11 @@
           },
           {
             "date": "2025-Q4",
-            "value": 140.6306
+            "value": 140.6283
           },
           {
             "date": "2026-Q1",
-            "value": 141.8838
+            "value": 141.8785
           }
         ],
         "Sydney": [],
@@ -66916,7 +66992,7 @@
       },
       "access_tier": "public",
       "methodology_note": "Linked BIS history: state-capital median prices to 1986 Q2, detached houses in eight cities to 2003 Q2, all dwellings in eight cities to 2021 Q4, and national all-dwelling coverage thereafter. Do not interpret the joins as a single unchanged hedonic sample.",
-      "last_source_check": "2026-08-20",
+      "last_source_check": "2026-09-02",
       "latest_source_period": "2026-Q1",
       "status": "fresh",
       "history_start": "1970-Q1",
@@ -67554,7 +67630,7 @@
       },
       "access_tier": "public",
       "methodology_note": "Latest revised history; use release-lag metadata in pseudo-real-time backtests.",
-      "last_source_check": "2026-08-20",
+      "last_source_check": "2026-09-02",
       "latest_source_period": "2026-Q1",
       "status": "fresh",
       "history_start": "1988-Q2",
@@ -68188,7 +68264,7 @@
       },
       "access_tier": "public",
       "methodology_note": "Latest revised history; use release-lag metadata in pseudo-real-time backtests.",
-      "last_source_check": "2026-08-20",
+      "last_source_check": "2026-09-02",
       "latest_source_period": "2026-Q1",
       "status": "fresh",
       "history_start": "1988-Q3",
@@ -68798,7 +68874,7 @@
       },
       "access_tier": "public",
       "methodology_note": "Latest revised history; use release-lag metadata in pseudo-real-time backtests.",
-      "last_source_check": "2026-08-20",
+      "last_source_check": "2026-09-02",
       "latest_source_period": "2026-Q1",
       "status": "fresh",
       "history_start": "1990-Q1",
@@ -69104,7 +69180,7 @@
       },
       "access_tier": "public",
       "methodology_note": "Latest revised history; use release-lag metadata in pseudo-real-time backtests.",
-      "last_source_check": "2026-08-20",
+      "last_source_check": "2026-09-02",
       "latest_source_period": "2026-Q1",
       "status": "fresh",
       "history_start": "2009-Q1",
@@ -69410,7 +69486,7 @@
       },
       "access_tier": "public",
       "methodology_note": "Latest revised history; use release-lag metadata in pseudo-real-time backtests.",
-      "last_source_check": "2026-08-20",
+      "last_source_check": "2026-09-02",
       "latest_source_period": "2026-Q1",
       "status": "fresh",
       "history_start": "2009-Q1",
@@ -69716,7 +69792,7 @@
       },
       "access_tier": "public",
       "methodology_note": "Latest revised history; use release-lag metadata in pseudo-real-time backtests.",
-      "last_source_check": "2026-08-20",
+      "last_source_check": "2026-09-02",
       "latest_source_period": "2026-Q1",
       "status": "fresh",
       "history_start": "2009-Q1",
@@ -73089,7 +73165,7 @@
       },
       "access_tier": "public",
       "methodology_note": "Latest revised history; use release-lag metadata in pseudo-real-time backtests.",
-      "last_source_check": "2026-08-20",
+      "last_source_check": "2026-09-02",
       "latest_source_period": "2026-Q1",
       "status": "fresh",
       "history_start": "1984-Q3",
@@ -76475,7 +76551,7 @@
       },
       "access_tier": "public",
       "methodology_note": "Latest revised history; use release-lag metadata in pseudo-real-time backtests.",
-      "last_source_check": "2026-08-20",
+      "last_source_check": "2026-09-02",
       "latest_source_period": "2026-Q1",
       "status": "fresh",
       "history_start": "1984-Q3",
@@ -80101,7 +80177,7 @@
       },
       "access_tier": "public",
       "methodology_note": "Latest revised history; use release-lag metadata in pseudo-real-time backtests.",
-      "last_source_check": "2026-08-20",
+      "last_source_check": "2026-09-02",
       "latest_source_period": "2025-Q4",
       "status": "fresh",
       "history_start": "1981-Q2",
@@ -83727,7 +83803,7 @@
       },
       "access_tier": "public",
       "methodology_note": "Latest revised history; use release-lag metadata in pseudo-real-time backtests.",
-      "last_source_check": "2026-08-20",
+      "last_source_check": "2026-09-02",
       "latest_source_period": "2025-Q4",
       "status": "fresh",
       "history_start": "1981-Q2",
@@ -83881,7 +83957,7 @@
       },
       "access_tier": "public",
       "methodology_note": "Latest revised public history; apply the stated release lag in pseudo-real-time tests.",
-      "last_source_check": "2026-08-20",
+      "last_source_check": "2026-09-02",
       "latest_source_period": "2026-Q1",
       "status": "fresh",
       "history_start": "2019-Q1",
@@ -84022,7 +84098,7 @@
       },
       "access_tier": "public",
       "methodology_note": "Latest revised public history; apply the stated release lag in pseudo-real-time tests.",
-      "last_source_check": "2026-08-20",
+      "last_source_check": "2026-09-02",
       "latest_source_period": "2026-Q1",
       "status": "fresh",
       "history_start": "2019-Q1",
@@ -84163,7 +84239,7 @@
       },
       "access_tier": "public",
       "methodology_note": "Latest revised public history; apply the stated release lag in pseudo-real-time tests.",
-      "last_source_check": "2026-08-20",
+      "last_source_check": "2026-09-02",
       "latest_source_period": "2026-Q1",
       "status": "fresh",
       "history_start": "2019-Q1",
@@ -84304,7 +84380,7 @@
       },
       "access_tier": "public",
       "methodology_note": "Latest revised public history; apply the stated release lag in pseudo-real-time tests.",
-      "last_source_check": "2026-08-20",
+      "last_source_check": "2026-09-02",
       "latest_source_period": "2026-Q1",
       "status": "fresh",
       "history_start": "2019-Q1",
@@ -84441,7 +84517,7 @@
       },
       "access_tier": "public",
       "methodology_note": "Latest revised public history; apply the stated release lag in pseudo-real-time tests.",
-      "last_source_check": "2026-08-20",
+      "last_source_check": "2026-09-02",
       "latest_source_period": "2026-Q2",
       "status": "fresh",
       "history_start": "2019-Q3",
@@ -84577,7 +84653,7 @@
       },
       "access_tier": "public",
       "methodology_note": "Latest revised public history; apply the stated release lag in pseudo-real-time tests.",
-      "last_source_check": "2026-08-20",
+      "last_source_check": "2026-09-02",
       "latest_source_period": "2026-Q2",
       "status": "fresh",
       "history_start": "2019-Q3",
@@ -84788,6 +84864,10 @@
           {
             "date": "2026-06",
             "value": 102.64
+          },
+          {
+            "date": "2026-07",
+            "value": 103.0
           }
         ],
         "Sydney": [
@@ -84982,6 +85062,10 @@
           {
             "date": "2026-06",
             "value": 102.66
+          },
+          {
+            "date": "2026-07",
+            "value": 103.0
           }
         ],
         "Melbourne": [
@@ -85176,6 +85260,10 @@
           {
             "date": "2026-06",
             "value": 101.78
+          },
+          {
+            "date": "2026-07",
+            "value": 102.04
           }
         ],
         "Brisbane": [
@@ -85370,6 +85458,10 @@
           {
             "date": "2026-06",
             "value": 103.38
+          },
+          {
+            "date": "2026-07",
+            "value": 103.86
           }
         ],
         "Perth": [
@@ -85564,22 +85656,26 @@
           {
             "date": "2026-06",
             "value": 103.8
+          },
+          {
+            "date": "2026-07",
+            "value": 104.36
           }
         ]
       },
       "access_tier": "public",
       "methodology_note": "ABS introduced complete monthly CPI publication and a new rents data source from July 2022. This series deliberately avoids mechanically splicing differently referenced older quarterly indexes.",
-      "last_source_check": "2026-08-20",
-      "latest_source_period": "2026-06",
+      "last_source_check": "2026-09-02",
+      "latest_source_period": "2026-07",
       "status": "fresh",
       "history_start": "2022-07",
-      "observation_count": 48,
+      "observation_count": 49,
       "observation_count_by_region": {
-        "National": 48,
-        "Sydney": 48,
-        "Melbourne": 48,
-        "Brisbane": 48,
-        "Perth": 48
+        "National": 49,
+        "Sydney": 49,
+        "Melbourne": 49,
+        "Brisbane": 49,
+        "Perth": 49
       },
       "update_method": "automated",
       "source_url": "https://www.abs.gov.au/statistics/economy/price-indexes-and-inflation/consumer-price-index-australia/latest-release",
@@ -87548,7 +87644,7 @@
       },
       "access_tier": "public",
       "methodology_note": "Latest revised public history; apply the stated release lag in pseudo-real-time tests.",
-      "last_source_check": "2026-08-20",
+      "last_source_check": "2026-09-02",
       "latest_source_period": "2026-Q1",
       "status": "fresh",
       "history_start": "2002-Q1",
@@ -88767,7 +88863,7 @@
       },
       "access_tier": "public",
       "methodology_note": "Latest revised public history; apply the stated release lag in pseudo-real-time tests.",
-      "last_source_check": "2026-08-20",
+      "last_source_check": "2026-09-02",
       "latest_source_period": "2026-Q1",
       "status": "fresh",
       "history_start": "2011-Q3",
@@ -89286,7 +89382,7 @@
       },
       "access_tier": "public",
       "methodology_note": "Latest revised public history; apply the stated release lag in pseudo-real-time tests.",
-      "last_source_check": "2026-08-20",
+      "last_source_check": "2026-09-02",
       "latest_source_period": "2025",
       "status": "fresh",
       "history_start": "2002",
@@ -89332,10 +89428,10 @@
       "methodology_note": "The cash rate is carried to each CPI observation period. This is an analytical proxy, not an expected real rate.",
       "derivation_version": 3,
       "status": "fresh",
-      "last_source_check": "2026-08-20",
-      "latest_source_period": "2026-06",
+      "last_source_check": "2026-09-02",
+      "latest_source_period": "2026-07",
       "history_start": "1990-03",
-      "observation_count": 156,
+      "observation_count": 157,
       "access_tier": "calculated from public inputs",
       "update_method": "automated derivation",
       "data": {
@@ -89918,7 +90014,7 @@
           },
           {
             "date": "2025-07",
-            "value": 0.85
+            "value": 0.75
           },
           {
             "date": "2025-08",
@@ -89958,10 +90054,14 @@
           },
           {
             "date": "2026-05",
-            "value": 0.75
+            "value": 0.85
           },
           {
             "date": "2026-06",
+            "value": 0.75
+          },
+          {
+            "date": "2026-07",
             "value": 0.75
           }
         ]
@@ -89994,7 +90094,7 @@
       "methodology_note": "The latest CPI observation at or before each mortgage-rate month is used. Borrower-specific rates differ from this system average.",
       "derivation_version": 3,
       "status": "fresh",
-      "last_source_check": "2026-08-20",
+      "last_source_check": "2026-09-02",
       "latest_source_period": "2026-06",
       "history_start": "2019-07",
       "observation_count": 84,
@@ -90368,7 +90468,7 @@
       "methodology_note": "The latest cash-rate setting in each mortgage-rate month is used.",
       "derivation_version": 3,
       "status": "fresh",
-      "last_source_check": "2026-08-20",
+      "last_source_check": "2026-09-02",
       "latest_source_period": "2026-06",
       "history_start": "2019-07",
       "observation_count": 84,
@@ -90742,7 +90842,7 @@
       "methodology_note": "The latest CPI observation at or before each wage quarter is used. This is a growth differential, not a household-income level.",
       "derivation_version": 3,
       "status": "fresh",
-      "last_source_check": "2026-08-20",
+      "last_source_check": "2026-09-02",
       "latest_source_period": "2026-Q2",
       "history_start": "2011-Q2",
       "observation_count": 61,
@@ -91024,7 +91124,7 @@
       "methodology_note": "The latest CPI observation at or before each wage quarter is used. This is a growth differential, not a household-income level.",
       "derivation_version": 3,
       "status": "fresh",
-      "last_source_check": "2026-08-20",
+      "last_source_check": "2026-09-02",
       "latest_source_period": "2026-Q2",
       "history_start": "2011-Q2",
       "observation_count": 61,
@@ -91306,7 +91406,7 @@
       "methodology_note": "Calculated from matched monthly FRED observations.",
       "derivation_version": 3,
       "status": "fresh",
-      "last_source_check": "2026-08-20",
+      "last_source_check": "2026-09-02",
       "latest_source_period": "2026-08",
       "history_start": "1962-01",
       "observation_count": 776,
@@ -94416,7 +94516,7 @@
           },
           {
             "date": "2026-08",
-            "value": 0.45
+            "value": 0.35
           }
         ]
       }
@@ -94444,7 +94544,7 @@
       "methodology_note": "Aggregate value divided by aggregate count. It is not the ABS median loan size and excludes refinancing consistently with the inputs.",
       "derivation_version": 3,
       "status": "fresh",
-      "last_source_check": "2026-08-20",
+      "last_source_check": "2026-09-02",
       "latest_source_period": "2026-Q2",
       "history_start": "2019-Q3",
       "observation_count": 28,
@@ -94590,7 +94690,7 @@
       "methodology_note": "The numerator sums eight capital cities while the available denominator is Australia-wide dwelling stock, so the level understates a like-for-like capital-city turnover rate. It is not annualised and can include transfers that are not ordinary arm's-length sales.",
       "derivation_version": 3,
       "status": "fresh",
-      "last_source_check": "2026-08-20",
+      "last_source_check": "2026-09-02",
       "latest_source_period": "2026-Q1",
       "history_start": "2011-Q3",
       "observation_count": 59,
@@ -94864,10 +94964,10 @@
       "methodology_note": "The latest quarterly house-price observation is carried to each monthly rent observation. This is an indexed proxy, not a dollar price-to-annual-rent multiple.",
       "derivation_version": 3,
       "status": "fresh",
-      "last_source_check": "2026-08-20",
-      "latest_source_period": "2026-06",
+      "last_source_check": "2026-09-02",
+      "latest_source_period": "2026-07",
       "history_start": "2022-07",
-      "observation_count": 48,
+      "observation_count": 49,
       "access_tier": "calculated from public inputs",
       "update_method": "automated derivation",
       "data": {
@@ -95063,6 +95163,10 @@
           {
             "date": "2026-06",
             "value": 95.47
+          },
+          {
+            "date": "2026-07",
+            "value": 95.14
           }
         ]
       }
@@ -95095,7 +95199,7 @@
       "methodology_note": "The latest available semiannual earnings observation is carried to each lending quarter. This is not household disposable income and is not an individual loan-serviceability measure.",
       "derivation_version": 3,
       "status": "fresh",
-      "last_source_check": "2026-08-20",
+      "last_source_check": "2026-09-02",
       "latest_source_period": "2026-Q2",
       "history_start": "2019-Q3",
       "observation_count": 28,
@@ -95243,10 +95347,10 @@
       "methodology_note": "All inputs are sign-aligned so higher means riskier, shifted by an estimated three-month release lag and standardised using expanding history only.",
       "derivation_version": 3,
       "status": "fresh",
-      "last_source_check": "2026-08-20",
-      "latest_source_period": "2026-08",
+      "last_source_check": "2026-09-02",
+      "latest_source_period": "2026-09",
       "history_start": "2022-03",
-      "observation_count": 54,
+      "observation_count": 55,
       "access_tier": "calculated from public inputs",
       "update_method": "automated derivation",
       "data": {
@@ -95466,6 +95570,10 @@
           {
             "date": "2026-08",
             "value": 0.4703
+          },
+          {
+            "date": "2026-09",
+            "value": 0.4703
           }
         ]
       }
@@ -95497,7 +95605,7 @@
       "methodology_note": "Population is matched as of each completion quarter. State/city extensions should retain the existing state-proxy labels.",
       "derivation_version": 3,
       "status": "fresh",
-      "last_source_check": "2026-08-20",
+      "last_source_check": "2026-09-02",
       "latest_source_period": "2026-Q1",
       "history_start": "1985-Q2",
       "observation_count": 164,
@@ -96191,7 +96299,7 @@
       "methodology_note": "Uses a fixed 2.5 persons-per-dwelling assumption for transparency. Future work should replace it with household-formation projections and account for demolitions and vacant stock.",
       "derivation_version": 3,
       "status": "fresh",
-      "last_source_check": "2026-08-20",
+      "last_source_check": "2026-09-02",
       "latest_source_period": "2025-Q4",
       "history_start": "1985-Q2",
       "observation_count": 163,
@@ -96878,7 +96986,7 @@
       "methodology_note": "Segment counts are imputed from aggregate commitment counts and published count shares. The impulse is the annual change in the segment's year-on-year growth rate, not a dollar credit-flow measure.",
       "derivation_version": 3,
       "status": "fresh",
-      "last_source_check": "2026-08-20",
+      "last_source_check": "2026-09-02",
       "latest_source_period": "2026-Q2",
       "history_start": "2021-Q3",
       "observation_count": 20,
@@ -96992,7 +97100,7 @@
       "methodology_note": "Segment counts are imputed from aggregate commitment counts and published count shares. The impulse is the annual change in the segment's year-on-year growth rate, not a dollar credit-flow measure.",
       "derivation_version": 3,
       "status": "fresh",
-      "last_source_check": "2026-08-20",
+      "last_source_check": "2026-09-02",
       "latest_source_period": "2026-Q2",
       "history_start": "2021-Q3",
       "observation_count": 20,
@@ -97105,10 +97213,10 @@
       "methodology_note": "Calculated only where an observation exists exactly 12 months earlier.",
       "derivation_version": 3,
       "status": "fresh",
-      "last_source_check": "2026-08-20",
-      "latest_source_period": "2026-06",
+      "last_source_check": "2026-09-02",
+      "latest_source_period": "2026-07",
       "history_start": "1984-07",
-      "observation_count": 504,
+      "observation_count": 505,
       "access_tier": "calculated from public inputs",
       "update_method": "automated derivation",
       "data": {
@@ -98411,7 +98519,7 @@
           },
           {
             "date": "2011-07",
-            "value": -14.04
+            "value": -14.05
           },
           {
             "date": "2011-08",
@@ -98423,7 +98531,7 @@
           },
           {
             "date": "2011-10",
-            "value": -27.22
+            "value": -27.23
           },
           {
             "date": "2011-11",
@@ -98435,19 +98543,19 @@
           },
           {
             "date": "2012-01",
-            "value": -14.71
+            "value": -14.75
           },
           {
             "date": "2012-02",
-            "value": -9.18
+            "value": -9.15
           },
           {
             "date": "2012-03",
-            "value": -15.6
+            "value": -15.58
           },
           {
             "date": "2012-04",
-            "value": -20.83
+            "value": -20.86
           },
           {
             "date": "2012-05",
@@ -98455,83 +98563,83 @@
           },
           {
             "date": "2012-06",
-            "value": 17.42
+            "value": 17.47
           },
           {
             "date": "2012-07",
-            "value": -9.75
+            "value": -9.78
           },
           {
             "date": "2012-08",
-            "value": -9.33
+            "value": -9.31
           },
           {
             "date": "2012-09",
-            "value": 24.98
+            "value": 25.0
           },
           {
             "date": "2012-10",
-            "value": 25.18
+            "value": 25.19
           },
           {
             "date": "2012-11",
-            "value": 19.77
+            "value": 19.75
           },
           {
             "date": "2012-12",
-            "value": 20.21
+            "value": 20.22
           },
           {
             "date": "2013-01",
-            "value": 10.91
+            "value": 10.95
           },
           {
             "date": "2013-02",
-            "value": 17.52
+            "value": 17.48
           },
           {
             "date": "2013-03",
-            "value": 13.15
+            "value": 13.11
           },
           {
             "date": "2013-04",
-            "value": 36.62
+            "value": 36.58
           },
           {
             "date": "2013-05",
-            "value": 2.58
+            "value": 2.62
           },
           {
             "date": "2013-06",
-            "value": -8.12
+            "value": -8.15
           },
           {
             "date": "2013-07",
-            "value": 27.4
+            "value": 27.46
           },
           {
             "date": "2013-08",
-            "value": 13.18
+            "value": 13.2
           },
           {
             "date": "2013-09",
-            "value": 20.99
+            "value": 20.89
           },
           {
             "date": "2013-10",
-            "value": 22.36
+            "value": 22.37
           },
           {
             "date": "2013-11",
-            "value": 24.13
+            "value": 24.21
           },
           {
             "date": "2013-12",
-            "value": 20.92
+            "value": 20.8
           },
           {
             "date": "2014-01",
-            "value": 39.75
+            "value": 39.8
           },
           {
             "date": "2014-02",
@@ -98539,19 +98647,19 @@
           },
           {
             "date": "2014-03",
-            "value": 20.01
+            "value": 20.03
           },
           {
             "date": "2014-04",
-            "value": 8.49
+            "value": 8.57
           },
           {
             "date": "2014-05",
-            "value": 18.42
+            "value": 18.43
           },
           {
             "date": "2014-06",
-            "value": 21.8
+            "value": 21.67
           },
           {
             "date": "2014-07",
@@ -98559,23 +98667,23 @@
           },
           {
             "date": "2014-08",
-            "value": 24.23
+            "value": 24.17
           },
           {
             "date": "2014-09",
-            "value": -12.13
+            "value": -12.14
           },
           {
             "date": "2014-10",
-            "value": 2.41
+            "value": 2.47
           },
           {
             "date": "2014-11",
-            "value": 16.16
+            "value": 16.15
           },
           {
             "date": "2014-12",
-            "value": 17.3
+            "value": 17.41
           },
           {
             "date": "2015-01",
@@ -98587,47 +98695,47 @@
           },
           {
             "date": "2015-03",
-            "value": 29.48
+            "value": 29.29
           },
           {
             "date": "2015-04",
-            "value": 18.41
+            "value": 18.49
           },
           {
             "date": "2015-05",
-            "value": 24.5
+            "value": 24.44
           },
           {
             "date": "2015-06",
-            "value": 16.29
+            "value": 16.34
           },
           {
             "date": "2015-07",
-            "value": 16.61
+            "value": 16.65
           },
           {
             "date": "2015-08",
-            "value": 4.35
+            "value": 4.38
           },
           {
             "date": "2015-09",
-            "value": 22.69
+            "value": 22.8
           },
           {
             "date": "2015-10",
-            "value": 20.4
+            "value": 20.41
           },
           {
             "date": "2015-11",
-            "value": -6.43
+            "value": -6.49
           },
           {
             "date": "2015-12",
-            "value": -0.83
+            "value": -0.84
           },
           {
             "date": "2016-01",
-            "value": -6.79
+            "value": -6.82
           },
           {
             "date": "2016-02",
@@ -98635,51 +98743,51 @@
           },
           {
             "date": "2016-03",
-            "value": -1.74
+            "value": -1.62
           },
           {
             "date": "2016-04",
-            "value": 10.4
+            "value": 10.34
           },
           {
             "date": "2016-05",
-            "value": -3.36
+            "value": -3.4
           },
           {
             "date": "2016-06",
-            "value": -4.76
+            "value": -4.69
           },
           {
             "date": "2016-07",
-            "value": 9.46
+            "value": 9.41
           },
           {
             "date": "2016-08",
-            "value": 12.02
+            "value": 12.0
           },
           {
             "date": "2016-09",
-            "value": -4.67
+            "value": -4.69
           },
           {
             "date": "2016-10",
-            "value": -23.72
+            "value": -23.76
           },
           {
             "date": "2016-11",
-            "value": -3.22
+            "value": -3.18
           },
           {
             "date": "2016-12",
-            "value": -9.12
+            "value": -9.08
           },
           {
             "date": "2017-01",
-            "value": -8.11
+            "value": -8.1
           },
           {
             "date": "2017-02",
-            "value": -3.52
+            "value": -3.53
           },
           {
             "date": "2017-03",
@@ -98687,15 +98795,15 @@
           },
           {
             "date": "2017-04",
-            "value": -12.32
+            "value": -12.35
           },
           {
             "date": "2017-05",
-            "value": -16.38
+            "value": -16.33
           },
           {
             "date": "2017-06",
-            "value": 0.72
+            "value": 0.69
           },
           {
             "date": "2017-07",
@@ -98707,23 +98815,23 @@
           },
           {
             "date": "2017-09",
-            "value": 2.19
+            "value": 2.2
           },
           {
             "date": "2017-10",
-            "value": 18.42
+            "value": 18.43
           },
           {
             "date": "2017-11",
-            "value": 24.85
+            "value": 24.84
           },
           {
             "date": "2017-12",
-            "value": -3.12
+            "value": -3.17
           },
           {
             "date": "2018-01",
-            "value": 12.41
+            "value": 12.39
           },
           {
             "date": "2018-02",
@@ -98751,27 +98859,27 @@
           },
           {
             "date": "2018-08",
-            "value": -13.99
+            "value": -13.97
           },
           {
             "date": "2018-09",
-            "value": -15.09
+            "value": -15.08
           },
           {
             "date": "2018-10",
-            "value": -13.57
+            "value": -13.59
           },
           {
             "date": "2018-11",
-            "value": -34.08
+            "value": -34.06
           },
           {
             "date": "2018-12",
-            "value": -20.6
+            "value": -20.58
           },
           {
             "date": "2019-01",
-            "value": -24.6
+            "value": -24.55
           },
           {
             "date": "2019-02",
@@ -98779,135 +98887,135 @@
           },
           {
             "date": "2019-03",
-            "value": -23.19
+            "value": -23.21
           },
           {
             "date": "2019-04",
-            "value": -21.55
+            "value": -21.56
           },
           {
             "date": "2019-05",
-            "value": -18.7
+            "value": -18.69
           },
           {
             "date": "2019-06",
-            "value": -24.05
+            "value": -24.03
           },
           {
             "date": "2019-07",
-            "value": -28.04
+            "value": -28.08
           },
           {
             "date": "2019-08",
-            "value": -15.73
+            "value": -15.69
           },
           {
             "date": "2019-09",
-            "value": -12.08
+            "value": -12.14
           },
           {
             "date": "2019-10",
-            "value": -18.21
+            "value": -18.16
           },
           {
             "date": "2019-11",
-            "value": -1.05
+            "value": -1.04
           },
           {
             "date": "2019-12",
-            "value": 12.02
+            "value": 11.98
           },
           {
             "date": "2020-01",
-            "value": -8.08
+            "value": -8.11
           },
           {
             "date": "2020-02",
-            "value": -1.97
+            "value": -1.91
           },
           {
             "date": "2020-03",
-            "value": 1.14
+            "value": 1.04
           },
           {
             "date": "2020-04",
-            "value": 3.7
+            "value": 3.74
           },
           {
             "date": "2020-05",
-            "value": -6.88
+            "value": -6.85
           },
           {
             "date": "2020-06",
-            "value": -12.71
+            "value": -12.76
           },
           {
             "date": "2020-07",
-            "value": 11.94
+            "value": 11.99
           },
           {
             "date": "2020-08",
-            "value": 5.79
+            "value": 5.74
           },
           {
             "date": "2020-09",
-            "value": 9.95
+            "value": 10.03
           },
           {
             "date": "2020-10",
-            "value": 24.4
+            "value": 24.42
           },
           {
             "date": "2020-11",
-            "value": 18.95
+            "value": 18.82
           },
           {
             "date": "2020-12",
-            "value": 17.83
+            "value": 17.94
           },
           {
             "date": "2021-01",
-            "value": 28.9
+            "value": 28.95
           },
           {
             "date": "2021-02",
-            "value": 22.07
+            "value": 22.01
           },
           {
             "date": "2021-03",
-            "value": 49.57
+            "value": 49.36
           },
           {
             "date": "2021-04",
-            "value": 36.58
+            "value": 36.69
           },
           {
             "date": "2021-05",
-            "value": 56.37
+            "value": 56.12
           },
           {
             "date": "2021-06",
-            "value": 51.34
+            "value": 51.38
           },
           {
             "date": "2021-07",
-            "value": 23.49
+            "value": 23.6
           },
           {
             "date": "2021-08",
-            "value": 32.12
+            "value": 32.19
           },
           {
             "date": "2021-09",
-            "value": 15.93
+            "value": 15.92
           },
           {
             "date": "2021-10",
-            "value": -6.28
+            "value": -6.34
           },
           {
             "date": "2021-11",
-            "value": -8.19
+            "value": -8.17
           },
           {
             "date": "2021-12",
@@ -98915,59 +99023,59 @@
           },
           {
             "date": "2022-01",
-            "value": -17.45
+            "value": -17.51
           },
           {
             "date": "2022-02",
-            "value": -7.81
+            "value": -7.83
           },
           {
             "date": "2022-03",
-            "value": -34.69
+            "value": -34.58
           },
           {
             "date": "2022-04",
-            "value": -22.65
+            "value": -22.74
           },
           {
             "date": "2022-05",
-            "value": -21.36
+            "value": -21.33
           },
           {
             "date": "2022-06",
-            "value": -16.32
+            "value": -16.31
           },
           {
             "date": "2022-07",
-            "value": -24.01
+            "value": -23.99
           },
           {
             "date": "2022-08",
-            "value": -10.63
+            "value": -10.72
           },
           {
             "date": "2022-09",
-            "value": -10.3
+            "value": -10.25
           },
           {
             "date": "2022-10",
-            "value": -4.55
+            "value": -4.73
           },
           {
             "date": "2022-11",
-            "value": -8.61
+            "value": -8.52
           },
           {
             "date": "2022-12",
-            "value": -0.15
+            "value": -0.04
           },
           {
             "date": "2023-01",
-            "value": -9.07
+            "value": -9.12
           },
           {
             "date": "2023-02",
-            "value": -27.09
+            "value": -27.11
           },
           {
             "date": "2023-03",
@@ -98975,71 +99083,71 @@
           },
           {
             "date": "2023-04",
-            "value": -17.65
+            "value": -17.66
           },
           {
             "date": "2023-05",
-            "value": -5.38
+            "value": -5.66
           },
           {
             "date": "2023-06",
-            "value": -15.75
+            "value": -15.8
           },
           {
             "date": "2023-07",
-            "value": -9.6
+            "value": -9.56
           },
           {
             "date": "2023-08",
-            "value": -22.03
+            "value": -21.81
           },
           {
             "date": "2023-09",
-            "value": -17.22
+            "value": -17.34
           },
           {
             "date": "2023-10",
-            "value": -7.07
+            "value": -7.11
           },
           {
             "date": "2023-11",
-            "value": -2.85
+            "value": -2.6
           },
           {
             "date": "2023-12",
-            "value": -18.06
+            "value": -18.27
           },
           {
             "date": "2024-01",
-            "value": 6.55
+            "value": 6.63
           },
           {
             "date": "2024-02",
-            "value": -3.58
+            "value": -3.45
           },
           {
             "date": "2024-03",
-            "value": 1.87
+            "value": 1.71
           },
           {
             "date": "2024-04",
-            "value": 4.21
+            "value": 3.84
           },
           {
             "date": "2024-05",
-            "value": -6.83
+            "value": -6.45
           },
           {
             "date": "2024-06",
-            "value": -3.08
+            "value": -3.31
           },
           {
             "date": "2024-07",
-            "value": 16.79
+            "value": 17.04
           },
           {
             "date": "2024-08",
-            "value": 8.26
+            "value": 8.2
           },
           {
             "date": "2024-09",
@@ -99047,87 +99155,91 @@
           },
           {
             "date": "2024-10",
-            "value": 11.84
+            "value": 12.2
           },
           {
             "date": "2024-11",
-            "value": 5.77
+            "value": 5.47
           },
           {
             "date": "2024-12",
-            "value": 12.11
+            "value": 11.84
           },
           {
             "date": "2025-01",
-            "value": 18.12
+            "value": 18.44
           },
           {
             "date": "2025-02",
-            "value": 28.06
+            "value": 27.9
           },
           {
             "date": "2025-03",
-            "value": 15.82
+            "value": 15.91
           },
           {
             "date": "2025-04",
-            "value": 11.95
+            "value": 12.01
           },
           {
             "date": "2025-05",
-            "value": 9.84
+            "value": 9.56
           },
           {
             "date": "2025-06",
-            "value": 27.28
+            "value": 27.14
           },
           {
             "date": "2025-07",
-            "value": 6.54
+            "value": 7.22
           },
           {
             "date": "2025-08",
-            "value": 6.26
+            "value": 6.21
           },
           {
             "date": "2025-09",
-            "value": 19.11
+            "value": 18.53
           },
           {
             "date": "2025-10",
-            "value": 0.42
+            "value": 0.53
           },
           {
             "date": "2025-11",
-            "value": 21.8
+            "value": 21.71
           },
           {
             "date": "2025-12",
-            "value": 2.25
+            "value": 2.74
           },
           {
             "date": "2026-01",
-            "value": -11.11
+            "value": -11.35
           },
           {
             "date": "2026-02",
-            "value": 18.69
+            "value": 18.65
           },
           {
             "date": "2026-03",
-            "value": 10.03
+            "value": 9.76
           },
           {
             "date": "2026-04",
-            "value": 12.1
+            "value": 12.82
           },
           {
             "date": "2026-05",
-            "value": 5.49
+            "value": 6.21
           },
           {
             "date": "2026-06",
-            "value": 8.92
+            "value": 9.49
+          },
+          {
+            "date": "2026-07",
+            "value": 9.0
           }
         ]
       }
@@ -99159,8 +99271,8 @@
       "methodology_note": "Monthly price-index levels are divided and rebased. Dividends are excluded where the component series is a price-return index.",
       "derivation_version": 3,
       "status": "fresh",
-      "last_source_check": "2026-08-20",
-      "latest_source_period": "2026-08",
+      "last_source_check": "2026-09-02",
+      "latest_source_period": "2026-09",
       "history_start": "2017-07",
       "observation_count": 110,
       "access_tier": "calculated from public inputs",
@@ -99601,11 +99713,11 @@
           },
           {
             "date": "2026-07",
-            "value": 71.26
+            "value": 68.33
           },
           {
-            "date": "2026-08",
-            "value": 71.13
+            "date": "2026-09",
+            "value": 68.15
           }
         ]
       }
@@ -99637,8 +99749,8 @@
       "methodology_note": "Monthly price-index levels are divided and rebased. Dividends are excluded where the component series is a price-return index.",
       "derivation_version": 3,
       "status": "fresh",
-      "last_source_check": "2026-08-20",
-      "latest_source_period": "2026-08",
+      "last_source_check": "2026-09-02",
+      "latest_source_period": "2026-09",
       "history_start": "2004-04",
       "observation_count": 269,
       "access_tier": "calculated from public inputs",
@@ -100715,11 +100827,11 @@
           },
           {
             "date": "2026-07",
-            "value": 38.27
+            "value": 36.66
           },
           {
-            "date": "2026-08",
-            "value": 38.19
+            "date": "2026-09",
+            "value": 36.55
           }
         ]
       }
@@ -101112,7 +101224,7 @@
           },
           {
             "date": "2025-08",
-            "value": 0.0898
+            "value": 0.0844
           },
           {
             "date": "2025-09",
@@ -101120,11 +101232,11 @@
           },
           {
             "date": "2025-10",
-            "value": -0.0344
+            "value": -0.0343
           },
           {
             "date": "2025-11",
-            "value": -0.0512
+            "value": -0.0511
           },
           {
             "date": "2025-12",
@@ -101140,7 +101252,7 @@
           },
           {
             "date": "2026-03",
-            "value": -0.0251
+            "value": -0.025
           },
           {
             "date": "2026-04",
@@ -101148,11 +101260,11 @@
           },
           {
             "date": "2026-05",
-            "value": 0.0191
+            "value": 0.0192
           },
           {
             "date": "2026-06",
-            "value": 0.0383
+            "value": 0.0439
           },
           {
             "date": "2026-07",
@@ -101160,7 +101272,11 @@
           },
           {
             "date": "2026-08",
-            "value": 0.0497
+            "value": 0.0499
+          },
+          {
+            "date": "2026-09",
+            "value": 0.0499
           }
         ],
         "Market Pricing": [
@@ -101482,7 +101598,11 @@
           },
           {
             "date": "2026-08",
-            "value": 0.2854
+            "value": 0.3305
+          },
+          {
+            "date": "2026-09",
+            "value": 0.3305
           }
         ]
       },
@@ -101797,7 +101917,7 @@
         },
         {
           "date": "2026-06",
-          "value": 88.5
+          "value": 89.7
         },
         {
           "date": "2026-07",
@@ -101805,16 +101925,20 @@
         },
         {
           "date": "2026-08",
-          "value": 98.8
+          "value": 100.0
+        },
+        {
+          "date": "2026-09",
+          "value": 100.0
         }
       ],
       "positive_direction": "tighter",
       "derivation_version": 3,
       "status": "fresh",
-      "last_source_check": "2026-08-20",
-      "latest_source_period": "2026-08",
+      "last_source_check": "2026-09-02",
+      "latest_source_period": "2026-09",
       "history_start": "2020-01",
-      "observation_count": 80,
+      "observation_count": 81,
       "access_tier": "calculated from public inputs",
       "update_method": "automated deterministic derivation",
       "data": {
@@ -102089,7 +102213,7 @@
           },
           {
             "date": "2025-08",
-            "value": 0.0481
+            "value": 0.0426
           },
           {
             "date": "2025-09",
@@ -102097,7 +102221,7 @@
           },
           {
             "date": "2025-10",
-            "value": 0.0377
+            "value": 0.0378
           },
           {
             "date": "2025-11",
@@ -102109,7 +102233,7 @@
           },
           {
             "date": "2026-01",
-            "value": 0.1674
+            "value": 0.1675
           },
           {
             "date": "2026-02",
@@ -102117,19 +102241,19 @@
           },
           {
             "date": "2026-03",
-            "value": 0.2435
+            "value": 0.2436
           },
           {
             "date": "2026-04",
-            "value": 0.2556
+            "value": 0.2557
           },
           {
             "date": "2026-05",
-            "value": 0.3265
+            "value": 0.3266
           },
           {
             "date": "2026-06",
-            "value": 0.2288
+            "value": 0.2344
           },
           {
             "date": "2026-07",
@@ -102137,7 +102261,11 @@
           },
           {
             "date": "2026-08",
-            "value": 0.335
+            "value": 0.3804
+          },
+          {
+            "date": "2026-09",
+            "value": 0.3804
           }
         ]
       }
@@ -102606,7 +102734,7 @@
           },
           {
             "date": "2025-08",
-            "value": 0.0449
+            "value": 0.0422
           },
           {
             "date": "2025-09",
@@ -102634,7 +102762,7 @@
           },
           {
             "date": "2026-03",
-            "value": -0.0126
+            "value": -0.0125
           },
           {
             "date": "2026-04",
@@ -102646,7 +102774,7 @@
           },
           {
             "date": "2026-06",
-            "value": 0.0192
+            "value": 0.022
           },
           {
             "date": "2026-07",
@@ -102654,7 +102782,11 @@
           },
           {
             "date": "2026-08",
-            "value": 0.0248
+            "value": 0.025
+          },
+          {
+            "date": "2026-09",
+            "value": 0.025
           }
         ],
         "Market Pricing": [
@@ -102976,7 +103108,11 @@
           },
           {
             "date": "2026-08",
-            "value": 0.1427
+            "value": 0.1652
+          },
+          {
+            "date": "2026-09",
+            "value": 0.1652
           }
         ],
         "Credit Availability": [
@@ -103150,7 +103286,7 @@
           },
           {
             "date": "2023-07",
-            "value": 0.3116
+            "value": 0.3128
           },
           {
             "date": "2023-08",
@@ -103162,7 +103298,7 @@
           },
           {
             "date": "2023-10",
-            "value": 0.3025
+            "value": 0.3019
           },
           {
             "date": "2023-11",
@@ -103286,7 +103422,7 @@
           },
           {
             "date": "2026-05",
-            "value": 0.0902
+            "value": 0.0914
           },
           {
             "date": "2026-06",
@@ -103298,7 +103434,11 @@
           },
           {
             "date": "2026-08",
-            "value": 0.1219
+            "value": 0.1248
+          },
+          {
+            "date": "2026-09",
+            "value": 0.1248
           }
         ],
         "Household Capacity": [
@@ -103572,7 +103712,7 @@
           },
           {
             "date": "2025-08",
-            "value": -0.0837
+            "value": -0.091
           },
           {
             "date": "2025-09",
@@ -103584,7 +103724,7 @@
           },
           {
             "date": "2025-11",
-            "value": 0.0966
+            "value": 0.0967
           },
           {
             "date": "2025-12",
@@ -103592,7 +103732,7 @@
           },
           {
             "date": "2026-01",
-            "value": 0.1259
+            "value": 0.126
           },
           {
             "date": "2026-02",
@@ -103616,11 +103756,15 @@
           },
           {
             "date": "2026-07",
-            "value": 0.1738
+            "value": 0.1739
           },
           {
             "date": "2026-08",
-            "value": 0.0992
+            "value": 0.1288
+          },
+          {
+            "date": "2026-09",
+            "value": 0.1288
           }
         ]
       },
@@ -103895,7 +104039,7 @@
         },
         {
           "date": "2025-08",
-          "value": 39.7
+          "value": 36.8
         },
         {
           "date": "2025-09",
@@ -103943,16 +104087,20 @@
         },
         {
           "date": "2026-08",
-          "value": 75.0
+          "value": 80.0
+        },
+        {
+          "date": "2026-09",
+          "value": 80.2
         }
       ],
       "positive_direction": "tighter",
       "derivation_version": 3,
       "status": "fresh",
-      "last_source_check": "2026-08-20",
-      "latest_source_period": "2026-08",
+      "last_source_check": "2026-09-02",
+      "latest_source_period": "2026-09",
       "history_start": "2020-01",
-      "observation_count": 80,
+      "observation_count": 81,
       "access_tier": "calculated from public inputs",
       "update_method": "automated deterministic derivation",
       "data": {
@@ -104127,7 +104275,7 @@
           },
           {
             "date": "2023-07",
-            "value": 0.6626
+            "value": 0.6639
           },
           {
             "date": "2023-08",
@@ -104139,7 +104287,7 @@
           },
           {
             "date": "2023-10",
-            "value": 0.6172
+            "value": 0.6166
           },
           {
             "date": "2023-11",
@@ -104227,27 +104375,27 @@
           },
           {
             "date": "2025-08",
-            "value": 0.1077
+            "value": 0.0976
           },
           {
             "date": "2025-09",
-            "value": 0.1294
+            "value": 0.1295
           },
           {
             "date": "2025-10",
-            "value": 0.1294
+            "value": 0.1295
           },
           {
             "date": "2025-11",
-            "value": 0.2494
+            "value": 0.2495
           },
           {
             "date": "2025-12",
-            "value": 0.3042
+            "value": 0.3043
           },
           {
             "date": "2026-01",
-            "value": 0.3333
+            "value": 0.3334
           },
           {
             "date": "2026-02",
@@ -104263,19 +104411,23 @@
           },
           {
             "date": "2026-05",
-            "value": 0.5014
+            "value": 0.5026
           },
           {
             "date": "2026-06",
-            "value": 0.4281
+            "value": 0.4309
           },
           {
             "date": "2026-07",
-            "value": 0.381
+            "value": 0.3811
           },
           {
             "date": "2026-08",
-            "value": 0.3886
+            "value": 0.4438
+          },
+          {
+            "date": "2026-09",
+            "value": 0.4438
           }
         ]
       }
@@ -105344,31 +105496,31 @@
           },
           {
             "date": "2025-08",
-            "value": -0.0954
+            "value": -0.1064
           },
           {
             "date": "2025-09",
-            "value": -0.1333
+            "value": -0.1332
           },
           {
             "date": "2025-10",
-            "value": -0.1437
+            "value": -0.1436
           },
           {
             "date": "2025-11",
-            "value": -0.154
+            "value": -0.1539
           },
           {
             "date": "2025-12",
-            "value": -0.1423
+            "value": -0.1422
           },
           {
             "date": "2026-01",
-            "value": -0.1527
+            "value": -0.1526
           },
           {
             "date": "2026-02",
-            "value": -0.152
+            "value": -0.1519
           },
           {
             "date": "2026-03",
@@ -105376,15 +105528,15 @@
           },
           {
             "date": "2026-04",
-            "value": -0.0954
+            "value": -0.0953
           },
           {
             "date": "2026-05",
-            "value": -0.1062
+            "value": -0.1061
           },
           {
             "date": "2026-06",
-            "value": -0.1002
+            "value": -0.0889
           },
           {
             "date": "2026-07",
@@ -105392,7 +105544,11 @@
           },
           {
             "date": "2026-08",
-            "value": -0.0998
+            "value": -0.0994
+          },
+          {
+            "date": "2026-09",
+            "value": -0.0994
           }
         ],
         "Market Pricing": [
@@ -106374,7 +106530,11 @@
           },
           {
             "date": "2026-08",
-            "value": 0.0225
+            "value": 0.0564
+          },
+          {
+            "date": "2026-09",
+            "value": 0.0564
           }
         ],
         "Credit Availability": [
@@ -106384,11 +106544,11 @@
           },
           {
             "date": "2006-05",
-            "value": 0.1853
+            "value": 0.1852
           },
           {
             "date": "2006-06",
-            "value": 0.1618
+            "value": 0.1617
           },
           {
             "date": "2006-07",
@@ -106396,7 +106556,7 @@
           },
           {
             "date": "2006-08",
-            "value": 0.1015
+            "value": 0.1014
           },
           {
             "date": "2006-09",
@@ -106408,11 +106568,11 @@
           },
           {
             "date": "2006-11",
-            "value": 0.0934
+            "value": 0.0933
           },
           {
             "date": "2006-12",
-            "value": 0.1157
+            "value": 0.1156
           },
           {
             "date": "2007-01",
@@ -106420,11 +106580,11 @@
           },
           {
             "date": "2007-02",
-            "value": 0.1421
+            "value": 0.142
           },
           {
             "date": "2007-03",
-            "value": 0.1454
+            "value": 0.1453
           },
           {
             "date": "2007-04",
@@ -106436,11 +106596,11 @@
           },
           {
             "date": "2007-06",
-            "value": 0.1702
+            "value": 0.1701
           },
           {
             "date": "2007-07",
-            "value": 0.161
+            "value": 0.1609
           },
           {
             "date": "2007-08",
@@ -106448,7 +106608,7 @@
           },
           {
             "date": "2007-09",
-            "value": 0.2149
+            "value": 0.2148
           },
           {
             "date": "2007-10",
@@ -106472,7 +106632,7 @@
           },
           {
             "date": "2008-03",
-            "value": 0.2456
+            "value": 0.2455
           },
           {
             "date": "2008-04",
@@ -106488,11 +106648,11 @@
           },
           {
             "date": "2008-07",
-            "value": 0.3539
+            "value": 0.3538
           },
           {
             "date": "2008-08",
-            "value": 0.3745
+            "value": 0.3744
           },
           {
             "date": "2008-09",
@@ -106516,7 +106676,7 @@
           },
           {
             "date": "2009-02",
-            "value": 0.4882
+            "value": 0.4881
           },
           {
             "date": "2009-03",
@@ -106528,7 +106688,7 @@
           },
           {
             "date": "2009-05",
-            "value": 0.5052
+            "value": 0.5051
           },
           {
             "date": "2009-06",
@@ -106580,7 +106740,7 @@
           },
           {
             "date": "2010-06",
-            "value": 0.3597
+            "value": 0.3596
           },
           {
             "date": "2010-07",
@@ -106588,15 +106748,15 @@
           },
           {
             "date": "2010-08",
-            "value": 0.3709
+            "value": 0.3708
           },
           {
             "date": "2010-09",
-            "value": 0.3731
+            "value": 0.373
           },
           {
             "date": "2010-10",
-            "value": 0.3882
+            "value": 0.3881
           },
           {
             "date": "2010-11",
@@ -106620,7 +106780,7 @@
           },
           {
             "date": "2011-04",
-            "value": 0.4343
+            "value": 0.4342
           },
           {
             "date": "2011-05",
@@ -106628,7 +106788,7 @@
           },
           {
             "date": "2011-06",
-            "value": 0.4439
+            "value": 0.4438
           },
           {
             "date": "2011-07",
@@ -106696,7 +106856,7 @@
           },
           {
             "date": "2012-11",
-            "value": 0.4708
+            "value": 0.4707
           },
           {
             "date": "2012-12",
@@ -106748,11 +106908,11 @@
           },
           {
             "date": "2013-12",
-            "value": 0.4036
+            "value": 0.4035
           },
           {
             "date": "2014-01",
-            "value": 0.3917
+            "value": 0.3916
           },
           {
             "date": "2014-02",
@@ -106836,7 +106996,7 @@
           },
           {
             "date": "2015-10",
-            "value": 0.2689
+            "value": 0.2688
           },
           {
             "date": "2015-11",
@@ -106848,7 +107008,7 @@
           },
           {
             "date": "2016-01",
-            "value": 0.2644
+            "value": 0.2643
           },
           {
             "date": "2016-02",
@@ -106904,7 +107064,7 @@
           },
           {
             "date": "2017-03",
-            "value": 0.2959
+            "value": 0.295
           },
           {
             "date": "2017-04",
@@ -107008,7 +107168,7 @@
           },
           {
             "date": "2019-05",
-            "value": 0.3857
+            "value": 0.3858
           },
           {
             "date": "2019-06",
@@ -107052,7 +107212,7 @@
           },
           {
             "date": "2020-04",
-            "value": 0.3919
+            "value": 0.392
           },
           {
             "date": "2020-05",
@@ -107104,7 +107264,7 @@
           },
           {
             "date": "2021-05",
-            "value": 0.316
+            "value": 0.3161
           },
           {
             "date": "2021-06",
@@ -107208,7 +107368,7 @@
           },
           {
             "date": "2023-07",
-            "value": 0.3004
+            "value": 0.302
           },
           {
             "date": "2023-08",
@@ -107220,7 +107380,7 @@
           },
           {
             "date": "2023-10",
-            "value": 0.3192
+            "value": 0.3183
           },
           {
             "date": "2023-11",
@@ -107256,7 +107416,7 @@
           },
           {
             "date": "2024-07",
-            "value": 0.2892
+            "value": 0.2891
           },
           {
             "date": "2024-08",
@@ -107312,7 +107472,7 @@
           },
           {
             "date": "2025-09",
-            "value": 0.2205
+            "value": 0.2204
           },
           {
             "date": "2025-10",
@@ -107344,7 +107504,7 @@
           },
           {
             "date": "2026-05",
-            "value": 0.1591
+            "value": 0.1607
           },
           {
             "date": "2026-06",
@@ -107356,7 +107516,11 @@
           },
           {
             "date": "2026-08",
-            "value": 0.157
+            "value": 0.161
+          },
+          {
+            "date": "2026-09",
+            "value": 0.161
           }
         ],
         "Household Capacity": [
@@ -108290,7 +108454,7 @@
           },
           {
             "date": "2025-08",
-            "value": -0.0837
+            "value": -0.091
           },
           {
             "date": "2025-09",
@@ -108302,7 +108466,7 @@
           },
           {
             "date": "2025-11",
-            "value": 0.0966
+            "value": 0.0967
           },
           {
             "date": "2025-12",
@@ -108310,7 +108474,7 @@
           },
           {
             "date": "2026-01",
-            "value": 0.1259
+            "value": 0.126
           },
           {
             "date": "2026-02",
@@ -108334,11 +108498,15 @@
           },
           {
             "date": "2026-07",
-            "value": 0.1738
+            "value": 0.1739
           },
           {
             "date": "2026-08",
-            "value": 0.0992
+            "value": 0.1288
+          },
+          {
+            "date": "2026-09",
+            "value": 0.1288
           }
         ]
       },
@@ -108653,7 +108821,7 @@
         },
         {
           "date": "2012-09",
-          "value": 17.9
+          "value": 19.2
         },
         {
           "date": "2012-10",
@@ -109173,7 +109341,7 @@
         },
         {
           "date": "2023-07",
-          "value": 76.4
+          "value": 76.9
         },
         {
           "date": "2023-08",
@@ -109273,7 +109441,7 @@
         },
         {
           "date": "2025-08",
-          "value": 29.6
+          "value": 27.0
         },
         {
           "date": "2025-09",
@@ -109313,7 +109481,7 @@
         },
         {
           "date": "2026-06",
-          "value": 85.2
+          "value": 86.4
         },
         {
           "date": "2026-07",
@@ -109321,23 +109489,27 @@
         },
         {
           "date": "2026-08",
-          "value": 78.4
+          "value": 86.9
+        },
+        {
+          "date": "2026-09",
+          "value": 87.0
         }
       ],
       "positive_direction": "tighter",
       "derivation_version": 3,
       "status": "fresh",
-      "last_source_check": "2026-08-20",
-      "latest_source_period": "2026-08",
+      "last_source_check": "2026-09-02",
+      "latest_source_period": "2026-09",
       "history_start": "2006-04",
-      "observation_count": 245,
+      "observation_count": 246,
       "access_tier": "calculated from public inputs",
       "update_method": "automated deterministic derivation",
       "data": {
         "National": [
           {
             "date": "2006-04",
-            "value": 0.2238
+            "value": 0.2237
           },
           {
             "date": "2006-05",
@@ -109353,15 +109525,15 @@
           },
           {
             "date": "2006-08",
-            "value": -0.1034
+            "value": -0.1035
           },
           {
             "date": "2006-09",
-            "value": -0.4024
+            "value": -0.4025
           },
           {
             "date": "2006-10",
-            "value": -0.3073
+            "value": -0.3074
           },
           {
             "date": "2006-11",
@@ -109373,15 +109545,15 @@
           },
           {
             "date": "2007-01",
-            "value": -0.2782
+            "value": -0.2783
           },
           {
             "date": "2007-02",
-            "value": -0.213
+            "value": -0.2131
           },
           {
             "date": "2007-03",
-            "value": -0.3109
+            "value": -0.311
           },
           {
             "date": "2007-04",
@@ -109393,19 +109565,19 @@
           },
           {
             "date": "2007-06",
-            "value": 0.0428
+            "value": 0.0427
           },
           {
             "date": "2007-07",
-            "value": 0.2896
+            "value": 0.2895
           },
           {
             "date": "2007-08",
-            "value": 0.198
+            "value": 0.1979
           },
           {
             "date": "2007-09",
-            "value": 0.0833
+            "value": 0.0832
           },
           {
             "date": "2007-10",
@@ -109413,7 +109585,7 @@
           },
           {
             "date": "2007-11",
-            "value": 0.4451
+            "value": 0.445
           },
           {
             "date": "2007-12",
@@ -109433,23 +109605,23 @@
           },
           {
             "date": "2008-04",
-            "value": 0.5218
+            "value": 0.5217
           },
           {
             "date": "2008-05",
-            "value": 0.7396
+            "value": 0.7395
           },
           {
             "date": "2008-06",
-            "value": 0.7669
+            "value": 0.7668
           },
           {
             "date": "2008-07",
-            "value": 0.7565
+            "value": 0.7564
           },
           {
             "date": "2008-08",
-            "value": 0.6507
+            "value": 0.6506
           },
           {
             "date": "2008-09",
@@ -109473,7 +109645,7 @@
           },
           {
             "date": "2009-02",
-            "value": 0.487
+            "value": 0.4869
           },
           {
             "date": "2009-03",
@@ -109489,7 +109661,7 @@
           },
           {
             "date": "2009-06",
-            "value": 0.2179
+            "value": 0.2178
           },
           {
             "date": "2009-07",
@@ -109505,7 +109677,7 @@
           },
           {
             "date": "2009-10",
-            "value": 0.1511
+            "value": 0.151
           },
           {
             "date": "2009-11",
@@ -109545,7 +109717,7 @@
           },
           {
             "date": "2010-08",
-            "value": 0.0918
+            "value": 0.0917
           },
           {
             "date": "2010-09",
@@ -109617,7 +109789,7 @@
           },
           {
             "date": "2012-02",
-            "value": 0.1735
+            "value": 0.1734
           },
           {
             "date": "2012-03",
@@ -109625,7 +109797,7 @@
           },
           {
             "date": "2012-04",
-            "value": 0.1876
+            "value": 0.1875
           },
           {
             "date": "2012-05",
@@ -109637,7 +109809,7 @@
           },
           {
             "date": "2012-07",
-            "value": -0.121
+            "value": -0.1211
           },
           {
             "date": "2012-08",
@@ -109693,7 +109865,7 @@
           },
           {
             "date": "2013-09",
-            "value": 0.1888
+            "value": 0.1887
           },
           {
             "date": "2013-10",
@@ -109725,7 +109897,7 @@
           },
           {
             "date": "2014-05",
-            "value": 0.1362
+            "value": 0.1361
           },
           {
             "date": "2014-06",
@@ -109733,7 +109905,7 @@
           },
           {
             "date": "2014-07",
-            "value": 0.0155
+            "value": 0.0154
           },
           {
             "date": "2014-08",
@@ -109777,7 +109949,7 @@
           },
           {
             "date": "2015-06",
-            "value": -0.3488
+            "value": -0.3489
           },
           {
             "date": "2015-07",
@@ -109805,7 +109977,7 @@
           },
           {
             "date": "2016-01",
-            "value": -0.2981
+            "value": -0.2982
           },
           {
             "date": "2016-02",
@@ -109861,7 +110033,7 @@
           },
           {
             "date": "2017-03",
-            "value": 0.1345
+            "value": 0.1336
           },
           {
             "date": "2017-04",
@@ -109889,7 +110061,7 @@
           },
           {
             "date": "2017-10",
-            "value": -0.1046
+            "value": -0.1045
           },
           {
             "date": "2017-11",
@@ -109905,7 +110077,7 @@
           },
           {
             "date": "2018-02",
-            "value": -0.0958
+            "value": -0.0957
           },
           {
             "date": "2018-03",
@@ -109965,7 +110137,7 @@
           },
           {
             "date": "2019-05",
-            "value": -0.1989
+            "value": -0.1988
           },
           {
             "date": "2019-06",
@@ -110045,7 +110217,7 @@
           },
           {
             "date": "2021-01",
-            "value": 0.1158
+            "value": 0.1159
           },
           {
             "date": "2021-02",
@@ -110165,7 +110337,7 @@
           },
           {
             "date": "2023-07",
-            "value": 0.1803
+            "value": 0.1819
           },
           {
             "date": "2023-08",
@@ -110173,11 +110345,11 @@
           },
           {
             "date": "2023-09",
-            "value": -0.0035
+            "value": -0.0036
           },
           {
             "date": "2023-10",
-            "value": 0.1694
+            "value": 0.1686
           },
           {
             "date": "2023-11",
@@ -110265,7 +110437,7 @@
           },
           {
             "date": "2025-08",
-            "value": -0.1181
+            "value": -0.1363
           },
           {
             "date": "2025-09",
@@ -110273,39 +110445,39 @@
           },
           {
             "date": "2025-10",
-            "value": -0.0644
+            "value": -0.0643
           },
           {
             "date": "2025-11",
-            "value": 0.0652
+            "value": 0.0654
           },
           {
             "date": "2025-12",
-            "value": 0.0963
+            "value": 0.0964
           },
           {
             "date": "2026-01",
-            "value": 0.132
+            "value": 0.1322
           },
           {
             "date": "2026-02",
-            "value": 0.1784
+            "value": 0.1785
           },
           {
             "date": "2026-03",
-            "value": 0.1547
+            "value": 0.1548
           },
           {
             "date": "2026-04",
-            "value": 0.175
+            "value": 0.1752
           },
           {
             "date": "2026-05",
-            "value": 0.3105
+            "value": 0.3122
           },
           {
             "date": "2026-06",
-            "value": 0.2324
+            "value": 0.2437
           },
           {
             "date": "2026-07",
@@ -110313,7 +110485,11 @@
           },
           {
             "date": "2026-08",
-            "value": 0.1789
+            "value": 0.2468
+          },
+          {
+            "date": "2026-09",
+            "value": 0.2468
           }
         ]
       }
@@ -110766,7 +110942,7 @@
           },
           {
             "date": "2025-08",
-            "value": 0.0449
+            "value": 0.0422
           },
           {
             "date": "2025-09",
@@ -110794,7 +110970,7 @@
           },
           {
             "date": "2026-03",
-            "value": -0.0126
+            "value": -0.0125
           },
           {
             "date": "2026-04",
@@ -110806,7 +110982,7 @@
           },
           {
             "date": "2026-06",
-            "value": 0.0192
+            "value": 0.022
           },
           {
             "date": "2026-07",
@@ -110814,7 +110990,11 @@
           },
           {
             "date": "2026-08",
-            "value": 0.0248
+            "value": 0.025
+          },
+          {
+            "date": "2026-09",
+            "value": 0.025
           }
         ],
         "Market Pricing": [
@@ -111024,7 +111204,11 @@
           },
           {
             "date": "2026-08",
-            "value": 0.1427
+            "value": 0.1652
+          },
+          {
+            "date": "2026-09",
+            "value": 0.1652
           }
         ],
         "Credit Availability": [
@@ -111086,7 +111270,7 @@
           },
           {
             "date": "2023-07",
-            "value": 0.2525
+            "value": 0.2532
           },
           {
             "date": "2023-08",
@@ -111098,7 +111282,7 @@
           },
           {
             "date": "2023-10",
-            "value": 0.254
+            "value": 0.2536
           },
           {
             "date": "2023-11",
@@ -111222,7 +111406,7 @@
           },
           {
             "date": "2026-05",
-            "value": 0.0258
+            "value": 0.0264
           },
           {
             "date": "2026-06",
@@ -111234,7 +111418,11 @@
           },
           {
             "date": "2026-08",
-            "value": 0.0323
+            "value": 0.0338
+          },
+          {
+            "date": "2026-09",
+            "value": 0.0338
           }
         ],
         "Household Capacity": [
@@ -111264,7 +111452,7 @@
           },
           {
             "date": "2022-11",
-            "value": 0.0163
+            "value": 0.0164
           },
           {
             "date": "2022-12",
@@ -111344,7 +111532,7 @@
           },
           {
             "date": "2024-07",
-            "value": 0.073
+            "value": 0.0731
           },
           {
             "date": "2024-08",
@@ -111352,11 +111540,11 @@
           },
           {
             "date": "2024-09",
-            "value": 0.1001
+            "value": 0.1002
           },
           {
             "date": "2024-10",
-            "value": 0.0907
+            "value": 0.0908
           },
           {
             "date": "2024-11",
@@ -111396,7 +111584,7 @@
           },
           {
             "date": "2025-08",
-            "value": -0.0007
+            "value": -0.0031
           },
           {
             "date": "2025-09",
@@ -111404,11 +111592,11 @@
           },
           {
             "date": "2025-10",
-            "value": 0.0186
+            "value": 0.0163
           },
           {
             "date": "2025-11",
-            "value": 0.092
+            "value": 0.0921
           },
           {
             "date": "2025-12",
@@ -111444,7 +111632,11 @@
           },
           {
             "date": "2026-08",
-            "value": 0.0901
+            "value": 0.1024
+          },
+          {
+            "date": "2026-09",
+            "value": 0.1024
           }
         ]
       },
@@ -111615,7 +111807,7 @@
         },
         {
           "date": "2025-10",
-          "value": 26.2
+          "value": 23.8
         },
         {
           "date": "2025-11",
@@ -111647,7 +111839,7 @@
         },
         {
           "date": "2026-06",
-          "value": 68.0
+          "value": 70.0
         },
         {
           "date": "2026-07",
@@ -111655,16 +111847,20 @@
         },
         {
           "date": "2026-08",
-          "value": 73.1
+          "value": 76.9
+        },
+        {
+          "date": "2026-09",
+          "value": 77.4
         }
       ],
       "positive_direction": "tighter",
       "derivation_version": 3,
       "status": "fresh",
-      "last_source_check": "2026-08-20",
-      "latest_source_period": "2026-08",
+      "last_source_check": "2026-09-02",
+      "latest_source_period": "2026-09",
       "history_start": "2022-05",
-      "observation_count": 52,
+      "observation_count": 53,
       "access_tier": "calculated from public inputs",
       "update_method": "automated deterministic derivation",
       "data": {
@@ -111683,7 +111879,7 @@
           },
           {
             "date": "2022-08",
-            "value": 0.0726
+            "value": 0.0727
           },
           {
             "date": "2022-09",
@@ -111695,7 +111891,7 @@
           },
           {
             "date": "2022-11",
-            "value": 0.1529
+            "value": 0.153
           },
           {
             "date": "2022-12",
@@ -111703,7 +111899,7 @@
           },
           {
             "date": "2023-01",
-            "value": 0.2401
+            "value": 0.2402
           },
           {
             "date": "2023-02",
@@ -111719,7 +111915,7 @@
           },
           {
             "date": "2023-05",
-            "value": 0.2678
+            "value": 0.2679
           },
           {
             "date": "2023-06",
@@ -111727,7 +111923,7 @@
           },
           {
             "date": "2023-07",
-            "value": 0.5469
+            "value": 0.5475
           },
           {
             "date": "2023-08",
@@ -111739,7 +111935,7 @@
           },
           {
             "date": "2023-10",
-            "value": 0.5688
+            "value": 0.5685
           },
           {
             "date": "2023-11",
@@ -111771,11 +111967,11 @@
           },
           {
             "date": "2024-06",
-            "value": 0.2878
+            "value": 0.2879
           },
           {
             "date": "2024-07",
-            "value": 0.2599
+            "value": 0.26
           },
           {
             "date": "2024-08",
@@ -111827,15 +112023,15 @@
           },
           {
             "date": "2025-08",
-            "value": 0.189
+            "value": 0.1838
           },
           {
             "date": "2025-09",
-            "value": 0.1682
+            "value": 0.1683
           },
           {
             "date": "2025-10",
-            "value": 0.1685
+            "value": 0.1662
           },
           {
             "date": "2025-11",
@@ -111851,23 +112047,23 @@
           },
           {
             "date": "2026-02",
-            "value": 0.2807
+            "value": 0.2808
           },
           {
             "date": "2026-03",
-            "value": 0.2194
+            "value": 0.2195
           },
           {
             "date": "2026-04",
-            "value": 0.2222
+            "value": 0.2223
           },
           {
             "date": "2026-05",
-            "value": 0.3524
+            "value": 0.3531
           },
           {
             "date": "2026-06",
-            "value": 0.2835
+            "value": 0.2864
           },
           {
             "date": "2026-07",
@@ -111875,7 +112071,11 @@
           },
           {
             "date": "2026-08",
-            "value": 0.2899
+            "value": 0.3263
+          },
+          {
+            "date": "2026-09",
+            "value": 0.3263
           }
         ]
       }

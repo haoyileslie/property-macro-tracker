@@ -1,6 +1,6 @@
 # 住房金融条件指数（HFCI）：构建方法与回测报告
 
-_数据截至 2026-08-20。本报告由 `property_data.json` 可复现生成。_
+_数据截至 2026-09-02。本报告由 `property_data.json` 可复现生成。_
 
 ## 1. 构建目的
 
@@ -53,16 +53,16 @@ _数据截至 2026-08-20。本报告由 `property_data.json` 可复现生成。_
 
 | 模块 | 变量 | 转换后跨度 | N | 最小值 | Q1 | 中位数 | 均值 | Q3 | 最大值 | 标准差 | 发布滞后（月） | 来源 |
 |---|---|---:|---:|---:|---:|---:|---:|---:|---:|---:|---:|---|
-| Pricing | Real cash rate | 1990-03–2026-06 | 156 | -4.05 | -0.01 | 1.77 | 1.63 | 3.05 | 9.80 | 2.22 | 1 | [Reserve Bank of Australia](https://www.rba.gov.au/statistics/cash-rate/) + [ABS Consumer Price Index, Australia](https://www.abs.gov.au/statistics/economy/price-indexes-and-inflation/consumer-price-index-australia/latest-release) |
+| Pricing | Real cash rate | 1990-03–2026-07 | 157 | -4.05 | 0.00 | 1.70 | 1.63 | 3.05 | 9.80 | 2.21 | 1 | [Reserve Bank of Australia](https://www.rba.gov.au/statistics/cash-rate/) + [ABS Consumer Price Index, Australia](https://www.abs.gov.au/statistics/economy/price-indexes-and-inflation/consumer-price-index-australia/latest-release) |
 | Pricing | New owner-occupier mortgage rate | 2019-07–2026-06 | 84 | 2.40 | 2.70 | 5.00 | 4.45 | 6.00 | 6.30 | 1.58 | 1 | [RBA Statistical Table F6 (Housing Lending Rates)](https://www.rba.gov.au/statistics/tables/csv/f6-data.csv) |
 | Pricing | Real new mortgage rate | 2019-07–2026-06 | 84 | -3.10 | -0.77 | 1.60 | 0.92 | 2.32 | 3.90 | 2.04 | 1 | [RBA Statistical Table F6 (Housing Lending Rates)](https://www.rba.gov.au/statistics/tables/csv/f6-data.csv) + [ABS Consumer Price Index, Australia](https://www.abs.gov.au/statistics/economy/price-indexes-and-inflation/consumer-price-index-australia/latest-release) |
 | Pricing | Mortgage spread to cash rate | 2019-07–2026-06 | 84 | 1.80 | 1.90 | 1.95 | 2.13 | 2.40 | 2.75 | 0.27 | 1 | [RBA Statistical Table F6 (Housing Lending Rates)](https://www.rba.gov.au/statistics/tables/csv/f6-data.csv) + [Reserve Bank of Australia](https://www.rba.gov.au/statistics/cash-rate/) |
 | Market Pricing | Australian five-year government yield | 2017-01–2026-07 | 115 | 0.30 | 1.27 | 2.37 | 2.49 | 3.64 | 4.75 | 1.33 | 1 | [RBA Statistical Table F17 (Indicative Mid Rates of Australian Government Securities)](https://www.rba.gov.au/statistics/tables/csv/f17-yields.csv) |
 | Market Pricing | BBB financing spread | 2005-01–2026-07 | 259 | 0.54 | 1.32 | 2.12 | 2.22 | 2.64 | 8.06 | 1.25 | 1 | [RBA Statistical Table F3 (Aggregate Measures of Australian Corporate Bond Yields)](https://www.rba.gov.au/statistics/tables/csv/f3-data.csv) + [Reserve Bank of Australia](https://www.rba.gov.au/statistics/cash-rate/) |
-| Market Pricing | A-REIT relative annual return | 2005-04–2026-08 | 257 | -41.76 | -10.60 | -2.30 | -3.00 | 5.95 | 23.87 | 12.99 | 1 | [S&P/ASX 200 A-REIT Index](https://www.spglobal.com/spdji/en/indices/equity/sp-asx-200-a-reit/) + [S&P/ASX 200](https://www.asx.com.au/markets/trade-our-cash-market/overview/indices) |
-| Credit Availability | Housing credit growth | 1977-08–2026-06 | 587 | 3.00 | 6.70 | 11.90 | 11.41 | 15.50 | 23.20 | 5.13 | 1 | [RBA Statistical Table D1 (Growth in Financial Aggregates)](https://www.rba.gov.au/statistics/tables/csv/d1-data.csv) |
-| Credit Availability | Owner-occupier housing credit growth | 1991-01–2026-06 | 426 | 3.80 | 6.10 | 8.80 | 9.81 | 12.70 | 19.90 | 4.23 | 1 | [RBA Statistical Table D1 (Growth in Financial Aggregates)](https://www.rba.gov.au/statistics/tables/csv/d1-data.csv) |
-| Credit Availability | Investor housing credit growth | 1991-01–2026-06 | 426 | -0.70 | 4.90 | 10.40 | 12.71 | 20.58 | 40.20 | 9.49 | 1 | [RBA Statistical Table D1 (Growth in Financial Aggregates)](https://www.rba.gov.au/statistics/tables/csv/d1-data.csv) |
+| Market Pricing | A-REIT relative annual return | 2005-04–2026-09 | 257 | -41.76 | -10.60 | -2.30 | -3.03 | 5.95 | 23.87 | 13.03 | 1 | [S&P/ASX 200 A-REIT Index](https://www.spglobal.com/spdji/en/indices/equity/sp-asx-200-a-reit/) + [S&P/ASX 200](https://www.asx.com.au/markets/trade-our-cash-market/overview/indices) |
+| Credit Availability | Housing credit growth | 1977-08–2026-07 | 588 | 3.00 | 6.70 | 11.85 | 11.41 | 15.50 | 23.20 | 5.13 | 1 | [RBA Statistical Table D1 (Growth in Financial Aggregates)](https://www.rba.gov.au/statistics/tables/csv/d1-data.csv) |
+| Credit Availability | Owner-occupier housing credit growth | 1991-01–2026-07 | 427 | 3.80 | 6.10 | 8.80 | 9.80 | 12.70 | 19.90 | 4.23 | 1 | [RBA Statistical Table D1 (Growth in Financial Aggregates)](https://www.rba.gov.au/statistics/tables/csv/d1-data.csv) |
+| Credit Availability | Investor housing credit growth | 1991-01–2026-07 | 427 | -0.70 | 4.90 | 10.40 | 12.71 | 20.55 | 40.20 | 9.48 | 1 | [RBA Statistical Table D1 (Growth in Financial Aggregates)](https://www.rba.gov.au/statistics/tables/csv/d1-data.csv) |
 | Credit Availability | New dwelling lending growth | 2017-Q2–2026-Q2 | 37 | -29.82 | -7.82 | 8.30 | 8.31 | 17.83 | 83.23 | 23.10 | 2 | [ABS Lending Indicators](https://www.abs.gov.au/statistics/economy/finance/lending-indicators/latest-release) |
 | Credit Availability | High-DTI lending share | 2019-Q1–2026-Q1 | 29 | 5.00 | 5.78 | 14.56 | 12.59 | 17.08 | 24.33 | 6.78 | 3 | [APRA Quarterly ADI Property Exposures](https://www.apra.gov.au/news-and-publications/quarterly-authorised-deposit-taking-institution-statistics) |
 | Credit Availability | High-LVR lending share | 2019-Q1–2026-Q1 | 29 | 5.52 | 6.67 | 7.28 | 7.81 | 9.17 | 11.34 | 1.55 | 3 | [APRA Quarterly ADI Property Exposures](https://www.apra.gov.au/news-and-publications/quarterly-authorised-deposit-taking-institution-statistics) |
@@ -70,8 +70,8 @@ _数据截至 2026-08-20。本报告由 `property_data.json` 可复现生成。_
 | Credit Availability | Non-performing mortgage share | 2019-Q1–2026-Q1 | 29 | 0.68 | 0.82 | 0.94 | 0.93 | 1.04 | 1.11 | 0.12 | 3 | [APRA Quarterly ADI Property Exposures](https://www.apra.gov.au/news-and-publications/quarterly-authorised-deposit-taking-institution-statistics) |
 | Household Capacity | Scheduled repayment burden | 2009-Q1–2026-Q1 | 69 | 7.10 | 7.60 | 8.00 | 8.22 | 8.90 | 10.10 | 0.84 | 2 | [RBA Housing Loan Payments (E13)](https://www.rba.gov.au/statistics/tables/csv/e13-data.csv) |
 | Household Capacity | Housing interest burden | 2009-Q1–2026-Q1 | 69 | 3.10 | 4.80 | 5.30 | 5.35 | 6.20 | 7.10 | 1.11 | 2 | [RBA Housing Loan Payments (E13)](https://www.rba.gov.au/statistics/tables/csv/e13-data.csv) |
-| Household Capacity | Unemployment rate | 1978-02–2026-06 | 581 | 3.40 | 5.20 | 6.10 | 6.50 | 7.90 | 11.20 | 1.84 | 1 | [ABS Labour Force, Australia](https://www.rba.gov.au/statistics/tables/csv/h5-data.csv) |
-| Household Capacity | Employment growth | 1979-02–2026-06 | 569 | -5.80 | 1.10 | 2.10 | 1.91 | 3.00 | 8.20 | 1.69 | 1 | [RBA Statistical Table H5 (ABS Labour Force)](https://www.rba.gov.au/statistics/tables/csv/h5-data.csv) |
+| Household Capacity | Unemployment rate | 1978-02–2026-07 | 582 | 3.40 | 5.20 | 6.10 | 6.50 | 7.88 | 11.20 | 1.84 | 1 | [ABS Labour Force, Australia](https://www.rba.gov.au/statistics/tables/csv/h5-data.csv) |
+| Household Capacity | Employment growth | 1979-02–2026-07 | 570 | -5.80 | 1.10 | 2.10 | 1.91 | 3.00 | 8.20 | 1.69 | 1 | [RBA Statistical Table H5 (ABS Labour Force)](https://www.rba.gov.au/statistics/tables/csv/h5-data.csv) |
 | Household Capacity | Real total wage growth | 1998-09–2026-06 | 112 | -4.60 | -0.02 | 0.50 | 0.30 | 1.10 | 2.60 | 1.35 | 2 | [RBA Statistical Table H4 (Labour Costs and Productivity)](https://www.rba.gov.au/statistics/tables/csv/h4-data.csv) + [ABS Consumer Price Index, Australia](https://www.abs.gov.au/statistics/economy/price-indexes-and-inflation/consumer-price-index-australia/latest-release) |
 | Household Capacity | Real private-sector wage growth | 2011-Q2–2026-Q2 | 61 | -4.30 | -0.30 | 0.30 | -0.00 | 0.70 | 2.60 | 1.37 | 2 | [ABS Wage Price Index, Australia](https://www.abs.gov.au/statistics/economy/price-indexes-and-inflation/wage-price-index-australia/latest-release) + [ABS Consumer Price Index, Australia](https://www.abs.gov.au/statistics/economy/price-indexes-and-inflation/consumer-price-index-australia/latest-release) |
 
@@ -79,10 +79,10 @@ _数据截至 2026-08-20。本报告由 `property_data.json` 可复现生成。_
 
 | 指数 | 时间跨度 | N | 最小值 | 中位数 | 均值 | 最大值 | 标准差 | 最新历史分位数 |
 |---|---:|---:|---:|---:|---:|---:|---:|---:|
-| Core Housing Financial Conditions Index | 2020-01–2026-08 | 80 | -1.29 | 0.02 | -0.20 | 0.35 | 0.46 | 98.80 |
-| Augmented Housing Financial Conditions Index | 2020-01–2026-08 | 80 | -0.90 | 0.22 | 0.17 | 0.66 | 0.32 | 75.00 |
-| Long-history Housing Financial Conditions Index | 2006-04–2026-08 | 245 | -0.64 | -0.01 | 0.03 | 1.24 | 0.27 | 78.40 |
-| Full Housing Financial Conditions Index | 2022-05–2026-08 | 52 | -0.07 | 0.26 | 0.26 | 0.57 | 0.13 | 73.10 |
+| Core Housing Financial Conditions Index | 2020-01–2026-09 | 81 | -1.29 | 0.03 | -0.20 | 0.38 | 0.46 | 100.00 |
+| Augmented Housing Financial Conditions Index | 2020-01–2026-09 | 81 | -0.90 | 0.22 | 0.17 | 0.66 | 0.32 | 80.20 |
+| Long-history Housing Financial Conditions Index | 2006-04–2026-09 | 246 | -0.64 | -0.01 | 0.03 | 1.24 | 0.27 | 87.00 |
+| Full Housing Financial Conditions Index | 2022-05–2026-09 | 53 | -0.07 | 0.26 | 0.27 | 0.57 | 0.13 | 77.40 |
 
 四个指数在主要紧缩和宽松阶段应大致同向，但当信贷数量或家庭偿付能力与市场价格信号背离时会出现差异。Long-history 更适合周期比较；Core 和 Full 更适合分析当前政策传导。
 
@@ -97,8 +97,8 @@ For horizon \(h\), the expanding-window direct regression is:
 | 目标变量 | 最优期限 | HFCI 版本 | 样本外 N | 相对现金利率 RMSE 改善 | 方向准确率 |
 |---|---:|---|---:|---:|---:|
 | Forward nominal house-price growth | 6 | Augmented Housing Financial Conditions Index | 10 | 18.4% | 80.0% |
-| Future housing-credit growth | 6 | Augmented Housing Financial Conditions Index | 29 | 36.6% | 72.4% |
-| Forward dwelling-approvals growth | 12 | Long-history Housing Financial Conditions Index | 171 | 4.1% | 48.5% |
+| Future housing-credit growth | 3 | Augmented Housing Financial Conditions Index | 31 | 35.6% | 54.8% |
+| Forward dwelling-approvals growth | 12 | Long-history Housing Financial Conditions Index | 172 | 4.1% | 48.3% |
 | Forward new-lending growth | 12 | Long-history Housing Financial Conditions Index | 14 | 28.2% | 57.1% |
 | Future change in housing-turnover proxy | 12 | Long-history Housing Financial Conditions Index | 22 | 19.1% | 72.7% |
 
