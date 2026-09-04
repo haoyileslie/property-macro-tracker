@@ -239,7 +239,6 @@ def parse_domain_saved_search(body, subject, captured_at):
             locations[name.strip().lower()] = (state.upper(), postcode)
     if not locations:
         return []
-    default = next(iter(locations.values()))
     lines = markdown_lines(body)
     records = []
     for index, line in enumerate(lines):
@@ -250,7 +249,13 @@ def parse_domain_saved_search(body, subject, captured_at):
         if not match or not re.match(r"^(?:\d|(?:Apartment|Unit)\s+\d)", match.group(1), re.I):
             continue
         street, suburb = match.groups()
-        state, postcode = locations.get(suburb.strip().lower(), default)
+        location = locations.get(suburb.strip().lower())
+        if not location:
+            # Alert emails contain other linked text that can resemble an
+            # address (prices and marketing headlines). Only accept a card
+            # whose suburb is explicitly named in the saved-search subject.
+            continue
+        state, postcode = location
         facts = {}
         window = lines[index + 1:index + 11]
         for position, value in enumerate(window[:-1]):
@@ -483,10 +488,21 @@ def supported_alert(message):
     ))
 
 
+def plausible_suburb(value):
+    """Reject email-copy fragments that were previously mistaken for suburbs."""
+    return bool(re.fullmatch(r"[A-Za-z][A-Za-z .'-]{1,31}", (value or "").strip()))
+
+
 def merge_listings(existing, observed, limit=3):
-    by_id = {item["property_id"]: dict(item) for item in existing}
+    by_id = {
+        item["property_id"]: dict(item)
+        for item in existing
+        if plausible_suburb(item.get("suburb"))
+    }
     for raw_item in observed:
         item = public_projection(raw_item)
+        if not plausible_suburb(item.get("suburb")):
+            continue
         previous = by_id.get(item["property_id"])
         if previous:
             item["first_seen_at"] = min(previous["first_seen_at"], item["first_seen_at"])

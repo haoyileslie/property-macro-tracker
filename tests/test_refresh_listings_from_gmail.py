@@ -118,6 +118,28 @@ class RefreshListingsTests(unittest.TestCase):
         self.assertEqual(rows[0]["bathrooms"], 2)
         self.assertEqual(rows[0]["parking"], 1)
 
+    def test_domain_saved_search_rejects_marketing_link_as_suburb(self):
+        message = alert(
+            "Home Alert for Morningside QLD 4170",
+            '<a href="https://example.test/noise">31.6m frontage, a world of potential</a>'
+            '<a href="https://example.test/listing">8 Test Street, Morningside</a>'
+            '<div>3</div><div>Beds</div><div>2</div><div>Baths</div>',
+        )
+        rows = refresh.parse_message(message)
+        self.assertEqual(len(rows), 1)
+        self.assertEqual(rows[0]["suburb"], "Morningside")
+
+    def test_merge_removes_legacy_marketing_copy_suburbs(self):
+        valid = refresh.public_item(
+            "Domain", "8 Test Street, Morningside QLD 4170",
+            "Morningside", "QLD", "4170", "2026-09-01T00:00:00Z",
+        )
+        invalid = refresh.public_item(
+            "Domain", "31.6m frontage, a world of potential QLD 4170",
+            "31.6m frontage", "QLD", "4170", "2026-09-01T00:00:00Z",
+        )
+        self.assertEqual(refresh.merge_listings([valid, invalid], []), [valid])
+
     def test_domain_saved_search_accepts_explicit_unit_prefix(self):
         message = alert(
             "Home Alert for Oxley QLD 4075",
