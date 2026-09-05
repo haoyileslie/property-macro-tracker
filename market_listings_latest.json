@@ -5,26 +5,20 @@
       "https://www.domain.com.au/",
       "https://www.realestate.com.au/"
     ],
-    "captured_at": "2026-09-04T09:21:44Z",
-    "published_at": "2026-09-04T10:10:32Z",
+    "captured_at": "2026-09-05T07:56:10Z",
+    "published_at": "2026-09-05T21:27:44Z",
     "status": "ok",
-    "alert_messages": 2216,
+    "alert_messages": 2246,
     "market_count": 134,
     "listing_count": 362,
-    "observations_fetched": 6173,
-    "unique_listings_analysed": 5825,
+    "observations_fetched": 6197,
+    "unique_listings_analysed": 5848,
     "public_sample_per_market": 3,
     "coverage_note": "Recent saved-search alert evidence, not a complete market census. Up to three examples are shown per suburb, with both portals represented where available.",
-    "last_alert_email_at": "2026-09-04T09:21:44Z",
-    "unattributed_alert_cards_skipped": 125,
-    "unparsed_alert_messages": 9,
+    "last_alert_email_at": "2026-09-05T07:56:10Z",
+    "unattributed_alert_cards_skipped": 142,
+    "unparsed_alert_messages": 11,
     "recent_unparsed_alerts": [
-      {
-        "portal": "REA",
-        "subject": "New to market: Alert for your \"Bondi Junction, NSW 2022\" saved search",
-        "received_at": "2026-08-04T08:50:21Z",
-        "reason": "recognized_alert_without_parseable_listing_cards"
-      },
       {
         "portal": "Domain",
         "subject": "Home Alert for Cockburn Central WA 6164",
@@ -71,6 +65,18 @@
         "portal": "REA",
         "subject": "New to market: Alert for your \"St Leonards, NSW 2065\" saved search",
         "received_at": "2026-08-31T08:25:44Z",
+        "reason": "recognized_alert_without_parseable_listing_cards"
+      },
+      {
+        "portal": "Domain",
+        "subject": "Home Alert for Parramatta NSW 2150, Chatswood NSW 2067",
+        "received_at": "2026-09-05T07:44:01Z",
+        "reason": "recognized_alert_without_parseable_listing_cards"
+      },
+      {
+        "portal": "Domain",
+        "subject": "Home Alert for New Farm QLD 4005, Indooroopilly QLD 4068",
+        "received_at": "2026-09-05T07:43:44Z",
         "reason": "recognized_alert_without_parseable_listing_cards"
       }
     ]
@@ -579,7 +585,7 @@
       "listing_count": 3,
       "auction_count": 0,
       "auction_share_pct": 0.0,
-      "price_disclosed_count": 3,
+      "price_disclosed_count": 2,
       "median_asking_midpoint_aud": null,
       "source_counts": {
         "Domain": 2,
@@ -777,8 +783,8 @@
       "price_disclosed_count": 3,
       "median_asking_midpoint_aud": null,
       "source_counts": {
-        "Domain": 2,
-        "REA": 1
+        "Domain": 1,
+        "REA": 2
       }
     },
     {
@@ -867,8 +873,8 @@
       "price_disclosed_count": 3,
       "median_asking_midpoint_aud": null,
       "source_counts": {
-        "Domain": 2,
-        "REA": 1
+        "Domain": 1,
+        "REA": 2
       }
     },
     {
@@ -1149,11 +1155,11 @@
       "listing_count": 3,
       "auction_count": 0,
       "auction_share_pct": 0.0,
-      "price_disclosed_count": 3,
+      "price_disclosed_count": 2,
       "median_asking_midpoint_aud": null,
       "source_counts": {
-        "Domain": 1,
-        "REA": 2
+        "Domain": 2,
+        "REA": 1
       }
     },
     {
@@ -1179,11 +1185,11 @@
       "listing_count": 3,
       "auction_count": 0,
       "auction_share_pct": 0.0,
-      "price_disclosed_count": 0,
+      "price_disclosed_count": 1,
       "median_asking_midpoint_aud": null,
       "source_counts": {
-        "Domain": 2,
-        "REA": 1
+        "Domain": 1,
+        "REA": 2
       }
     },
     {
@@ -1377,8 +1383,8 @@
       "price_disclosed_count": 3,
       "median_asking_midpoint_aud": null,
       "source_counts": {
-        "Domain": 2,
-        "REA": 1
+        "Domain": 1,
+        "REA": 2
       }
     },
     {
@@ -1479,11 +1485,11 @@
       "listing_count": 3,
       "auction_count": 1,
       "auction_share_pct": 33.3,
-      "price_disclosed_count": 1,
+      "price_disclosed_count": 2,
       "median_asking_midpoint_aud": null,
       "source_counts": {
-        "Domain": 1,
-        "REA": 2
+        "Domain": 2,
+        "REA": 1
       }
     },
     {
@@ -1989,7 +1995,7 @@
       "listing_count": 3,
       "auction_count": 0,
       "auction_share_pct": 0.0,
-      "price_disclosed_count": 1,
+      "price_disclosed_count": 0,
       "median_asking_midpoint_aud": null,
       "source_counts": {
         "Domain": 0,
@@ -3951,23 +3957,23 @@
       "last_seen_at": "2026-08-25T08:26:05Z"
     },
     {
-      "property_id": "86bb3426a1dee82a",
+      "property_id": "5c69ff3b639d4dec",
       "source": "Domain",
       "city": "Brisbane",
       "suburb": "Sunnybank",
       "state": "QLD",
       "postcode": "4109",
-      "address": "99 Woff Street, Sunnybank QLD 4109",
+      "address": "210 Mains Road, Sunnybank QLD 4109",
       "property_type": null,
       "sale_type": null,
-      "price_text": "Best Offers before 16/09/2026 @ 5PM",
+      "price_text": null,
       "asking_price_low": null,
       "asking_price_high": null,
       "bedrooms": 4,
-      "bathrooms": 2,
+      "bathrooms": 3,
       "parking": 2,
-      "first_seen_at": "2026-09-04T09:05:24Z",
-      "last_seen_at": "2026-09-04T09:05:24Z"
+      "first_seen_at": "2026-09-05T07:44:42Z",
+      "last_seen_at": "2026-09-05T07:44:42Z"
     },
     {
       "property_id": "40ea724fecba5db7",
@@ -3989,20 +3995,20 @@
       "last_seen_at": "2026-09-04T09:15:02Z"
     },
     {
-      "property_id": "081dac48f7dd04f8",
+      "property_id": "86bb3426a1dee82a",
       "source": "Domain",
       "city": "Brisbane",
       "suburb": "Sunnybank",
       "state": "QLD",
       "postcode": "4109",
-      "address": "18 Aminta Street, Sunnybank QLD 4109",
+      "address": "99 Woff Street, Sunnybank QLD 4109",
       "property_type": null,
       "sale_type": null,
-      "price_text": "$1.2M | Wide Frontage & Endless Potential",
+      "price_text": "Best Offers before 16/09/2026 @ 5PM",
       "asking_price_low": null,
       "asking_price_high": null,
       "bedrooms": 4,
-      "bathrooms": 1,
+      "bathrooms": 2,
       "parking": 2,
       "first_seen_at": "2026-09-04T09:05:24Z",
       "last_seen_at": "2026-09-04T09:05:24Z"
@@ -4179,23 +4185,23 @@
       "last_seen_at": "2026-07-23T08:32:53Z"
     },
     {
-      "property_id": "c5a0177939b18a22",
+      "property_id": "642e389a1be86c5c",
       "source": "Domain",
       "city": "Brisbane",
       "suburb": "Toowong",
       "state": "QLD",
       "postcode": "4066",
-      "address": "49 Fewings Street, Toowong QLD 4066",
+      "address": "6 Thorpe Street, Toowong QLD 4066",
       "property_type": null,
       "sale_type": null,
-      "price_text": "$2,000,000 - $2,300,000",
+      "price_text": "For Sale",
       "asking_price_low": null,
       "asking_price_high": null,
-      "bedrooms": 4,
-      "bathrooms": 3,
-      "parking": 2,
-      "first_seen_at": "2026-09-02T08:29:53Z",
-      "last_seen_at": "2026-09-04T09:09:21Z"
+      "bedrooms": 5,
+      "bathrooms": 4,
+      "parking": 4,
+      "first_seen_at": "2026-09-05T07:43:57Z",
+      "last_seen_at": "2026-09-05T07:43:57Z"
     },
     {
       "property_id": "0fbb0bf53c1f794c",
@@ -4217,22 +4223,22 @@
       "last_seen_at": "2026-09-04T09:15:32Z"
     },
     {
-      "property_id": "22d708859cc01e4e",
+      "property_id": "c5a0177939b18a22",
       "source": "Domain",
       "city": "Brisbane",
       "suburb": "Toowong",
       "state": "QLD",
       "postcode": "4066",
-      "address": "47 Fewings Street, Toowong QLD 4066",
+      "address": "49 Fewings Street, Toowong QLD 4066",
       "property_type": null,
       "sale_type": null,
-      "price_text": "For Sale",
+      "price_text": "$2,000,000 - $2,300,000",
       "asking_price_low": null,
       "asking_price_high": null,
       "bedrooms": 4,
       "bathrooms": 3,
-      "parking": null,
-      "first_seen_at": "2026-09-04T09:09:21Z",
+      "parking": 2,
+      "first_seen_at": "2026-09-02T08:29:53Z",
       "last_seen_at": "2026-09-04T09:09:21Z"
     },
     {
@@ -4559,23 +4565,23 @@
       "last_seen_at": "2026-09-02T09:11:12Z"
     },
     {
-      "property_id": "930f7fe1710507f9",
+      "property_id": "12c6858e6e2cecb5",
       "source": "Domain",
       "city": "Melbourne",
       "suburb": "Box Hill",
       "state": "VIC",
       "postcode": "3128",
-      "address": "8 Kintore Crescent, Box Hill VIC 3128",
+      "address": "1601/12 Nelson Road, Box Hill VIC 3128",
       "property_type": null,
       "sale_type": null,
-      "price_text": "For Sale $1,800,000 - $1,980,000",
+      "price_text": "Private Sale: $560,000 - $590,000",
       "asking_price_low": null,
       "asking_price_high": null,
-      "bedrooms": 3,
-      "bathrooms": 1,
-      "parking": 2,
-      "first_seen_at": "2026-09-04T09:04:45Z",
-      "last_seen_at": "2026-09-04T09:04:45Z"
+      "bedrooms": 2,
+      "bathrooms": 2,
+      "parking": 1,
+      "first_seen_at": "2026-09-05T07:44:35Z",
+      "last_seen_at": "2026-09-05T07:44:35Z"
     },
     {
       "property_id": "5238017a0bdb9224",
@@ -4616,23 +4622,42 @@
       "last_seen_at": "2026-09-04T09:15:17Z"
     },
     {
-      "property_id": "3bedda99e5cc826d",
+      "property_id": "079316435e3392d3",
       "source": "Domain",
       "city": "Melbourne",
       "suburb": "Brunswick",
       "state": "VIC",
       "postcode": "3056",
-      "address": "605/7 Ovens Street, Brunswick VIC 3056",
+      "address": "89 Union Street, Brunswick VIC 3056",
       "property_type": null,
       "sale_type": null,
-      "price_text": "$1,350,000",
+      "price_text": "$830,000",
       "asking_price_low": null,
       "asking_price_high": null,
       "bedrooms": 3,
-      "bathrooms": 2,
-      "parking": 2,
-      "first_seen_at": "2026-09-03T08:27:56Z",
-      "last_seen_at": "2026-09-03T08:27:56Z"
+      "bathrooms": 1,
+      "parking": null,
+      "first_seen_at": "2026-09-05T07:44:53Z",
+      "last_seen_at": "2026-09-05T07:44:53Z"
+    },
+    {
+      "property_id": "e155de276c0298a2",
+      "source": "REA",
+      "city": "Melbourne",
+      "suburb": "Brunswick",
+      "state": "VIC",
+      "postcode": "3056",
+      "address": "21 Charles Street, Brunswick VIC 3056",
+      "property_type": null,
+      "sale_type": null,
+      "price_text": "$1,150,000-$1,250,000",
+      "asking_price_low": null,
+      "asking_price_high": null,
+      "bedrooms": 3,
+      "bathrooms": 1,
+      "parking": 1,
+      "first_seen_at": "2026-09-05T07:55:52Z",
+      "last_seen_at": "2026-09-05T07:55:52Z"
     },
     {
       "property_id": "266688075925a667",
@@ -4652,25 +4677,6 @@
       "parking": 2,
       "first_seen_at": "2026-09-03T09:07:14Z",
       "last_seen_at": "2026-09-03T09:07:14Z"
-    },
-    {
-      "property_id": "f38977fb891df1b3",
-      "source": "Domain",
-      "city": "Melbourne",
-      "suburb": "Brunswick",
-      "state": "VIC",
-      "postcode": "3056",
-      "address": "28A Breese Street, Brunswick VIC 3056",
-      "property_type": null,
-      "sale_type": null,
-      "price_text": "EOI $900,000 - $990,000",
-      "asking_price_low": null,
-      "asking_price_high": null,
-      "bedrooms": 2,
-      "bathrooms": 2,
-      "parking": 2,
-      "first_seen_at": "2026-09-03T08:27:56Z",
-      "last_seen_at": "2026-09-03T08:27:56Z"
     },
     {
       "property_id": "06dc4102cd5eb51e",
@@ -4920,8 +4926,27 @@
       "last_seen_at": "2026-09-03T08:17:56Z"
     },
     {
-      "property_id": "6d65995823dc7286",
+      "property_id": "500eb103d86701c3",
       "source": "Domain",
+      "city": "Melbourne",
+      "suburb": "Coburg",
+      "state": "VIC",
+      "postcode": "3058",
+      "address": "18 Merribell Avenue, Coburg VIC 3058",
+      "property_type": null,
+      "sale_type": null,
+      "price_text": "Private Sale - $1,250,000",
+      "asking_price_low": null,
+      "asking_price_high": null,
+      "bedrooms": 3,
+      "bathrooms": 1,
+      "parking": 2,
+      "first_seen_at": "2026-09-05T07:44:00Z",
+      "last_seen_at": "2026-09-05T07:44:00Z"
+    },
+    {
+      "property_id": "d49e48d4494eedaa",
+      "source": "REA",
       "city": "Melbourne",
       "suburb": "Coburg",
       "state": "VIC",
@@ -4935,46 +4960,27 @@
       "bedrooms": 4,
       "bathrooms": 1,
       "parking": 2,
-      "first_seen_at": "2026-09-04T09:04:46Z",
-      "last_seen_at": "2026-09-04T09:04:46Z"
+      "first_seen_at": "2026-09-05T07:55:45Z",
+      "last_seen_at": "2026-09-05T07:55:45Z"
     },
     {
-      "property_id": "cea8414b44b0bc72",
+      "property_id": "9b113b5fca18da76",
       "source": "REA",
       "city": "Melbourne",
       "suburb": "Coburg",
       "state": "VIC",
       "postcode": "3058",
-      "address": "77 Donne Street, Coburg VIC 3058",
+      "address": "13 Hardwick Street, Coburg VIC 3058",
       "property_type": null,
       "sale_type": null,
-      "price_text": "EOI - 1,650,000 - $1,750,000",
+      "price_text": "Auction - $1,450,000 - $1,550,000",
       "asking_price_low": null,
       "asking_price_high": null,
       "bedrooms": 4,
-      "bathrooms": 3,
-      "parking": 0,
-      "first_seen_at": "2026-09-03T09:07:22Z",
-      "last_seen_at": "2026-09-03T09:07:22Z"
-    },
-    {
-      "property_id": "62cdd9e982d809bd",
-      "source": "Domain",
-      "city": "Melbourne",
-      "suburb": "Coburg",
-      "state": "VIC",
-      "postcode": "3058",
-      "address": "189 Nicholson Street, Coburg VIC 3058",
-      "property_type": null,
-      "sale_type": null,
-      "price_text": "$950,000 - $1,050,000",
-      "asking_price_low": null,
-      "asking_price_high": null,
-      "bedrooms": 3,
-      "bathrooms": 1,
-      "parking": null,
-      "first_seen_at": "2026-09-04T09:04:46Z",
-      "last_seen_at": "2026-09-04T09:04:46Z"
+      "bathrooms": 2,
+      "parking": 1,
+      "first_seen_at": "2026-09-05T07:55:45Z",
+      "last_seen_at": "2026-09-05T07:55:45Z"
     },
     {
       "property_id": "28dee3782df2d43c",
@@ -5718,6 +5724,25 @@
       "last_seen_at": "2026-09-03T08:19:56Z"
     },
     {
+      "property_id": "29a1b7be86091d96",
+      "source": "REA",
+      "city": "Perth",
+      "suburb": "Bassendean",
+      "state": "WA",
+      "postcode": "6054",
+      "address": "26 Iolanthe Street, Bassendean WA 6054",
+      "property_type": null,
+      "sale_type": null,
+      "price_text": "From $985,000",
+      "asking_price_low": null,
+      "asking_price_high": null,
+      "bedrooms": 3,
+      "bathrooms": 2,
+      "parking": 0,
+      "first_seen_at": "2026-09-05T07:56:06Z",
+      "last_seen_at": "2026-09-05T07:56:06Z"
+    },
+    {
       "property_id": "87bf502fb4790880",
       "source": "REA",
       "city": "Perth",
@@ -5735,25 +5760,6 @@
       "parking": 2,
       "first_seen_at": "2026-09-03T09:07:31Z",
       "last_seen_at": "2026-09-03T09:07:31Z"
-    },
-    {
-      "property_id": "58402c07eb822a71",
-      "source": "REA",
-      "city": "Perth",
-      "suburb": "Bassendean",
-      "state": "WA",
-      "postcode": "6054",
-      "address": "55B Ivanhoe Street, Bassendean WA 6054",
-      "property_type": null,
-      "sale_type": null,
-      "price_text": "From $1,150,000",
-      "asking_price_low": null,
-      "asking_price_high": null,
-      "bedrooms": 3,
-      "bathrooms": 2,
-      "parking": 2,
-      "first_seen_at": "2026-09-02T09:10:35Z",
-      "last_seen_at": "2026-09-02T09:10:35Z"
     },
     {
       "property_id": "20625f65678e1298",
@@ -5870,23 +5876,23 @@
       "last_seen_at": "2026-08-31T08:27:28Z"
     },
     {
-      "property_id": "f01dc97a2e24ece1",
+      "property_id": "d5a08b7737c979e6",
       "source": "Domain",
       "city": "Perth",
       "suburb": "Claremont",
       "state": "WA",
       "postcode": "6010",
-      "address": "90A Gugeri Street, Claremont WA 6010",
+      "address": "9/20 Richardson Avenue, Claremont WA 6010",
       "property_type": null,
       "sale_type": null,
-      "price_text": "OFFERS",
+      "price_text": "NEW PRICE - $1.55M",
       "asking_price_low": null,
       "asking_price_high": null,
-      "bedrooms": 4,
+      "bedrooms": 3,
       "bathrooms": 2,
       "parking": 2,
       "first_seen_at": "2026-09-04T09:19:34Z",
-      "last_seen_at": "2026-09-04T09:19:34Z"
+      "last_seen_at": "2026-09-05T07:43:58Z"
     },
     {
       "property_id": "203653816aac9917",
@@ -5908,42 +5914,42 @@
       "last_seen_at": "2026-09-04T09:15:19Z"
     },
     {
-      "property_id": "d5a08b7737c979e6",
+      "property_id": "f01dc97a2e24ece1",
       "source": "Domain",
       "city": "Perth",
       "suburb": "Claremont",
       "state": "WA",
       "postcode": "6010",
-      "address": "9/20 Richardson Avenue, Claremont WA 6010",
+      "address": "90A Gugeri Street, Claremont WA 6010",
       "property_type": null,
       "sale_type": null,
-      "price_text": "NEW PRICE - $1.65M",
+      "price_text": "OFFERS",
       "asking_price_low": null,
       "asking_price_high": null,
-      "bedrooms": 3,
+      "bedrooms": 4,
       "bathrooms": 2,
       "parking": 2,
       "first_seen_at": "2026-09-04T09:19:34Z",
       "last_seen_at": "2026-09-04T09:19:34Z"
     },
     {
-      "property_id": "dae5ceab033ccc2d",
+      "property_id": "e209b1cc462b130d",
       "source": "Domain",
       "city": "Perth",
       "suburb": "Cockburn Central",
       "state": "WA",
       "postcode": "6164",
-      "address": "249 Pacer Approach, Cockburn Central WA 6164",
+      "address": "113 Muriel Court, Cockburn Central WA 6164",
       "property_type": null,
       "sale_type": null,
-      "price_text": "$977,892",
+      "price_text": null,
       "asking_price_low": null,
       "asking_price_high": null,
       "bedrooms": 4,
       "bathrooms": 2,
       "parking": 2,
-      "first_seen_at": "2026-09-04T09:19:40Z",
-      "last_seen_at": "2026-09-04T09:19:40Z"
+      "first_seen_at": "2026-09-05T07:43:16Z",
+      "last_seen_at": "2026-09-05T07:43:16Z"
     },
     {
       "property_id": "89c85b358075081e",
@@ -5965,23 +5971,23 @@
       "last_seen_at": "2026-09-04T09:15:38Z"
     },
     {
-      "property_id": "d67c8c9c5be9e10b",
-      "source": "REA",
+      "property_id": "dae5ceab033ccc2d",
+      "source": "Domain",
       "city": "Perth",
       "suburb": "Cockburn Central",
       "state": "WA",
       "postcode": "6164",
-      "address": "138 Muriel Curcit, Cockburn Central WA 6164",
+      "address": "249 Pacer Approach, Cockburn Central WA 6164",
       "property_type": null,
       "sale_type": null,
-      "price_text": "$400,000",
+      "price_text": "$977,892",
       "asking_price_low": null,
       "asking_price_high": null,
-      "bedrooms": null,
-      "bathrooms": null,
-      "parking": null,
-      "first_seen_at": "2026-09-03T09:07:30Z",
-      "last_seen_at": "2026-09-03T09:07:30Z"
+      "bedrooms": 4,
+      "bathrooms": 2,
+      "parking": 2,
+      "first_seen_at": "2026-09-04T09:19:40Z",
+      "last_seen_at": "2026-09-04T09:19:40Z"
     },
     {
       "property_id": "a691fb1e10c4fa4d",
@@ -6041,8 +6047,27 @@
       "last_seen_at": "2026-09-04T09:15:05Z"
     },
     {
-      "property_id": "75a2018ba527b334",
+      "property_id": "72693dff6831d202",
       "source": "Domain",
+      "city": "Perth",
+      "suburb": "Cottesloe",
+      "state": "WA",
+      "postcode": "6011",
+      "address": "12 Torrens Street, Cottesloe WA 6011",
+      "property_type": null,
+      "sale_type": null,
+      "price_text": "OFFERS FROM $5.95M",
+      "asking_price_low": null,
+      "asking_price_high": null,
+      "bedrooms": 5,
+      "bathrooms": 4,
+      "parking": 2,
+      "first_seen_at": "2026-09-05T07:44:39Z",
+      "last_seen_at": "2026-09-05T07:44:39Z"
+    },
+    {
+      "property_id": "66940deb233490f3",
+      "source": "REA",
       "city": "Perth",
       "suburb": "Cottesloe",
       "state": "WA",
@@ -6056,8 +6081,8 @@
       "bedrooms": 4,
       "bathrooms": 3,
       "parking": 2,
-      "first_seen_at": "2026-09-04T09:05:26Z",
-      "last_seen_at": "2026-09-04T09:05:26Z"
+      "first_seen_at": "2026-09-05T07:56:10Z",
+      "last_seen_at": "2026-09-05T07:56:10Z"
     },
     {
       "property_id": "a8f9357795df6f23",
@@ -6077,25 +6102,6 @@
       "parking": 3,
       "first_seen_at": "2026-09-04T09:15:26Z",
       "last_seen_at": "2026-09-04T09:15:26Z"
-    },
-    {
-      "property_id": "10bb7f5dfeea5d84",
-      "source": "Domain",
-      "city": "Perth",
-      "suburb": "Cottesloe",
-      "state": "WA",
-      "postcode": "6011",
-      "address": "45 Lyons Street, Cottesloe WA 6011",
-      "property_type": null,
-      "sale_type": null,
-      "price_text": null,
-      "asking_price_low": null,
-      "asking_price_high": null,
-      "bedrooms": 4,
-      "bathrooms": 2,
-      "parking": 3,
-      "first_seen_at": "2026-09-03T08:19:39Z",
-      "last_seen_at": "2026-09-03T08:19:39Z"
     },
     {
       "property_id": "df26ac10ce8d86af",
@@ -6573,23 +6579,23 @@
       "last_seen_at": "2026-08-24T08:28:16Z"
     },
     {
-      "property_id": "149c63f996051e57",
+      "property_id": "3432f2c76555726e",
       "source": "Domain",
       "city": "Perth",
       "suburb": "Maylands",
       "state": "WA",
       "postcode": "6051",
-      "address": "2/32 Hubert Road, Maylands WA 6051",
+      "address": "25/97 Peninsula Road, Maylands WA 6051",
       "property_type": null,
       "sale_type": null,
-      "price_text": "Offers From $649,000",
+      "price_text": "Inhabit From $529,000",
       "asking_price_low": null,
       "asking_price_high": null,
-      "bedrooms": 2,
+      "bedrooms": 1,
       "bathrooms": 1,
       "parking": 1,
-      "first_seen_at": "2026-09-04T09:06:04Z",
-      "last_seen_at": "2026-09-04T09:06:04Z"
+      "first_seen_at": "2026-09-05T07:44:38Z",
+      "last_seen_at": "2026-09-05T07:44:38Z"
     },
     {
       "property_id": "1ea3634c8a509569",
@@ -6611,23 +6617,23 @@
       "last_seen_at": "2026-09-04T09:15:37Z"
     },
     {
-      "property_id": "8938c8d8d556b8bf",
+      "property_id": "149c63f996051e57",
       "source": "Domain",
       "city": "Perth",
       "suburb": "Maylands",
       "state": "WA",
       "postcode": "6051",
-      "address": "33 Tenth Avenue, Maylands WA 6051",
+      "address": "2/32 Hubert Road, Maylands WA 6051",
       "property_type": null,
       "sale_type": null,
-      "price_text": "From $1,150,000",
+      "price_text": "Offers From $649,000",
       "asking_price_low": null,
       "asking_price_high": null,
-      "bedrooms": 3,
-      "bathrooms": 2,
-      "parking": 2,
-      "first_seen_at": "2026-09-03T08:19:42Z",
-      "last_seen_at": "2026-09-03T08:19:42Z"
+      "bedrooms": 2,
+      "bathrooms": 1,
+      "parking": 1,
+      "first_seen_at": "2026-09-04T09:06:04Z",
+      "last_seen_at": "2026-09-04T09:06:04Z"
     },
     {
       "property_id": "2a8a6c5faf9ef70f",
@@ -6744,8 +6750,27 @@
       "last_seen_at": "2026-09-01T08:21:13Z"
     },
     {
-      "property_id": "79efc2177a6aec1a",
+      "property_id": "bc950fdfab4a570f",
       "source": "Domain",
+      "city": "Perth",
+      "suburb": "Subiaco",
+      "state": "WA",
+      "postcode": "6008",
+      "address": "203/74 Price Street, Subiaco WA 6008",
+      "property_type": null,
+      "sale_type": null,
+      "price_text": "From $899,000",
+      "asking_price_low": null,
+      "asking_price_high": null,
+      "bedrooms": 2,
+      "bathrooms": 2,
+      "parking": 2,
+      "first_seen_at": "2026-09-05T07:44:51Z",
+      "last_seen_at": "2026-09-05T07:44:51Z"
+    },
+    {
+      "property_id": "7839ca55d7a54cdf",
+      "source": "REA",
       "city": "Perth",
       "suburb": "Subiaco",
       "state": "WA",
@@ -6753,52 +6778,33 @@
       "address": "509/19 Olive Street, Subiaco WA 6008",
       "property_type": null,
       "sale_type": null,
-      "price_text": "THE DEAL: From $1.55M",
+      "price_text": "From $1.55M",
       "asking_price_low": null,
       "asking_price_high": null,
       "bedrooms": 3,
       "bathrooms": 2,
       "parking": 3,
-      "first_seen_at": "2026-09-04T09:06:10Z",
-      "last_seen_at": "2026-09-04T09:06:10Z"
+      "first_seen_at": "2026-09-05T07:55:57Z",
+      "last_seen_at": "2026-09-05T07:55:57Z"
     },
     {
-      "property_id": "da0f2b4dbb73a307",
+      "property_id": "b3f7dccefac3f33e",
       "source": "REA",
       "city": "Perth",
       "suburb": "Subiaco",
       "state": "WA",
       "postcode": "6008",
-      "address": "10/100 Subiaco Road, Subiaco WA 6008",
+      "address": "203/74 Price Street, Subiaco WA 6008",
       "property_type": null,
       "sale_type": null,
-      "price_text": "Offers From $599,000",
+      "price_text": "From $899,000",
       "asking_price_low": null,
       "asking_price_high": null,
       "bedrooms": 2,
-      "bathrooms": 1,
-      "parking": 1,
-      "first_seen_at": "2026-09-04T09:15:37Z",
-      "last_seen_at": "2026-09-04T09:15:37Z"
-    },
-    {
-      "property_id": "731e2fa856fbd78c",
-      "source": "Domain",
-      "city": "Perth",
-      "suburb": "Subiaco",
-      "state": "WA",
-      "postcode": "6008",
-      "address": "205/26 Hood Street, Subiaco WA 6008",
-      "property_type": null,
-      "sale_type": null,
-      "price_text": "ALL Offers by 14th September (Unless Sold Prior)",
-      "asking_price_low": null,
-      "asking_price_high": null,
-      "bedrooms": 3,
       "bathrooms": 2,
       "parking": 2,
-      "first_seen_at": "2026-09-03T08:27:56Z",
-      "last_seen_at": "2026-09-04T09:06:10Z"
+      "first_seen_at": "2026-09-05T07:55:57Z",
+      "last_seen_at": "2026-09-05T07:55:57Z"
     },
     {
       "property_id": "3a1bc86b846ad74e",
@@ -7086,6 +7092,25 @@
       "last_seen_at": "2026-08-28T09:05:24Z"
     },
     {
+      "property_id": "f30007c179299799",
+      "source": "REA",
+      "city": "Sydney",
+      "suburb": "Blacktown",
+      "state": "NSW",
+      "postcode": "2148",
+      "address": "57 Cambridge Street, Blacktown NSW 2148",
+      "property_type": null,
+      "sale_type": null,
+      "price_text": null,
+      "asking_price_low": null,
+      "asking_price_high": null,
+      "bedrooms": 4,
+      "bathrooms": 1,
+      "parking": 2,
+      "first_seen_at": "2026-09-05T07:55:54Z",
+      "last_seen_at": "2026-09-05T07:55:54Z"
+    },
+    {
       "property_id": "a35ec023312b04f6",
       "source": "REA",
       "city": "Sydney",
@@ -7124,23 +7149,42 @@
       "last_seen_at": "2026-09-03T09:07:34Z"
     },
     {
-      "property_id": "4e29bafb1b825973",
+      "property_id": "b3270148a8bbbd6c",
+      "source": "Domain",
+      "city": "Sydney",
+      "suburb": "Bondi Junction",
+      "state": "NSW",
+      "postcode": "2022",
+      "address": "18/7-15 Newland St, Bondi Junction NSW 2022",
+      "property_type": null,
+      "sale_type": null,
+      "price_text": "AUCTION - Contact Agent",
+      "asking_price_low": null,
+      "asking_price_high": null,
+      "bedrooms": 1,
+      "bathrooms": 1,
+      "parking": 1,
+      "first_seen_at": "2026-09-05T07:43:43Z",
+      "last_seen_at": "2026-09-05T07:43:43Z"
+    },
+    {
+      "property_id": "3fd5de6d6d22c426",
       "source": "REA",
       "city": "Sydney",
-      "suburb": "Blacktown",
+      "suburb": "Bondi Junction",
       "state": "NSW",
-      "postcode": "2148",
-      "address": "13 Carinya Street, Blacktown NSW 2148",
+      "postcode": "2022",
+      "address": "105 Newland Street, Bondi Junction NSW 2022",
       "property_type": null,
       "sale_type": null,
       "price_text": null,
       "asking_price_low": null,
       "asking_price_high": null,
-      "bedrooms": 3,
-      "bathrooms": 1,
+      "bedrooms": 4,
+      "bathrooms": 2,
       "parking": 1,
-      "first_seen_at": "2026-09-03T09:07:34Z",
-      "last_seen_at": "2026-09-03T09:07:34Z"
+      "first_seen_at": "2026-09-05T07:56:08Z",
+      "last_seen_at": "2026-09-05T07:56:08Z"
     },
     {
       "property_id": "c77819d602893e5a",
@@ -7160,44 +7204,6 @@
       "parking": null,
       "first_seen_at": "2026-09-04T09:21:44Z",
       "last_seen_at": "2026-09-04T09:21:44Z"
-    },
-    {
-      "property_id": "d349da56edb2de99",
-      "source": "REA",
-      "city": "Sydney",
-      "suburb": "Bondi Junction",
-      "state": "NSW",
-      "postcode": "2022",
-      "address": "802/253 Oxford Street, Bondi Junction NSW 2022",
-      "property_type": null,
-      "sale_type": null,
-      "price_text": null,
-      "asking_price_low": null,
-      "asking_price_high": null,
-      "bedrooms": 2,
-      "bathrooms": 2,
-      "parking": 1,
-      "first_seen_at": "2026-09-04T09:15:39Z",
-      "last_seen_at": "2026-09-04T09:15:39Z"
-    },
-    {
-      "property_id": "aea215650c25c7db",
-      "source": "REA",
-      "city": "Sydney",
-      "suburb": "Bondi Junction",
-      "state": "NSW",
-      "postcode": "2022",
-      "address": "6/123 Old South Head Road, Bondi Junction NSW 2022",
-      "property_type": null,
-      "sale_type": null,
-      "price_text": null,
-      "asking_price_low": null,
-      "asking_price_high": null,
-      "bedrooms": 2,
-      "bathrooms": 1,
-      "parking": 0,
-      "first_seen_at": "2026-09-04T09:15:39Z",
-      "last_seen_at": "2026-09-04T09:15:39Z"
     },
     {
       "property_id": "3d73e9813745f667",
@@ -7314,6 +7320,25 @@
       "last_seen_at": "2026-09-04T09:04:46Z"
     },
     {
+      "property_id": "9dd88ecaa38c1da4",
+      "source": "REA",
+      "city": "Sydney",
+      "suburb": "Chatswood",
+      "state": "NSW",
+      "postcode": "2067",
+      "address": "20 Chatswood Avenue, Chatswood NSW 2067",
+      "property_type": null,
+      "sale_type": null,
+      "price_text": null,
+      "asking_price_low": null,
+      "asking_price_high": null,
+      "bedrooms": 5,
+      "bathrooms": 2,
+      "parking": 2,
+      "first_seen_at": "2026-09-05T07:55:52Z",
+      "last_seen_at": "2026-09-05T07:55:52Z"
+    },
+    {
       "property_id": "92a94414faa1ca3c",
       "source": "REA",
       "city": "Sydney",
@@ -7329,25 +7354,6 @@
       "bedrooms": 3,
       "bathrooms": 2,
       "parking": 2,
-      "first_seen_at": "2026-09-04T09:15:22Z",
-      "last_seen_at": "2026-09-04T09:15:22Z"
-    },
-    {
-      "property_id": "a3ab27bce52da2ce",
-      "source": "REA",
-      "city": "Sydney",
-      "suburb": "Chatswood",
-      "state": "NSW",
-      "postcode": "2067",
-      "address": "301/10 Freeman Road, Chatswood NSW 2067",
-      "property_type": null,
-      "sale_type": null,
-      "price_text": null,
-      "asking_price_low": null,
-      "asking_price_high": null,
-      "bedrooms": 3,
-      "bathrooms": 2,
-      "parking": 1,
       "first_seen_at": "2026-09-04T09:15:22Z",
       "last_seen_at": "2026-09-04T09:15:22Z"
     },
@@ -7808,23 +7814,23 @@
       "last_seen_at": "2026-09-04T09:05:35Z"
     },
     {
-      "property_id": "b5d9c53665264fb4",
+      "property_id": "9166e2e72231fa9a",
       "source": "REA",
       "city": "Sydney",
       "suburb": "Kingsford",
       "state": "NSW",
       "postcode": "2032",
-      "address": "A104/22-28 Gardeners Road, Kingsford NSW 2032",
+      "address": "12/117 Houston Road, Kingsford NSW 2032",
       "property_type": null,
       "sale_type": null,
       "price_text": null,
       "asking_price_low": null,
       "asking_price_high": null,
-      "bedrooms": 0,
+      "bedrooms": 2,
       "bathrooms": 1,
-      "parking": 0,
-      "first_seen_at": "2026-09-03T09:07:24Z",
-      "last_seen_at": "2026-09-03T09:07:24Z"
+      "parking": 2,
+      "first_seen_at": "2026-09-05T07:56:00Z",
+      "last_seen_at": "2026-09-05T07:56:00Z"
     },
     {
       "property_id": "5148018096db8b21",
@@ -8606,6 +8612,44 @@
       "last_seen_at": "2026-09-04T09:14:56Z"
     },
     {
+      "property_id": "a81a065093135058",
+      "source": "REA",
+      "city": "Sydney",
+      "suburb": "Strathfield",
+      "state": "NSW",
+      "postcode": "2135",
+      "address": "29 Fairholm Street, Strathfield NSW 2135",
+      "property_type": null,
+      "sale_type": null,
+      "price_text": null,
+      "asking_price_low": null,
+      "asking_price_high": null,
+      "bedrooms": 5,
+      "bathrooms": 2,
+      "parking": 4,
+      "first_seen_at": "2026-09-05T07:56:05Z",
+      "last_seen_at": "2026-09-05T07:56:05Z"
+    },
+    {
+      "property_id": "391e47f13e8ab7c9",
+      "source": "REA",
+      "city": "Sydney",
+      "suburb": "Strathfield",
+      "state": "NSW",
+      "postcode": "2135",
+      "address": "20 Llandilo Avenue, Strathfield NSW 2135",
+      "property_type": null,
+      "sale_type": null,
+      "price_text": null,
+      "asking_price_low": null,
+      "asking_price_high": null,
+      "bedrooms": 5,
+      "bathrooms": 6,
+      "parking": 7,
+      "first_seen_at": "2026-09-05T07:56:05Z",
+      "last_seen_at": "2026-09-05T07:56:05Z"
+    },
+    {
       "property_id": "db5ef56108946d32",
       "source": "REA",
       "city": "Sydney",
@@ -8623,44 +8667,6 @@
       "parking": 5,
       "first_seen_at": "2026-09-04T09:15:28Z",
       "last_seen_at": "2026-09-04T09:15:28Z"
-    },
-    {
-      "property_id": "9bfd2c3dd9642a58",
-      "source": "REA",
-      "city": "Sydney",
-      "suburb": "Strathfield",
-      "state": "NSW",
-      "postcode": "2135",
-      "address": "101A/86 Centenary Drive, Strathfield NSW 2135",
-      "property_type": null,
-      "sale_type": null,
-      "price_text": null,
-      "asking_price_low": null,
-      "asking_price_high": null,
-      "bedrooms": 2,
-      "bathrooms": 2,
-      "parking": 1,
-      "first_seen_at": "2026-09-04T09:15:28Z",
-      "last_seen_at": "2026-09-04T09:15:28Z"
-    },
-    {
-      "property_id": "4b48c0fd6f871776",
-      "source": "REA",
-      "city": "Sydney",
-      "suburb": "Strathfield",
-      "state": "NSW",
-      "postcode": "2135",
-      "address": "21 Wentworth Road, Strathfield NSW 2135",
-      "property_type": null,
-      "sale_type": null,
-      "price_text": "AUCTION, Guide $2,000,000",
-      "asking_price_low": null,
-      "asking_price_high": null,
-      "bedrooms": 4,
-      "bathrooms": 1,
-      "parking": 2,
-      "first_seen_at": "2026-09-03T09:07:28Z",
-      "last_seen_at": "2026-09-03T09:07:28Z"
     },
     {
       "property_id": "17acc38ad260c42e",
