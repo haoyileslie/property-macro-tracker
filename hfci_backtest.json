@@ -1,7 +1,7 @@
 {
   "meta": {
-    "generated_at": "2026-09-10T06:44:54+00:00",
-    "data_as_of": "2026-09-10",
+    "generated_at": "2026-09-14T22:36:50+00:00",
+    "data_as_of": "2026-09-14",
     "method": "Expanding-window direct OLS forecasts using publication-lag-adjusted HFCIs and latest revised source histories",
     "initial_training_rule": "60% of aligned observations, bounded between 12 and 60 observations",
     "warning": "Pseudo-real-time, not a full vintage backtest: HFCI publication lags are respected, but most source histories are the latest revised vintages."
@@ -3385,13 +3385,13 @@
     {
       "left": "hfci_core",
       "right": "hfci_long_history",
-      "correlation": 0.198,
+      "correlation": 0.199,
       "observations": 81
     },
     {
       "left": "hfci_core",
       "right": "hfci_full",
-      "correlation": 0.428,
+      "correlation": 0.429,
       "observations": 53
     },
     {
@@ -3409,7 +3409,7 @@
     {
       "left": "hfci_augmented",
       "right": "hfci_full",
-      "correlation": 0.462,
+      "correlation": 0.463,
       "observations": 53
     },
     {
@@ -3421,7 +3421,7 @@
     {
       "left": "hfci_long_history",
       "right": "hfci_full",
-      "correlation": 0.378,
+      "correlation": 0.379,
       "observations": 53
     },
     {
