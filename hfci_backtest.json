@@ -1,7 +1,7 @@
 {
   "meta": {
-    "generated_at": "2026-09-14T22:36:50+00:00",
-    "data_as_of": "2026-09-14",
+    "generated_at": "2026-09-19T11:49:25+00:00",
+    "data_as_of": "2026-09-19",
     "method": "Expanding-window direct OLS forecasts using publication-lag-adjusted HFCIs and latest revised source histories",
     "initial_training_rule": "60% of aligned observations, bounded between 12 and 60 observations",
     "warning": "Pseudo-real-time, not a full vintage backtest: HFCI publication lags are respected, but most source histories are the latest revised vintages."
@@ -1151,7 +1151,7 @@
       "sample_start": "2022-05",
       "test_start": "2024-08",
       "sample_end": "2026-01",
-      "rmse": 1.2718,
+      "rmse": 1.2719,
       "mae": 1.1544,
       "direction_accuracy": 16.7,
       "oos_observations": 18,
@@ -1781,8 +1781,8 @@
       "sample_start": "2022-05",
       "test_start": "2024-09",
       "sample_end": "2026-04",
-      "rmse": 10.7215,
-      "mae": 8.2927,
+      "rmse": 10.7214,
+      "mae": 8.2926,
       "direction_accuracy": 60.0,
       "oos_observations": 20,
       "rmse_improvement_vs_cash": -1.8
@@ -1823,7 +1823,7 @@
       "sample_start": "2022-05",
       "test_start": "2024-08",
       "sample_end": "2026-01",
-      "rmse": 14.0547,
+      "rmse": 14.0548,
       "mae": 11.4773,
       "direction_accuracy": 61.1,
       "oos_observations": 18,
@@ -1837,8 +1837,8 @@
       "sample_start": "2022-05",
       "test_start": "2024-08",
       "sample_end": "2026-01",
-      "rmse": 13.1853,
-      "mae": 10.8414,
+      "rmse": 13.1852,
+      "mae": 10.8413,
       "direction_accuracy": 66.7,
       "oos_observations": 18,
       "rmse_improvement_vs_cash": 0.5
@@ -3385,13 +3385,13 @@
     {
       "left": "hfci_core",
       "right": "hfci_long_history",
-      "correlation": 0.199,
+      "correlation": 0.2,
       "observations": 81
     },
     {
       "left": "hfci_core",
       "right": "hfci_full",
-      "correlation": 0.429,
+      "correlation": 0.427,
       "observations": 53
     },
     {
@@ -3421,7 +3421,7 @@
     {
       "left": "hfci_long_history",
       "right": "hfci_full",
-      "correlation": 0.379,
+      "correlation": 0.378,
       "observations": 53
     },
     {

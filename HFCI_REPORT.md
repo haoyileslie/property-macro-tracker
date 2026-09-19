@@ -1,6 +1,6 @@
 # 住房金融条件指数（HFCI）：构建方法与回测报告
 
-_数据截至 2026-09-14。本报告由 `property_data.json` 可复现生成。_
+_数据截至 2026-09-19。本报告由 `property_data.json` 可复现生成。_
 
 ## 1. 构建目的
 
@@ -59,15 +59,15 @@ _数据截至 2026-09-14。本报告由 `property_data.json` 可复现生成。_
 | Pricing | Mortgage spread to cash rate | 2019-07–2026-07 | 85 | 1.80 | 1.90 | 1.95 | 2.13 | 2.40 | 2.75 | 0.27 | 1 | [RBA Statistical Table F6 (Housing Lending Rates)](https://www.rba.gov.au/statistics/tables/csv/f6-data.csv) + [Reserve Bank of Australia](https://www.rba.gov.au/statistics/cash-rate/) |
 | Market Pricing | Australian five-year government yield | 2017-01–2026-08 | 116 | 0.30 | 1.28 | 2.40 | 2.51 | 3.66 | 4.75 | 1.34 | 1 | [RBA Statistical Table F17 (Indicative Mid Rates of Australian Government Securities)](https://www.rba.gov.au/statistics/tables/csv/f17-yields.csv) |
 | Market Pricing | BBB financing spread | 2005-01–2026-08 | 260 | 0.54 | 1.34 | 2.12 | 2.22 | 2.64 | 8.06 | 1.25 | 1 | [RBA Statistical Table F3 (Aggregate Measures of Australian Corporate Bond Yields)](https://www.rba.gov.au/statistics/tables/csv/f3-data.csv) + [Reserve Bank of Australia](https://www.rba.gov.au/statistics/cash-rate/) |
-| Market Pricing | A-REIT relative annual return | 2005-04–2026-09 | 258 | -41.76 | -10.66 | -2.60 | -3.08 | 5.91 | 23.87 | 13.03 | 1 | [S&P/ASX 200 A-REIT Index](https://www.spglobal.com/spdji/en/indices/equity/sp-asx-200-a-reit/) + [S&P/ASX 200](https://www.asx.com.au/markets/trade-our-cash-market/overview/indices) |
+| Market Pricing | A-REIT relative annual return | 2005-04–2026-09 | 258 | -41.76 | -10.66 | -2.60 | -3.09 | 5.91 | 23.87 | 13.04 | 1 | [S&P/ASX 200 A-REIT Index](https://www.spglobal.com/spdji/en/indices/equity/sp-asx-200-a-reit/) + [S&P/ASX 200](https://www.asx.com.au/markets/trade-our-cash-market/overview/indices) |
 | Credit Availability | Housing credit growth | 1977-08–2026-07 | 588 | 3.00 | 6.70 | 11.85 | 11.41 | 15.50 | 23.20 | 5.13 | 1 | [RBA Statistical Table D1 (Growth in Financial Aggregates)](https://www.rba.gov.au/statistics/tables/csv/d1-data.csv) |
 | Credit Availability | Owner-occupier housing credit growth | 1991-01–2026-07 | 427 | 3.80 | 6.10 | 8.80 | 9.80 | 12.70 | 19.90 | 4.23 | 1 | [RBA Statistical Table D1 (Growth in Financial Aggregates)](https://www.rba.gov.au/statistics/tables/csv/d1-data.csv) |
 | Credit Availability | Investor housing credit growth | 1991-01–2026-07 | 427 | -0.70 | 4.90 | 10.40 | 12.71 | 20.55 | 40.20 | 9.48 | 1 | [RBA Statistical Table D1 (Growth in Financial Aggregates)](https://www.rba.gov.au/statistics/tables/csv/d1-data.csv) |
 | Credit Availability | New dwelling lending growth | 2017-Q2–2026-Q2 | 37 | -29.82 | -7.82 | 8.30 | 8.31 | 17.83 | 83.23 | 23.10 | 2 | [ABS Lending Indicators](https://www.abs.gov.au/statistics/economy/finance/lending-indicators/latest-release) |
-| Credit Availability | High-DTI lending share | 2019-Q1–2026-Q1 | 29 | 5.00 | 5.78 | 14.56 | 12.59 | 17.08 | 24.33 | 6.78 | 3 | [APRA Quarterly ADI Property Exposures](https://www.apra.gov.au/news-and-publications/quarterly-authorised-deposit-taking-institution-statistics) |
-| Credit Availability | High-LVR lending share | 2019-Q1–2026-Q1 | 29 | 5.52 | 6.67 | 7.28 | 7.81 | 9.17 | 11.34 | 1.55 | 3 | [APRA Quarterly ADI Property Exposures](https://www.apra.gov.au/news-and-publications/quarterly-authorised-deposit-taking-institution-statistics) |
-| Credit Availability | Interest-only lending share | 2019-Q1–2026-Q1 | 29 | 17.54 | 18.46 | 19.25 | 19.33 | 20.16 | 21.73 | 1.05 | 3 | [APRA Quarterly ADI Property Exposures](https://www.apra.gov.au/news-and-publications/quarterly-authorised-deposit-taking-institution-statistics) |
-| Credit Availability | Non-performing mortgage share | 2019-Q1–2026-Q1 | 29 | 0.68 | 0.82 | 0.94 | 0.93 | 1.04 | 1.11 | 0.12 | 3 | [APRA Quarterly ADI Property Exposures](https://www.apra.gov.au/news-and-publications/quarterly-authorised-deposit-taking-institution-statistics) |
+| Credit Availability | High-DTI lending share | 2019-Q1–2026-Q2 | 30 | 5.00 | 5.69 | 12.78 | 12.36 | 16.91 | 24.33 | 6.78 | 3 | [APRA Quarterly ADI Property Exposures](https://www.apra.gov.au/news-and-publications/quarterly-authorised-deposit-taking-institution-statistics) |
+| Credit Availability | High-LVR lending share | 2019-Q1–2026-Q2 | 30 | 5.52 | 6.67 | 7.39 | 7.81 | 9.14 | 11.34 | 1.53 | 3 | [APRA Quarterly ADI Property Exposures](https://www.apra.gov.au/news-and-publications/quarterly-authorised-deposit-taking-institution-statistics) |
+| Credit Availability | Interest-only lending share | 2019-Q1–2026-Q2 | 30 | 17.54 | 18.48 | 19.29 | 19.46 | 20.21 | 23.16 | 1.25 | 3 | [APRA Quarterly ADI Property Exposures](https://www.apra.gov.au/news-and-publications/quarterly-authorised-deposit-taking-institution-statistics) |
+| Credit Availability | Non-performing mortgage share | 2019-Q1–2026-Q2 | 30 | 0.68 | 0.83 | 0.95 | 0.93 | 1.04 | 1.11 | 0.12 | 3 | [APRA Quarterly ADI Property Exposures](https://www.apra.gov.au/news-and-publications/quarterly-authorised-deposit-taking-institution-statistics) |
 | Household Capacity | Scheduled repayment burden | 2009-Q1–2026-Q1 | 69 | 7.10 | 7.60 | 8.00 | 8.22 | 8.90 | 10.10 | 0.84 | 2 | [RBA Housing Loan Payments (E13)](https://www.rba.gov.au/statistics/tables/csv/e13-data.csv) |
 | Household Capacity | Housing interest burden | 2009-Q1–2026-Q1 | 69 | 3.10 | 4.80 | 5.30 | 5.35 | 6.20 | 7.10 | 1.11 | 2 | [RBA Housing Loan Payments (E13)](https://www.rba.gov.au/statistics/tables/csv/e13-data.csv) |
 | Household Capacity | Unemployment rate | 1978-02–2026-07 | 582 | 3.40 | 5.20 | 6.10 | 6.50 | 7.88 | 11.20 | 1.84 | 1 | [ABS Labour Force, Australia](https://www.rba.gov.au/statistics/tables/csv/h5-data.csv) |
@@ -79,9 +79,9 @@ _数据截至 2026-09-14。本报告由 `property_data.json` 可复现生成。_
 
 | 指数 | 时间跨度 | N | 最小值 | 中位数 | 均值 | 最大值 | 标准差 | 最新历史分位数 |
 |---|---:|---:|---:|---:|---:|---:|---:|---:|
-| Core Housing Financial Conditions Index | 2020-01–2026-09 | 81 | -1.29 | 0.03 | -0.20 | 0.41 | 0.46 | 100.00 |
+| Core Housing Financial Conditions Index | 2020-01–2026-09 | 81 | -1.29 | 0.03 | -0.19 | 0.43 | 0.46 | 100.00 |
 | Augmented Housing Financial Conditions Index | 2020-01–2026-09 | 81 | -0.90 | 0.22 | 0.17 | 0.66 | 0.32 | 82.70 |
-| Long-history Housing Financial Conditions Index | 2006-04–2026-09 | 246 | -0.64 | -0.01 | 0.03 | 1.24 | 0.27 | 86.60 |
+| Long-history Housing Financial Conditions Index | 2006-04–2026-09 | 246 | -0.64 | -0.01 | 0.03 | 1.24 | 0.27 | 87.40 |
 | Full Housing Financial Conditions Index | 2022-05–2026-09 | 53 | -0.07 | 0.26 | 0.27 | 0.57 | 0.13 | 77.40 |
 
 四个指数在主要紧缩和宽松阶段应大致同向，但当信贷数量或家庭偿付能力与市场价格信号背离时会出现差异。Long-history 更适合周期比较；Core 和 Full 更适合分析当前政策传导。
