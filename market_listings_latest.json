@@ -5,32 +5,20 @@
       "https://www.domain.com.au/",
       "https://www.realestate.com.au/"
     ],
-    "captured_at": "2026-09-19T08:05:40Z",
-    "published_at": "2026-09-19T11:48:40Z",
+    "captured_at": "2026-09-20T12:49:19Z",
+    "published_at": "2026-09-20T21:29:13Z",
     "status": "ok",
-    "alert_messages": 2896,
+    "alert_messages": 2910,
     "market_count": 134,
     "listing_count": 362,
-    "observations_fetched": 7653,
-    "unique_listings_analysed": 7210,
+    "observations_fetched": 7661,
+    "unique_listings_analysed": 7216,
     "public_sample_per_market": 3,
     "coverage_note": "Recent saved-search alert evidence, not a complete market census. Up to three examples are shown per suburb, with both portals represented where available.",
-    "last_alert_email_at": "2026-09-19T08:05:40Z",
-    "unattributed_alert_cards_skipped": 178,
-    "unparsed_alert_messages": 20,
+    "last_alert_email_at": "2026-09-20T12:49:19Z",
+    "unattributed_alert_cards_skipped": 186,
+    "unparsed_alert_messages": 22,
     "recent_unparsed_alerts": [
-      {
-        "portal": "Domain",
-        "subject": "Home Alert for New Farm QLD 4005, Indooroopilly QLD 4068",
-        "received_at": "2026-09-05T07:43:44Z",
-        "reason": "recognized_alert_without_parseable_listing_cards"
-      },
-      {
-        "portal": "Domain",
-        "subject": "Home Alert for New Farm QLD 4005, Indooroopilly QLD 4068",
-        "received_at": "2026-09-12T08:03:31Z",
-        "reason": "recognized_alert_without_parseable_listing_cards"
-      },
       {
         "portal": "Domain",
         "subject": "Home Alert for Parramatta NSW 2150, Chatswood NSW 2067",
@@ -77,6 +65,18 @@
         "portal": "Domain",
         "subject": "Home Alert for New Farm QLD 4005, Indooroopilly QLD 4068",
         "received_at": "2026-09-19T07:54:53Z",
+        "reason": "recognized_alert_without_parseable_listing_cards"
+      },
+      {
+        "portal": "Domain",
+        "subject": "Home Alert for Subiaco WA 6008, Victoria Park WA 6100",
+        "received_at": "2026-09-20T07:30:50Z",
+        "reason": "recognized_alert_without_parseable_listing_cards"
+      },
+      {
+        "portal": "Domain",
+        "subject": "Home Alert for New Farm QLD 4005, Indooroopilly QLD 4068",
+        "received_at": "2026-09-20T07:30:44Z",
         "reason": "recognized_alert_without_parseable_listing_cards"
       }
     ]
@@ -420,7 +420,7 @@
       "listing_count": 3,
       "auction_count": 0,
       "auction_share_pct": 0.0,
-      "price_disclosed_count": 3,
+      "price_disclosed_count": 2,
       "median_asking_midpoint_aud": null,
       "source_counts": {
         "Domain": 1,
@@ -750,11 +750,11 @@
       "listing_count": 3,
       "auction_count": 0,
       "auction_share_pct": 0.0,
-      "price_disclosed_count": 2,
+      "price_disclosed_count": 3,
       "median_asking_midpoint_aud": null,
       "source_counts": {
-        "Domain": 1,
-        "REA": 2
+        "Domain": 2,
+        "REA": 1
       }
     },
     {
@@ -2095,6 +2095,25 @@
   ],
   "listings": [
     {
+      "property_id": "802e1031fcbcd0e4",
+      "source": "Domain",
+      "city": "Brisbane",
+      "suburb": "Acacia Ridge",
+      "state": "QLD",
+      "postcode": "4110",
+      "address": "17 Stanley Street, Acacia Ridge QLD 4110",
+      "property_type": null,
+      "sale_type": null,
+      "price_text": "$919,000 | More Space & More Flexibility",
+      "asking_price_low": null,
+      "asking_price_high": null,
+      "bedrooms": 4,
+      "bathrooms": 2,
+      "parking": 3,
+      "first_seen_at": "2026-09-17T08:47:42Z",
+      "last_seen_at": "2026-09-20T07:30:31Z"
+    },
+    {
       "property_id": "1ac8e091fb977bc3",
       "source": "Domain",
       "city": "Brisbane",
@@ -2110,25 +2129,6 @@
       "bedrooms": 6,
       "bathrooms": 5,
       "parking": 2,
-      "first_seen_at": "2026-09-17T08:47:42Z",
-      "last_seen_at": "2026-09-17T08:47:42Z"
-    },
-    {
-      "property_id": "802e1031fcbcd0e4",
-      "source": "Domain",
-      "city": "Brisbane",
-      "suburb": "Acacia Ridge",
-      "state": "QLD",
-      "postcode": "4110",
-      "address": "17 Stanley Street, Acacia Ridge QLD 4110",
-      "property_type": null,
-      "sale_type": null,
-      "price_text": "Auction",
-      "asking_price_low": null,
-      "asking_price_high": null,
-      "bedrooms": 4,
-      "bathrooms": 2,
-      "parking": 3,
       "first_seen_at": "2026-09-17T08:47:42Z",
       "last_seen_at": "2026-09-17T08:47:42Z"
     },
@@ -3330,23 +3330,42 @@
       "last_seen_at": "2026-08-25T08:26:05Z"
     },
     {
-      "property_id": "3a340513c35a380c",
+      "property_id": "3cec3da157cf4e4b",
       "source": "Domain",
       "city": "Brisbane",
       "suburb": "Morningside",
       "state": "QLD",
       "postcode": "4170",
-      "address": "2/16 Monmouth Street, Morningside QLD 4170",
+      "address": "7/15 Bartlett Street, Morningside QLD 4170",
       "property_type": null,
       "sale_type": null,
-      "price_text": "Offers Over $1,280,000",
+      "price_text": "Auction",
       "asking_price_low": null,
       "asking_price_high": null,
       "bedrooms": 3,
       "bathrooms": 2,
-      "parking": 1,
-      "first_seen_at": "2026-09-19T07:56:37Z",
-      "last_seen_at": "2026-09-19T07:56:37Z"
+      "parking": 2,
+      "first_seen_at": "2026-09-20T07:31:45Z",
+      "last_seen_at": "2026-09-20T07:31:45Z"
+    },
+    {
+      "property_id": "2f87d4ac037f662e",
+      "source": "REA",
+      "city": "Brisbane",
+      "suburb": "Morningside",
+      "state": "QLD",
+      "postcode": "4170",
+      "address": "7/15 Bartlett Street, Morningside QLD 4170",
+      "property_type": null,
+      "sale_type": null,
+      "price_text": null,
+      "asking_price_low": null,
+      "asking_price_high": null,
+      "bedrooms": 3,
+      "bathrooms": 2,
+      "parking": 2,
+      "first_seen_at": "2026-09-20T06:47:25Z",
+      "last_seen_at": "2026-09-20T06:47:25Z"
     },
     {
       "property_id": "a9875df9ab1de6fc",
@@ -3359,25 +3378,6 @@
       "property_type": null,
       "sale_type": null,
       "price_text": "Offers over $1.075M",
-      "asking_price_low": null,
-      "asking_price_high": null,
-      "bedrooms": 3,
-      "bathrooms": 2,
-      "parking": 1,
-      "first_seen_at": "2026-09-19T08:05:03Z",
-      "last_seen_at": "2026-09-19T08:05:03Z"
-    },
-    {
-      "property_id": "8c40ec523a86356e",
-      "source": "REA",
-      "city": "Brisbane",
-      "suburb": "Morningside",
-      "state": "QLD",
-      "postcode": "4170",
-      "address": "2/16 Monmouth Street, Morningside QLD 4170",
-      "property_type": null,
-      "sale_type": null,
-      "price_text": "Offers Over $1,280,000",
       "asking_price_low": null,
       "asking_price_high": null,
       "bedrooms": 3,
@@ -4508,23 +4508,23 @@
       "last_seen_at": "2026-09-17T09:15:39Z"
     },
     {
-      "property_id": "965e2cfeda9cd9b9",
+      "property_id": "eaada5789368b8e2",
       "source": "Domain",
       "city": "Melbourne",
       "suburb": "Blackburn",
       "state": "VIC",
       "postcode": "3130",
-      "address": "35-37 Whitehorse Road, Blackburn VIC 3130",
+      "address": "20B Norway Avenue, Blackburn VIC 3130",
       "property_type": null,
       "sale_type": null,
-      "price_text": "$895,000",
+      "price_text": "For Sale $1,185,000",
       "asking_price_low": null,
       "asking_price_high": null,
-      "bedrooms": 2,
-      "bathrooms": 1,
+      "bedrooms": 3,
+      "bathrooms": 3,
       "parking": 1,
-      "first_seen_at": "2026-09-18T09:06:45Z",
-      "last_seen_at": "2026-09-18T09:06:45Z"
+      "first_seen_at": "2026-09-20T07:42:10Z",
+      "last_seen_at": "2026-09-20T07:42:10Z"
     },
     {
       "property_id": "3784db0bb09aa49d",
@@ -4546,23 +4546,23 @@
       "last_seen_at": "2026-09-19T08:05:01Z"
     },
     {
-      "property_id": "9cfcf3f0e5cbad31",
-      "source": "REA",
+      "property_id": "965e2cfeda9cd9b9",
+      "source": "Domain",
       "city": "Melbourne",
       "suburb": "Blackburn",
       "state": "VIC",
       "postcode": "3130",
-      "address": "603/162 Whitehorse Road, Blackburn VIC 3130",
+      "address": "35-37 Whitehorse Road, Blackburn VIC 3130",
       "property_type": null,
       "sale_type": null,
-      "price_text": null,
+      "price_text": "$895,000",
       "asking_price_low": null,
       "asking_price_high": null,
       "bedrooms": 2,
-      "bathrooms": 2,
-      "parking": 3,
-      "first_seen_at": "2026-09-18T09:06:12Z",
-      "last_seen_at": "2026-09-18T09:06:12Z"
+      "bathrooms": 1,
+      "parking": 1,
+      "first_seen_at": "2026-09-18T09:06:45Z",
+      "last_seen_at": "2026-09-18T09:06:45Z"
     },
     {
       "property_id": "cb7782562791a805",
@@ -4641,6 +4641,25 @@
       "last_seen_at": "2026-09-19T07:57:24Z"
     },
     {
+      "property_id": "8d827659265b7128",
+      "source": "REA",
+      "city": "Melbourne",
+      "suburb": "Brunswick",
+      "state": "VIC",
+      "postcode": "3056",
+      "address": "7/116 Albert Street, Brunswick VIC 3056",
+      "property_type": null,
+      "sale_type": null,
+      "price_text": "$445,000 \u2014 $485,000",
+      "asking_price_low": null,
+      "asking_price_high": null,
+      "bedrooms": 1,
+      "bathrooms": 1,
+      "parking": 1,
+      "first_seen_at": "2026-09-20T06:47:20Z",
+      "last_seen_at": "2026-09-20T06:47:20Z"
+    },
+    {
       "property_id": "375cca398b1c9a87",
       "source": "REA",
       "city": "Melbourne",
@@ -4656,25 +4675,6 @@
       "bedrooms": 2,
       "bathrooms": 1,
       "parking": 0,
-      "first_seen_at": "2026-09-19T08:04:48Z",
-      "last_seen_at": "2026-09-19T08:04:48Z"
-    },
-    {
-      "property_id": "3f0d91dae67b6a81",
-      "source": "REA",
-      "city": "Melbourne",
-      "suburb": "Brunswick",
-      "state": "VIC",
-      "postcode": "3056",
-      "address": "1A Westbourne Street, Brunswick VIC 3056",
-      "property_type": null,
-      "sale_type": null,
-      "price_text": "Auction - $1,550,000 - $1,650,000",
-      "asking_price_low": null,
-      "asking_price_high": null,
-      "bedrooms": 4,
-      "bathrooms": 3,
-      "parking": 2,
       "first_seen_at": "2026-09-19T08:04:48Z",
       "last_seen_at": "2026-09-19T08:04:48Z"
     },
@@ -6351,23 +6351,23 @@
       "last_seen_at": "2026-07-22T08:09:32Z"
     },
     {
-      "property_id": "8524f3c08923ae5f",
+      "property_id": "ee164dd397a75572",
       "source": "Domain",
       "city": "Perth",
       "suburb": "Joondalup",
       "state": "WA",
       "postcode": "6027",
-      "address": "8 Alberta Pocket, Joondalup WA 6027",
+      "address": "9 Pya Place, Joondalup WA 6027",
       "property_type": null,
       "sale_type": null,
-      "price_text": "$1.2 million",
+      "price_text": "$780,000 Negotiable",
       "asking_price_low": null,
       "asking_price_high": null,
-      "bedrooms": 5,
-      "bathrooms": 3,
-      "parking": 2,
-      "first_seen_at": "2026-09-18T09:05:57Z",
-      "last_seen_at": "2026-09-18T09:05:57Z"
+      "bedrooms": null,
+      "bathrooms": null,
+      "parking": null,
+      "first_seen_at": "2026-09-20T07:42:10Z",
+      "last_seen_at": "2026-09-20T07:42:10Z"
     },
     {
       "property_id": "ffed2bb1d10e928d",
@@ -6389,20 +6389,20 @@
       "last_seen_at": "2026-09-19T08:05:00Z"
     },
     {
-      "property_id": "19a2cb633d63648d",
+      "property_id": "8524f3c08923ae5f",
       "source": "Domain",
       "city": "Perth",
       "suburb": "Joondalup",
       "state": "WA",
       "postcode": "6027",
-      "address": "132 Lakeside Drive, Joondalup WA 6027",
+      "address": "8 Alberta Pocket, Joondalup WA 6027",
       "property_type": null,
       "sale_type": null,
-      "price_text": "OFFERS INVITED - 6 x 6 Investment Opportunity!",
+      "price_text": "$1.2 million",
       "asking_price_low": null,
       "asking_price_high": null,
-      "bedrooms": 6,
-      "bathrooms": 6,
+      "bedrooms": 5,
+      "bathrooms": 3,
       "parking": 2,
       "first_seen_at": "2026-09-18T09:05:57Z",
       "last_seen_at": "2026-09-18T09:05:57Z"
@@ -8555,23 +8555,23 @@
       "last_seen_at": "2026-08-07T08:44:08Z"
     },
     {
-      "property_id": "b85d0e12a43447e6",
+      "property_id": "684fdc1009ee6483",
       "source": "Domain",
       "city": "Sydney",
       "suburb": "St Leonards",
       "state": "NSW",
       "postcode": "2065",
-      "address": "1204/33 Berry Road, St Leonards NSW 2065",
+      "address": "2002/1 Marshall Avenue, St Leonards NSW 2065",
       "property_type": null,
-      "sale_type": null,
-      "price_text": "Positioned on the  Level 12 of the highly regarded Park Avenue development, this brand-new three-bedroom residence offers an exceptional combination of elevated living, abundant natural light and impressive panoramic views.",
+      "sale_type": "Private Sale",
+      "price_text": "Just Listed Contact Agent",
       "asking_price_low": null,
       "asking_price_high": null,
-      "bedrooms": 3,
-      "bathrooms": 2,
-      "parking": 3,
-      "first_seen_at": "2026-09-19T07:59:27Z",
-      "last_seen_at": "2026-09-19T07:59:27Z"
+      "bedrooms": null,
+      "bathrooms": null,
+      "parking": null,
+      "first_seen_at": "2026-09-20T12:49:19Z",
+      "last_seen_at": "2026-09-20T12:49:19Z"
     },
     {
       "property_id": "94f6feedf93a543d",
@@ -8609,7 +8609,7 @@
       "bathrooms": 2,
       "parking": 1,
       "first_seen_at": "2026-09-18T09:09:43Z",
-      "last_seen_at": "2026-09-18T09:09:43Z"
+      "last_seen_at": "2026-09-20T07:42:10Z"
     },
     {
       "property_id": "d270e7b0dc983edd",
