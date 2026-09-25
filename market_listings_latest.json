@@ -6,17 +6,17 @@
       "https://www.realestate.com.au/"
     ],
     "captured_at": "2026-09-24T09:19:39Z",
-    "published_at": "2026-09-24T21:30:01Z",
+    "published_at": "2026-09-25T21:30:39Z",
     "status": "ok",
-    "alert_messages": 3166,
+    "alert_messages": 3169,
     "market_count": 134,
     "listing_count": 362,
     "observations_fetched": 8235,
     "unique_listings_analysed": 7755,
     "public_sample_per_market": 3,
     "coverage_note": "Recent saved-search alert evidence, not a complete market census. Up to three examples are shown per suburb, with both portals represented where available.",
-    "last_alert_email_at": "2026-09-24T09:19:39Z",
-    "unattributed_alert_cards_skipped": 194,
+    "last_alert_email_at": "2026-09-25T01:30:48Z",
+    "unattributed_alert_cards_skipped": 197,
     "unparsed_alert_messages": 25,
     "recent_unparsed_alerts": [
       {
