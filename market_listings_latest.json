@@ -5,18 +5,18 @@
       "https://www.domain.com.au/",
       "https://www.realestate.com.au/"
     ],
-    "captured_at": "2026-10-05T08:07:38Z",
-    "published_at": "2026-10-05T21:33:35Z",
+    "captured_at": "2026-10-06T03:08:18Z",
+    "published_at": "2026-10-06T21:32:23Z",
     "status": "ok",
-    "alert_messages": 3618,
+    "alert_messages": 3624,
     "market_count": 135,
     "listing_count": 364,
-    "observations_fetched": 9134,
-    "unique_listings_analysed": 8634,
+    "observations_fetched": 9139,
+    "unique_listings_analysed": 8638,
     "public_sample_per_market": 3,
     "coverage_note": "Recent saved-search alert evidence, not a complete market census. Up to three examples are shown per suburb, with both portals represented where available.",
-    "last_alert_email_at": "2026-10-05T08:07:38Z",
-    "unattributed_alert_cards_skipped": 238,
+    "last_alert_email_at": "2026-10-06T04:54:43Z",
+    "unattributed_alert_cards_skipped": 239,
     "unparsed_alert_messages": 38,
     "recent_unparsed_alerts": [
       {
@@ -135,7 +135,7 @@
       "listing_count": 3,
       "auction_count": 0,
       "auction_share_pct": 0.0,
-      "price_disclosed_count": 2,
+      "price_disclosed_count": 3,
       "median_asking_midpoint_aud": null,
       "source_counts": {
         "Domain": 3,
@@ -791,7 +791,7 @@
       "city": "Melbourne",
       "suburb": "Brunswick East",
       "state": "VIC",
-      "postcode": "3121",
+      "postcode": "3057",
       "listing_count": 3,
       "auction_count": 0,
       "auction_share_pct": 0.0,
@@ -1483,13 +1483,13 @@
       "state": "NSW",
       "postcode": "2022",
       "listing_count": 3,
-      "auction_count": 1,
-      "auction_share_pct": 33.3,
-      "price_disclosed_count": 1,
+      "auction_count": 2,
+      "auction_share_pct": 66.7,
+      "price_disclosed_count": 2,
       "median_asking_midpoint_aud": null,
       "source_counts": {
-        "Domain": 1,
-        "REA": 2
+        "Domain": 2,
+        "REA": 1
       }
     },
     {
@@ -2281,6 +2281,25 @@
       "last_seen_at": "2026-08-29T07:48:20Z"
     },
     {
+      "property_id": "797e54679811db0c",
+      "source": "Domain",
+      "city": "Brisbane",
+      "suburb": "Bowen Hills",
+      "state": "QLD",
+      "postcode": "4006",
+      "address": "712/8 Hurworth Street, Bowen Hills QLD 4006",
+      "property_type": null,
+      "sale_type": "Off Market",
+      "price_text": "Offers Over $769,000",
+      "asking_price_low": null,
+      "asking_price_high": null,
+      "bedrooms": 2,
+      "bathrooms": 2,
+      "parking": 1,
+      "first_seen_at": "2026-10-05T23:27:14Z",
+      "last_seen_at": "2026-10-05T23:27:14Z"
+    },
+    {
       "property_id": "7bf915eaae88e0c5",
       "source": "Domain",
       "city": "Brisbane",
@@ -2317,25 +2336,6 @@
       "parking": 1,
       "first_seen_at": "2026-09-01T08:21:36Z",
       "last_seen_at": "2026-09-01T08:21:36Z"
-    },
-    {
-      "property_id": "08e91caafd504393",
-      "source": "Domain",
-      "city": "Brisbane",
-      "suburb": "Bowen Hills",
-      "state": "QLD",
-      "postcode": "4005",
-      "address": "59/78 Brookes Street, Bowen Hills QLD 4005",
-      "property_type": null,
-      "sale_type": null,
-      "price_text": null,
-      "asking_price_low": null,
-      "asking_price_high": null,
-      "bedrooms": 2,
-      "bathrooms": 2,
-      "parking": 1,
-      "first_seen_at": "2026-08-29T07:48:20Z",
-      "last_seen_at": "2026-08-29T07:48:20Z"
     },
     {
       "property_id": "215e64e7b9317d7d",
@@ -4713,6 +4713,25 @@
       "last_seen_at": "2026-10-03T08:05:57Z"
     },
     {
+      "property_id": "3952025f70038952",
+      "source": "Domain",
+      "city": "Melbourne",
+      "suburb": "Brunswick East",
+      "state": "VIC",
+      "postcode": "3057",
+      "address": "6/32 Albert Street, Brunswick East VIC 3057",
+      "property_type": null,
+      "sale_type": "Off Market",
+      "price_text": "Contact Agent for Price Guide",
+      "asking_price_low": null,
+      "asking_price_high": null,
+      "bedrooms": 3,
+      "bathrooms": 2,
+      "parking": 1,
+      "first_seen_at": "2026-10-05T22:32:00Z",
+      "last_seen_at": "2026-10-05T22:32:00Z"
+    },
+    {
       "property_id": "e5c9dc110e7c16cb",
       "source": "Domain",
       "city": "Melbourne",
@@ -4749,25 +4768,6 @@
       "parking": 1,
       "first_seen_at": "2026-08-24T08:28:46Z",
       "last_seen_at": "2026-09-01T08:21:34Z"
-    },
-    {
-      "property_id": "0aeec848ffff1ca2",
-      "source": "Domain",
-      "city": "Melbourne",
-      "suburb": "Brunswick East",
-      "state": "VIC",
-      "postcode": "3121",
-      "address": "406/65 Nicholson Street, Brunswick East VIC 3121",
-      "property_type": null,
-      "sale_type": null,
-      "price_text": "$570,000 - $620,000",
-      "asking_price_low": null,
-      "asking_price_high": null,
-      "bedrooms": 2,
-      "bathrooms": 2,
-      "parking": 1,
-      "first_seen_at": "2026-08-31T08:24:37Z",
-      "last_seen_at": "2026-08-31T08:24:37Z"
     },
     {
       "property_id": "3480dc1ad6d63e5a",
@@ -7183,23 +7183,23 @@
       "last_seen_at": "2026-10-03T08:06:15Z"
     },
     {
-      "property_id": "d7b49fb87bdf29cb",
+      "property_id": "2fdcfd604b18e646",
       "source": "Domain",
       "city": "Sydney",
       "suburb": "Bondi Junction",
       "state": "NSW",
       "postcode": "2022",
-      "address": "307/568 Oxford Street, Bondi Junction NSW 2022",
+      "address": "19 Walter Street, Bondi Junction NSW 2022",
       "property_type": null,
       "sale_type": "Auction",
-      "price_text": "Buyers Guide $1,300,000",
+      "price_text": "Auction | 31st October",
       "asking_price_low": null,
       "asking_price_high": null,
       "bedrooms": null,
       "bathrooms": null,
       "parking": null,
-      "first_seen_at": "2026-10-05T07:31:06Z",
-      "last_seen_at": "2026-10-05T07:31:06Z"
+      "first_seen_at": "2026-10-06T03:08:18Z",
+      "last_seen_at": "2026-10-06T03:08:18Z"
     },
     {
       "property_id": "2e4c29d2b818c96a",
@@ -7221,23 +7221,23 @@
       "last_seen_at": "2026-10-03T08:06:02Z"
     },
     {
-      "property_id": "2a04e6a780555fe4",
-      "source": "REA",
+      "property_id": "d7b49fb87bdf29cb",
+      "source": "Domain",
       "city": "Sydney",
       "suburb": "Bondi Junction",
       "state": "NSW",
       "postcode": "2022",
-      "address": "12 Keiran Street, Bondi Junction NSW 2022",
+      "address": "307/568 Oxford Street, Bondi Junction NSW 2022",
       "property_type": null,
-      "sale_type": null,
-      "price_text": null,
+      "sale_type": "Auction",
+      "price_text": "Buyers Guide $1,300,000",
       "asking_price_low": null,
       "asking_price_high": null,
-      "bedrooms": 3,
-      "bathrooms": 2,
-      "parking": 0,
-      "first_seen_at": "2026-10-03T08:06:02Z",
-      "last_seen_at": "2026-10-03T08:06:02Z"
+      "bedrooms": null,
+      "bathrooms": null,
+      "parking": null,
+      "first_seen_at": "2026-10-05T07:31:06Z",
+      "last_seen_at": "2026-10-05T07:31:06Z"
     },
     {
       "property_id": "3d73e9813745f667",
@@ -7715,23 +7715,23 @@
       "last_seen_at": "2026-07-28T08:25:50Z"
     },
     {
-      "property_id": "9b7921719eb27b1b",
+      "property_id": "b6375eed123d8149",
       "source": "Domain",
       "city": "Sydney",
       "suburb": "Hornsby",
       "state": "NSW",
       "postcode": "2077",
-      "address": "30 Pretoria Parade, Hornsby NSW 2077",
+      "address": "2/44 Bridge Road, Hornsby NSW 2077",
       "property_type": null,
-      "sale_type": null,
-      "price_text": "Guide $2,500,000",
+      "sale_type": "Private Sale",
+      "price_text": "Price guide $790,000",
       "asking_price_low": null,
       "asking_price_high": null,
-      "bedrooms": 4,
-      "bathrooms": 2,
-      "parking": 2,
-      "first_seen_at": "2026-10-02T08:56:48Z",
-      "last_seen_at": "2026-10-02T08:56:48Z"
+      "bedrooms": null,
+      "bathrooms": null,
+      "parking": null,
+      "first_seen_at": "2026-10-06T02:10:39Z",
+      "last_seen_at": "2026-10-06T02:10:39Z"
     },
     {
       "property_id": "6be5040a4e330730",
@@ -7753,23 +7753,23 @@
       "last_seen_at": "2026-10-01T09:33:39Z"
     },
     {
-      "property_id": "e2ee922ab59da749",
+      "property_id": "9b7921719eb27b1b",
       "source": "Domain",
       "city": "Sydney",
       "suburb": "Hornsby",
       "state": "NSW",
       "postcode": "2077",
-      "address": "5/2-8 Belair Close, Hornsby NSW 2077",
+      "address": "30 Pretoria Parade, Hornsby NSW 2077",
       "property_type": null,
-      "sale_type": "Private Sale",
-      "price_text": "For Sale | $660,000 - $720,000",
+      "sale_type": null,
+      "price_text": "Guide $2,500,000",
       "asking_price_low": null,
       "asking_price_high": null,
-      "bedrooms": null,
-      "bathrooms": null,
-      "parking": null,
-      "first_seen_at": "2026-10-02T03:41:40Z",
-      "last_seen_at": "2026-10-02T03:41:40Z"
+      "bedrooms": 4,
+      "bathrooms": 2,
+      "parking": 2,
+      "first_seen_at": "2026-10-02T08:56:48Z",
+      "last_seen_at": "2026-10-02T08:56:48Z"
     },
     {
       "property_id": "31109760702ff826",
@@ -9004,7 +9004,7 @@
       "bathrooms": 3,
       "parking": 2,
       "first_seen_at": "2026-10-02T00:39:32Z",
-      "last_seen_at": "2026-10-02T00:39:32Z"
+      "last_seen_at": "2026-10-05T23:00:44Z"
     },
     {
       "property_id": "87309cd5ee6b2935",
