@@ -1,7 +1,7 @@
 {
   "meta": {
-    "generated_at": "2026-09-19T11:49:25+00:00",
-    "data_as_of": "2026-09-19",
+    "generated_at": "2026-10-14T22:37:06+00:00",
+    "data_as_of": "2026-10-14",
     "method": "Expanding-window direct OLS forecasts using publication-lag-adjusted HFCIs and latest revised source histories",
     "initial_training_rule": "60% of aligned observations, bounded between 12 and 60 observations",
     "warning": "Pseudo-real-time, not a full vintage backtest: HFCI publication lags are respected, but most source histories are the latest revised vintages."
@@ -87,11 +87,11 @@
       "sample_start": "2020-03",
       "test_start": "2023-09",
       "sample_end": "2025-12",
-      "rmse": 2.02,
-      "mae": 1.8508,
+      "rmse": 2.0187,
+      "mae": 1.8495,
       "direction_accuracy": 50.0,
       "oos_observations": 10,
-      "rmse_improvement_vs_cash": -56.0
+      "rmse_improvement_vs_cash": -55.9
     },
     {
       "target": "house_price_growth",
@@ -101,8 +101,8 @@
       "sample_start": "2020-03",
       "test_start": "2023-09",
       "sample_end": "2025-12",
-      "rmse": 1.6613,
-      "mae": 1.3789,
+      "rmse": 1.6607,
+      "mae": 1.378,
       "direction_accuracy": 90.0,
       "oos_observations": 10,
       "rmse_improvement_vs_cash": -28.3
@@ -143,8 +143,8 @@
       "sample_start": "2020-03",
       "test_start": "2023-06",
       "sample_end": "2025-09",
-      "rmse": 3.67,
-      "mae": 3.3494,
+      "rmse": 3.6684,
+      "mae": 3.3484,
       "direction_accuracy": 50.0,
       "oos_observations": 10,
       "rmse_improvement_vs_cash": -3.7
@@ -157,8 +157,8 @@
       "sample_start": "2020-03",
       "test_start": "2023-06",
       "sample_end": "2025-09",
-      "rmse": 3.1715,
-      "mae": 2.6178,
+      "rmse": 3.1695,
+      "mae": 2.6151,
       "direction_accuracy": 90.0,
       "oos_observations": 10,
       "rmse_improvement_vs_cash": 10.4
@@ -199,8 +199,8 @@
       "sample_start": "2020-03",
       "test_start": "2023-03",
       "sample_end": "2025-03",
-      "rmse": 5.6874,
-      "mae": 5.1686,
+      "rmse": 5.6843,
+      "mae": 5.1662,
       "direction_accuracy": 77.8,
       "oos_observations": 9,
       "rmse_improvement_vs_cash": 29.1
@@ -213,8 +213,8 @@
       "sample_start": "2020-03",
       "test_start": "2023-03",
       "sample_end": "2025-03",
-      "rmse": 6.7077,
-      "mae": 5.7619,
+      "rmse": 6.7038,
+      "mae": 5.7586,
       "direction_accuracy": 55.6,
       "oos_observations": 9,
       "rmse_improvement_vs_cash": 16.4
@@ -255,8 +255,8 @@
       "sample_start": "2020-03",
       "test_start": "2023-09",
       "sample_end": "2025-12",
-      "rmse": 1.2444,
-      "mae": 1.0748,
+      "rmse": 1.2442,
+      "mae": 1.0749,
       "direction_accuracy": 100.0,
       "oos_observations": 10,
       "rmse_improvement_vs_cash": 3.9
@@ -269,11 +269,11 @@
       "sample_start": "2020-03",
       "test_start": "2023-09",
       "sample_end": "2025-12",
-      "rmse": 1.391,
-      "mae": 1.1116,
+      "rmse": 1.3905,
+      "mae": 1.1113,
       "direction_accuracy": 90.0,
       "oos_observations": 10,
-      "rmse_improvement_vs_cash": -7.5
+      "rmse_improvement_vs_cash": -7.4
     },
     {
       "target": "house_price_growth",
@@ -311,8 +311,8 @@
       "sample_start": "2020-03",
       "test_start": "2023-06",
       "sample_end": "2025-09",
-      "rmse": 2.0003,
-      "mae": 1.4728,
+      "rmse": 1.9998,
+      "mae": 1.4726,
       "direction_accuracy": 100.0,
       "oos_observations": 10,
       "rmse_improvement_vs_cash": 43.5
@@ -325,11 +325,11 @@
       "sample_start": "2020-03",
       "test_start": "2023-06",
       "sample_end": "2025-09",
-      "rmse": 2.8896,
-      "mae": 2.3207,
+      "rmse": 2.8888,
+      "mae": 2.3201,
       "direction_accuracy": 80.0,
       "oos_observations": 10,
-      "rmse_improvement_vs_cash": 18.3
+      "rmse_improvement_vs_cash": 18.4
     },
     {
       "target": "house_price_growth",
@@ -367,8 +367,8 @@
       "sample_start": "2020-03",
       "test_start": "2023-03",
       "sample_end": "2025-03",
-      "rmse": 4.4771,
-      "mae": 3.3599,
+      "rmse": 4.4741,
+      "mae": 3.3575,
       "direction_accuracy": 100.0,
       "oos_observations": 9,
       "rmse_improvement_vs_cash": 44.2
@@ -381,8 +381,8 @@
       "sample_start": "2020-03",
       "test_start": "2023-03",
       "sample_end": "2025-03",
-      "rmse": 6.9327,
-      "mae": 5.7848,
+      "rmse": 6.9317,
+      "mae": 5.7842,
       "direction_accuracy": 55.6,
       "oos_observations": 9,
       "rmse_improvement_vs_cash": 13.6
@@ -424,7 +424,7 @@
       "test_start": "2018-03",
       "sample_end": "2025-12",
       "rmse": 2.4917,
-      "mae": 2.0335,
+      "mae": 2.0334,
       "direction_accuracy": 71.9,
       "oos_observations": 32,
       "rmse_improvement_vs_cash": 2.0
@@ -438,7 +438,7 @@
       "test_start": "2018-03",
       "sample_end": "2025-12",
       "rmse": 2.5365,
-      "mae": 2.0648,
+      "mae": 2.0647,
       "direction_accuracy": 71.9,
       "oos_observations": 32,
       "rmse_improvement_vs_cash": 0.2
@@ -561,13 +561,13 @@
       "horizon_months": 3,
       "model": "autoregressive",
       "sample_start": "2020-01",
-      "test_start": "2023-10",
-      "sample_end": "2026-04",
-      "rmse": 0.2903,
-      "mae": 0.2547,
+      "test_start": "2023-11",
+      "sample_end": "2026-05",
+      "rmse": 0.2978,
+      "mae": 0.2575,
       "direction_accuracy": 90.3,
       "oos_observations": 31,
-      "rmse_improvement_vs_cash": 53.7
+      "rmse_improvement_vs_cash": 51.7
     },
     {
       "target": "housing_credit_growth",
@@ -575,11 +575,11 @@
       "horizon_months": 3,
       "model": "cash_rate",
       "sample_start": "2020-01",
-      "test_start": "2023-10",
-      "sample_end": "2026-04",
-      "rmse": 0.6276,
-      "mae": 0.6009,
-      "direction_accuracy": 0.0,
+      "test_start": "2023-11",
+      "sample_end": "2026-05",
+      "rmse": 0.6172,
+      "mae": 0.5815,
+      "direction_accuracy": 3.2,
       "oos_observations": 31,
       "rmse_improvement_vs_cash": 0.0
     },
@@ -589,13 +589,13 @@
       "horizon_months": 3,
       "model": "hfci",
       "sample_start": "2020-01",
-      "test_start": "2023-10",
-      "sample_end": "2026-04",
-      "rmse": 0.6178,
-      "mae": 0.5988,
-      "direction_accuracy": 0.0,
+      "test_start": "2023-11",
+      "sample_end": "2026-05",
+      "rmse": 0.5992,
+      "mae": 0.5725,
+      "direction_accuracy": 3.2,
       "oos_observations": 31,
-      "rmse_improvement_vs_cash": 1.6
+      "rmse_improvement_vs_cash": 2.9
     },
     {
       "target": "housing_credit_growth",
@@ -603,13 +603,13 @@
       "horizon_months": 3,
       "model": "cash_plus_hfci",
       "sample_start": "2020-01",
-      "test_start": "2023-10",
-      "sample_end": "2026-04",
-      "rmse": 0.5763,
-      "mae": 0.543,
-      "direction_accuracy": 6.5,
+      "test_start": "2023-11",
+      "sample_end": "2026-05",
+      "rmse": 0.554,
+      "mae": 0.5156,
+      "direction_accuracy": 9.7,
       "oos_observations": 31,
-      "rmse_improvement_vs_cash": 8.2
+      "rmse_improvement_vs_cash": 10.2
     },
     {
       "target": "housing_credit_growth",
@@ -617,13 +617,13 @@
       "horizon_months": 6,
       "model": "autoregressive",
       "sample_start": "2020-01",
-      "test_start": "2023-08",
-      "sample_end": "2026-01",
-      "rmse": 0.5892,
-      "mae": 0.5067,
+      "test_start": "2023-09",
+      "sample_end": "2026-02",
+      "rmse": 0.5958,
+      "mae": 0.507,
       "direction_accuracy": 76.7,
       "oos_observations": 30,
-      "rmse_improvement_vs_cash": 49.0
+      "rmse_improvement_vs_cash": 48.0
     },
     {
       "target": "housing_credit_growth",
@@ -631,11 +631,11 @@
       "horizon_months": 6,
       "model": "cash_rate",
       "sample_start": "2020-01",
-      "test_start": "2023-08",
-      "sample_end": "2026-01",
-      "rmse": 1.1554,
-      "mae": 1.1389,
-      "direction_accuracy": 3.3,
+      "test_start": "2023-09",
+      "sample_end": "2026-02",
+      "rmse": 1.1465,
+      "mae": 1.1257,
+      "direction_accuracy": 0.0,
       "oos_observations": 30,
       "rmse_improvement_vs_cash": 0.0
     },
@@ -645,27 +645,27 @@
       "horizon_months": 6,
       "model": "hfci",
       "sample_start": "2020-01",
-      "test_start": "2023-08",
-      "sample_end": "2026-01",
-      "rmse": 1.1373,
-      "mae": 1.1102,
+      "test_start": "2023-09",
+      "sample_end": "2026-02",
+      "rmse": 1.1431,
+      "mae": 1.114,
+      "direction_accuracy": 3.3,
+      "oos_observations": 30,
+      "rmse_improvement_vs_cash": 0.3
+    },
+    {
+      "target": "housing_credit_growth",
+      "hfci": "hfci_core",
+      "horizon_months": 6,
+      "model": "cash_plus_hfci",
+      "sample_start": "2020-01",
+      "test_start": "2023-09",
+      "sample_end": "2026-02",
+      "rmse": 1.0745,
+      "mae": 1.0234,
       "direction_accuracy": 6.7,
       "oos_observations": 30,
-      "rmse_improvement_vs_cash": 1.6
-    },
-    {
-      "target": "housing_credit_growth",
-      "hfci": "hfci_core",
-      "horizon_months": 6,
-      "model": "cash_plus_hfci",
-      "sample_start": "2020-01",
-      "test_start": "2023-08",
-      "sample_end": "2026-01",
-      "rmse": 1.0794,
-      "mae": 1.0306,
-      "direction_accuracy": 10.0,
-      "oos_observations": 30,
-      "rmse_improvement_vs_cash": 6.6
+      "rmse_improvement_vs_cash": 6.3
     },
     {
       "target": "housing_credit_growth",
@@ -674,12 +674,12 @@
       "model": "autoregressive",
       "sample_start": "2020-01",
       "test_start": "2023-05",
-      "sample_end": "2025-07",
-      "rmse": 0.9854,
-      "mae": 0.8127,
-      "direction_accuracy": 81.5,
-      "oos_observations": 27,
-      "rmse_improvement_vs_cash": 33.4
+      "sample_end": "2025-08",
+      "rmse": 1.0209,
+      "mae": 0.8449,
+      "direction_accuracy": 82.1,
+      "oos_observations": 28,
+      "rmse_improvement_vs_cash": 31.8
     },
     {
       "target": "housing_credit_growth",
@@ -688,11 +688,11 @@
       "model": "cash_rate",
       "sample_start": "2020-01",
       "test_start": "2023-05",
-      "sample_end": "2025-07",
-      "rmse": 1.4797,
-      "mae": 1.4423,
-      "direction_accuracy": 29.6,
-      "oos_observations": 27,
+      "sample_end": "2025-08",
+      "rmse": 1.4976,
+      "mae": 1.4581,
+      "direction_accuracy": 28.6,
+      "oos_observations": 28,
       "rmse_improvement_vs_cash": 0.0
     },
     {
@@ -702,12 +702,12 @@
       "model": "hfci",
       "sample_start": "2020-01",
       "test_start": "2023-05",
-      "sample_end": "2025-07",
-      "rmse": 1.3614,
-      "mae": 1.2344,
-      "direction_accuracy": 48.1,
-      "oos_observations": 27,
-      "rmse_improvement_vs_cash": 8.0
+      "sample_end": "2025-08",
+      "rmse": 1.3891,
+      "mae": 1.2599,
+      "direction_accuracy": 46.4,
+      "oos_observations": 28,
+      "rmse_improvement_vs_cash": 7.2
     },
     {
       "target": "housing_credit_growth",
@@ -716,12 +716,12 @@
       "model": "cash_plus_hfci",
       "sample_start": "2020-01",
       "test_start": "2023-05",
-      "sample_end": "2025-07",
-      "rmse": 1.4001,
-      "mae": 1.3314,
-      "direction_accuracy": 44.4,
-      "oos_observations": 27,
-      "rmse_improvement_vs_cash": 5.4
+      "sample_end": "2025-08",
+      "rmse": 1.4206,
+      "mae": 1.3491,
+      "direction_accuracy": 42.9,
+      "oos_observations": 28,
+      "rmse_improvement_vs_cash": 5.1
     },
     {
       "target": "housing_credit_growth",
@@ -729,13 +729,13 @@
       "horizon_months": 3,
       "model": "autoregressive",
       "sample_start": "2020-01",
-      "test_start": "2023-10",
-      "sample_end": "2026-04",
-      "rmse": 0.2903,
-      "mae": 0.2547,
+      "test_start": "2023-11",
+      "sample_end": "2026-05",
+      "rmse": 0.2978,
+      "mae": 0.2575,
       "direction_accuracy": 90.3,
       "oos_observations": 31,
-      "rmse_improvement_vs_cash": 53.7
+      "rmse_improvement_vs_cash": 51.7
     },
     {
       "target": "housing_credit_growth",
@@ -743,11 +743,11 @@
       "horizon_months": 3,
       "model": "cash_rate",
       "sample_start": "2020-01",
-      "test_start": "2023-10",
-      "sample_end": "2026-04",
-      "rmse": 0.6276,
-      "mae": 0.6009,
-      "direction_accuracy": 0.0,
+      "test_start": "2023-11",
+      "sample_end": "2026-05",
+      "rmse": 0.6172,
+      "mae": 0.5815,
+      "direction_accuracy": 3.2,
       "oos_observations": 31,
       "rmse_improvement_vs_cash": 0.0
     },
@@ -757,13 +757,13 @@
       "horizon_months": 3,
       "model": "hfci",
       "sample_start": "2020-01",
-      "test_start": "2023-10",
-      "sample_end": "2026-04",
-      "rmse": 0.3888,
-      "mae": 0.3499,
-      "direction_accuracy": 61.3,
+      "test_start": "2023-11",
+      "sample_end": "2026-05",
+      "rmse": 0.3899,
+      "mae": 0.3455,
+      "direction_accuracy": 64.5,
       "oos_observations": 31,
-      "rmse_improvement_vs_cash": 38.0
+      "rmse_improvement_vs_cash": 36.8
     },
     {
       "target": "housing_credit_growth",
@@ -771,13 +771,13 @@
       "horizon_months": 3,
       "model": "cash_plus_hfci",
       "sample_start": "2020-01",
-      "test_start": "2023-10",
-      "sample_end": "2026-04",
-      "rmse": 0.4042,
-      "mae": 0.3543,
-      "direction_accuracy": 54.8,
+      "test_start": "2023-11",
+      "sample_end": "2026-05",
+      "rmse": 0.3942,
+      "mae": 0.3418,
+      "direction_accuracy": 58.1,
       "oos_observations": 31,
-      "rmse_improvement_vs_cash": 35.6
+      "rmse_improvement_vs_cash": 36.1
     },
     {
       "target": "housing_credit_growth",
@@ -785,13 +785,13 @@
       "horizon_months": 6,
       "model": "autoregressive",
       "sample_start": "2020-01",
-      "test_start": "2023-08",
-      "sample_end": "2026-01",
-      "rmse": 0.5892,
-      "mae": 0.5067,
+      "test_start": "2023-09",
+      "sample_end": "2026-02",
+      "rmse": 0.5958,
+      "mae": 0.507,
       "direction_accuracy": 76.7,
       "oos_observations": 30,
-      "rmse_improvement_vs_cash": 49.0
+      "rmse_improvement_vs_cash": 48.0
     },
     {
       "target": "housing_credit_growth",
@@ -799,11 +799,11 @@
       "horizon_months": 6,
       "model": "cash_rate",
       "sample_start": "2020-01",
-      "test_start": "2023-08",
-      "sample_end": "2026-01",
-      "rmse": 1.1554,
-      "mae": 1.1389,
-      "direction_accuracy": 3.3,
+      "test_start": "2023-09",
+      "sample_end": "2026-02",
+      "rmse": 1.1465,
+      "mae": 1.1257,
+      "direction_accuracy": 0.0,
       "oos_observations": 30,
       "rmse_improvement_vs_cash": 0.0
     },
@@ -813,13 +813,13 @@
       "horizon_months": 6,
       "model": "hfci",
       "sample_start": "2020-01",
-      "test_start": "2023-08",
-      "sample_end": "2026-01",
-      "rmse": 0.7257,
-      "mae": 0.6473,
-      "direction_accuracy": 56.7,
+      "test_start": "2023-09",
+      "sample_end": "2026-02",
+      "rmse": 0.755,
+      "mae": 0.6762,
+      "direction_accuracy": 53.3,
       "oos_observations": 30,
-      "rmse_improvement_vs_cash": 37.2
+      "rmse_improvement_vs_cash": 34.1
     },
     {
       "target": "housing_credit_growth",
@@ -827,13 +827,13 @@
       "horizon_months": 6,
       "model": "cash_plus_hfci",
       "sample_start": "2020-01",
-      "test_start": "2023-08",
-      "sample_end": "2026-01",
-      "rmse": 0.7451,
-      "mae": 0.6638,
-      "direction_accuracy": 70.0,
+      "test_start": "2023-09",
+      "sample_end": "2026-02",
+      "rmse": 0.7535,
+      "mae": 0.6699,
+      "direction_accuracy": 66.7,
       "oos_observations": 30,
-      "rmse_improvement_vs_cash": 35.5
+      "rmse_improvement_vs_cash": 34.3
     },
     {
       "target": "housing_credit_growth",
@@ -842,12 +842,12 @@
       "model": "autoregressive",
       "sample_start": "2020-01",
       "test_start": "2023-05",
-      "sample_end": "2025-07",
-      "rmse": 0.9854,
-      "mae": 0.8127,
-      "direction_accuracy": 81.5,
-      "oos_observations": 27,
-      "rmse_improvement_vs_cash": 33.4
+      "sample_end": "2025-08",
+      "rmse": 1.0209,
+      "mae": 0.8449,
+      "direction_accuracy": 82.1,
+      "oos_observations": 28,
+      "rmse_improvement_vs_cash": 31.8
     },
     {
       "target": "housing_credit_growth",
@@ -856,11 +856,11 @@
       "model": "cash_rate",
       "sample_start": "2020-01",
       "test_start": "2023-05",
-      "sample_end": "2025-07",
-      "rmse": 1.4797,
-      "mae": 1.4423,
-      "direction_accuracy": 29.6,
-      "oos_observations": 27,
+      "sample_end": "2025-08",
+      "rmse": 1.4976,
+      "mae": 1.4581,
+      "direction_accuracy": 28.6,
+      "oos_observations": 28,
       "rmse_improvement_vs_cash": 0.0
     },
     {
@@ -870,12 +870,12 @@
       "model": "hfci",
       "sample_start": "2020-01",
       "test_start": "2023-05",
-      "sample_end": "2025-07",
-      "rmse": 0.9335,
-      "mae": 0.7288,
-      "direction_accuracy": 74.1,
-      "oos_observations": 27,
-      "rmse_improvement_vs_cash": 36.9
+      "sample_end": "2025-08",
+      "rmse": 0.9725,
+      "mae": 0.7623,
+      "direction_accuracy": 71.4,
+      "oos_observations": 28,
+      "rmse_improvement_vs_cash": 35.1
     },
     {
       "target": "housing_credit_growth",
@@ -884,12 +884,12 @@
       "model": "cash_plus_hfci",
       "sample_start": "2020-01",
       "test_start": "2023-05",
-      "sample_end": "2025-07",
-      "rmse": 1.0198,
-      "mae": 0.9427,
-      "direction_accuracy": 77.8,
-      "oos_observations": 27,
-      "rmse_improvement_vs_cash": 31.1
+      "sample_end": "2025-08",
+      "rmse": 1.041,
+      "mae": 0.96,
+      "direction_accuracy": 78.6,
+      "oos_observations": 28,
+      "rmse_improvement_vs_cash": 30.5
     },
     {
       "target": "housing_credit_growth",
@@ -898,12 +898,12 @@
       "model": "autoregressive",
       "sample_start": "2006-04",
       "test_start": "2011-04",
-      "sample_end": "2026-04",
-      "rmse": 0.4649,
-      "mae": 0.3637,
-      "direction_accuracy": 48.6,
-      "oos_observations": 181,
-      "rmse_improvement_vs_cash": 10.9
+      "sample_end": "2026-05",
+      "rmse": 0.4647,
+      "mae": 0.3627,
+      "direction_accuracy": 48.9,
+      "oos_observations": 182,
+      "rmse_improvement_vs_cash": 10.8
     },
     {
       "target": "housing_credit_growth",
@@ -912,11 +912,11 @@
       "model": "cash_rate",
       "sample_start": "2006-04",
       "test_start": "2011-04",
-      "sample_end": "2026-04",
-      "rmse": 0.5216,
-      "mae": 0.4432,
-      "direction_accuracy": 50.3,
-      "oos_observations": 181,
+      "sample_end": "2026-05",
+      "rmse": 0.5211,
+      "mae": 0.4415,
+      "direction_accuracy": 50.5,
+      "oos_observations": 182,
       "rmse_improvement_vs_cash": 0.0
     },
     {
@@ -926,12 +926,12 @@
       "model": "hfci",
       "sample_start": "2006-04",
       "test_start": "2011-04",
-      "sample_end": "2026-04",
-      "rmse": 0.4691,
-      "mae": 0.3814,
-      "direction_accuracy": 42.5,
-      "oos_observations": 181,
-      "rmse_improvement_vs_cash": 10.1
+      "sample_end": "2026-05",
+      "rmse": 0.4689,
+      "mae": 0.3803,
+      "direction_accuracy": 42.9,
+      "oos_observations": 182,
+      "rmse_improvement_vs_cash": 10.0
     },
     {
       "target": "housing_credit_growth",
@@ -940,11 +940,11 @@
       "model": "cash_plus_hfci",
       "sample_start": "2006-04",
       "test_start": "2011-04",
-      "sample_end": "2026-04",
-      "rmse": 0.5174,
-      "mae": 0.4404,
-      "direction_accuracy": 50.8,
-      "oos_observations": 181,
+      "sample_end": "2026-05",
+      "rmse": 0.517,
+      "mae": 0.439,
+      "direction_accuracy": 51.1,
+      "oos_observations": 182,
       "rmse_improvement_vs_cash": 0.8
     },
     {
@@ -954,11 +954,11 @@
       "model": "autoregressive",
       "sample_start": "2006-04",
       "test_start": "2011-04",
-      "sample_end": "2026-01",
-      "rmse": 0.8594,
-      "mae": 0.6823,
-      "direction_accuracy": 56.2,
-      "oos_observations": 178,
+      "sample_end": "2026-02",
+      "rmse": 0.8595,
+      "mae": 0.6826,
+      "direction_accuracy": 55.9,
+      "oos_observations": 179,
       "rmse_improvement_vs_cash": 11.9
     },
     {
@@ -968,11 +968,11 @@
       "model": "cash_rate",
       "sample_start": "2006-04",
       "test_start": "2011-04",
-      "sample_end": "2026-01",
-      "rmse": 0.9753,
-      "mae": 0.8222,
-      "direction_accuracy": 52.8,
-      "oos_observations": 178,
+      "sample_end": "2026-02",
+      "rmse": 0.9752,
+      "mae": 0.8223,
+      "direction_accuracy": 52.5,
+      "oos_observations": 179,
       "rmse_improvement_vs_cash": 0.0
     },
     {
@@ -982,12 +982,12 @@
       "model": "hfci",
       "sample_start": "2006-04",
       "test_start": "2011-04",
-      "sample_end": "2026-01",
-      "rmse": 0.8733,
-      "mae": 0.7119,
-      "direction_accuracy": 51.1,
-      "oos_observations": 178,
-      "rmse_improvement_vs_cash": 10.5
+      "sample_end": "2026-02",
+      "rmse": 0.8738,
+      "mae": 0.7127,
+      "direction_accuracy": 50.8,
+      "oos_observations": 179,
+      "rmse_improvement_vs_cash": 10.4
     },
     {
       "target": "housing_credit_growth",
@@ -996,11 +996,11 @@
       "model": "cash_plus_hfci",
       "sample_start": "2006-04",
       "test_start": "2011-04",
-      "sample_end": "2026-01",
-      "rmse": 0.9732,
-      "mae": 0.8231,
-      "direction_accuracy": 53.9,
-      "oos_observations": 178,
+      "sample_end": "2026-02",
+      "rmse": 0.9733,
+      "mae": 0.8234,
+      "direction_accuracy": 53.6,
+      "oos_observations": 179,
       "rmse_improvement_vs_cash": 0.2
     },
     {
@@ -1010,11 +1010,11 @@
       "model": "autoregressive",
       "sample_start": "2006-04",
       "test_start": "2011-04",
-      "sample_end": "2025-07",
-      "rmse": 1.3858,
-      "mae": 1.1287,
-      "direction_accuracy": 71.5,
-      "oos_observations": 172,
+      "sample_end": "2025-08",
+      "rmse": 1.3874,
+      "mae": 1.1314,
+      "direction_accuracy": 71.1,
+      "oos_observations": 173,
       "rmse_improvement_vs_cash": 8.5
     },
     {
@@ -1024,11 +1024,11 @@
       "model": "cash_rate",
       "sample_start": "2006-04",
       "test_start": "2011-04",
-      "sample_end": "2025-07",
-      "rmse": 1.5146,
-      "mae": 1.2473,
-      "direction_accuracy": 59.9,
-      "oos_observations": 172,
+      "sample_end": "2025-08",
+      "rmse": 1.5156,
+      "mae": 1.2496,
+      "direction_accuracy": 59.5,
+      "oos_observations": 173,
       "rmse_improvement_vs_cash": 0.0
     },
     {
@@ -1038,11 +1038,11 @@
       "model": "hfci",
       "sample_start": "2006-04",
       "test_start": "2011-04",
-      "sample_end": "2025-07",
-      "rmse": 1.4058,
-      "mae": 1.1538,
-      "direction_accuracy": 71.5,
-      "oos_observations": 172,
+      "sample_end": "2025-08",
+      "rmse": 1.4071,
+      "mae": 1.1563,
+      "direction_accuracy": 71.1,
+      "oos_observations": 173,
       "rmse_improvement_vs_cash": 7.2
     },
     {
@@ -1052,11 +1052,11 @@
       "model": "cash_plus_hfci",
       "sample_start": "2006-04",
       "test_start": "2011-04",
-      "sample_end": "2025-07",
-      "rmse": 1.5273,
-      "mae": 1.2772,
-      "direction_accuracy": 52.3,
-      "oos_observations": 172,
+      "sample_end": "2025-08",
+      "rmse": 1.5282,
+      "mae": 1.2793,
+      "direction_accuracy": 52.0,
+      "oos_observations": 173,
       "rmse_improvement_vs_cash": -0.8
     },
     {
@@ -1065,13 +1065,13 @@
       "horizon_months": 3,
       "model": "autoregressive",
       "sample_start": "2022-05",
-      "test_start": "2024-09",
-      "sample_end": "2026-04",
-      "rmse": 0.6243,
-      "mae": 0.6016,
-      "direction_accuracy": 0.0,
+      "test_start": "2024-10",
+      "sample_end": "2026-05",
+      "rmse": 0.6191,
+      "mae": 0.5804,
+      "direction_accuracy": 5.0,
       "oos_observations": 20,
-      "rmse_improvement_vs_cash": -25.1
+      "rmse_improvement_vs_cash": -22.5
     },
     {
       "target": "housing_credit_growth",
@@ -1079,10 +1079,10 @@
       "horizon_months": 3,
       "model": "cash_rate",
       "sample_start": "2022-05",
-      "test_start": "2024-09",
-      "sample_end": "2026-04",
-      "rmse": 0.4991,
-      "mae": 0.4685,
+      "test_start": "2024-10",
+      "sample_end": "2026-05",
+      "rmse": 0.5053,
+      "mae": 0.4805,
       "direction_accuracy": 20.0,
       "oos_observations": 20,
       "rmse_improvement_vs_cash": 0.0
@@ -1093,13 +1093,13 @@
       "horizon_months": 3,
       "model": "hfci",
       "sample_start": "2022-05",
-      "test_start": "2024-09",
-      "sample_end": "2026-04",
-      "rmse": 0.6845,
-      "mae": 0.6254,
+      "test_start": "2024-10",
+      "sample_end": "2026-05",
+      "rmse": 0.6949,
+      "mae": 0.6349,
       "direction_accuracy": 10.0,
       "oos_observations": 20,
-      "rmse_improvement_vs_cash": -37.1
+      "rmse_improvement_vs_cash": -37.5
     },
     {
       "target": "housing_credit_growth",
@@ -1107,13 +1107,13 @@
       "horizon_months": 3,
       "model": "cash_plus_hfci",
       "sample_start": "2022-05",
-      "test_start": "2024-09",
-      "sample_end": "2026-04",
-      "rmse": 0.5418,
-      "mae": 0.5157,
-      "direction_accuracy": 20.0,
+      "test_start": "2024-10",
+      "sample_end": "2026-05",
+      "rmse": 0.5577,
+      "mae": 0.536,
+      "direction_accuracy": 15.0,
       "oos_observations": 20,
-      "rmse_improvement_vs_cash": -8.6
+      "rmse_improvement_vs_cash": -10.4
     },
     {
       "target": "housing_credit_growth",
@@ -1122,12 +1122,12 @@
       "model": "autoregressive",
       "sample_start": "2022-05",
       "test_start": "2024-08",
-      "sample_end": "2026-01",
-      "rmse": 1.2172,
-      "mae": 1.1788,
+      "sample_end": "2026-02",
+      "rmse": 1.2204,
+      "mae": 1.1787,
       "direction_accuracy": 0.0,
-      "oos_observations": 18,
-      "rmse_improvement_vs_cash": -26.2
+      "oos_observations": 19,
+      "rmse_improvement_vs_cash": -27.9
     },
     {
       "target": "housing_credit_growth",
@@ -1136,11 +1136,11 @@
       "model": "cash_rate",
       "sample_start": "2022-05",
       "test_start": "2024-08",
-      "sample_end": "2026-01",
-      "rmse": 0.9647,
-      "mae": 0.9281,
-      "direction_accuracy": 11.1,
-      "oos_observations": 18,
+      "sample_end": "2026-02",
+      "rmse": 0.954,
+      "mae": 0.9083,
+      "direction_accuracy": 15.8,
+      "oos_observations": 19,
       "rmse_improvement_vs_cash": 0.0
     },
     {
@@ -1150,12 +1150,12 @@
       "model": "hfci",
       "sample_start": "2022-05",
       "test_start": "2024-08",
-      "sample_end": "2026-01",
-      "rmse": 1.2719,
-      "mae": 1.1544,
-      "direction_accuracy": 16.7,
-      "oos_observations": 18,
-      "rmse_improvement_vs_cash": -31.8
+      "sample_end": "2026-02",
+      "rmse": 1.2844,
+      "mae": 1.1697,
+      "direction_accuracy": 15.8,
+      "oos_observations": 19,
+      "rmse_improvement_vs_cash": -34.6
     },
     {
       "target": "housing_credit_growth",
@@ -1164,12 +1164,12 @@
       "model": "cash_plus_hfci",
       "sample_start": "2022-05",
       "test_start": "2024-08",
-      "sample_end": "2026-01",
-      "rmse": 1.0163,
-      "mae": 0.9693,
-      "direction_accuracy": 11.1,
-      "oos_observations": 18,
-      "rmse_improvement_vs_cash": -5.3
+      "sample_end": "2026-02",
+      "rmse": 1.0018,
+      "mae": 0.9312,
+      "direction_accuracy": 15.8,
+      "oos_observations": 19,
+      "rmse_improvement_vs_cash": -5.0
     },
     {
       "target": "housing_credit_growth",
@@ -1177,13 +1177,13 @@
       "horizon_months": 12,
       "model": "autoregressive",
       "sample_start": "2022-05",
-      "test_start": "2024-04",
-      "sample_end": "2025-07",
-      "rmse": 1.6269,
-      "mae": 1.5332,
-      "direction_accuracy": 31.2,
+      "test_start": "2024-05",
+      "sample_end": "2025-08",
+      "rmse": 1.7053,
+      "mae": 1.622,
+      "direction_accuracy": 25.0,
       "oos_observations": 16,
-      "rmse_improvement_vs_cash": -27.5
+      "rmse_improvement_vs_cash": -29.8
     },
     {
       "target": "housing_credit_growth",
@@ -1191,11 +1191,11 @@
       "horizon_months": 12,
       "model": "cash_rate",
       "sample_start": "2022-05",
-      "test_start": "2024-04",
-      "sample_end": "2025-07",
-      "rmse": 1.2756,
-      "mae": 1.2575,
-      "direction_accuracy": 62.5,
+      "test_start": "2024-05",
+      "sample_end": "2025-08",
+      "rmse": 1.3138,
+      "mae": 1.2994,
+      "direction_accuracy": 56.2,
       "oos_observations": 16,
       "rmse_improvement_vs_cash": 0.0
     },
@@ -1205,13 +1205,13 @@
       "horizon_months": 12,
       "model": "hfci",
       "sample_start": "2022-05",
-      "test_start": "2024-04",
-      "sample_end": "2025-07",
-      "rmse": 1.5999,
-      "mae": 1.405,
-      "direction_accuracy": 50.0,
+      "test_start": "2024-05",
+      "sample_end": "2025-08",
+      "rmse": 1.6832,
+      "mae": 1.5057,
+      "direction_accuracy": 43.8,
       "oos_observations": 16,
-      "rmse_improvement_vs_cash": -25.4
+      "rmse_improvement_vs_cash": -28.1
     },
     {
       "target": "housing_credit_growth",
@@ -1219,13 +1219,13 @@
       "horizon_months": 12,
       "model": "cash_plus_hfci",
       "sample_start": "2022-05",
-      "test_start": "2024-04",
-      "sample_end": "2025-07",
-      "rmse": 1.2662,
-      "mae": 1.191,
-      "direction_accuracy": 75.0,
+      "test_start": "2024-05",
+      "sample_end": "2025-08",
+      "rmse": 1.3137,
+      "mae": 1.2434,
+      "direction_accuracy": 68.8,
       "oos_observations": 16,
-      "rmse_improvement_vs_cash": 0.7
+      "rmse_improvement_vs_cash": 0.0
     },
     {
       "target": "dwelling_approvals_growth",
@@ -1233,13 +1233,13 @@
       "horizon_months": 3,
       "model": "autoregressive",
       "sample_start": "2020-01",
-      "test_start": "2023-10",
-      "sample_end": "2026-04",
-      "rmse": 9.7683,
-      "mae": 7.7979,
+      "test_start": "2023-11",
+      "sample_end": "2026-05",
+      "rmse": 9.6266,
+      "mae": 7.6266,
       "direction_accuracy": 51.6,
       "oos_observations": 31,
-      "rmse_improvement_vs_cash": 5.4
+      "rmse_improvement_vs_cash": 6.8
     },
     {
       "target": "dwelling_approvals_growth",
@@ -1247,11 +1247,11 @@
       "horizon_months": 3,
       "model": "cash_rate",
       "sample_start": "2020-01",
-      "test_start": "2023-10",
-      "sample_end": "2026-04",
-      "rmse": 10.3233,
-      "mae": 8.0195,
-      "direction_accuracy": 45.2,
+      "test_start": "2023-11",
+      "sample_end": "2026-05",
+      "rmse": 10.3247,
+      "mae": 7.9978,
+      "direction_accuracy": 41.9,
       "oos_observations": 31,
       "rmse_improvement_vs_cash": 0.0
     },
@@ -1261,13 +1261,13 @@
       "horizon_months": 3,
       "model": "hfci",
       "sample_start": "2020-01",
-      "test_start": "2023-10",
-      "sample_end": "2026-04",
-      "rmse": 9.857,
-      "mae": 7.8212,
+      "test_start": "2023-11",
+      "sample_end": "2026-05",
+      "rmse": 9.7525,
+      "mae": 7.706,
       "direction_accuracy": 51.6,
       "oos_observations": 31,
-      "rmse_improvement_vs_cash": 4.5
+      "rmse_improvement_vs_cash": 5.5
     },
     {
       "target": "dwelling_approvals_growth",
@@ -1275,13 +1275,13 @@
       "horizon_months": 3,
       "model": "cash_plus_hfci",
       "sample_start": "2020-01",
-      "test_start": "2023-10",
-      "sample_end": "2026-04",
-      "rmse": 10.3978,
-      "mae": 8.1157,
-      "direction_accuracy": 51.6,
+      "test_start": "2023-11",
+      "sample_end": "2026-05",
+      "rmse": 10.3748,
+      "mae": 8.1012,
+      "direction_accuracy": 48.4,
       "oos_observations": 31,
-      "rmse_improvement_vs_cash": -0.7
+      "rmse_improvement_vs_cash": -0.5
     },
     {
       "target": "dwelling_approvals_growth",
@@ -1289,13 +1289,13 @@
       "horizon_months": 6,
       "model": "autoregressive",
       "sample_start": "2020-01",
-      "test_start": "2023-08",
-      "sample_end": "2026-01",
-      "rmse": 11.5834,
-      "mae": 9.64,
+      "test_start": "2023-09",
+      "sample_end": "2026-02",
+      "rmse": 12.0357,
+      "mae": 9.9814,
       "direction_accuracy": 66.7,
       "oos_observations": 30,
-      "rmse_improvement_vs_cash": 10.6
+      "rmse_improvement_vs_cash": 10.5
     },
     {
       "target": "dwelling_approvals_growth",
@@ -1303,11 +1303,11 @@
       "horizon_months": 6,
       "model": "cash_rate",
       "sample_start": "2020-01",
-      "test_start": "2023-08",
-      "sample_end": "2026-01",
-      "rmse": 12.9593,
-      "mae": 10.3539,
-      "direction_accuracy": 50.0,
+      "test_start": "2023-09",
+      "sample_end": "2026-02",
+      "rmse": 13.4511,
+      "mae": 10.9545,
+      "direction_accuracy": 46.7,
       "oos_observations": 30,
       "rmse_improvement_vs_cash": 0.0
     },
@@ -1317,10 +1317,10 @@
       "horizon_months": 6,
       "model": "hfci",
       "sample_start": "2020-01",
-      "test_start": "2023-08",
-      "sample_end": "2026-01",
-      "rmse": 12.4628,
-      "mae": 10.2645,
+      "test_start": "2023-09",
+      "sample_end": "2026-02",
+      "rmse": 12.938,
+      "mae": 10.7278,
       "direction_accuracy": 46.7,
       "oos_observations": 30,
       "rmse_improvement_vs_cash": 3.8
@@ -1331,13 +1331,13 @@
       "horizon_months": 6,
       "model": "cash_plus_hfci",
       "sample_start": "2020-01",
-      "test_start": "2023-08",
-      "sample_end": "2026-01",
-      "rmse": 12.9871,
-      "mae": 10.3616,
-      "direction_accuracy": 46.7,
+      "test_start": "2023-09",
+      "sample_end": "2026-02",
+      "rmse": 13.4602,
+      "mae": 10.9558,
+      "direction_accuracy": 43.3,
       "oos_observations": 30,
-      "rmse_improvement_vs_cash": -0.2
+      "rmse_improvement_vs_cash": -0.1
     },
     {
       "target": "dwelling_approvals_growth",
@@ -1346,12 +1346,12 @@
       "model": "autoregressive",
       "sample_start": "2020-01",
       "test_start": "2023-05",
-      "sample_end": "2025-07",
-      "rmse": 12.9475,
-      "mae": 10.9388,
-      "direction_accuracy": 70.4,
-      "oos_observations": 27,
-      "rmse_improvement_vs_cash": -1.8
+      "sample_end": "2025-08",
+      "rmse": 12.8455,
+      "mae": 10.883,
+      "direction_accuracy": 71.4,
+      "oos_observations": 28,
+      "rmse_improvement_vs_cash": -2.1
     },
     {
       "target": "dwelling_approvals_growth",
@@ -1360,11 +1360,11 @@
       "model": "cash_rate",
       "sample_start": "2020-01",
       "test_start": "2023-05",
-      "sample_end": "2025-07",
-      "rmse": 12.7237,
-      "mae": 10.333,
-      "direction_accuracy": 74.1,
-      "oos_observations": 27,
+      "sample_end": "2025-08",
+      "rmse": 12.5768,
+      "mae": 10.194,
+      "direction_accuracy": 75.0,
+      "oos_observations": 28,
       "rmse_improvement_vs_cash": 0.0
     },
     {
@@ -1374,12 +1374,12 @@
       "model": "hfci",
       "sample_start": "2020-01",
       "test_start": "2023-05",
-      "sample_end": "2025-07",
-      "rmse": 16.0058,
-      "mae": 13.5059,
-      "direction_accuracy": 37.0,
-      "oos_observations": 27,
-      "rmse_improvement_vs_cash": -25.8
+      "sample_end": "2025-08",
+      "rmse": 15.8291,
+      "mae": 13.3429,
+      "direction_accuracy": 39.3,
+      "oos_observations": 28,
+      "rmse_improvement_vs_cash": -25.9
     },
     {
       "target": "dwelling_approvals_growth",
@@ -1388,12 +1388,12 @@
       "model": "cash_plus_hfci",
       "sample_start": "2020-01",
       "test_start": "2023-05",
-      "sample_end": "2025-07",
-      "rmse": 13.2115,
-      "mae": 10.9031,
-      "direction_accuracy": 63.0,
-      "oos_observations": 27,
-      "rmse_improvement_vs_cash": -3.8
+      "sample_end": "2025-08",
+      "rmse": 13.0652,
+      "mae": 10.7665,
+      "direction_accuracy": 64.3,
+      "oos_observations": 28,
+      "rmse_improvement_vs_cash": -3.9
     },
     {
       "target": "dwelling_approvals_growth",
@@ -1401,13 +1401,13 @@
       "horizon_months": 3,
       "model": "autoregressive",
       "sample_start": "2020-01",
-      "test_start": "2023-10",
-      "sample_end": "2026-04",
-      "rmse": 9.7683,
-      "mae": 7.7979,
+      "test_start": "2023-11",
+      "sample_end": "2026-05",
+      "rmse": 9.6266,
+      "mae": 7.6266,
       "direction_accuracy": 51.6,
       "oos_observations": 31,
-      "rmse_improvement_vs_cash": 5.4
+      "rmse_improvement_vs_cash": 6.8
     },
     {
       "target": "dwelling_approvals_growth",
@@ -1415,11 +1415,11 @@
       "horizon_months": 3,
       "model": "cash_rate",
       "sample_start": "2020-01",
-      "test_start": "2023-10",
-      "sample_end": "2026-04",
-      "rmse": 10.3233,
-      "mae": 8.0195,
-      "direction_accuracy": 45.2,
+      "test_start": "2023-11",
+      "sample_end": "2026-05",
+      "rmse": 10.3247,
+      "mae": 7.9978,
+      "direction_accuracy": 41.9,
       "oos_observations": 31,
       "rmse_improvement_vs_cash": 0.0
     },
@@ -1429,13 +1429,13 @@
       "horizon_months": 3,
       "model": "hfci",
       "sample_start": "2020-01",
-      "test_start": "2023-10",
-      "sample_end": "2026-04",
-      "rmse": 9.8769,
-      "mae": 7.6854,
+      "test_start": "2023-11",
+      "sample_end": "2026-05",
+      "rmse": 9.5874,
+      "mae": 7.4223,
       "direction_accuracy": 61.3,
       "oos_observations": 31,
-      "rmse_improvement_vs_cash": 4.3
+      "rmse_improvement_vs_cash": 7.1
     },
     {
       "target": "dwelling_approvals_growth",
@@ -1443,11 +1443,11 @@
       "horizon_months": 3,
       "model": "cash_plus_hfci",
       "sample_start": "2020-01",
-      "test_start": "2023-10",
-      "sample_end": "2026-04",
-      "rmse": 11.6367,
-      "mae": 9.3051,
-      "direction_accuracy": 51.6,
+      "test_start": "2023-11",
+      "sample_end": "2026-05",
+      "rmse": 11.6377,
+      "mae": 9.3129,
+      "direction_accuracy": 48.4,
       "oos_observations": 31,
       "rmse_improvement_vs_cash": -12.7
     },
@@ -1457,13 +1457,13 @@
       "horizon_months": 6,
       "model": "autoregressive",
       "sample_start": "2020-01",
-      "test_start": "2023-08",
-      "sample_end": "2026-01",
-      "rmse": 11.5834,
-      "mae": 9.64,
+      "test_start": "2023-09",
+      "sample_end": "2026-02",
+      "rmse": 12.0357,
+      "mae": 9.9814,
       "direction_accuracy": 66.7,
       "oos_observations": 30,
-      "rmse_improvement_vs_cash": 10.6
+      "rmse_improvement_vs_cash": 10.5
     },
     {
       "target": "dwelling_approvals_growth",
@@ -1471,11 +1471,11 @@
       "horizon_months": 6,
       "model": "cash_rate",
       "sample_start": "2020-01",
-      "test_start": "2023-08",
-      "sample_end": "2026-01",
-      "rmse": 12.9593,
-      "mae": 10.3539,
-      "direction_accuracy": 50.0,
+      "test_start": "2023-09",
+      "sample_end": "2026-02",
+      "rmse": 13.4511,
+      "mae": 10.9545,
+      "direction_accuracy": 46.7,
       "oos_observations": 30,
       "rmse_improvement_vs_cash": 0.0
     },
@@ -1485,13 +1485,13 @@
       "horizon_months": 6,
       "model": "hfci",
       "sample_start": "2020-01",
-      "test_start": "2023-08",
-      "sample_end": "2026-01",
-      "rmse": 11.5381,
-      "mae": 9.7322,
+      "test_start": "2023-09",
+      "sample_end": "2026-02",
+      "rmse": 12.0985,
+      "mae": 10.1224,
       "direction_accuracy": 66.7,
       "oos_observations": 30,
-      "rmse_improvement_vs_cash": 11.0
+      "rmse_improvement_vs_cash": 10.1
     },
     {
       "target": "dwelling_approvals_growth",
@@ -1499,13 +1499,13 @@
       "horizon_months": 6,
       "model": "cash_plus_hfci",
       "sample_start": "2020-01",
-      "test_start": "2023-08",
-      "sample_end": "2026-01",
-      "rmse": 15.2512,
-      "mae": 12.7118,
-      "direction_accuracy": 36.7,
+      "test_start": "2023-09",
+      "sample_end": "2026-02",
+      "rmse": 15.7055,
+      "mae": 13.2084,
+      "direction_accuracy": 33.3,
       "oos_observations": 30,
-      "rmse_improvement_vs_cash": -17.7
+      "rmse_improvement_vs_cash": -16.8
     },
     {
       "target": "dwelling_approvals_growth",
@@ -1514,12 +1514,12 @@
       "model": "autoregressive",
       "sample_start": "2020-01",
       "test_start": "2023-05",
-      "sample_end": "2025-07",
-      "rmse": 12.9475,
-      "mae": 10.9388,
-      "direction_accuracy": 70.4,
-      "oos_observations": 27,
-      "rmse_improvement_vs_cash": -1.8
+      "sample_end": "2025-08",
+      "rmse": 12.8455,
+      "mae": 10.883,
+      "direction_accuracy": 71.4,
+      "oos_observations": 28,
+      "rmse_improvement_vs_cash": -2.1
     },
     {
       "target": "dwelling_approvals_growth",
@@ -1528,11 +1528,11 @@
       "model": "cash_rate",
       "sample_start": "2020-01",
       "test_start": "2023-05",
-      "sample_end": "2025-07",
-      "rmse": 12.7237,
-      "mae": 10.333,
-      "direction_accuracy": 74.1,
-      "oos_observations": 27,
+      "sample_end": "2025-08",
+      "rmse": 12.5768,
+      "mae": 10.194,
+      "direction_accuracy": 75.0,
+      "oos_observations": 28,
       "rmse_improvement_vs_cash": 0.0
     },
     {
@@ -1542,12 +1542,12 @@
       "model": "hfci",
       "sample_start": "2020-01",
       "test_start": "2023-05",
-      "sample_end": "2025-07",
-      "rmse": 11.9723,
-      "mae": 9.8164,
-      "direction_accuracy": 85.2,
-      "oos_observations": 27,
-      "rmse_improvement_vs_cash": 5.9
+      "sample_end": "2025-08",
+      "rmse": 11.8988,
+      "mae": 9.8083,
+      "direction_accuracy": 85.7,
+      "oos_observations": 28,
+      "rmse_improvement_vs_cash": 5.4
     },
     {
       "target": "dwelling_approvals_growth",
@@ -1556,12 +1556,12 @@
       "model": "cash_plus_hfci",
       "sample_start": "2020-01",
       "test_start": "2023-05",
-      "sample_end": "2025-07",
-      "rmse": 14.2096,
-      "mae": 11.9291,
-      "direction_accuracy": 63.0,
-      "oos_observations": 27,
-      "rmse_improvement_vs_cash": -11.7
+      "sample_end": "2025-08",
+      "rmse": 14.0403,
+      "mae": 11.7585,
+      "direction_accuracy": 64.3,
+      "oos_observations": 28,
+      "rmse_improvement_vs_cash": -11.6
     },
     {
       "target": "dwelling_approvals_growth",
@@ -1570,12 +1570,12 @@
       "model": "autoregressive",
       "sample_start": "2006-04",
       "test_start": "2011-04",
-      "sample_end": "2026-04",
-      "rmse": 11.4761,
-      "mae": 9.0872,
-      "direction_accuracy": 58.0,
-      "oos_observations": 181,
-      "rmse_improvement_vs_cash": 3.1
+      "sample_end": "2026-05",
+      "rmse": 11.4593,
+      "mae": 9.0666,
+      "direction_accuracy": 57.7,
+      "oos_observations": 182,
+      "rmse_improvement_vs_cash": 3.0
     },
     {
       "target": "dwelling_approvals_growth",
@@ -1584,11 +1584,11 @@
       "model": "cash_rate",
       "sample_start": "2006-04",
       "test_start": "2011-04",
-      "sample_end": "2026-04",
-      "rmse": 11.8376,
-      "mae": 9.6146,
-      "direction_accuracy": 51.9,
-      "oos_observations": 181,
+      "sample_end": "2026-05",
+      "rmse": 11.8195,
+      "mae": 9.5865,
+      "direction_accuracy": 51.6,
+      "oos_observations": 182,
       "rmse_improvement_vs_cash": 0.0
     },
     {
@@ -1598,11 +1598,11 @@
       "model": "hfci",
       "sample_start": "2006-04",
       "test_start": "2011-04",
-      "sample_end": "2026-04",
-      "rmse": 11.4556,
-      "mae": 9.0754,
-      "direction_accuracy": 56.4,
-      "oos_observations": 181,
+      "sample_end": "2026-05",
+      "rmse": 11.4393,
+      "mae": 9.0603,
+      "direction_accuracy": 56.6,
+      "oos_observations": 182,
       "rmse_improvement_vs_cash": 3.2
     },
     {
@@ -1612,11 +1612,11 @@
       "model": "cash_plus_hfci",
       "sample_start": "2006-04",
       "test_start": "2011-04",
-      "sample_end": "2026-04",
-      "rmse": 11.7615,
-      "mae": 9.5529,
-      "direction_accuracy": 53.0,
-      "oos_observations": 181,
+      "sample_end": "2026-05",
+      "rmse": 11.7438,
+      "mae": 9.5335,
+      "direction_accuracy": 52.7,
+      "oos_observations": 182,
       "rmse_improvement_vs_cash": 0.6
     },
     {
@@ -1626,12 +1626,12 @@
       "model": "autoregressive",
       "sample_start": "2006-04",
       "test_start": "2011-04",
-      "sample_end": "2026-01",
-      "rmse": 14.6939,
-      "mae": 11.6104,
-      "direction_accuracy": 56.2,
-      "oos_observations": 178,
-      "rmse_improvement_vs_cash": 6.2
+      "sample_end": "2026-02",
+      "rmse": 14.7196,
+      "mae": 11.6405,
+      "direction_accuracy": 56.4,
+      "oos_observations": 179,
+      "rmse_improvement_vs_cash": 6.1
     },
     {
       "target": "dwelling_approvals_growth",
@@ -1640,11 +1640,11 @@
       "model": "cash_rate",
       "sample_start": "2006-04",
       "test_start": "2011-04",
-      "sample_end": "2026-01",
-      "rmse": 15.6619,
-      "mae": 12.894,
-      "direction_accuracy": 52.8,
-      "oos_observations": 178,
+      "sample_end": "2026-02",
+      "rmse": 15.6787,
+      "mae": 12.9139,
+      "direction_accuracy": 53.6,
+      "oos_observations": 179,
       "rmse_improvement_vs_cash": 0.0
     },
     {
@@ -1654,12 +1654,12 @@
       "model": "hfci",
       "sample_start": "2006-04",
       "test_start": "2011-04",
-      "sample_end": "2026-01",
-      "rmse": 14.624,
-      "mae": 11.654,
-      "direction_accuracy": 51.7,
-      "oos_observations": 178,
-      "rmse_improvement_vs_cash": 6.6
+      "sample_end": "2026-02",
+      "rmse": 14.6572,
+      "mae": 11.6937,
+      "direction_accuracy": 52.0,
+      "oos_observations": 179,
+      "rmse_improvement_vs_cash": 6.5
     },
     {
       "target": "dwelling_approvals_growth",
@@ -1668,11 +1668,11 @@
       "model": "cash_plus_hfci",
       "sample_start": "2006-04",
       "test_start": "2011-04",
-      "sample_end": "2026-01",
-      "rmse": 15.4848,
-      "mae": 12.7987,
-      "direction_accuracy": 50.0,
-      "oos_observations": 178,
+      "sample_end": "2026-02",
+      "rmse": 15.5101,
+      "mae": 12.8296,
+      "direction_accuracy": 49.7,
+      "oos_observations": 179,
       "rmse_improvement_vs_cash": 1.1
     },
     {
@@ -1682,11 +1682,11 @@
       "model": "autoregressive",
       "sample_start": "2006-04",
       "test_start": "2011-04",
-      "sample_end": "2025-07",
-      "rmse": 17.9643,
-      "mae": 14.8953,
-      "direction_accuracy": 55.8,
-      "oos_observations": 172,
+      "sample_end": "2025-08",
+      "rmse": 17.931,
+      "mae": 14.8679,
+      "direction_accuracy": 56.1,
+      "oos_observations": 173,
       "rmse_improvement_vs_cash": 5.6
     },
     {
@@ -1696,11 +1696,11 @@
       "model": "cash_rate",
       "sample_start": "2006-04",
       "test_start": "2011-04",
-      "sample_end": "2025-07",
-      "rmse": 19.0396,
-      "mae": 15.876,
-      "direction_accuracy": 57.6,
-      "oos_observations": 172,
+      "sample_end": "2025-08",
+      "rmse": 19.0019,
+      "mae": 15.8432,
+      "direction_accuracy": 57.8,
+      "oos_observations": 173,
       "rmse_improvement_vs_cash": 0.0
     },
     {
@@ -1710,12 +1710,12 @@
       "model": "hfci",
       "sample_start": "2006-04",
       "test_start": "2011-04",
-      "sample_end": "2025-07",
-      "rmse": 17.2336,
-      "mae": 14.4187,
-      "direction_accuracy": 48.3,
-      "oos_observations": 172,
-      "rmse_improvement_vs_cash": 9.5
+      "sample_end": "2025-08",
+      "rmse": 17.2118,
+      "mae": 14.4117,
+      "direction_accuracy": 48.0,
+      "oos_observations": 173,
+      "rmse_improvement_vs_cash": 9.4
     },
     {
       "target": "dwelling_approvals_growth",
@@ -1724,12 +1724,12 @@
       "model": "cash_plus_hfci",
       "sample_start": "2006-04",
       "test_start": "2011-04",
-      "sample_end": "2025-07",
-      "rmse": 18.2661,
-      "mae": 15.4015,
-      "direction_accuracy": 48.3,
-      "oos_observations": 172,
-      "rmse_improvement_vs_cash": 4.1
+      "sample_end": "2025-08",
+      "rmse": 18.243,
+      "mae": 15.395,
+      "direction_accuracy": 48.0,
+      "oos_observations": 173,
+      "rmse_improvement_vs_cash": 4.0
     },
     {
       "target": "dwelling_approvals_growth",
@@ -1737,125 +1737,125 @@
       "horizon_months": 3,
       "model": "autoregressive",
       "sample_start": "2022-05",
-      "test_start": "2024-09",
-      "sample_end": "2026-04",
-      "rmse": 10.4915,
-      "mae": 7.9145,
+      "test_start": "2024-10",
+      "sample_end": "2026-05",
+      "rmse": 10.5548,
+      "mae": 7.9928,
       "direction_accuracy": 45.0,
       "oos_observations": 20,
-      "rmse_improvement_vs_cash": 0.4
-    },
-    {
-      "target": "dwelling_approvals_growth",
-      "hfci": "hfci_full",
-      "horizon_months": 3,
-      "model": "cash_rate",
-      "sample_start": "2022-05",
-      "test_start": "2024-09",
-      "sample_end": "2026-04",
-      "rmse": 10.5309,
-      "mae": 8.0545,
-      "direction_accuracy": 50.0,
-      "oos_observations": 20,
-      "rmse_improvement_vs_cash": 0.0
-    },
-    {
-      "target": "dwelling_approvals_growth",
-      "hfci": "hfci_full",
-      "horizon_months": 3,
-      "model": "hfci",
-      "sample_start": "2022-05",
-      "test_start": "2024-09",
-      "sample_end": "2026-04",
-      "rmse": 10.5252,
-      "mae": 7.9679,
-      "direction_accuracy": 50.0,
-      "oos_observations": 20,
-      "rmse_improvement_vs_cash": 0.1
-    },
-    {
-      "target": "dwelling_approvals_growth",
-      "hfci": "hfci_full",
-      "horizon_months": 3,
-      "model": "cash_plus_hfci",
-      "sample_start": "2022-05",
-      "test_start": "2024-09",
-      "sample_end": "2026-04",
-      "rmse": 10.7214,
-      "mae": 8.2926,
-      "direction_accuracy": 60.0,
-      "oos_observations": 20,
-      "rmse_improvement_vs_cash": -1.8
-    },
-    {
-      "target": "dwelling_approvals_growth",
-      "hfci": "hfci_full",
-      "horizon_months": 6,
-      "model": "autoregressive",
-      "sample_start": "2022-05",
-      "test_start": "2024-08",
-      "sample_end": "2026-01",
-      "rmse": 14.0487,
-      "mae": 11.6361,
-      "direction_accuracy": 61.1,
-      "oos_observations": 18,
-      "rmse_improvement_vs_cash": -6.0
-    },
-    {
-      "target": "dwelling_approvals_growth",
-      "hfci": "hfci_full",
-      "horizon_months": 6,
-      "model": "cash_rate",
-      "sample_start": "2022-05",
-      "test_start": "2024-08",
-      "sample_end": "2026-01",
-      "rmse": 13.2553,
-      "mae": 10.8298,
-      "direction_accuracy": 66.7,
-      "oos_observations": 18,
-      "rmse_improvement_vs_cash": 0.0
-    },
-    {
-      "target": "dwelling_approvals_growth",
-      "hfci": "hfci_full",
-      "horizon_months": 6,
-      "model": "hfci",
-      "sample_start": "2022-05",
-      "test_start": "2024-08",
-      "sample_end": "2026-01",
-      "rmse": 14.0548,
-      "mae": 11.4773,
-      "direction_accuracy": 61.1,
-      "oos_observations": 18,
-      "rmse_improvement_vs_cash": -6.0
-    },
-    {
-      "target": "dwelling_approvals_growth",
-      "hfci": "hfci_full",
-      "horizon_months": 6,
-      "model": "cash_plus_hfci",
-      "sample_start": "2022-05",
-      "test_start": "2024-08",
-      "sample_end": "2026-01",
-      "rmse": 13.1852,
-      "mae": 10.8413,
-      "direction_accuracy": 66.7,
-      "oos_observations": 18,
       "rmse_improvement_vs_cash": 0.5
     },
     {
       "target": "dwelling_approvals_growth",
       "hfci": "hfci_full",
+      "horizon_months": 3,
+      "model": "cash_rate",
+      "sample_start": "2022-05",
+      "test_start": "2024-10",
+      "sample_end": "2026-05",
+      "rmse": 10.6028,
+      "mae": 8.2,
+      "direction_accuracy": 50.0,
+      "oos_observations": 20,
+      "rmse_improvement_vs_cash": 0.0
+    },
+    {
+      "target": "dwelling_approvals_growth",
+      "hfci": "hfci_full",
+      "horizon_months": 3,
+      "model": "hfci",
+      "sample_start": "2022-05",
+      "test_start": "2024-10",
+      "sample_end": "2026-05",
+      "rmse": 10.5737,
+      "mae": 8.009,
+      "direction_accuracy": 50.0,
+      "oos_observations": 20,
+      "rmse_improvement_vs_cash": 0.3
+    },
+    {
+      "target": "dwelling_approvals_growth",
+      "hfci": "hfci_full",
+      "horizon_months": 3,
+      "model": "cash_plus_hfci",
+      "sample_start": "2022-05",
+      "test_start": "2024-10",
+      "sample_end": "2026-05",
+      "rmse": 10.8031,
+      "mae": 8.5723,
+      "direction_accuracy": 50.0,
+      "oos_observations": 20,
+      "rmse_improvement_vs_cash": -1.9
+    },
+    {
+      "target": "dwelling_approvals_growth",
+      "hfci": "hfci_full",
+      "horizon_months": 6,
+      "model": "autoregressive",
+      "sample_start": "2022-05",
+      "test_start": "2024-08",
+      "sample_end": "2026-02",
+      "rmse": 14.7547,
+      "mae": 12.2411,
+      "direction_accuracy": 57.9,
+      "oos_observations": 19,
+      "rmse_improvement_vs_cash": -6.5
+    },
+    {
+      "target": "dwelling_approvals_growth",
+      "hfci": "hfci_full",
+      "horizon_months": 6,
+      "model": "cash_rate",
+      "sample_start": "2022-05",
+      "test_start": "2024-08",
+      "sample_end": "2026-02",
+      "rmse": 13.8503,
+      "mae": 11.3387,
+      "direction_accuracy": 63.2,
+      "oos_observations": 19,
+      "rmse_improvement_vs_cash": 0.0
+    },
+    {
+      "target": "dwelling_approvals_growth",
+      "hfci": "hfci_full",
+      "horizon_months": 6,
+      "model": "hfci",
+      "sample_start": "2022-05",
+      "test_start": "2024-08",
+      "sample_end": "2026-02",
+      "rmse": 14.7968,
+      "mae": 12.1348,
+      "direction_accuracy": 52.6,
+      "oos_observations": 19,
+      "rmse_improvement_vs_cash": -6.8
+    },
+    {
+      "target": "dwelling_approvals_growth",
+      "hfci": "hfci_full",
+      "horizon_months": 6,
+      "model": "cash_plus_hfci",
+      "sample_start": "2022-05",
+      "test_start": "2024-08",
+      "sample_end": "2026-02",
+      "rmse": 13.6584,
+      "mae": 11.256,
+      "direction_accuracy": 63.2,
+      "oos_observations": 19,
+      "rmse_improvement_vs_cash": 1.4
+    },
+    {
+      "target": "dwelling_approvals_growth",
+      "hfci": "hfci_full",
       "horizon_months": 12,
       "model": "autoregressive",
       "sample_start": "2022-05",
-      "test_start": "2024-04",
-      "sample_end": "2025-07",
-      "rmse": 10.7654,
-      "mae": 8.3902,
+      "test_start": "2024-05",
+      "sample_end": "2025-08",
+      "rmse": 10.8085,
+      "mae": 8.4194,
       "direction_accuracy": 93.8,
       "oos_observations": 16,
-      "rmse_improvement_vs_cash": -11.3
+      "rmse_improvement_vs_cash": -9.5
     },
     {
       "target": "dwelling_approvals_growth",
@@ -1863,10 +1863,10 @@
       "horizon_months": 12,
       "model": "cash_rate",
       "sample_start": "2022-05",
-      "test_start": "2024-04",
-      "sample_end": "2025-07",
-      "rmse": 9.674,
-      "mae": 7.5639,
+      "test_start": "2024-05",
+      "sample_end": "2025-08",
+      "rmse": 9.8673,
+      "mae": 7.9181,
       "direction_accuracy": 93.8,
       "oos_observations": 16,
       "rmse_improvement_vs_cash": 0.0
@@ -1877,13 +1877,13 @@
       "horizon_months": 12,
       "model": "hfci",
       "sample_start": "2022-05",
-      "test_start": "2024-04",
-      "sample_end": "2025-07",
-      "rmse": 11.005,
-      "mae": 8.2364,
+      "test_start": "2024-05",
+      "sample_end": "2025-08",
+      "rmse": 11.0197,
+      "mae": 8.2706,
       "direction_accuracy": 93.8,
       "oos_observations": 16,
-      "rmse_improvement_vs_cash": -13.8
+      "rmse_improvement_vs_cash": -11.7
     },
     {
       "target": "dwelling_approvals_growth",
@@ -1891,13 +1891,13 @@
       "horizon_months": 12,
       "model": "cash_plus_hfci",
       "sample_start": "2022-05",
-      "test_start": "2024-04",
-      "sample_end": "2025-07",
-      "rmse": 10.0093,
-      "mae": 7.8636,
+      "test_start": "2024-05",
+      "sample_end": "2025-08",
+      "rmse": 10.1508,
+      "mae": 8.0737,
       "direction_accuracy": 93.8,
       "oos_observations": 16,
-      "rmse_improvement_vs_cash": -3.5
+      "rmse_improvement_vs_cash": -2.9
     },
     {
       "target": "new_lending_growth",
@@ -1935,8 +1935,8 @@
       "sample_start": "2020-03",
       "test_start": "2023-12",
       "sample_end": "2026-03",
-      "rmse": 7.5326,
-      "mae": 6.4907,
+      "rmse": 7.5297,
+      "mae": 6.488,
       "direction_accuracy": 20.0,
       "oos_observations": 10,
       "rmse_improvement_vs_cash": -25.9
@@ -1949,11 +1949,11 @@
       "sample_start": "2020-03",
       "test_start": "2023-12",
       "sample_end": "2026-03",
-      "rmse": 6.8187,
-      "mae": 6.1021,
+      "rmse": 6.8161,
+      "mae": 6.0995,
       "direction_accuracy": 60.0,
       "oos_observations": 10,
-      "rmse_improvement_vs_cash": -14.0
+      "rmse_improvement_vs_cash": -13.9
     },
     {
       "target": "new_lending_growth",
@@ -1991,11 +1991,11 @@
       "sample_start": "2020-03",
       "test_start": "2023-09",
       "sample_end": "2025-12",
-      "rmse": 16.0284,
-      "mae": 13.5617,
+      "rmse": 16.0326,
+      "mae": 13.565,
       "direction_accuracy": 20.0,
       "oos_observations": 10,
-      "rmse_improvement_vs_cash": -61.7
+      "rmse_improvement_vs_cash": -61.8
     },
     {
       "target": "new_lending_growth",
@@ -2005,8 +2005,8 @@
       "sample_start": "2020-03",
       "test_start": "2023-09",
       "sample_end": "2025-12",
-      "rmse": 14.3904,
-      "mae": 12.368,
+      "rmse": 14.3866,
+      "mae": 12.365,
       "direction_accuracy": 40.0,
       "oos_observations": 10,
       "rmse_improvement_vs_cash": -45.2
@@ -2047,11 +2047,11 @@
       "sample_start": "2020-03",
       "test_start": "2023-06",
       "sample_end": "2025-06",
-      "rmse": 25.5873,
-      "mae": 22.4739,
+      "rmse": 25.612,
+      "mae": 22.4975,
       "direction_accuracy": 22.2,
       "oos_observations": 9,
-      "rmse_improvement_vs_cash": -46.7
+      "rmse_improvement_vs_cash": -46.9
     },
     {
       "target": "new_lending_growth",
@@ -2061,8 +2061,8 @@
       "sample_start": "2020-03",
       "test_start": "2023-06",
       "sample_end": "2025-06",
-      "rmse": 22.8374,
-      "mae": 19.1217,
+      "rmse": 22.8331,
+      "mae": 19.1097,
       "direction_accuracy": 55.6,
       "oos_observations": 9,
       "rmse_improvement_vs_cash": -31.0
@@ -2103,11 +2103,11 @@
       "sample_start": "2020-03",
       "test_start": "2023-12",
       "sample_end": "2026-03",
-      "rmse": 9.684,
-      "mae": 8.9049,
+      "rmse": 9.6806,
+      "mae": 8.9021,
       "direction_accuracy": 60.0,
       "oos_observations": 10,
-      "rmse_improvement_vs_cash": -61.9
+      "rmse_improvement_vs_cash": -61.8
     },
     {
       "target": "new_lending_growth",
@@ -2117,11 +2117,11 @@
       "sample_start": "2020-03",
       "test_start": "2023-12",
       "sample_end": "2026-03",
-      "rmse": 10.0282,
-      "mae": 8.9496,
+      "rmse": 10.0218,
+      "mae": 8.9437,
       "direction_accuracy": 60.0,
       "oos_observations": 10,
-      "rmse_improvement_vs_cash": -67.6
+      "rmse_improvement_vs_cash": -67.5
     },
     {
       "target": "new_lending_growth",
@@ -2159,8 +2159,8 @@
       "sample_start": "2020-03",
       "test_start": "2023-09",
       "sample_end": "2025-12",
-      "rmse": 13.0056,
-      "mae": 9.7502,
+      "rmse": 12.9987,
+      "mae": 9.7447,
       "direction_accuracy": 80.0,
       "oos_observations": 10,
       "rmse_improvement_vs_cash": -31.2
@@ -2173,8 +2173,8 @@
       "sample_start": "2020-03",
       "test_start": "2023-09",
       "sample_end": "2025-12",
-      "rmse": 12.758,
-      "mae": 9.0422,
+      "rmse": 12.7507,
+      "mae": 9.0392,
       "direction_accuracy": 70.0,
       "oos_observations": 10,
       "rmse_improvement_vs_cash": -28.7
@@ -2215,11 +2215,11 @@
       "sample_start": "2020-03",
       "test_start": "2023-06",
       "sample_end": "2025-06",
-      "rmse": 12.2366,
-      "mae": 9.0926,
+      "rmse": 12.2168,
+      "mae": 9.0808,
       "direction_accuracy": 100.0,
       "oos_observations": 9,
-      "rmse_improvement_vs_cash": 29.8
+      "rmse_improvement_vs_cash": 29.9
     },
     {
       "target": "new_lending_growth",
@@ -2229,8 +2229,8 @@
       "sample_start": "2020-03",
       "test_start": "2023-06",
       "sample_end": "2025-06",
-      "rmse": 15.6345,
-      "mae": 12.6226,
+      "rmse": 15.6326,
+      "mae": 12.6135,
       "direction_accuracy": 88.9,
       "oos_observations": 9,
       "rmse_improvement_vs_cash": 10.3
@@ -2271,11 +2271,11 @@
       "sample_start": "2017-06",
       "test_start": "2022-09",
       "sample_end": "2026-03",
-      "rmse": 6.8814,
-      "mae": 5.5044,
+      "rmse": 6.878,
+      "mae": 5.5023,
       "direction_accuracy": 53.3,
       "oos_observations": 15,
-      "rmse_improvement_vs_cash": 21.1
+      "rmse_improvement_vs_cash": 21.2
     },
     {
       "target": "new_lending_growth",
@@ -2285,8 +2285,8 @@
       "sample_start": "2017-06",
       "test_start": "2022-09",
       "sample_end": "2026-03",
-      "rmse": 8.2066,
-      "mae": 6.9858,
+      "rmse": 8.2033,
+      "mae": 6.9839,
       "direction_accuracy": 53.3,
       "oos_observations": 15,
       "rmse_improvement_vs_cash": 6.0
@@ -2327,8 +2327,8 @@
       "sample_start": "2017-06",
       "test_start": "2022-09",
       "sample_end": "2025-12",
-      "rmse": 10.5298,
-      "mae": 8.0877,
+      "rmse": 10.5301,
+      "mae": 8.0876,
       "direction_accuracy": 71.4,
       "oos_observations": 14,
       "rmse_improvement_vs_cash": 34.4
@@ -2342,7 +2342,7 @@
       "test_start": "2022-09",
       "sample_end": "2025-12",
       "rmse": 13.3147,
-      "mae": 10.8228,
+      "mae": 10.8226,
       "direction_accuracy": 64.3,
       "oos_observations": 14,
       "rmse_improvement_vs_cash": 17.0
@@ -2383,7 +2383,7 @@
       "sample_start": "2017-06",
       "test_start": "2022-03",
       "sample_end": "2025-06",
-      "rmse": 17.0671,
+      "rmse": 17.0682,
       "mae": 13.4255,
       "direction_accuracy": 64.3,
       "oos_observations": 14,
@@ -2397,8 +2397,8 @@
       "sample_start": "2017-06",
       "test_start": "2022-03",
       "sample_end": "2025-06",
-      "rmse": 25.0637,
-      "mae": 20.0701,
+      "rmse": 25.0633,
+      "mae": 20.0692,
       "direction_accuracy": 57.1,
       "oos_observations": 14,
       "rmse_improvement_vs_cash": 28.2
@@ -2622,7 +2622,7 @@
       "test_start": "2023-12",
       "sample_end": "2026-03",
       "rmse": 0.0911,
-      "mae": 0.0744,
+      "mae": 0.0745,
       "direction_accuracy": 50.0,
       "oos_observations": 10,
       "rmse_improvement_vs_cash": -3.6
@@ -2994,217 +2994,217 @@
       "target": "housing_credit_growth",
       "hfci": "hfci_core",
       "horizon_months": 3,
-      "correlation": 0.08,
-      "observations": 76,
+      "correlation": 0.099,
+      "observations": 77,
       "sample_start": "2020-01",
-      "sample_end": "2026-04"
+      "sample_end": "2026-05"
     },
     {
       "target": "housing_credit_growth",
       "hfci": "hfci_core",
       "horizon_months": 6,
-      "correlation": -0.126,
-      "observations": 73,
+      "correlation": -0.106,
+      "observations": 74,
       "sample_start": "2020-01",
-      "sample_end": "2026-01"
+      "sample_end": "2026-02"
     },
     {
       "target": "housing_credit_growth",
       "hfci": "hfci_core",
       "horizon_months": 12,
-      "correlation": -0.324,
-      "observations": 67,
+      "correlation": -0.305,
+      "observations": 68,
       "sample_start": "2020-01",
-      "sample_end": "2025-07"
+      "sample_end": "2025-08"
     },
     {
       "target": "housing_credit_growth",
       "hfci": "hfci_augmented",
       "horizon_months": 3,
-      "correlation": -0.285,
-      "observations": 76,
+      "correlation": -0.261,
+      "observations": 77,
       "sample_start": "2020-01",
-      "sample_end": "2026-04"
+      "sample_end": "2026-05"
     },
     {
       "target": "housing_credit_growth",
       "hfci": "hfci_augmented",
+      "horizon_months": 6,
+      "correlation": -0.496,
+      "observations": 74,
+      "sample_start": "2020-01",
+      "sample_end": "2026-02"
+    },
+    {
+      "target": "housing_credit_growth",
+      "hfci": "hfci_augmented",
+      "horizon_months": 12,
+      "correlation": -0.562,
+      "observations": 68,
+      "sample_start": "2020-01",
+      "sample_end": "2025-08"
+    },
+    {
+      "target": "housing_credit_growth",
+      "hfci": "hfci_long_history",
+      "horizon_months": 3,
+      "correlation": 0.001,
+      "observations": 242,
+      "sample_start": "2006-04",
+      "sample_end": "2026-05"
+    },
+    {
+      "target": "housing_credit_growth",
+      "hfci": "hfci_long_history",
+      "horizon_months": 6,
+      "correlation": -0.032,
+      "observations": 239,
+      "sample_start": "2006-04",
+      "sample_end": "2026-02"
+    },
+    {
+      "target": "housing_credit_growth",
+      "hfci": "hfci_long_history",
+      "horizon_months": 12,
+      "correlation": 0.01,
+      "observations": 233,
+      "sample_start": "2006-04",
+      "sample_end": "2025-08"
+    },
+    {
+      "target": "housing_credit_growth",
+      "hfci": "hfci_full",
+      "horizon_months": 3,
+      "correlation": -0.686,
+      "observations": 49,
+      "sample_start": "2022-05",
+      "sample_end": "2026-05"
+    },
+    {
+      "target": "housing_credit_growth",
+      "hfci": "hfci_full",
       "horizon_months": 6,
       "correlation": -0.513,
-      "observations": 73,
-      "sample_start": "2020-01",
-      "sample_end": "2026-01"
-    },
-    {
-      "target": "housing_credit_growth",
-      "hfci": "hfci_augmented",
-      "horizon_months": 12,
-      "correlation": -0.569,
-      "observations": 67,
-      "sample_start": "2020-01",
-      "sample_end": "2025-07"
-    },
-    {
-      "target": "housing_credit_growth",
-      "hfci": "hfci_long_history",
-      "horizon_months": 3,
-      "correlation": -0.001,
-      "observations": 241,
-      "sample_start": "2006-04",
-      "sample_end": "2026-04"
-    },
-    {
-      "target": "housing_credit_growth",
-      "hfci": "hfci_long_history",
-      "horizon_months": 6,
-      "correlation": -0.033,
-      "observations": 238,
-      "sample_start": "2006-04",
-      "sample_end": "2026-01"
-    },
-    {
-      "target": "housing_credit_growth",
-      "hfci": "hfci_long_history",
-      "horizon_months": 12,
-      "correlation": 0.011,
-      "observations": 232,
-      "sample_start": "2006-04",
-      "sample_end": "2025-07"
-    },
-    {
-      "target": "housing_credit_growth",
-      "hfci": "hfci_full",
-      "horizon_months": 3,
-      "correlation": -0.73,
-      "observations": 48,
+      "observations": 46,
       "sample_start": "2022-05",
-      "sample_end": "2026-04"
-    },
-    {
-      "target": "housing_credit_growth",
-      "hfci": "hfci_full",
-      "horizon_months": 6,
-      "correlation": -0.535,
-      "observations": 45,
-      "sample_start": "2022-05",
-      "sample_end": "2026-01"
+      "sample_end": "2026-02"
     },
     {
       "target": "housing_credit_growth",
       "hfci": "hfci_full",
       "horizon_months": 12,
-      "correlation": 0.091,
-      "observations": 39,
+      "correlation": 0.066,
+      "observations": 40,
       "sample_start": "2022-05",
-      "sample_end": "2025-07"
+      "sample_end": "2025-08"
     },
     {
       "target": "dwelling_approvals_growth",
       "hfci": "hfci_core",
       "horizon_months": 3,
-      "correlation": 0.086,
-      "observations": 76,
+      "correlation": 0.084,
+      "observations": 77,
       "sample_start": "2020-01",
-      "sample_end": "2026-04"
+      "sample_end": "2026-05"
     },
     {
       "target": "dwelling_approvals_growth",
       "hfci": "hfci_core",
       "horizon_months": 6,
-      "correlation": 0.062,
-      "observations": 73,
+      "correlation": 0.046,
+      "observations": 74,
       "sample_start": "2020-01",
-      "sample_end": "2026-01"
+      "sample_end": "2026-02"
     },
     {
       "target": "dwelling_approvals_growth",
       "hfci": "hfci_core",
       "horizon_months": 12,
-      "correlation": 0.115,
-      "observations": 67,
+      "correlation": 0.119,
+      "observations": 68,
       "sample_start": "2020-01",
-      "sample_end": "2025-07"
+      "sample_end": "2025-08"
     },
     {
       "target": "dwelling_approvals_growth",
       "hfci": "hfci_augmented",
       "horizon_months": 3,
-      "correlation": 0.228,
-      "observations": 76,
+      "correlation": 0.224,
+      "observations": 77,
       "sample_start": "2020-01",
-      "sample_end": "2026-04"
+      "sample_end": "2026-05"
     },
     {
       "target": "dwelling_approvals_growth",
       "hfci": "hfci_augmented",
       "horizon_months": 6,
-      "correlation": 0.242,
-      "observations": 73,
+      "correlation": 0.23,
+      "observations": 74,
       "sample_start": "2020-01",
-      "sample_end": "2026-01"
+      "sample_end": "2026-02"
     },
     {
       "target": "dwelling_approvals_growth",
       "hfci": "hfci_augmented",
       "horizon_months": 12,
-      "correlation": 0.272,
-      "observations": 67,
+      "correlation": 0.27,
+      "observations": 68,
       "sample_start": "2020-01",
-      "sample_end": "2025-07"
+      "sample_end": "2025-08"
     },
     {
       "target": "dwelling_approvals_growth",
       "hfci": "hfci_long_history",
       "horizon_months": 3,
-      "correlation": 0.118,
-      "observations": 241,
+      "correlation": 0.117,
+      "observations": 242,
       "sample_start": "2006-04",
-      "sample_end": "2026-04"
+      "sample_end": "2026-05"
     },
     {
       "target": "dwelling_approvals_growth",
       "hfci": "hfci_long_history",
       "horizon_months": 6,
-      "correlation": 0.158,
-      "observations": 238,
+      "correlation": 0.155,
+      "observations": 239,
       "sample_start": "2006-04",
-      "sample_end": "2026-01"
+      "sample_end": "2026-02"
     },
     {
       "target": "dwelling_approvals_growth",
       "hfci": "hfci_long_history",
       "horizon_months": 12,
-      "correlation": 0.288,
-      "observations": 232,
+      "correlation": 0.287,
+      "observations": 233,
       "sample_start": "2006-04",
-      "sample_end": "2025-07"
+      "sample_end": "2025-08"
     },
     {
       "target": "dwelling_approvals_growth",
       "hfci": "hfci_full",
       "horizon_months": 3,
-      "correlation": 0.087,
-      "observations": 48,
+      "correlation": 0.084,
+      "observations": 49,
       "sample_start": "2022-05",
-      "sample_end": "2026-04"
+      "sample_end": "2026-05"
     },
     {
       "target": "dwelling_approvals_growth",
       "hfci": "hfci_full",
       "horizon_months": 6,
-      "correlation": 0.215,
-      "observations": 45,
+      "correlation": 0.206,
+      "observations": 46,
       "sample_start": "2022-05",
-      "sample_end": "2026-01"
+      "sample_end": "2026-02"
     },
     {
       "target": "dwelling_approvals_growth",
       "hfci": "hfci_full",
       "horizon_months": 12,
-      "correlation": 0.517,
-      "observations": 39,
+      "correlation": 0.504,
+      "observations": 40,
       "sample_start": "2022-05",
-      "sample_end": "2025-07"
+      "sample_end": "2025-08"
     },
     {
       "target": "new_lending_growth",
@@ -3228,7 +3228,7 @@
       "target": "new_lending_growth",
       "hfci": "hfci_core",
       "horizon_months": 12,
-      "correlation": -0.111,
+      "correlation": -0.112,
       "observations": 22,
       "sample_start": "2020-03",
       "sample_end": "2025-06"
@@ -3336,7 +3336,7 @@
       "target": "housing_turnover_change",
       "hfci": "hfci_augmented",
       "horizon_months": 12,
-      "correlation": 0.533,
+      "correlation": 0.532,
       "observations": 22,
       "sample_start": "2020-03",
       "sample_end": "2025-06"
@@ -3345,7 +3345,7 @@
       "target": "housing_turnover_change",
       "hfci": "hfci_long_history",
       "horizon_months": 3,
-      "correlation": 0.224,
+      "correlation": 0.225,
       "observations": 59,
       "sample_start": "2011-09",
       "sample_end": "2026-03"
@@ -3374,61 +3374,61 @@
       "left": "hfci_core",
       "right": "hfci_core",
       "correlation": 1.0,
-      "observations": 81
+      "observations": 82
     },
     {
       "left": "hfci_core",
       "right": "hfci_augmented",
-      "correlation": 0.781,
-      "observations": 81
+      "correlation": 0.783,
+      "observations": 82
     },
     {
       "left": "hfci_core",
       "right": "hfci_long_history",
-      "correlation": 0.2,
-      "observations": 81
+      "correlation": 0.211,
+      "observations": 82
     },
     {
       "left": "hfci_core",
       "right": "hfci_full",
-      "correlation": 0.427,
-      "observations": 53
+      "correlation": 0.422,
+      "observations": 54
     },
     {
       "left": "hfci_augmented",
       "right": "hfci_augmented",
       "correlation": 1.0,
-      "observations": 81
+      "observations": 82
     },
     {
       "left": "hfci_augmented",
       "right": "hfci_long_history",
-      "correlation": 0.632,
-      "observations": 81
+      "correlation": 0.635,
+      "observations": 82
     },
     {
       "left": "hfci_augmented",
       "right": "hfci_full",
       "correlation": 0.463,
-      "observations": 53
+      "observations": 54
     },
     {
       "left": "hfci_long_history",
       "right": "hfci_long_history",
       "correlation": 1.0,
-      "observations": 246
+      "observations": 247
     },
     {
       "left": "hfci_long_history",
       "right": "hfci_full",
-      "correlation": 0.378,
-      "observations": 53
+      "correlation": 0.375,
+      "observations": 54
     },
     {
       "left": "hfci_full",
       "right": "hfci_full",
       "correlation": 1.0,
-      "observations": 53
+      "observations": 54
     }
   ]
 }
